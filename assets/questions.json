@@ -1,0 +1,5172 @@
+[
+  {
+    "id": 1,
+    "question": "Căror nave li se aplică prevederile Colreg-1972?",
+    "options": [
+      "tuturor navelor care navigă în apele internaționale.",
+      "tuturor navelor care navigă în rade, strâmtori și marea liberă.",
+      "tuturor navelor aflate în largul mării ori pe toate apele învecinate accesibile navelor maritime."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "question": "Tuturor navelor aflate în largul mării ori pe toate apele învecinate accesibile navelor maritime li se aplică prevederile:",
+    "options": [
+      "COLREG-1972.",
+      "R.N.D.",
+      "Codului ISPS."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 3,
+    "question": "Dispozițiile Regulamentului împiedică aplicarea prescripțiilor speciale stabilite de către autoritatea competentă referitoare la navigația în rade, porturi, pe fluvii, lacuri sau căi de navigație interioară accesibile navelor maritime?",
+    "options": [
+      "da.",
+      "nu.",
+      "nu este precizat."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "question": "Cum influențează prevederile Regulamentului prescripțiile speciale referitoare la navigația în rade, porturi, pe fluvii, lacuri sau căi de navigație interioară accesibile navelor maritime?",
+    "options": [
+      "dispozițiile regulamentului nu trebuie să împiedice aplicarea prescripțiilor speciale stabilite de către autoritatea competentă, dar asemenea prescripții speciale trebuie să fie cât mai conforme cu prezentele reguli.",
+      "autoritatea competentă nu este obligată să țină seama de prescripțiile Regulamentului.",
+      "în toate situațiile se vor aplica prevederile Regulamentului."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 5,
+    "question": "Guvernul unui stat poate stabili prescripțiile speciale cu privire la numărul luminilor de poziție, a semnalelor luminoase, prescripții care să fie astfel încât să facă imposibilă confundarea lor cu Regulamentul?",
+    "options": [
+      "nu.",
+      "nu este precizat.",
+      "da."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "Dispozițiile Regulamentului scutesc nava, comandantul sau armatorul de consecințele unei neglijențe oarecare în ceea ce privește aplicarea Regulamentului sau în ceea ce privește luarea tuturor măsurilor cerute de o bună practică marinărească?",
+    "options": [
+      "nu este precizat.",
+      "da.",
+      "nu."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "Când este exonerată o navă, comandantul sau armatorul de consecințele unei neglijențe sau de neluarea tuturor măsurilor cerute de o bună practică marinărească?",
+    "options": [
+      "aplicarea regulilor scutește nava, comandantul sau armatorul de orice răspundere.",
+      "conformarea întocmai la prevederile regulii \"navă privilegiată\" scutește nava, comandantul sau armatorul de orice răspundere.",
+      "dispozițiile Regulamentului nu scutesc nava, comandantul sau armatorul de consecințele unei neglijențe oarecare în ceea ce privește aplicarea Regulamentului sau în ceea ce privește luarea tuturor măsurilor cerute de o bună practică marinărească."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "Când există riscul unei coliziuni, precum și în toate împrejurările deosebite sunt permise:",
+    "options": [
+      "abaterea de la prevederile Regulamentului.",
+      "abateri de la prevederile autorităților portuare.",
+      "abateri de la prevederile legilor specifice."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 9,
+    "question": "Când sunt permise abateri de la prevederile Regulamentului?",
+    "options": [
+      "în apele naționale, rade și în toate apele învecinate accesibile navelor maritime.",
+      "când există pericol de navigație, riscul unei coliziuni, precum și în toate împrejurările deosebite.",
+      "indiferent de situație, nu este permisă abaterea de la prevederile Regulamentului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "Ce se înțelege prin expresia \"navă\", conform Regulamentului?",
+    "options": [
+      "orice construcție sau aparat, de orice natură, capabil să plutească pe apă fără propulsie.",
+      "orice construcție sau aparat, de orice natură ar fi, inclusiv construcțiile fără pescaj și hidro avioane, folosite sau susceptibile de a fi folosite ca mijloc de transport pe apă.",
+      "orice corp plutitor cu orice mijloc de propulsie."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "Ce se înțelege prin \"navă cu propulsie mecanică\"?",
+    "options": [
+      "orice navă pusă în mișcare de către o mașină.",
+      "navele care folosesc ca mijloc de propulsie un motor Diesel.",
+      "toate navele care se pot deplasa pe apă, cu excepția navelor cu vele."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 12,
+    "question": "O navă care navigă cu vele, chiar dacă are o mașină proprie, cu condiția ca aceasta să nu fie folosită, reprezintă:",
+    "options": [
+      "o navă cu vele.",
+      "o navă cu propulsie mecanică, care folosește și velele.",
+      "o navă care folosește ca mijloc de propulsie forța vântului."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "question": "Ce se înțelege prin expresia \"navă cu vele\"?",
+    "options": [
+      "o navă care folosește ca mijloc de propulsie forța vântului.",
+      "o navă cu propulsie mecanică, care folosește și vele.",
+      "o navă care navigă cu vele, chiar dacă are o mașină proprie, cu condiția ca aceasta să nu fie folosită."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "O navă care din cauza unei împrejurări excepționale nu este în măsură să manevreze și deci, nu poate să se îndepărteze din drumul altei nave trebuie considerată:",
+    "options": [
+      "nava nu este stăpână pe manevra sa.",
+      "navă cu capacitate de manevră redusă.",
+      "navă stânjenită de pescajul său."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 15,
+    "question": "Ce se înțelege prin expresia \"navă cu capacitate de manevră redusă\"?",
+    "options": [
+      "o navă a cărei capacitate de manevră conform Regulamentului este limitată prin natura lucrărilor sale și care, în consecință, nu se poate îndepărta din drumul altei nave.",
+      "o navă cu avarii accidentale la cârmă și/sau mașină, în curs de remediere.",
+      "o navă care nu se poate abate din drumul său, datorită unor pericole de navigație."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 16,
+    "question": "O navă cu propulsie mecanică, care din cauza pescajului și a adâncimii apei sub chilă poate să-și modifice cu greu drumul, se consideră:",
+    "options": [
+      "navă stânjenită de pescajul său.",
+      "navă cu lungime mai mare de 200 m.",
+      "navă cu capacitate de manevră redusă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 17,
+    "question": "O navă care nu este nici la ancoră, nici legată la cheu, nici eșuată se consideră:",
+    "options": [
+      "navă \"în marș\".",
+      "navă în derivă.",
+      "navă care ține la capă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 18,
+    "question": "Când una dintre nave poate fi observată vizual de către cealaltă navă, se consideră:",
+    "options": [
+      "navă în siguranță.",
+      "nave aflate în vedere.",
+      "nave în marș."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "question": "Când două nave se consideră în vedere?",
+    "options": [
+      "când se observă vizual reciproc.",
+      "numai când una dintre ele poate fi observată vizual de către cealaltă.",
+      "când navele se află în limita de observare cu radarul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Cum trebuie să se asigure veghea la bordul navei?",
+    "options": [
+      "trebuie să se asigure în permanență o veghe vizuală și auditivă corespunzătoare, folosind în același timp toate mijloacele disponibile, potrivit cu împrejurările și condițiile existente, în așa fel încât să permită o apreciere completă a situației.",
+      "trebuie să se asigure în permanență o veghe vizuală pentru evitarea unor situații periculoase.",
+      "în condiții de vizibilitate redusă, se va organiza o veghe corespunzătoare, pentru a aprecia existența unui pericol de coliziune."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 21,
+    "question": "Pentru a se putea acționa corect și eficace pentru prevenirea unei coliziuni și pentru ca nava să poată fi oprită pe o distanță corespunzătoare împrejurărilor și condițiilor, se impune menținerea de a naviga cu:",
+    "options": [
+      "viteză maximă.",
+      "viteză minimă.",
+      "viteză de siguranță."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "question": "Care sunt factorii care trebuie luați în considerație pentru determinarea \"vitezei de siguranță\"?",
+    "options": [
+      "lungimea navei, calitățile nautice ale navei, puterea mașinii și vizibilitatea.",
+      "pregătirea echipajului, condițiile de navigație, vizibilitatea.",
+      "vizibilitatea, densitatea traficului, capacitatea de manevră a navei, noaptea-existența unui fundal luminos, starea vântului și a mării, pescajul navei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "Orice navă trebuie să folosească toate mijloacele disponibile corespunzătoare împrejurărilor și condițiilor externe pentru a stabili dacă există:",
+    "options": [
+      "un pericol de eșuare.",
+      "un pericol iminent.",
+      "un pericol de coliziune."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Ce mijloace trebuie să folosească o navă pentru a stabili dacă există pericolul de coliziune?",
+    "options": [
+      "orice navă trebuie să folosească toate mijloacele disponibile corespunzătoare împrejurărilor și condițiilor externe, pentru a stabili dacă există un pericol de coliziune.",
+      "orice navă trebuie să folosească toate mijloacele vizuale, pentru a stabili dacă există pericolul de coliziune.",
+      "orice navă trebuie să folosească radarul, pentru a stabili dacă există pericolul de coliziune."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 25,
+    "question": "Când relevmentul compas la o navă care se apropie nu variază în mod apreciabil, se consideră:",
+    "options": [
+      "nave în vedere.",
+      "pericol de coliziune.",
+      "nave cu drumuri opuse."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "Când se consideră că există pericol de coliziune?",
+    "options": [
+      "când navele navigă în drumuri opuse.",
+      "când relevmentul compas la o navă care se apropie nu variază în mod apreciabil.",
+      "când viteza de apropiere între cele două nave este foarte mare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "question": "Cum trebuie să se execute o manevră pentru evitarea unei coliziuni?",
+    "options": [
+      "din timp, cu schimbări mici de drum, pentru a nu devia prea mult de la drumul navei.",
+      "hotărât, din timp și conform cu buna practică marinărească.",
+      "hotărât, cu variații de viteză, pentru evitarea pericolului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Cum trebuie să se execute schimbările de drum și/sau de viteză pentru evitarea unei coliziuni?",
+    "options": [
+      "schimbări mici de drum și/sau de viteză, pentru a nu devia prea mult de la drumul navei.",
+      "schimbări destul de mari de viteză și mici de drum, pentru a nu devia prea mult de la drumul navei.",
+      "dacă împrejurările permit, să fie destul de mare, pentru a putea fi percepută imediat de orice navă care o observă vizual sau cu radarul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 29,
+    "question": "Dacă pentru evitarea unei coliziuni este suficientă numai schimbarea de drum, cum trebuie să fie executată?",
+    "options": [
+      "manevra se va face cu mult timp înainte, să fie substanțială și să nu conducă la o altă situație de foarte mare apropiere.",
+      "se vor executa schimbări mari de drum, suficiente pentru evitarea coliziunii.",
+      "se va efectua o schimbare de drum suficientă pentru ca să se elimine orice pericol de coliziune."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 30,
+    "question": "Manevra de evitare între nave se va efectua astfel încât să permită trecerea la:",
+    "options": [
+      "o distanță maximă.",
+      "o distanță de siguranță.",
+      "o distanță minimă."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "question": "Până când se controlează eficacitatea unei manevre de evitare?",
+    "options": [
+      "până când navele vor fi la travers una față de cealaltă.",
+      "până când nava cealaltă va fi într-un unghi de 45° tribord/babord.",
+      "până când nava cealaltă a fost complet și definitiv depășită."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "question": "Care este manevra cea mai indicată pentru a se câștiga mai mult timp pentru aprecierea situației, atunci când trebuie să se evite o coliziune?",
+    "options": [
+      "reducerea vitezei sau opirea completă, stopând mașinile ori punându-le înapoi.",
+      "stoparea navei.",
+      "reducerea la minimum de viteză, până la limita guvernării."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 33,
+    "question": "Cum se navigă în șenal sau cale navigabilă îngustă?",
+    "options": [
+      "pe mijlocul șenalului sau căii de acces.",
+      "cât mai aproape posibil de marginea exterioară din dreapta șenalului sau căii de acces respective, atunci când aceasta se poate face.",
+      "se va naviga întotdeauna cât mai aproape posibil de marginea exterioară a șenalului sau căii de acces, pentru asigurarea unei veghe corespunzătoare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "question": "Ce semnale pot da navele care navigă prin șenal și se îndoiesc de intențiile navei care traversează șenalul?",
+    "options": [
+      "un sunet lung și două scurte.",
+      "un semnal de avertizare compus din cinci sunete scurte.",
+      "un semnal lung de atenționare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "question": "Ce măsuri de siguranță trebuie să ia o navă care se apropie de un cot aflat într-un șenal sau o cale de acces îngustă?",
+    "options": [
+      "să emită cinci sunete scurte (de avertizare).",
+      "să emită un semnal scurt și să navige pe partea dreaptă a șenalului.",
+      "să emită un semnal lung și să navige cu prudență și vigilență."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 36,
+    "question": "Schemelor de separare a traficului li se aplică reglementările referitoare la schemele de separare a traficului, adoptate de:",
+    "options": [
+      "guvernele țărilor unde se află schemele.",
+      "Organizație.",
+      "Organizație și guvernele anumitor țări."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "question": "Nava trebuie să navige pe banda de navigație corespunzătoare în direcția generală a traficului și să se îndepărteze, în măsura posibilului, de linia sau zona de separare a sensurilor de trafic atunci când trebuie să navige:",
+    "options": [
+      "în exteriorul unei scheme de separare a traficului.",
+      "în interiorul unei scheme de separare a traficului.",
+      "în interiorul unei benzi de separație."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "question": "Cum trebuie să se angajeze o navă pentru intrarea sau ieșirea dintr-o schemă de separare a traficului?",
+    "options": [
+      "sub un unghi drept față de direcția generală a traficului.",
+      "ca regulă generală pe la una din extremități, dar atunci când se angajează să intre sau să iasă din orice parte, să facă manevra sub unghi cât mai mic față de direcția traficului.",
+      "prin zona de separare a traficului, dar cu aprobarea autorităților care supraveghează navigația în schema de separare a traficului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "question": "Cum trebuie să întretoaie o navă benzile de separație, când este obligată să o facă?",
+    "options": [
+      "sub un unghi cât mai mic față de direcția generală a traficului și cu viteza redusă.",
+      "sub un unghi cât mai mic față de direcția generală a traficului și cu viteza maximă.",
+      "pe cât posibil perpendicular față de direcția traficului."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "question": "Zonele de navigație costieră pot fi folosite pentru traficul costier?",
+    "options": [
+      "în mod normal nu trebuie folosite pentru traficul direct, cu excepția navelor mai mici de 20 m lungime și a navelor cu vele.",
+      "pot fi folosite de toate navele aparținând țării riverane.",
+      "pot fi folosite de navele cu capacitate de manevră redusă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 41,
+    "question": "Când poate o navă să pătrundă într-o zonă de separare sau să taie o linie de separare?",
+    "options": [
+      "când condițiile hidrometeorologice fac dificilă navigația în sensul general al traficului.",
+      "în caz de urgență, pentru evitarea unui pericol imediat, sau pentru a pescui într-o zonă de separare.",
+      "zona de separare nu va fi traversată în nici o situație."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "question": "Cum trebuie să se navige în zone vecine cu extremitățile unei zone de separare a traficului?",
+    "options": [
+      "se va naviga în direcția generală a traficului.",
+      "se vor semnaliza sonor și vizual intențiile de schimbare de drum.",
+      "cu atenție deosebită."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "question": "Este permisă ancorarea în schemele de separare a traficului?",
+    "options": [
+      "se va evita în măsura maximă a posibilului ancorarea atât în schema de separare, cât și în zonele învecinate acesteia.",
+      "se poate ancora, dar se vor da toate semnalele prevăzute în prezentele reguli.",
+      "nu se poate ancora în nici o situație."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 44,
+    "question": "Cum trebuie să navige navele care nu folosesc o schemă de separare a traficului?",
+    "options": [
+      "să folosească zonele de navigație costieră.",
+      "să se îndepărteze cât mai mult de zona de separare a traficului.",
+      "să navige în apropiere, dar să nu intersecteze linia de separare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "question": "Care sunt navele exceptate de la prevederile regulii referitoare la navigație în schemele de separare a traficului?",
+    "options": [
+      "navele cu capacitate de manevră redusă, angajate în manevra de menținere a siguranței navigației.",
+      "navele cu defecțiuni la motorul principal.",
+      "navele cu avarii la cârmă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 46,
+    "question": "Ce navă trebuie să se abată din drumul navei ajunsă din urmă?",
+    "options": [
+      "nava care se află la o distanță de 200 m.",
+      "nava care se află la o distanță de 100 m.",
+      "nava care ajunge din urmă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 47,
+    "question": "Cum se comportă o navă care ajunge din urmă (depășește) o altă navă?",
+    "options": [
+      "nava care ajunge din urmă o altă navă va avea prioritate.",
+      "nava ajunsă din urmă va manevra astfel încât să-i permită navei care o depășește deplasarea.",
+      "orice navă care ajunge din urmă o altă navă trebuie să se abată din drumul navei ajunsă din urmă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 48,
+    "question": "Când se consideră că o navă ajunge din urmă altă navă?",
+    "options": [
+      "când vine dintr-o direcție mai mare de 22°5 dinapoia traversului celorlalte nave, astfel încât noaptea se vede numai lumina din pupa și luminile din bordurile navei ajunsă din urmă.",
+      "când vede lumina din pupa și luminile din bordurile navei ajunsă din urmă.",
+      "când vede lumina catargului pupa și luminile din pupa."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 49,
+    "question": "Cum trebuie să manevreze o navă care nu poate stabili cu siguranță că ajunge din urmă altă navă?",
+    "options": [
+      "să se considere navă privilegiată și să-și mențină viteza și drumul.",
+      "să se considere navă care ajunge din urmă și să manevreze în consecință.",
+      "să dea semnalele corespunzătoare și după edificare să procedeze conform situației."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "question": "Cum trebuie să manevreze două nave cu vele care se apropie una de alta, astfel încât există pericolul de coliziune și primesc vântul din borduri diferite?",
+    "options": [
+      "nava care primește vântul din babord trebuie să se abată din drumul navei care primește vântul din tribord.",
+      "nava care primește vântul din tribord trebuie să se abată din drumul navei care primește vântul din babord.",
+      "nava care primește vântul din pupa trebuie să se abată din drumul navei care primește vântul din tribord."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 51,
+    "question": "Cum trebuie să manevreze două nave cu vele care se apropie una de alta, astfel încât există pericolul de coliziune și primesc vântul din același bord?",
+    "options": [
+      "nava care o vede pe cealaltă prin babord trebuie să se abată din drumul celeilalte nave.",
+      "nava care este în vânt se va abate din drumul navei de sub vânt.",
+      "nava care o vede pe cealaltă prin tribord trebuie să se abată din drumul celeilalte nave."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 52,
+    "question": "Care este manevra unei nave care nu este obligată să se abată din drumul altei nave?",
+    "options": [
+      "trebuie să-și mențină drumul și viteza.",
+      "va schimba numai drumul, pentru a evita o situație periculoasă.",
+      "va reduce viteza sau va stopa, pentru a evita situații periculoase."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 53,
+    "question": "Când trebuie să manevreze nava care nu este obligată să se abată din drumul altei nave?",
+    "options": [
+      "indiferent de situație, nu se va abate niciodată din drumul altei nave.",
+      "imediat ce i se pare evident faptul că nava care are obligația de a se abate din drumul său nu face manevra.",
+      "când în urma observării relevmentului și-a dat seama că există pericolul de coliziune."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "question": "Din drumul căror nave trebuie să se abată o navă cu propulsie mecanică în marș?",
+    "options": [
+      "navelor cu vele.",
+      "velierelor care navigă numai cu mașina.",
+      "velierelor care poartă la prova un semn conic negru, cu vârful în jos."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 55,
+    "question": "Din drumul căror nave trebuie să se abată o navă cu vele în marș?",
+    "options": [
+      "navelor cu propulsie mecanică cu viteză mică.",
+      "navelor care nu sunt stăpâne pe manevra lor.",
+      "navelor petroliere sau navelor care transportă gaze lichefiate."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "question": "Din drumul căror nave trebuie să se abată o navă cu vele în marș?",
+    "options": [
+      "navelor frigorifice cu viteză mare.",
+      "navelor petroliere.",
+      "navelor cu capacitate de manevră redusă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 57,
+    "question": "Din drumul căror nave trebuie să se abată o navă cu vele în marș?",
+    "options": [
+      "navelor în curs de pescuit.",
+      "traulelor aflate în marș spre zona de pescuit.",
+      "navelor colectoare de pește aflate în marș."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 58,
+    "question": "Din drumul căror nave trebuie să se abată o navă stânjenită de pescajul său?",
+    "options": [
+      "navelor cu vele.",
+      "navelor nestăpâne pe manevra lor.",
+      "navelor petrolier sau navelor care transportă gaze lichefiate."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "question": "Căror nave li se aplică regulile de conducerea navelor pe vizibilitate redusă?",
+    "options": [
+      "navelor care navigă în interiorul zonelor de vizibilitate redusă și numai una dintre ele nu o vede pe cealaltă.",
+      "navelor care nu se văd una pe alta și care navigă înlăuntrul sau în apropierea zonelor de vizibilitate redusă.",
+      "navelor care navigă în interiorul sau apropierea zonelor de vizibilitate redusă și observă una la alta numai luminile de catarg."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "question": "Cu ce viteză trebuie să navige o navă în condiții de vizibilitate redusă?",
+    "options": [
+      "cu viteză redusă și veghe la prova.",
+      "cu viteză economică, dar cu radarul în funcțiune și cu o veghe corespunzătoare, pentru a evita pericolul de coliziune.",
+      "cu o viteză de siguranță adaptată împrejurărilor existente și condițiilor de vizibilitate redusă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 61,
+    "question": "Când se vor respecta regulile referitoare la \"lumini și semne\"?",
+    "options": [
+      "în marș ziua și noaptea.",
+      "pe orice vreme.",
+      "în staționar ziua și noaptea."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "question": "În ce perioadă sunt respectate regulile referitoare la lumini?",
+    "options": [
+      "pe timpul nopții.",
+      "pe timpul nopții și pe vizibilitate redusă.",
+      "de la apusul la răsăritul soarelui."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "question": "Pe timpul zilei se vor respecta regulile cu privire la:",
+    "options": [
+      "lumini.",
+      "semne.",
+      "lumini și semne."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "question": "Când mai pot fi purtate luminile prevăzute de reguli?",
+    "options": [
+      "de la răsăritul la apusul soarelui, pe timp cu vizibilitate redusă, în toate împrejurările în care această măsură este necesară.",
+      "când vizibilitatea este sub 3 Mm.",
+      "în srâmtori, când vizibilitatea este redusă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 65,
+    "question": "Când se vor respecta regulile referitoare la semne?",
+    "options": [
+      "în timpul crepusculului.",
+      "pe timpul zilei.",
+      "ziua sau noaptea, când sunt iluminate."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "question": "Lumina albă așezată deasupra axului longitudinal al navei, arătând o lumină neîntreruptă pe un arc de orizont de 22°5 astfel ca să arate 22°5 înapoia traversului fiecărui bord este:",
+    "options": [
+      "lumina de pupa.",
+      "lumina de catarg.",
+      "lumina de remorcaj."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "question": "Lumină verde din tribord și lumină roșie din babord, vizibile pe un arc de 112°5 adică de la prova până la 22°5 înapoia traversului, reprezintă ceea ce se înțelege prin expresia:",
+    "options": [
+      "lumină de bord.",
+      "lumină de pupa.",
+      "lumină de remorcaj."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 68,
+    "question": "Ce se înțelege prin expresia \"lumină de catarg\"?",
+    "options": [
+      "orice lumină albă instalată pe catargul unei nave la o înălțime prevăzută de normele din registru.",
+      "orice lumină albă vizibilă pe tot orizontul.",
+      "o lumină albă așezată deasupra axului longitudinal al navei, arătând o lumină neîntreruptă pe un arc de orizont de 225°, astfel ca să arate 22°5 înapoia traversului fiecărui bord."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 69,
+    "question": "Ce se înțelege prin expresia \"lumină de bord\"?",
+    "options": [
+      "lumină verde din tribord și lumină roșie din babord, vizibile pe un arc de 112°5, adică de la prova până la 22°5 înapoia traversului.",
+      "lumină albă din borduri, de la scările de acces.",
+      "lumină albă de la scările exterioare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 70,
+    "question": "Lumina albă așezată cât mai aproape posibil în pupa, arătând o lumină neîntreruptă pe un arc de 135° câte 67°5 în fiecare bord este:",
+    "options": [
+      "lumina de ancoră pupa.",
+      "lumina de remorcaj.",
+      "lumina de pupa."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 71,
+    "question": "Ce se înțelege prin expresia \"lumină de pupa\"?",
+    "options": [
+      "o lumină albă instalată la pupa unei nave.",
+      "o lumină așezată cât mai aproape posibil în pupa, arătând o lumină neîntreruptă pe un arc de 135°, câte 67°5 în fiecare bord.",
+      "o lumină albă instalată la pupa, care arată ca o lumină neîntreruptă pe un arc de cerc de 135°, câte 67°5 în fiecare bord."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 72,
+    "question": "Lumina galbenă așezată cât mai aproape posibil în pupa arătând o lumină de 135°, câte 67°5 în fiecare bord este:",
+    "options": [
+      "lumina de pupa.",
+      "lumina de remorcaj.",
+      "lumina de ancoră pupa."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "question": "Trei lumini în poziție verticală din care luminile de sus și de jos roșii și lumina din mijloc albă sunt luminile purtate de o navă:",
+    "options": [
+      "cu capacitate de manevră redusă când nu este în marș.",
+      "nestăpână pe manevra sa.",
+      "stânjenită de pescajul ei când nu este în marș."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "question": "Ce se înțelege prin expresia \"lumină de remorcaj\"?",
+    "options": [
+      "o lumină albă așezată deasupra luminii de pupa după care se guvernează în timpul remorcajului.",
+      "o lumină galbenă neîntreruptă vizibilă la 360°.",
+      "o lumină galbenă așezată cât mai aproape posibil de pupa, arătând o lumină neîntreruptă pe un arc de cerc de 135°, câte 67°5 în fiecare bord."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 75,
+    "question": "Luminile roșu-alb-roșu dispuse pe verticală, lumina de ancoră de la pupa sunt luminile purtate de o navă:",
+    "options": [
+      "nestăpână pe manevră la ancoră.",
+      "cu capacitate de manevră redusă la ancoră.",
+      "stânjenită de pescajul ei la ancoră."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "question": "Lumina neîntreruptă pe un arc de orizont de 360° este:",
+    "options": [
+      "lumina de catarg.",
+      "lumina cu sclipiri regulate.",
+      "lumina vizibilă pe întreg orizontul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 77,
+    "question": "Trei semne suprapuse din care semnul superior și inferior câte o bulă, iar cel din mijloc un bicon sunt semnele purtate de o navă:",
+    "options": [
+      "nestăpână pe manevra sa.",
+      "stânjenită de pescajul ei.",
+      "cu capacitate de manevră redusă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 78,
+    "question": "Ce se înțelege prin expresia lumină vizibilă pe întreg orizontul?",
+    "options": [
+      "lumină neîntreruptă pe un arc de de orizont de 360°.",
+      "lumină neîntreruptă vizibilă la prova și în borduri.",
+      "lumină neîntreruptă vizibilă pe un arc de orizont de 180°."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 79,
+    "question": "O lumină cu sclipiri regulate a cărei frecvență este de 120 sclipiri pe minut sau mai mult, reprezintă ceea ce se înțelege prin expresia:",
+    "options": [
+      "lumină de bord.",
+      "lumină cu sclipiri.",
+      "lumină de remorcaj."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "question": "O bulă la prova și trei semne dispuse vertical, dintre care semnul superior și inferior bule și cel din mijloc bicon, montate în locul cel mai vizibil sunt semnele purtate de o navă:",
+    "options": [
+      "cu capacitate de manevră redusă la ancoră.",
+      "stânjenită de pescajul ei la ancoră.",
+      "nestăpână pe manevră la ancoră."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 81,
+    "question": "Ce se înțelege prin expresia \"lumină cu sclipiri\"?",
+    "options": [
+      "o lumină cu sclipiri regulate cu frecvența de 60 sclipiri pe minut.",
+      "o lumină cu sclipiri regulate cu frecvența de 120 sclipiri pe minut sau mai mult.",
+      "o lumină cu sclipiri regulate foarte repezi."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "question": "La ce distanță trebuie să se vadă luminile de la catarge pentru navele cu lungimea între 12 și 20 m?",
+    "options": [
+      "1-2 Mm.",
+      "2 Mm.",
+      "3 Mm."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 83,
+    "question": "La ce distanță trebuie să se vadă luminile de la catarge pentru navele cu lungimea mai mică de 12 m?",
+    "options": [
+      "3 Mm.",
+      "2 Mm.",
+      "1 Mm."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "question": "Un cilindru negru reprezintă semnul purtat de o navă:",
+    "options": [
+      "stânjenită de pescajul său.",
+      "cu capacitate de manevră redusă.",
+      "nestăpână pe manevră."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 85,
+    "question": "La ce distanță trebuie să se vadă luminile din borduri pentru navele cu o lungime între 12 și 50 m?",
+    "options": [
+      "3 Mm.",
+      "2 Mm.",
+      "1,5 Mm."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "question": "La ce distanță trebuie să se vadă luminile din borduri pentru navele cu o lungime mai mică de 12 m?",
+    "options": [
+      "2 Mm.",
+      "0,5 Mm.",
+      "1 Mm."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 87,
+    "question": "La ce distanță trebuie să se vadă lumina din pupa pentru navele cu o lungime între 12 și 50 m?",
+    "options": [
+      "3 Mm.",
+      "2 Mm.",
+      "1 Mm."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "question": "La ce distanță trebuie să se vadă lumina din pupa pentru navele cu o lungime mai mică de 12 m?",
+    "options": [
+      "3 Mm.",
+      "1,5 Mm.",
+      "2 Mm."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 89,
+    "question": "La ce distanță trebuie să se vadă lumina de remorcaj pentru navele cu o lungime mai mare de 50 m?",
+    "options": [
+      "3 Mm.",
+      "4 Mm.",
+      "3,5 Mm."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 90,
+    "question": "La ce distanță trebuie să se vadă lumina de remorcaj pentru navele cu o lungime între 12 și 50 m?",
+    "options": [
+      "3 Mm.",
+      "2 Mm.",
+      "5 Mm."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "question": "La ce distanță trebuie să se vadă lumina de remorcaj pentru navele cu o lungime mai mică de 12 m?",
+    "options": [
+      "1 Mm.",
+      "3 Mm.",
+      "2 Mm."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 92,
+    "question": "La 2 Mm se văd luminile albe, roșii, verzi sau galbene pe întreg orizontul la navele:",
+    "options": [
+      "cu lungimea mai mare de 50 m.",
+      "cu lungimea mai mică de 100 m.",
+      "cu lungimea între 12 și 20 m."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 93,
+    "question": "La ce distanță trebuie să se vadă lumina albă, roșie, verde sau galbenă vizibilă pe întreg orizontul, pentru navele cu lungimea între 12 și 50 m?",
+    "options": [
+      "3 Mm.",
+      "2 Mm.",
+      "1 Mm."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "question": "Ce lumini trebuie să poarte o navă cu pernă de aer în exploatare fără pescaj?",
+    "options": [
+      "aceleași lumini ca o navă cu propulsie mecanică în marș.",
+      "o lumină galbenă cu sclipiri vizibile pe tot orizontul.",
+      "luminile unei nave cu propulsie mecanică în marș plus o lumină galbenă cu sclipiri vizibilă pe tot orizontul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 95,
+    "question": "Ce lumini trebuie să poarte o navă cu propulsie mecanică în marș cu lungimea mai mare de 7 m și a cărei viteză depășește 7 Nd?",
+    "options": [
+      "o lumină albă vizibilă peste tot orizontul și dacă este posibil și luminile din borduri.",
+      "luminile din borduri.",
+      "o lumină albă care poate fi ridicată la nevoie."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 96,
+    "question": "La ce distanță trebuie să se vadă lumina albă vizibilă pe tot orizontul, a unei nave sau obiect de formă nedefinită, parțial în imersiune, care este remorcat?",
+    "options": [
+      "3 Mm.",
+      "2 Mm.",
+      "1 Mm."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 97,
+    "question": "Ce lumini trebuie să poarte obiectele sau navele remorcate, altele decât cele cu forma nedefinită?",
+    "options": [
+      "luminile de catarg și lumina de pupa.",
+      "luminile din borduri și lumina de pupa.",
+      "luminile de remorcher și lumina de pupa."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "question": "Ce lumini trebuie să poarte o navă împinsă înainte când formează o singură unitate?",
+    "options": [
+      "trebuie să poarte la extremitatea prova luminile din borduri.",
+      "lumina de catarg și luminile din borduri.",
+      "lumină de catarg și lumină de pupa."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 99,
+    "question": "Ce lumini trebuie să poarte o navă remorcată la ureche?",
+    "options": [
+      "luminile de catarg și lumina de pupa.",
+      "lumina de pupa și luminile din borduri la extremitatea prova.",
+      "luminile de borduri la extremitatea prova."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "question": "Luminile din borduri și lumina din pupa sunt luminile pe care le poartă o navă:",
+    "options": [
+      "în seviciul de pilotaj și este în marș.",
+      "cu vele când este la ancoră.",
+      "cu vele în marș."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 101,
+    "question": "Ce lumini poartă o navă cu vele în marș?",
+    "options": [
+      "luminile din borduri.",
+      "luminile de catarg și luminile din borduri.",
+      "luminile din borduri și lumina din pupa."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 102,
+    "question": "Luminile din borduri și lumina din pupa, reunite într-un felinar este purtat de:",
+    "options": [
+      "o navă cu vele mai mică de 7 m, în marș.",
+      "o navă cu rame.",
+      "o navă cu vele la ancoră."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 103,
+    "question": "Ce lumini poartă o navă cu vele în marș, mai mică de 20 m?",
+    "options": [
+      "luminile din borduri și lumina din pupa, pe care le poate reuni într-un felinar.",
+      "luminile din borduri.",
+      "o lumină albă pe care să o arate la nevoie."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 104,
+    "question": "La măr sau în partea superioară a catargului, în locul cel mai vizibil, trebuie să poarte felinarul combinat o navă cu vele în marș, cu o lungime mai mică de:",
+    "options": [
+      "30 m.",
+      "20 m.",
+      "15 m."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 105,
+    "question": "Unde trebuie să poarte felinarul combinat o navă cu vele în marș mai mică de 20 m?",
+    "options": [
+      "poate să-l țină oriunde și să-l arate numai la nevoie.",
+      "la măr sau la partea superioară a catargului, în locul cel mai vizibil.",
+      "la bastonul prova."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 106,
+    "question": "Care sunt luminile suplimentare pe care le poate purta o navă cu vele în marș?",
+    "options": [
+      "la măr o lumină verde vizibilă pe tot orizontul.",
+      "la măr o lumină roșie vizibilă pe tot orizontul.",
+      "la măr sau la partea superioară a catargului o lumină roșie deasupra unei lumini verzi, vizibile pe tot orizontul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 107,
+    "question": "Nava care trebuie să fie gata să arate în orice moment o lanternă electrică sau un felinar aprins cu o lumină albă este nava cu vele, în marș, cu o lungime mai mică de:",
+    "options": [
+      "15 m.",
+      "10 m.",
+      "7 m."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 108,
+    "question": "Ce lumini poartă o navă cu vele, mai mică de 7 m, în marș?",
+    "options": [
+      "trebuie să fie gata să arate în orice moment o lanternă electrică sau un felinar aprins cu o lumină albă.",
+      "luminile din borduri.",
+      "o lumină albă la catarg."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 109,
+    "question": "Ce lumini trebuie să poarte o navă cu rame?",
+    "options": [
+      "o lampă albastră care să poate fi arătată oricând.",
+      "o lumină roșie.",
+      "dacă nu poartă luminile unei nave cu vele, să fie pregătită să arate o lanternă electrică sau un felinar cu lumină albă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 110,
+    "question": "La prova, în locul cel mai vizibil, un con cu vârful în jos este semnul purtat pe timp de zi de:",
+    "options": [
+      "o navă care pescuiește și ale cărei unelte se întind pe o distanță orizontală mai mare de 150 m.",
+      "o navă care navigă în același timp cu vele și cu ajutorul unui aparat propulsor.",
+      "o navă sau obiect remorcat care este parțial în imersiune și greu de observat."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 111,
+    "question": "Ce semn trebuie să poarte o navă care navigă în același timp cu vele și cu ajutorul aparatului propulsor?",
+    "options": [
+      "la prova, în locul cel mai vizibil, un con cu vârful în jos.",
+      "un bicon în locul cel mai vizibil.",
+      "două conuri negre vârf la vârf."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 112,
+    "question": "Două lumini suprapuse, vizibile pe tot orizontul, lumina superioară verde și ce inferioară albă, o lumină de catarg așezată la o înălțime mai mare decât lumina verde și înapoia acesteia sunt luminile purtate de:",
+    "options": [
+      "o navă angajată în operațiuni de deminare.",
+      "o navă cu vele în marș.",
+      "o navă care traulează și nu este în marș."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 113,
+    "question": "Ce semne poartă o navă ancorată?",
+    "options": [
+      "o bulă ridicată la prova.",
+      "un bicon instalat la prova.",
+      "un con negru instalat la prova."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 114,
+    "question": "Unde trebuie instalate semnele și luminile navelor eșuate?",
+    "options": [
+      "la prova.",
+      "la catargul pupa.",
+      "în locul cel mai vizibil."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 115,
+    "question": "Când nu sunt obligate navele mai mici de 7 m lungime să poarte lumini de navă ancorată?",
+    "options": [
+      "când sunt la ancoră dar nu într-un canal navigabil îngust, pase de intrare în port sau rade de ancorare.",
+      "când sunt ancorate într-un bazin portuar.",
+      "când sunt la ancoră și în radă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 116,
+    "question": "Căror nave eșuate nu li se cere să poarte luminile și semnele speciale de navă eșuată?",
+    "options": [
+      "nave cu lungime mai mică de 7 m.",
+      "nave cu lungime mai mică de 15 m.",
+      "nave cu lungime mai mică de 12 m."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 117,
+    "question": "Ce este \"sunetul scurt\"?",
+    "options": [
+      "un sunet cu o durată de 2-3 secunde, emis de o navă.",
+      "un sunet emis de o navă propulsată, în marș, cu o durată mică, sub o secundă.",
+      "un sunet a cărui durată este de aproximativ o secundă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 118,
+    "question": "Ce se înțelege prin expresia \"sunet lung\"?",
+    "options": [
+      "un sunet a cărui durată este de 4-6 secunde.",
+      "un sunet emis de o navă propulsată, în marș, cu o durată de peste 6 secunde.",
+      "un sunet sonor emis de o navă cu o durată de 2-3 secunde."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 119,
+    "question": "Ce echipament de semnalizare sonoră trebuie să aibă o navă cu lungimea între 12 și 100 m?",
+    "options": [
+      "un singur fluier în mijlocul navei.",
+      "un clopot la prova sau pupa navei.",
+      "un fluier și un clopot."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 120,
+    "question": "Ce echipament de semnalizare sonoră trebuie să aibă o navă sub 12 m lungime?",
+    "options": [
+      "navele sub 12 m lungime nu sunt obligate să aibă echipament de semnalizare sonoră.",
+      "navele sub 12 m lungime sunt obligate să aibă un fluier și un clopot la prova.",
+      "navele sub 12 m lungime nu sunt obligate să aibă la bord echipamentul de semnalizare prescris, în lipsa lui să fie dotate cu un alt mijloc de emitere a unui semnal sonor eficace."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 121,
+    "question": "Când se emit semnalele sonore de manevră?",
+    "options": [
+      "în orice situații.",
+      "când navele se văd unele pe altele.",
+      "pe timp de vizibilitate redusă."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 122,
+    "question": "Ce semnal sonor se emite pentru indicarea manevrei \"vin la tribord\"?",
+    "options": [
+      "un sunet scurt.",
+      "un sunet scurt, urmat de un sunet lung.",
+      "două sunete lungi, urmate de unul scurt."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 123,
+    "question": "Ce semnal sonor se emite pentru indicarea manevrei \"vin la babord\"?",
+    "options": [
+      "un sunet lung și două scurte.",
+      "două sunete scurte.",
+      "două sunete lungi, urmate de două scurte."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 124,
+    "question": "Ce semnal sonor se emite pentru indicarea manevrei \"am mașina înapoi\"?",
+    "options": [
+      "un sunet lung și trei sunete scurte.",
+      "trei sunete scurte precedate și urmate de un sunet lung.",
+      "trei sunete scurte."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 125,
+    "question": "Cu ce se pot completa semnalele sonore emise cu fluierul, pentru a indica o manevră ce se execută?",
+    "options": [
+      "cu semnale luminoase.",
+      "cu orice alte semnale.",
+      "cu una sau două bule negre ridicate la catarg."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 126,
+    "question": "La ce interval de timp se pot da semnalele necesare luminoase pentru repetarea manevrei?",
+    "options": [
+      "la cel puțin 10 secunde.",
+      "după minim un minut.",
+      "de câte ori este nevoie."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 127,
+    "question": "Ce semnale dă o navă care își dă acordul în legătură cu manevra de depășire pe care urmează să o facă altă navă?",
+    "options": [
+      "un sunet lung și 5 sunete scurte.",
+      "un sunet lung, un sunet scurt, un sunet lung și unul scurt (litera C).",
+      "un sunet scurt pentru tribord și 2 sunete scurte pentru babord."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 128,
+    "question": "Când se emit semnalele sonore pentru vizibilitate redusă?",
+    "options": [
+      "numai ziua, pe vizibilitate redusă.",
+      "noaptea pe timp de ceață.",
+      "atât ziua cât și noaptea, pe vizibilitate redusă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 129,
+    "question": "Când se emit semnalele sonore pe vizibilitate redusă?",
+    "options": [
+      "înlăuntrul sau în apropierea zonei în care vizibilitatea este redusă.",
+      "înlăuntrul unei zone în care vizibilitatea este redusă.",
+      "numai pe timp de ceață."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 130,
+    "question": "Ce semnal sonor emite o navă cu capacitatea de manevră redusă pe vizibilitate redusă?",
+    "options": [
+      "un sunet lung urmat de trei sunete scurte la intervale de 2 minute.",
+      "3 sunete scurte precedate și urmate de un sunet lung, la intervale de 2 minute.",
+      "un sunet lung urmat de 2 sunete scurte la intervale nu mai mari de 2 minute."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 131,
+    "question": "Ce semnale sonore vor emite navele stânjenite de pescajul lor pe vizibilitate redusă?",
+    "options": [
+      "un sunet lung urmat de două sunete scurte, la intervale nu mai mari de 2 minute.",
+      "un sunet lung precedat și urmat de un sunet scurt la intervale de un minut.",
+      "5 sunete scurte la intervale de 2 minute."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 132,
+    "question": "Ce semnale sonore emite o navă cu vele pe vizibilitate redusă?",
+    "options": [
+      "un sunet lung dat cu sirena, la intervale de un minut.",
+      "4 sunete scurte la intervale de două minute.",
+      "un sunet lung urmat de 2 sunete scurte, la intervale ce nu vor fi mai mari de 2 minute."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 133,
+    "question": "Ce obligații are o navă mai mică de 12 m, pe vizibilitate redusă, în cazul în care nu poate emite semnale prescrise de Regulament?",
+    "options": [
+      "să emită din fluierul un semnal sonor format din 5 sunete la interval de un minut.",
+      "să emită un semnal sonor eficace la intervale care să nu depășească 2 minute.",
+      "să emită cu gongul bătăi repezi la interval de maxim un minut."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 134,
+    "question": "Care este semnalul de pericol din Codul Internațional de Semnale?",
+    "options": [
+      "\"N.C\"",
+      "\"P.\"",
+      "\"O.\""
+    ],
+    "correct": 0
+  },
+  {
+    "id": 135,
+    "question": "Care poate fi considerat semnal de pericol?",
+    "options": [
+      "un pavilion având deasupra sau dedesubt o bulă sau un obiect asemănător.",
+      "3 bule negre vertical.",
+      "un pavilion roșu (B)."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 136,
+    "question": "Care poate fi considerat semnal de pericol?",
+    "options": [
+      "fuzee sau facle de mână care produc lumină roșie.",
+      "fuzee sau facle de mână care produc lumină verde.",
+      "fuzee sau facle de mână care produc lumină albă strălucitoare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 137,
+    "question": "Ce este semnalul de pericol dat cu brațele?",
+    "options": [
+      "mișcări lente repetate cu brațele, descriind cercuri deasupra capului.",
+      "ridicarea ambelor brațe vertical deasupra capului.",
+      "mișcări lente și repetate de sus în jos a brațelor întinse lateral."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 138,
+    "question": "Care este semnalul de alarmă radiotelefonică?",
+    "options": [
+      "un semnal bitonal continuu.",
+      "un semnal de ton continuu.",
+      "un semnal compus din tonuri scurte, continuu."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 139,
+    "question": "Ce nave pot folosi zonele de navigație de trafic costier?",
+    "options": [
+      "navele cu o lungime mai mică de 20 m, navele cu vele și navele angajate în operațiuni de pescuit.",
+      "navele ce aparțin țărilor riverane.",
+      "navele cu capacitate de manevră redusă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 140,
+    "question": "Când pot folosi navele zonele de navigație de trafic costier?",
+    "options": [
+      "pentru evitarea unui pericol evident.",
+      "când sunt considerate nave privilegiate.",
+      "când sunt nave stânjenite de pescajul lor."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 141,
+    "question": "Ce semnificație au semnele aprobate transmise prin sisteme de radiocomunicații?",
+    "options": [
+      "sunt considerate semnale de pericol.",
+      "sunt considerate semnale de test.",
+      "sunt considerate semnale de avertizare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 142,
+    "question": "Ce semnificație au semnalele transmise de SART-urile mijloacelor de salvare?",
+    "options": [
+      "sunt considerate semnale de atragere a atenției.",
+      "sunt considerate semnale de avertizare.",
+      "sunt considerate semnale de pericol."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 143,
+    "question": "Scara numerică a unei hărți este:",
+    "options": [
+      "Raportul dintre lungimea și lățimea hărții.",
+      "Un număr de catalog.",
+      "Raportul dintre lungimea unitară de pe Pământ și corespondentul pe hartă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 144,
+    "question": "În emisfera vestică, dacă nava se deplasează spre vest:",
+    "options": [
+      "latitudinea punctului de sosire este mai mică decât latitudinea punctului de sosire.",
+      "longitudinea punctului de plecare este mai mică decât longitudinea punctului de sosire.",
+      "longitudinea punctului de plecare este mai mare decât longitudinea punctului de sosire."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 145,
+    "question": "Temperatura apei de mare se exprimă în:",
+    "options": [
+      "Milibari.",
+      "grade Celsius.",
+      "milimetri coloană de mercur."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 146,
+    "question": "Corespunzător sensului convențional de balizaj de la larg la uscat, în regiunea B, marcajele laterale au următoarele lumini:",
+    "options": [
+      "tribord-verde, babord-roșu.",
+      "tribord-albă fixa, babord-albă cu sclipiri.",
+      "tribord-roșu, babord-verde."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 147,
+    "question": "Drumul giro al navei este:",
+    "options": [
+      "Unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la un reper costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la axul prova al navei.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord giro până la axul prova al navei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 148,
+    "question": "Relevmentul prova la un reper costier este:",
+    "options": [
+      "Unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la linia de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 149,
+    "question": "Latitudinea geografică este:",
+    "options": [
+      "Arcul de ecuator măsurat de la meridianul Greenwich până la meridianul locului.",
+      "Arcul de paralel măsurat de la meridianul Greenwich până la meridianul locului.",
+      "Arcul de meridian măsurat de la ecuatorul terestru până la paralelul locului."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 150,
+    "question": "În emisfera estică, dacă nava se deplasează spre vest:",
+    "options": [
+      "latitudinea punctului de sosire este mai mică decât latitudinea punctului de sosire.",
+      "longitudinea punctului de sosire este mai mică decât longitudinea punctului de plecare.",
+      "longitudinea punctului de sosire este mai mare decât longitudinea punctului de plecare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 151,
+    "question": "Dacă vântul bate dinaintea traversului acesta produce:",
+    "options": [
+      "creșterea vitezei și derivă de vânt.",
+      "numai creșterea vitezei.",
+      "micșorarea vitezei și derivă de vânt."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 152,
+    "question": "Relevmentul compas la un reper costier este:",
+    "options": [
+      "Unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la linia de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 153,
+    "question": "Longitudinea geografică este:",
+    "options": [
+      "Arcul de ecuator măsurat de la meridianul Greenwich până la meridianul locului.",
+      "Arcul de paralel măsurat de la meridianul Greenwich până la meridianul locului.",
+      "Arcul de meridian măsurat de la ecuatorul terestru până la paralelul locului."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 155,
+    "question": "În emisfera sudică, dacă nava se deplasează spre Nord:",
+    "options": [
+      "latitudinea punctului de plecare este mai mică decât latitudinea punctului de sosire.",
+      "latitudinea punctului de plecare este mai mare decât latitudinea punctului de sosire.",
+      "longitudinea punctului de plecare este mai mică decât longitudinea punctului de sosire."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 156,
+    "question": "Acul magnetic al compasului magnetic de la bordul navei se orientează pe direcția:",
+    "options": [
+      "Nord adevărat.",
+      "Nord giro.",
+      "Nord compas."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 157,
+    "question": "Marcajele laterale din sistemul de balizaj semnalizează:",
+    "options": [
+      "Limitele laterale ale unui pericol de navigație.",
+      "Limitele laterale ale unei serii de pericole de navigație.",
+      "Limitele laterale ale șenalului navigabil."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 158,
+    "question": "Drumul magnetic al navei este:",
+    "options": [
+      "Unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la un reper costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la axul prova al navei.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 159,
+    "question": "Relevmentul magnetic la un reper costier este:",
+    "options": [
+      "Unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la linia de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 160,
+    "question": "Polii geografici sunt:",
+    "options": [
+      "Cele două puncte în care axa de rotație intersectează suprafața Pământului.",
+      "Punctele în care linia ce trece prin centrul Pământului și punctul navei intersectează suprafața Pământului.",
+      "Punctele în care linia ce trece prin centrul Pământului și prin observatorul astronomic de la Greenwich intersectează suprafața Pământului."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 161,
+    "question": "Adâncimea apei se măsoară cu:",
+    "options": [
+      "lochul.",
+      "sonda.",
+      "barometrul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 162,
+    "question": "Reperele costiere utilizate pentru determinarea punctului navei pot fi:",
+    "options": [
+      "geamanduri, balize, scondri.",
+      "alte nave aflate la ancoră.",
+      "faruri."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 163,
+    "question": "Drumul adevărat al navei este:",
+    "options": [
+      "Unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la un reper costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la axul prova al navei.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la axul prova al navei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 164,
+    "question": "Dacă vântul bate din travers acesta produce:",
+    "options": [
+      "creșterea vitezei și derivă de vânt.",
+      "doar creșterea vitezei.",
+      "derivă de vânt."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 165,
+    "question": "Lumina alternativă a unui far are următoarea semnificație:",
+    "options": [
+      "intensitatea luminii este variabilă.",
+      "lumina fixă combinată cu intensificare de lumina.",
+      "culori diferite în sectoare strict delimitate."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 166,
+    "question": "Longitudinea geografică este:",
+    "options": [
+      "Arcul de ecuator măsurat de la meridianul Greenwich până la meridianul locului.",
+      "Arcul de paralel măsurat de la meridianul Greenwich până la meridianul locului.",
+      "Arcul de meridian măsurat de la ecuatorul terestru până la paralelul locului."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 168,
+    "question": "Dacă vântul bate din prova tribord acesta produce:",
+    "options": [
+      "micșorarea vitezei și derivă de vânt la tribord.",
+      "derivă de vânt la babord.",
+      "micșorarea vitezei și derivă de vânt la babord."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 169,
+    "question": "Lumina unui far în izofază are următoarea semnificație:",
+    "options": [
+      "durata de lumina este egală cu durata de întuneric.",
+      "intensitatea luminii este constanta.",
+      "lumina fixă este combinată cu o intensificare de lumina."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 170,
+    "question": "Drumul compas al navei este:",
+    "options": [
+      "unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la un reper costier.",
+      "unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la axul prova al navei.",
+      "unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 171,
+    "question": "Harta marină este:",
+    "options": [
+      "o hartă tematică care figurează aspecte detaliate ale întinderilor de apă de pe o anumită suprafață a scoarței terestre.",
+      "o harta geografică a unei porțiuni din suprafața Pământului care conține mări și oceane.",
+      "este o reprezentare în plan, convențională, micșorată și generalizată a oceanului planetar."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 172,
+    "question": "În emisfera nordică, dacă nava se deplasează spre Nord:",
+    "options": [
+      "latitudinea punctului de plecare este mai mică decât latitudinea punctului de sosire.",
+      "latitudinea punctului de plecare este mai mare decât latitudinea punctului de sosire.",
+      "longitudinea punctului de plecare este mai mică decât longitudinea punctului de sosire."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 173,
+    "question": "Relevmentul adevărat la un reper costier este:",
+    "options": [
+      "Unghiul din planul orizontului adevărat măsurat de la axul prova al navei până la direcția de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la linia de vizare la reperul costier.",
+      "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 174,
+    "question": "Poziția navei se poate determina, printre altele, prin măsurători de:",
+    "options": [
+      "temperatură.",
+      "relevmente.",
+      "salinitate."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 175,
+    "question": "Linia de credință a compasului magnetic de la bord materializează:",
+    "options": [
+      "Direcția nord magnetic.",
+      "Axul longitudinal al navei.",
+      "Direcția nord compas."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 176,
+    "question": "Viteza ambarcațiunii se măsoară cu:",
+    "options": [
+      "sonda.",
+      "barometrul.",
+      "lochul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 177,
+    "question": "Adâncimea apei se măsoară cu:",
+    "options": [
+      "lochul.",
+      "sonda.",
+      "barometrul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 178,
+    "question": "Dacă vântul bate dinaintea traversului acesta produce:",
+    "options": [
+      "creșterea vitezei și derivă de vânt.",
+      "numai creșterea vitezei.",
+      "micșorarea vitezei și derivă de vânt."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 179,
+    "question": "Dacă vântul bate din travers acesta produce:",
+    "options": [
+      "creșterea vitezei și derivă de vânt.",
+      "doar creșterea vitezei.",
+      "derivă de vânt."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 180,
+    "question": "Dacă vântul bate din prova tribord acesta produce:",
+    "options": [
+      "micșorarea vitezei și derivă de vânt la tribord.",
+      "derivă de vânt la babord.",
+      "micșorarea vitezei și derivă de vânt la babord."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 181,
+    "question": "Temperatura apei de mare se exprimă în:",
+    "options": [
+      "milibari.",
+      "grade Celsius.",
+      "milimetri coloană de mercur."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 182,
+    "question": "Acul magnetic al compasului magnetic de la bordul ambarcațiunii se orientează pe direcția:",
+    "options": [
+      "Nord adevărat.",
+      "Nord giro.",
+      "Nord compas."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 183,
+    "question": "Cele mai sigure repere costiere utilizate pentru determinarea punctului ambarcațiunii sunt:",
+    "options": [
+      "geamanduri, balize, scondri.",
+      "orice construcție de la coastă.",
+      "faruri de aterizare."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 184,
+    "question": "Linia de credința a compasului magnetic la bord materializează:",
+    "options": [
+      "direcția Nord magnetic.",
+      "axul longitudinal al ambarcațiunii.",
+      "direcția Nord compas."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 185,
+    "question": "Lumina unui far în izofaza are următoarea semnificație:",
+    "options": [
+      "durata de lumină este egală cu durata de întuneric.",
+      "intensitatea luminii este constanta.",
+      "lumina fixă este combinată cu o intensificare de lumina."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 186,
+    "question": "Corpul balizei marcajului cardinal de Vest este piturat în dungi orizontale dispuse de sus în jos astfel:",
+    "options": [
+      "galben-negru-galben.",
+      "negru-galben-negru.",
+      "negru-galben."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 187,
+    "question": "Corpul balizei marcajului cardinal de Nord este piturat în dungi orizontale dispuse de sus în jos astfel:",
+    "options": [
+      "negru-galben-negru.",
+      "galben-negru-galben.",
+      "negru-galben."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 188,
+    "question": "Corpul balizei marcajului cardinal de Est este piturat în dungi orizontale dispuse de sus în jos astfel:",
+    "options": [
+      "negru-galben-negru.",
+      "galben-negru-galben.",
+      "negru-galben."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 189,
+    "question": "Marcajul lateral de babord din regiunea A are ca semn de vârf:",
+    "options": [
+      "un con negru cu vârful în sus.",
+      "un cilindru verde.",
+      "un cilindru roșu."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 190,
+    "question": "Marcajul lateral de tribord din regiunea A are ca semn de vârf:",
+    "options": [
+      "un con verde cu vârful în sus.",
+      "un cilindru verde.",
+      "un cilindru roșu."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 191,
+    "question": "Marcajul de pericol izolat are ca semn de vârf:",
+    "options": [
+      "un con roșu cu vârful în sus.",
+      "o sferă de culoare roșie.",
+      "două bule suprapuse de culoare neagră."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 192,
+    "question": "Regula \"verde la tribord - roșu la babord\" valabila în regiunea A de balizaj se aplică marcajelor laterale astfel:",
+    "options": [
+      "în sensul de la coastă către larg.",
+      "în sensul de larg către coastă.",
+      "este de competența guvernelor statelor riverane."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 193,
+    "question": "Conducătorul de ambarcațiune vede pe timp de noapte în prova tribord un marcaj care emite un grup de două sclipiri albe care se repeta regulat. Aceasta este:",
+    "options": [
+      "un semn de ape sigure.",
+      "un semn de pericol izolat.",
+      "un semn de vest."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 194,
+    "question": "Conducătorul de ambarcațiune vede pe timp de noapte în prova babord un marcaj care emite un grup de două sclipiri albe care se repeta regulat. Aceasta este:",
+    "options": [
+      "un semn de ape sigure.",
+      "un semn de pericol izolat.",
+      "un semn de est."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 195,
+    "question": "Conducătorul de ambarcațiune vede pe timp de noapte în prova un marcaj care emite un grup de nouă sclipiri albe care se repetă regulat. Aceasta este:",
+    "options": [
+      "un semn de ape sigure.",
+      "un semn de pericol izolat.",
+      "un semn de vest."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 196,
+    "question": "Conducătorul de ambarcațiune vede pe timp de noapte în prova un marcaj care emite un grup de nouă sclipiri albe care se repetă regulat. Aceasta este:",
+    "options": [
+      "un semn de ape sigure.",
+      "un semn de vest.",
+      "un semn de pericol izolat."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 197,
+    "question": "Conducătorul de ambarcațiune vede pe timp de noapte în prova babord un marcaj care emite un grup de două sclipiri albe care se repeta regulat. Aceasta este:",
+    "options": [
+      "un semn special.",
+      "un semn de pericol izolat.",
+      "un semn de vest."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 198,
+    "question": "Cartul N este un cart:",
+    "options": [
+      "intercardinal.",
+      "cardinal.",
+      "inter-intercardinal."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 199,
+    "question": "Cartul SW este un cart:",
+    "options": [
+      "intercardinal.",
+      "cardinal.",
+      "inter-intercardinal."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 200,
+    "question": "Cartul SSE este un cart:",
+    "options": [
+      "intercardinal.",
+      "cardinal.",
+      "inter-intercardinal."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 201,
+    "question": "Cartul E la N este un cart:",
+    "options": [
+      "intercardinal.",
+      "inter-intercardinal.",
+      "intermediar."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 202,
+    "question": "Drumul adevărat al ambarcațiunii este egal cu 090 grade; rezulta că ambarcațiunea se deplasează către:",
+    "options": [
+      "Vest.",
+      "Est.",
+      "Sud."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 203,
+    "question": "Drumul adevărat al ambarcațiunii este egal cu 000 grade; rezulta că ambarcațiunea se deplasează către:",
+    "options": [
+      "Nord.",
+      "Est.",
+      "Sud."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 204,
+    "question": "Drumul adevărat al ambarcațiunii este egal cu 180 grade; rezulta că ambarcațiunea se deplasează către:",
+    "options": [
+      "Vest.",
+      "Est.",
+      "Sud."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 205,
+    "question": "Drumul adevărat al ambarcațiunii este egal cu 270 grade; rezulta că ambarcațiunea se deplasează către:",
+    "options": [
+      "Vest.",
+      "Est.",
+      "Sud."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 206,
+    "question": "Drumul compas al ambarcațiunii se afla cuprins în cadranul NE de orizont. Care din următoarele valori de drum compas este corectă?",
+    "options": [
+      "Dc = 212 grade.",
+      "Dc = 034 grade.",
+      "Dc = 328 grade."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 207,
+    "question": "Drumul compas al ambarcațiunii se afla cuprins în cadranul SE de orizont. Care din următoarele valori de drum compas este corectă?",
+    "options": [
+      "Dc = 112 grade.",
+      "Dc = 034 grade.",
+      "Dc = 328 grade."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 208,
+    "question": "Drumul compas al ambarcațiunii se afla cuprins în cadranul SW de orizont. Care din următoarele valori de drum compas este corectă?",
+    "options": [
+      "Dc = 102 grade.",
+      "Dc = 234 grade.",
+      "Dc = 328 grade."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 209,
+    "question": "Drumul compas al ambarcațiunii se afla cuprins în cadranul NW de orizont. Care din următoarele valori de drum compas este corectă?",
+    "options": [
+      "Dc = 102 grade.",
+      "Dc = 234 grade.",
+      "Dc = 328 grade."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 210,
+    "question": "Piesa de rezistenta situată în extremitatea prova, constituind o prelungire a chilei, se numește:",
+    "options": [
+      "contractilă.",
+      "etravă.",
+      "carlinga."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 211,
+    "question": "Ce reprezintă un cui de strapazan?",
+    "options": [
+      "un cui de lemn folosit la asamblarea pieselor de rezistenta.",
+      "un cui de lemn bătut în marginea bordajului, vertical de care se prinde rama.",
+      "un cui de lemn, așezat la prova de care se leagă barca."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 212,
+    "question": "La ce folosește podul în cazul zalei de ancora?",
+    "options": [
+      "zalele de ancora nu au pod.",
+      "la ghidare pe nara de ancora.",
+      "mărește rezistenta la întindere și împiedica încurcarea."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 213,
+    "question": "Barbetele sunt bucăți de parâma fixate la prova și pupa bărcii și servesc:",
+    "options": [
+      "pentru amaraj.",
+      "in cazul unei persoane căzută peste bord.",
+      "pentru legare sau remorcat."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 214,
+    "question": "Parâma obținută din răsucirea a trei suvițe se numește:",
+    "options": [
+      "parâmă simplă sau lanțană.",
+      "parâmă simplă sau garlin.",
+      "parâmă simplă sau cordon."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 215,
+    "question": "Apărătoarele gașelor mici la parâme se numesc:",
+    "options": [
+      "guardaman.",
+      "rodante.",
+      "binte."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 216,
+    "question": "Babalele sunt piese metalice din fonta sau otel, simple sau duble și servesc pentru:",
+    "options": [
+      "întărirea structurii de rezistenta a navei.",
+      "ancoraj.",
+      "luarea voltelor cu parâme."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 217,
+    "question": "La navele mici locul babalelor poate fi luat de:",
+    "options": [
+      "trancheti.",
+      "tacheti.",
+      "turnicheti."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 218,
+    "question": "Ce este operațiunea de matisire?",
+    "options": [
+      "împreunarea a doua capete de parâma sau realizarea unei gașe.",
+      "trecerea de la o parâma mai groasa spre una mai subțire.",
+      "sporirea rezistentei la rupere a parâmei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 219,
+    "question": "Ce reprezintă voltele?",
+    "options": [
+      "legăturile prin care parâmele se fixează la dispozitivele de legare existente la bord.",
+      "totalitatea manevrelor mobile de la bord.",
+      "ochiurile făcute de o parâma semirigida."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 220,
+    "question": "In cazul unei rame, pana reprezintă:",
+    "options": [
+      "îngroșarea brațului imediat după manșon.",
+      "partea ramei din care este manevrata.",
+      "partea lată în forma de lopata."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 221,
+    "question": "In general o ancora se compune din următoarele parti:",
+    "options": [
+      "brațe, fus, diamant, inel, traversa.",
+      "traverse, brațe, diamant și eche.",
+      "inel, traversa, brațe și pană."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 222,
+    "question": "Ce înțelegeți prin graparea ancorei:",
+    "options": [
+      "ancora și lanțul sunt suprasolicitate.",
+      "ancora se târăște pe fundul apei.",
+      "ancora s-a agățat într-un corp dur pe fundul apei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 223,
+    "question": "Dacă o parâma intra în compunerea altei parâme, mai groase, aceasta va purta denumirea de:",
+    "options": [
+      "lanțană.",
+      "garlin.",
+      "cordon."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 224,
+    "question": "Adâncimea apei se măsoară cu:",
+    "options": [
+      "lochul.",
+      "sonda.",
+      "barometrul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 225,
+    "question": "Fiecare rând de scânduri sau de table al învelișului (bordajului) exterior se numește:",
+    "options": [
+      "traversa.",
+      "copastie.",
+      "fila."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 226,
+    "question": "Un observator care sta pe puntea navei cu fata spre prova, are în dreapta:",
+    "options": [
+      "bordul babord.",
+      "bordul tribord.",
+      "cuplul maestru."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 227,
+    "question": "Cârma se compune din:",
+    "options": [
+      "pană și eche.",
+      "dame și eche.",
+      "pană și dama."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 228,
+    "question": "Ancora cu patru brațe este folosită:",
+    "options": [
+      "la fluviu și ape interioare.",
+      "în golfuri și estuare.",
+      "la mare în ape de adâncime medie."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 229,
+    "question": "O baba simpla, formata dintr-o singura coloană prevăzuta cu traversa se numește:",
+    "options": [
+      "tranchet.",
+      "turnichet.",
+      "binta."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 230,
+    "question": "Piesele metalice de ghidare a parâmelor eliminând frecarea se numesc:",
+    "options": [
+      "binte.",
+      "babale.",
+      "turnicheti."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 231,
+    "question": "Ce reprezintă patronarea unei parâme?",
+    "options": [
+      "protejarea contra frecării, prin învelirea unei porțiuni.",
+      "înfășurarea capetelor ca sa nu se destrame.",
+      "eliminarea unei porțiuni uzate."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 232,
+    "question": "Piesa fundamentala de rezistenta a oricărei nave, situata în plan diametral, de la prova la pupa, se numește:",
+    "options": [
+      "chila.",
+      "etrava.",
+      "etambou."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 233,
+    "question": "Care este elementul de baza la structura oricărui tip de parâma?",
+    "options": [
+      "lanțana.",
+      "firul.",
+      "garlinul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 234,
+    "question": "Piesele metalice mai mici, care servesc la luarea voltelor cu parâme mai subțiri se numesc:",
+    "options": [
+      "tacheti.",
+      "trancheti.",
+      "turnicheti."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 235,
+    "question": "Dispozitivele de construcție speciala, fixate în bordaj, cu rol de ghidare a parâmei se numesc:",
+    "options": [
+      "rodante.",
+      "urechi.",
+      "tacheti."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 236,
+    "question": "Orificiul rotund prin care trece axul cârmei se numește:",
+    "options": [
+      "stelatura pupa.",
+      "etrava.",
+      "etambreul axului cârmei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 237,
+    "question": "Viteza unei ambarcațiuni se măsoară cu:",
+    "options": [
+      "Sonda.",
+      "Barometrul.",
+      "Lochul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 238,
+    "question": "Dama reprezintă:",
+    "options": [
+      "o scobitura în marginea superioara a bordajului, în care se introduce rama.",
+      "partea cea mai lată a ambarcațiunii.",
+      "locul în care se întâlnesc filele de bordaj cu copastia."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 239,
+    "question": "In cazul unei ancore, diamantul este:",
+    "options": [
+      "locul de unde se leagă capătul lanțului.",
+      "ramificația brațelor.",
+      "locul de împreunare a brațelor cu fusul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 240,
+    "question": "Cum se măsoară calibrul lanțului de ancora?",
+    "options": [
+      "grosimea la mijlocul zalei.",
+      "lățimea maxima a zalei la interior.",
+      "lungimea maxima a zalei la exterior."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 241,
+    "question": "Dispozitivele de construcție speciala, fixate în punte, cu rol de ghidare a parâmei se numesc:",
+    "options": [
+      "rodante.",
+      "urechi.",
+      "tacheti."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 242,
+    "question": "Cablurile fixate de cârma, cu ajutorul cărora se guvernează se numesc:",
+    "options": [
+      "eche.",
+      "troțe.",
+      "pene."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 243,
+    "question": "Vârtejul este:",
+    "options": [
+      "piesa de legătură inte cheia de împreunare a ancorei și cea a lanțului de ancora.",
+      "o za de lat de ancora.",
+      "o cheie de împreunare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 244,
+    "question": "Orificiul rotund prin care trece axul elicei de propulsie se numește:",
+    "options": [
+      "etambou.",
+      "selatura pupa.",
+      "etambreul axului elicei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 245,
+    "question": "Un observator care sta pe puntea navei cu fata spre prova, are în stânga:",
+    "options": [
+      "bordul babord.",
+      "bordul tribord.",
+      "cuplul maestru."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 246,
+    "question": "Elementele de osatura transversale, fixate pe chila la intervale egale, se numesc:",
+    "options": [
+      "filă lacrimară.",
+      "coaste.",
+      "traverse."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 247,
+    "question": "Locul de îmbinare a filelor se numește:",
+    "options": [
+      "cusătura.",
+      "gurna.",
+      "binta."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 248,
+    "question": "Din punct de vedere al materialului folosit la confecționarea parâmelor, una din categoriile incluse în aceasta clasificare o reprezintă:",
+    "options": [
+      "parâmele vegetale.",
+      "parâmele răsucite (garline).",
+      "parâmele simple (lanțane)."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 249,
+    "question": "La parâmele vegetale și sintetice circumferința reprezintă:",
+    "options": [
+      "greutatea.",
+      "grosimea.",
+      "rezistenta."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 250,
+    "question": "Chila reprezintă:",
+    "options": [
+      "element de rezistenta al navei dispus în planul transversal al navei.",
+      "element de rezistenta dispus în planul longitudinal al navei.",
+      "element de rezistență dispus în planul cuplului maestru."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 251,
+    "question": "Sarcina la care parâma se rupe reprezintă:",
+    "options": [
+      "grosimea parâmei.",
+      "greutatea parâmei.",
+      "rezistenta parâmei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 252,
+    "question": "Ce este merlinul?",
+    "options": [
+      "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+      "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+      "o parâmă subțire confecționată din trei sfilate, folosită la înfășurare, legături și patronări."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 253,
+    "question": "Raiul unei macarale este:",
+    "options": [
+      "o rola care se învârtește liber în jurul unui ax.",
+      "o piesa formata din doua placi laterale ovale și doua tocuri.",
+      "piesa de susținere a macaralei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 254,
+    "question": "Etrava reprezintă:",
+    "options": [
+      "prelungirea chilei în tribord și babord.",
+      "prelungirea chilei în prova.",
+      "prelungirea chilei în pupa."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 255,
+    "question": "Care din următoarele parâme au în interior o inima vegetala, pentru protecția acestora?",
+    "options": [
+      "parâmele sintetice.",
+      "parâmele vegetale.",
+      "parâmele metalice."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 256,
+    "question": "Capacitatea parâmei de a se îndoi, fără a-si modifica structura interioara, reprezintă:",
+    "options": [
+      "flexibilitatea parâmei.",
+      "greutatea parâmei.",
+      "rezistenta parâmei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 257,
+    "question": "Ce este grandeea?",
+    "options": [
+      "o lanțană cu circumferința de 25-120mm cusuta pe marginea unei vele sau tenzi pentru a o întări.",
+      "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+      "o lanțană subțire de 7-8mm folosită la înfășurări și patronări de parâme groase."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 258,
+    "question": "Sbirul este:",
+    "options": [
+      "o rola care se învârtește liber în jurul unui ax.",
+      "o piesa formata din doua placi laterale ovale și doua tocuri.",
+      "inel de parâmă confecționat prin matisire care servește la prinderea unui palanc pe o parâmă sau pe un scondru."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 259,
+    "question": "Etamboul reprezintă:",
+    "options": [
+      "prelungirea chilei în tribord și babord.",
+      "prelungirea chilei în prova.",
+      "prelungirea chilei în pupa."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 260,
+    "question": "Caracteristicile parâmelor sunt:",
+    "options": [
+      "flotabilitatea, greutatea, rezistenta, elasticitatea.",
+      "grosimea, greutatea, rezistenta, flexibilitatea, elasticitatea.",
+      "grosimea, flotabilitatea, greutatea, flexibilitatea, elasticitatea, asieta."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 261,
+    "question": "Ce se înțelege prin \"bătaia parâmei\"?",
+    "options": [
+      "separarea firelor după lungime și eliberarea produsului secundar numit stupa.",
+      "îndepărtarea materialelor străine din materia prima.",
+      "operațiunea prin care firele sunt răsucite."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 262,
+    "question": "Ce este saula?",
+    "options": [
+      "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+      "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+      "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 263,
+    "question": "Macaralele în marinărie sunt:",
+    "options": [
+      "dispozitive de genul scripetilor, folosite pentru ridicarea unor greutăți sau pentru schimbarea direcției de tracțiune a unei parâme.",
+      "instalații de forță prevăzute cu cabina și panou de comandă.",
+      "instalații compuse dintr-un ansamblu de grinzi metalice sudate sau nituite, aflate pe nave."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 264,
+    "question": "Coastele reprezintă elemente de construcție ale navei dispuse în planul:",
+    "options": [
+      "liniei de plutire.",
+      "longitudinal.",
+      "transversal."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 265,
+    "question": "Pescajul navei reprezintă:",
+    "options": [
+      "distanta măsurată pe orizontală în planul cuplului maestru, la nivelul liniei de plutire de plina încărcare.",
+      "distanta măsurată pe orizontală în planul cuplului maestru, între extremitățile celor doua borduri.",
+      "distanța măsurată pe verticală, de la linia de bază până la linia de plutire."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 267,
+    "question": "Ce se înțelege prin \"pieptănarea parâmei\"?",
+    "options": [
+      "separarea firelor după lungime și eliberarea produsului secundar, numit stupa.",
+      "îndepărtarea materialelor străine din materia primă.",
+      "operațiunea prin care firele sunt rasucite."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 268,
+    "question": "Ce este lusinul?",
+    "options": [
+      "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+      "o lanțană mai fină decât merlinul, folosită la patronări și înfășurări fine.",
+      "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 269,
+    "question": "Părțile componente ale unei macarale sunt:",
+    "options": [
+      "căpățâna, raiul, sbirul.",
+      "căpățâna, raiul, troliul.",
+      "căpățâna, raiul, spiraiul."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 270,
+    "question": "Varangele reprezintă elemente de construcție ale navei dispuse în planul:",
+    "options": [
+      "liniei de plutire.",
+      "longitudinal.",
+      "transversal."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 271,
+    "question": "Ce este flotabilitatea?",
+    "options": [
+      "proprietatea navei de a reveni la poziția inițială, după ce a fost scoasă din starea de echilibru.",
+      "proprietatea navei de a pluti, la pescajul mediu determinat, cu încărcătura sa.",
+      "proprietatea navei de a-si schimba direcția mișcării."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 272,
+    "question": "Păstrarea parâmelor vegetale se face ferindu-le de:",
+    "options": [
+      "întuneric și lipsa de ventilație.",
+      "umezeala și radiația solara.",
+      "nu necesita masuri speciale pentru păstrare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 273,
+    "question": "Ce se înțelege prin \"toarcerea parâmei\"?",
+    "options": [
+      "separarea firelor după lungime și eliberarea produsului secundar numit stupa.",
+      "îndepărtarea materialelor străine din materia prima.",
+      "operațiunea prin care firele sunt răsucite spre dreapta."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 274,
+    "question": "Ce este garlinul?",
+    "options": [
+      "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+      "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+      "o lanțână subțire de 7-8mm folosită la înfășurări și patronări de parâme groase."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 275,
+    "question": "Palancurile sunt:",
+    "options": [
+      "dispozitive compuse din una sau mai multe macarale cu cate unul sau mai multe raiuri, prin care se trece o parâmă denumită curent.",
+      "instalații compuse din grinzi de otel sudate sau îmbinate prin nituire.",
+      "ansamble alcătuite din mai multe bigi sau cranice, folosite la ridicarea de greutăți și deschiderea capacelor de magazii."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 276,
+    "question": "Elementul de baza din structura oricărei parâme este:",
+    "options": [
+      "suvița.",
+      "firul.",
+      "lanțana."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 277,
+    "question": "Din ce sunt confecționate parâmele metalice?",
+    "options": [
+      "din fire de cânepă, in, bumbac, iuta.",
+      "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm.",
+      "din fire de capron, relon, nailon, polipropilena."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 278,
+    "question": "Mandarul simplu este:",
+    "options": [
+      "dispozitiv de ridicat, alcătuit din doua macarale duble.",
+      "dispozitiv de ridicat alcătuit dintr-o macara fixa, prin care trece o parâmă.",
+      "dispozitiv de ridicat alcătuit dintr-o macara mobila, prin care trece un curent."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 279,
+    "question": "Parâmele simple se numesc si:",
+    "options": [
+      "garline.",
+      "lanțane.",
+      "cordoane."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 280,
+    "question": "Din ce sunt confecționate parâmele vegetale?",
+    "options": [
+      "din fire de cânepă, in, bumbac, iuta.",
+      "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm.",
+      "din fire de capron, relon, nailon, polipropilena."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 281,
+    "question": "Furcheții sunt:",
+    "options": [
+      "piese metalice în forma de furca pe care se sprijină ramele ambarcațiunii.",
+      "montant de copastie.",
+      "nu sunt necesari pentru ambarcatiuni."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 282,
+    "question": "Din ce sunt confecționate parâmele sintetice?",
+    "options": [
+      "din fire de cânepă, in, bumbac, iuta.",
+      "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm.",
+      "din fire de capron, relon, nailon, polipropilena."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 283,
+    "question": "Mai multe fire răsucite intre ele formează:",
+    "options": [
+      "o suvița.",
+      "o lanțână.",
+      "o sfilata."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 284,
+    "question": "Vesta de salvare este:",
+    "options": [
+      "in inventarul ambarcațiunii.",
+      "mijloc individual de salvare care face parte din inventarul ambarcațiunii.",
+      "protejată termic."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 285,
+    "question": "Ce sunt parâmele de sizal?",
+    "options": [
+      "parâme vegetale confecționate din fire lungi de cânepă.",
+      "parâme vegetale confecționate din fibre de bananier.",
+      "parâme vegetale confecționate din frunze de cactus."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 286,
+    "question": "Unde se păstrează parâmele pentru uzul curent?",
+    "options": [
+      "in magazii.",
+      "pe punte.",
+      "intr-un cofferdam."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 287,
+    "question": "Vesta de salvare asigura:",
+    "options": [
+      "ieșirea la suprafață a persoanei căzute în apă, chiar în stare de inconștiență, și menține gura acesteia deasupra nivelului apei.",
+      "la confecționarea baloanelor și paietelor.",
+      "la confecționarea saulelor la ambarcațiuni sport și de agrement."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 288,
+    "question": "Ce trebuie verificat la primirea parâmelor vegetale la bord?",
+    "options": [
+      "culoarea și mirosul.",
+      "calitatea zincării.",
+      "sa nu fie îndoite."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 289,
+    "question": "La ce sunt folosite parâmele de cânepa?",
+    "options": [
+      "la confecționarea manevrelor curente, la bărci și la arborada.",
+      "la confecționarea baloanelor și paietelor.",
+      "la confecționarea saulelor la ambarcațiuni sportive și de agrement."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 290,
+    "question": "Barbetele sunt:",
+    "options": [
+      "parâme folosite pentru prinderea butoaielor și ridicarea acestora.",
+      "capete de parâmă folosite la botare.",
+      "capete de parâmă fixate la prova și la pupa bărcii."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 291,
+    "question": "Boturile sunt:",
+    "options": [
+      "capete de parâmă vegetala sau de lant fixate cu unul din capete solid în punte pentru fixarea provizorie a unei parâme.",
+      "siguranțe ale axului unei macarale.",
+      "stifturi de siguranță ale unei chei de împreunare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 292,
+    "question": "Care dintre afirmație de mai jos este adevărată?",
+    "options": [
+      "tacheții sunt piese metalice formate din doua coloane cilindrice care servesc la luarea voltelor la parâmele date ca legături la mal.",
+      "tacheții sunt piese metalice în forma de T, montate pe punte, pe copastie și servesc pentru luarea voltelor la parâme mai subțiri.",
+      "tacheții sunt piese metalice de ghidarea parâmelor, cu minimum de frecare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 293,
+    "question": "Care dintre afirmațiile de mai jos este adevărată?",
+    "options": [
+      "turnicheții sunt piese metalice în forma de T, ce se folosesc la luarea voltelor la diverse parâme.",
+      "turnicheții sunt piese metalice de ghidarea parâmelor, cu minimum de frecare.",
+      "turnicheții sunt piese metalice pentru agățat lanțuri, parâme vegetale și sârme."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 294,
+    "question": "Care dintre afirmațiile de mai jos este falsa?",
+    "options": [
+      "viteza navei se măsoară în noduri.",
+      "viteza navei se măsoară în Mile marine pe ora (Mm/h).",
+      "viteza navei se măsoară cu anemometrul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 295,
+    "question": "Ce tip de ancora este ancora Amiralitate?",
+    "options": [
+      "cu fus articulat.",
+      "cu gheare de pisica.",
+      "cu fus nearticulat."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 296,
+    "question": "Ce tip de ancora este ancora Hall?",
+    "options": [
+      "cu fus articulat.",
+      "cu gheare de pisica.",
+      "cu fus nearticulat."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 297,
+    "question": "Cum se măsoară greutatea unei parâme?",
+    "options": [
+      "prin măsurarea circumferinței ei.",
+      "prin măsurarea sarcinii care se rupe parâma.",
+      "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 298,
+    "question": "Cum se măsoară grosimea unei parâme?",
+    "options": [
+      "prin măsurarea circumferinței ei.",
+      "prin măsurarea sarcinii care se rupe parâma.",
+      "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 299,
+    "question": "Cum se măsoară rezistenta unei parâme?",
+    "options": [
+      "prin măsurarea circumferinței ei.",
+      "prin măsurarea sarcinii care se rupe parâma.",
+      "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 300,
+    "question": "Echea reprezintă:",
+    "options": [
+      "partea cârmei scufundată în apa, care realizează efectul de guvernare.",
+      "o piesa sub forma unei bare sau a unui sector ce se fixează în capul penei cârmei.",
+      "partea de cârmă ce se afla deasupra liniei de plutire."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 301,
+    "question": "Elementele componente ale unei ancore sunt:",
+    "options": [
+      "nara de ancora, vinciul de ancora și lanțul de ancorare.",
+      "fus, diamant, brațe și gheare.",
+      "stopa de lanț, lanțul de ancorare și tubul de ghidare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 302,
+    "question": "Elementele structurale ale unei parâme sintetice sau vegetale sunt:",
+    "options": [
+      "firul, sfilata, suvița, lanțana, cordonul, garlinul.",
+      "firul, șuvița, lanțana, cordonul, garlinul, gașa.",
+      "firul, sfilata, suvița, lanțana, cordonul, carlinga."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 303,
+    "question": "In categoria nodurilor speciale intra:",
+    "options": [
+      "nodul gura de știucă, nodul de remorca.",
+      "nodul de bandula, nodul picior de câine.",
+      "nodul de scaun, nodul de ancora."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 304,
+    "question": "In categoria obiectelor de armament destinate pentru navigație din inventarul bărcii, intra:",
+    "options": [
+      "ghiordel.",
+      "cuțit de gabier.",
+      "compas de barca."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 305,
+    "question": "In categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intra:",
+    "options": [
+      "pistol de semnalizare.",
+      "butoiaș cu apă potabilă.",
+      "ispol."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 306,
+    "question": "In categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intra:",
+    "options": [
+      "colaci de salvare.",
+      "pavilioane de semnalizare cu brațele.",
+      "veste de salvare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 307,
+    "question": "In categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intra:",
+    "options": [
+      "bastonul de pavilion cu pavilionul.",
+      "ciocanul.",
+      "ghiordelul."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 308,
+    "question": "In categoria obiectelor de armament destinate pentru salvare echipaj, în inventarul bărcii intra si:",
+    "options": [
+      "pistolul de semnalizare.",
+      "butoias cu apă potabilă.",
+      "ispolul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 309,
+    "question": "In categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intra si:",
+    "options": [
+      "trusa cu scule de marangozerie.",
+      "veste de salvare.",
+      "compasul de barca."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 310,
+    "question": "In categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intra si:",
+    "options": [
+      "colaci de salvare.",
+      "ghiordelul.",
+      "compasul de barca."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 311,
+    "question": "In categoria obiectelor de armament destinate pentru salvarea personalului, în inventarul bărcii intra si:",
+    "options": [
+      "trusa cu medicamente.",
+      "trusa cu scule de marangozerie.",
+      "felinar de vânt."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 312,
+    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "options": [
+      "butoias cu apa potabila.",
+      "ghiordelul.",
+      "veste de salvare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 313,
+    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "options": [
+      "pavilioane de semnalizare cu brațele.",
+      "ispolul.",
+      "ciocanul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 314,
+    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "options": [
+      "dopuri de lemn.",
+      "bastonul de pavilion cu pavilionul.",
+      "centuri de salvare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 315,
+    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "options": [
+      "trusa cu medicamente.",
+      "pene, cuie, câlți.",
+      "compasul de barca."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 316,
+    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "options": [
+      "trusa cu medicamente.",
+      "trusa cu scule de marangozerie.",
+      "felinar de vânt."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 317,
+    "question": "In categoria propulsoarelor intra:",
+    "options": [
+      "zbaturile, ramele, elicele.",
+      "linia de arbori, bulbul, cârma.",
+      "cârma, timona, mașina cârmei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 318,
+    "question": "Instalația de ancorare a navei reprezintă:",
+    "options": [
+      "un complex de mecanisme care, acționate separat sau în comun, produce momentul girației (schimbarea direcției de înaintare a navei).",
+      "instalația cu care se realizează propulsia navei.",
+      "instalația cu care se realizează fixarea într-o poziție bine determinată a navei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 319,
+    "question": "Instalația de ancorare:",
+    "options": [
+      "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei.",
+      "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
+      "reprezintă un ansamblu de piese și mecanisme cu ajutorul cărora se guvernează nava în locul voit."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 320,
+    "question": "Instalația de guvernare a navei reprezintă:",
+    "options": [
+      "un complex de mecanisme care, acționate separat sau în comun, produce momentul girației (schimbarea direcției de înaintare a navei).",
+      "instalația cu care se realizează propulsia navei.",
+      "instalatia cu care se realizează fixarea într-o poziție bine determinată a navei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 321,
+    "question": "Instalația de guvernare:",
+    "options": [
+      "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
+      "reprezintă un ansamblu de piese și mecanisme care trebuie sa asigure respectarea drumului impus navei sau schimbarea direcției de înaintare a navei.",
+      "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 322,
+    "question": "Instalația de propulsie a navei:",
+    "options": [
+      "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei.",
+      "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
+      "reprezintă un ansamblu de piese și mecanisme cu ajutorul cărora se asigura nava în locul voit și într-o pozitie aleasă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 323,
+    "question": "La ce folosește un palanc dublu?",
+    "options": [
+      "pentru multiplicarea forței de acționare a manevrelor curente de la bord și ridicarea de diferite greutăți.",
+      "pentru dublarea forței de tracțiune a unei fungi.",
+      "pentru ridicarea greutăților și la instalațiile de gruie."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 324,
+    "question": "Matagonirea reprezintă:",
+    "options": [
+      "operațiunea de furbisare a alămurilor de pe nava.",
+      "operațiunea de îndepărtare a ruginii și a stratului de vopsea sub care se afla rugina.",
+      "operațiunea de aplicare a grundului pe suprafețe curățate de rugină."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 325,
+    "question": "Nodul de ancora este un nod:",
+    "options": [
+      "de împreunare.",
+      "de legătură.",
+      "de cârlig."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 326,
+    "question": "Nodul de capelatura este un nod:",
+    "options": [
+      "de legătură.",
+      "de cârlig.",
+      "special."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 327,
+    "question": "Nodul de scota este un nod:",
+    "options": [
+      "de legătură.",
+      "de cârlig.",
+      "special."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 328,
+    "question": "Nodul de pescar este un nod:",
+    "options": [
+      "de împreunare.",
+      "de legătură.",
+      "de cârlig."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 329,
+    "question": "Nodul de scaun simplu este un nod:",
+    "options": [
+      "de împreunare.",
+      "de legatura.",
+      "de cârlig."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 330,
+    "question": "Nodul de schelă este un nod:",
+    "options": [
+      "de legătură.",
+      "de cârlig.",
+      "special."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 331,
+    "question": "Nodul de văcar este un nod:",
+    "options": [
+      "de împreunare.",
+      "de legătură.",
+      "de cârlig."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 332,
+    "question": "Nodul gura de știucă este un nod:",
+    "options": [
+      "de împreunare.",
+      "de legatura.",
+      "de cârlig."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 333,
+    "question": "Nodul lat este un nod:",
+    "options": [
+      "de împreunare.",
+      "de legătură.",
+      "de cârlig."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 335,
+    "question": "Nodurile de cârlig sunt:",
+    "options": [
+      "nodurile folosite la legarea unui capăt de parâmă de cârligul unei macarale.",
+      "nodurile folosite la împreunarea a doua capete de parâmă de grosimi aproximativ egale.",
+      "nodurile folosite la fixarea unui capăt de parâmă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 336,
+    "question": "Nodurile de împreunare sunt:",
+    "options": [
+      "nodurile folosite la legarea navelor.",
+      "nodurile folosite la împreunarea a doua capete de parâmă de grosimi aproximativ egale.",
+      "nodurile folosite la fixarea unui capăt de parâmă."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 337,
+    "question": "Nodurile de legătura sunt:",
+    "options": [
+      "nodurile folosite la legarea unui capăt de parâmă de cârligul unei macarale.",
+      "nodurile folosite la împreunarea a doua capete de parâmă de grosimi aproximativ egale.",
+      "nodurile folosite la fixarea unui capăt de parâmă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 338,
+    "question": "Obiectele din alama și bronz se piturează?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 339,
+    "question": "Parâmele de bumbac sun folosite la confecționarea baloanelor și paietelor?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 341,
+    "question": "Parâmele sintetice sunt folosite la confecționarea saulelor la ambarcațiuni sport și de agrement?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 342,
+    "question": "Parâmele de cânepă sunt confecționate din fire de cânepă?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 343,
+    "question": "Parâmele vegetale și sintetice sunt folosite la confecționarea baloanelor și paietelor?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 344,
+    "question": "Parâmele de vegetale și sintetice sunt folosite la confecționarea manevrelor curente?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 345,
+    "question": "Parâmele de cânepă sunt folosite la confecționarea saulelor la ambarcațiuni sport și de agrement?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 346,
+    "question": "Parâmele vegetale și sintetice uzate sunt folosite la confecționarea baloanelor și paietelor?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 350,
+    "question": "Parâmele de sizal sunt confecționate din fire de cânepă?",
+    "options": [
+      "nu.",
+      "da.",
+      "uneori."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 351,
+    "question": "Vinciul este:",
+    "options": [
+      "instalație fixa.",
+      "mecanism de ridicat sau tras, manual sau acționat mecanic, cu ax orizontal utilizat la bord pentru virarea ancorei, manevrelor unei bigi, a curenților palancurilor gruelor de barcă.",
+      "instalație mecanica de forță."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 354,
+    "question": "Nodul de scaun simplu (de gașă) se utilizează la:",
+    "options": [
+      "împreunarea a doua parâme.",
+      "legarea ambarcațiunii de instalațiile.",
+      "nu are utilitate."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 355,
+    "question": "Cabestanul este:",
+    "options": [
+      "instalație mecanica.",
+      "dispozitiv de manevra.",
+      "Mecanism de punte, pentru virarea ancorei sau manevrarea parâmelor, acționat manual sau electro-mecanic, cu ax vertical."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 356,
+    "question": "Gruiul este:",
+    "options": [
+      "instalație mecanica.",
+      "suport ambarcatiune.",
+      "dispozitiv de ridicare a greutatilor și a barcilor având o formă curbată, o raza relativ mică de actiune comparativ cu bigile și granicele și o capacitate de ridicare scăzută."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 358,
+    "question": "Principiul lui Arhimede se aplica:",
+    "options": [
+      "oricărui corp care zboară.",
+      "oricărui corp aflat la sol.",
+      "oricarui corp scufundat în apă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 359,
+    "question": "Rodantele sunt:",
+    "options": [
+      "apărătoare ale macaralelor.",
+      "apărătoare ale gașelor.",
+      "dispozitive de vitalitate."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 360,
+    "question": "Sabordurile sunt:",
+    "options": [
+      "deschideri în bordaj de forma dreptunghiulara, cu destinații diferite.",
+      "deschideri în punte de dimensiuni mici, destinate accesului oamenilor în compartimentele aflate sub punte.",
+      "deschideri în punte destinate pentru iluminarea și aerisirea compartimentului masini și căldări."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 361,
+    "question": "Sarcina la care parâma se rupe reprezintă:",
+    "options": [
+      "grosimea parâmei.",
+      "greutatea parâmei.",
+      "rezistenta pâramei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 362,
+    "question": "Saula \"tin-te bine\" se întâlneste la:",
+    "options": [
+      "bărcile de serviciu.",
+      "bărcile de salvare.",
+      "bărcile de serviciu, bărcile de agrement."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 363,
+    "question": "Se poate da a doua mana de vopsea, dacă nu s-a uscat primul strat de vopsea?",
+    "options": [
+      "da.",
+      "nu.",
+      "nu contează."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 364,
+    "question": "Sunt elemente componente ale instalației de ancorare:",
+    "options": [
+      "stopa de lant, vinciul de ancoră și nara de punte.",
+      "babale, parâme, turnicheti.",
+      "vinciuri de balansină, balansina și cârligul de sarcina."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 365,
+    "question": "Sunt elemente componente ale instalației de ancorare:",
+    "options": [
+      "fungile, brațele și scotele.",
+      "ancora, nara de ancora și ghidajele de lanț.",
+      "straiurile, sarturile și pataratinele."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 366,
+    "question": "Tambuchiurile sunt:",
+    "options": [
+      "deschideri în punte necesare încărcării-descărcării mărfii în/din magazii.",
+      "deschideri în punte de dimensiuni mici, destinate accesului oamenilor în compartimentele aflate sub punte.",
+      "deschideri în punte, destinate pentru iluminarea și aerisirea compartimentului mașini și căldări."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 367,
+    "question": "Timona reprezintă un element component al instalației de:",
+    "options": [
+      "propulsie.",
+      "guvernare.",
+      "ancorare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 368,
+    "question": "Umezeala alterează parâmele vegetale?",
+    "options": [
+      "da.",
+      "nu.",
+      "uneori."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 369,
+    "question": "Unde se afla puntile bărcii?",
+    "options": [
+      "in prova și în pupa.",
+      "in mijlocul bărcii.",
+      "pe fundul bărcii."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 370,
+    "question": "Voltele în cadrul lucrărilor de matelotaj sunt:",
+    "options": [
+      "noduri marinărești.",
+      "legături prin care se fixează parâmele la dispozitive speciale de legare.",
+      "întoarceri ale navelor sub acțiunea vântului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 371,
+    "question": "Voltele se pot face la:",
+    "options": [
+      "baba, tacheti, cavile.",
+      "baba, turnicheti, somare.",
+      "baba, galion, goling."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 408,
+    "question": "La deplasarea înainte a bărcii, efectul cârmei determină:",
+    "options": [
+      "orientarea provei în vânt.",
+      "orientarea provei în bordul în care s-a pus cârma și a pupei în bordul opus.",
+      "mersul în linie dreaptă."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 409,
+    "question": "La marș înainte, pupa este abătută:",
+    "options": [
+      "spre dreapta.",
+      "în bordul pasului elicei, iar prova are tendința să gireze în bordul opus pasului elicei.",
+      "spre stânga."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 410,
+    "question": "Acostarea ambarcațiunii la mal neamenajat:",
+    "options": [
+      "nu este recomandată.",
+      "se face cu vigilență sporită, protejând elicea și cârma.",
+      "este interzisă."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 411,
+    "question": "Depășirile se execută:",
+    "options": [
+      "la o distanță cât mai mare de nava depășită, viteza se adaptează situației, urmărind a nu face valuri pentru nava depășită, dar acordând atenția necesară întâmpinării valurilor din siajul acesteia.",
+      "de către ambarcațiunea care merge pe mijlocul șenalului.",
+      "oricum deoarece nu sunt reguli speciale de siguranță în cazul acestei manevre."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 412,
+    "question": "Remorcarea este o operațiune la care lungimea parâmei de remorcă:",
+    "options": [
+      "se va alege astfel încât nava remorcată să nu suporte curentul respins de elicea navei remorcher.",
+      "nu contează lungimea parâmei de legare.",
+      "nu se fac remorcări cu ambarcatiuni."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 413,
+    "question": "Înainte de pătrunderea în ecluză:",
+    "options": [
+      "nu trebuiesc făcute pregătiri speciale la bordul ambarcațiunilor.",
+      "la bordul ambarcațiunilor parâmele trebuie ținute din scurt și componentele echipamentului trebuie să nu depășească limitele navei.",
+      "conducătorul nu are nici o obligație."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 414,
+    "question": "Din motive de siguranță și fluidizare a circulației, pentru accelerarea traversării și pentru exploatarea în plin a ecluzelor:",
+    "options": [
+      "personalul de supraveghere a ecluzelor poate emite ordine care să completeze regulile inițial prevăzute sau care se abat de la acestea, iar conducătorii navelor trebuie să urmeze aceste ordine în zona de ecluzare.",
+      "personalul de supraveghere a ecluzelor nu are permisiunea de a emite ordine care să completeze regulile inițial prevăzute.",
+      "este permisă orice măsură propusă de conducătorii navelor."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 415,
+    "question": "În funcție de tipul cocii, viteza bărcii este cu atât mai mare cu cât:",
+    "options": [
+      "suprafața udată la viteza maximă este mai mare.",
+      "suprafața udată la viteza maximă este mai mică.",
+      "elicea are mai multe pale."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 416,
+    "question": "Înainte de a părăsi locul de acostare:",
+    "options": [
+      "îndepărtați orice material în plus din barca și lăsați-l la țărm; dacă aveți nevoie de el la bord, asigurați-vă că este depozitat în siguranță.",
+      "nu este nevoie de asemenea pregătire.",
+      "puteți depozita materialele după libera dvs. alegere."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 417,
+    "question": "Alegerea celei mai bune elice și a înălțimii motorului necesită verificarea câtorva lucruri precum:",
+    "options": [
+      "turația maximă a motorului; viteza bărcii; ventilația elicei; abilitatea de glisare a bărcii; presiunea de răcire.",
+      "lungimea bărcii.",
+      "pescajul și lățimea bărcii."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 418,
+    "question": "Numărul de ture pe care îl efectuează o elice în mișcarea sa de rotație într-un interval de timp de un minut reprezintă:",
+    "options": [
+      "numărul de rotații pe minut (RPM).",
+      "spațiul parcurs de elice într-un minut.",
+      "viteza de rotație a elicei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 419,
+    "question": "Legăturile ambarcațiunii sunt:",
+    "options": [
+      "parâma pupa.",
+      "parâma prova și pupa.",
+      "parâma prova."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 420,
+    "question": "Locul de ancorare trebuie să îndeplinească o serie de condiții:",
+    "options": [
+      "să permită o ancorare-plecare ușoară, fără să deranjeze alte ambarcatiuni.",
+      "nu sunt impuse condiții speciale pentru ancorare.",
+      "este interzisă ancorarea în afara radelor."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 421,
+    "question": "În cazul în care nu putem observa în mod clar felul cum acționează curentul și vântul în cazul manevrei de \"Om la apă\":",
+    "options": [
+      "nu facem manevra de recuperare a celui căzut în apă.",
+      "venim inițial cu prova pe direcția inversă a rezultantei, căutând efectul minim de derivă și ne apropiem de cel căzut în apă cu viteza scăzută.",
+      "nu este nevoie de nici o estimare a efectului curentului și vântului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 422,
+    "question": "În timpul ecluzării, în camerele ecluzelor:",
+    "options": [
+      "este interzisă curățarea și maturarea navelor și corpurilor flotante.",
+      "este permisă curățarea și maturarea navelor și corpurilor flotante.",
+      "nu este prevăzută expres această regulă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 423,
+    "question": "Conducerea de motovehicule nautice (skyjet) este supusă următoarelor limite:",
+    "options": [
+      "motorul nu se oprește la căderea conducătorului.",
+      "regulile de construcție privesc pe constructor.",
+      "motorul trebuie sau să se oprească automat la căderea conducătorului, sau să fie cuplat automat pe cea mai mică viteză, în timp ce vehiculul trebuie să se oprească sau să descrie o traiectorie circulară."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 424,
+    "question": "Dacă barca dumneavoastră este echipată cu un sistem de cablu împinge-trage, mecanic:",
+    "options": [
+      "toate componentele sistemului trebuie să îndeplinească sau să depășească cerințele menționate în standard.",
+      "componentele sistemului pot fi alese după aprecierea proprietarului.",
+      "nu există reguli și standarde pentru această instalație."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 425,
+    "question": "Manevra de oprire se execută astfel:",
+    "options": [
+      "în cazul în care nu exista nici un motiv sa faceți altfel, reduceți în mod gradat viteza, deoarece reducerea brusca a bărcii poate face ca valul de pupa sa se lovească de oglinda bărcii și sa se reverse în interior.",
+      "ambarcațiunea se opreste rapid, prin punerea pe zero și cuplarea pe înapoi a motorului.",
+      "barca se opreste din mers prin scoaterea cheii din contact."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 426,
+    "question": "Dacă înclinați motorul în sus la viteze mari:",
+    "options": [
+      "nu se observa nici un efect.",
+      "forțele turbionare vor acționa brusc și pot cauza pierderea controlului ambarcatiunii.",
+      "barca se înclina în bordul pasului elicei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 427,
+    "question": "La acostare se folosesc:",
+    "options": [
+      "baloane de protecție polivinilice umplute cu aer.",
+      "corpul ambarcațiunii nu se protejează.",
+      "orice fel de obiecte din metal sau lemn."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 428,
+    "question": "Cu cât viteza de deplasare este mai mare:",
+    "options": [
+      "presiunea apei asupra penei cârmei va fi mai mare, iar schimbarea direcției mai rapidă.",
+      "presiunea apei asupra penei cârmei va fi mai mică, iar schimbarea direcției mai înceată.",
+      "viteza nu influențează rapiditatea schimbării direcției de navigație."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 429,
+    "question": "Mărimea și forma elicei depinde de:",
+    "options": [
+      "turația dată la axul elicei.",
+      "puterea motorului, mărimea corpului ambarcațiunii și scopul pentru care este destinată barca, tracțiune sau viteză.",
+      "parametrii motorului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 430,
+    "question": "Guvernarea poate fi îmbunătățită de:",
+    "options": [
+      "reducerea numărului de cârmă.",
+      "mărimea suprafeței penei cârmei.",
+      "micșorarea unghiului de rotire a cârmei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 431,
+    "question": "La manevra de acostare, pe lângă calitățile manevriere ale navei, tot timpul se va ține cont de vânt și curent urmărindu-se:",
+    "options": [
+      "să se evite influența lor.",
+      "ca forța acestora să fie folosită în ajutorul manevrei și nu manevra să se împotrivească acestora.",
+      "nu se ține cont de vânt și curent."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 432,
+    "question": "Manevra de \"Om la apă\" este o manevră clasică de recuperare care se efectuează:",
+    "options": [
+      "ținând cont de efectul vântului și curentului asupra ambarcațiunii și persoanei căzute în apă, astfel încât ambarcațiunea să nu derive peste omul din apă.",
+      "nu este nevoie de nici o estimare a efectului curentului și vântului.",
+      "această manevră o fac numai navele de salvare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 433,
+    "question": "În camerele ecluzei:",
+    "options": [
+      "nu se folosesc baloanele/trancheții pentru acostare.",
+      "este obligatorie folosirea trancheților pentru acostare.",
+      "se folosesc trancheți care trebuie să fie flotabili, dacă nu sunt legați strâns de navă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 434,
+    "question": "Conducerea de motovehicule nautice (skyjet-uri) este supusă următoarelor limite:",
+    "options": [
+      "se poate naviga atât ziua cât și noaptea.",
+      "este permisă numai ziua.",
+      "nu sunt prevăzute reguli exprese."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 435,
+    "question": "Indicatorul înclinării este folosit:",
+    "options": [
+      "la ridicarea cizmei/motorului pentru controlul elicei.",
+      "numai de persoanele autorizate.",
+      "să orienteze motorul la un unghi predeterminat pentru o performanță mai bună în navigație."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 436,
+    "question": "Înainte de a părăsi locul de acostare:",
+    "options": [
+      "asigurați-vă că operațiunile de pe algoritmul verificărilor dumneavoastră au fost parcurse.",
+      "nu se fac nici un fel de verificări.",
+      "toate verificările sunt făcute de către un service."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 437,
+    "question": "Pasul elicei reprezintă:",
+    "options": [
+      "mărimea diametrului butucului.",
+      "lungimea palei.",
+      "spațiul parcurs de marginea exterioară a elicei în mișcarea de translație efectuată de-a lungul axei de rotație în timpul unei rotații complete."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 438,
+    "question": "Locul de ancorare trebuie să îndeplinească o serie de condiții:",
+    "options": [
+      "este interzisă ancorarea în afara radelor.",
+      "să fie un loc ferit de efectele curenților, valurilor și vântului.",
+      "nu sunt impuse condiții speciale pentru ancorare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 439,
+    "question": "În categoria ecluzelor intră:",
+    "options": [
+      "ecluzele și suprafețele de apă dinăuntrul și dinafara sasurilor ecluzelor care servesc legării la cheu, înșiruirii și așteptării navelor –avanporturile de ecluză.",
+      "barajele și porțile amonte și aval.",
+      "numai sasurile ecluzelor."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 440,
+    "question": "În timpul ecluzării, în camerele ecluzelor:",
+    "options": [
+      "ambarcațiunile mici pot să staționeze oriunde în interiorul camerei.",
+      "ambarcațiunile mici nu au voie să ecluzeze.",
+      "ambarcațiunile mici trebuie să păstreze suficientă distanță față de alte nave."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 441,
+    "question": "Conducerea de motociclete nautice (skyjet) este supusă următoarelor limite:",
+    "options": [
+      "conducătorul și însoțitorul trebuie să poarte veste de salvare.",
+      "conducătorul și însoțitorul nu trebuie să poarte veste de salvare.",
+      "conducătorul și însoțitorul nu trebuie să poarte veste de salvare, dacă sunt buni înotători."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 442,
+    "question": "Mișcarea transversală a unei nave în jurul unei axe longitudinale reprezintă:",
+    "options": [
+      "tangaj.",
+      "ruliu.",
+      "mișcare ascensională."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 443,
+    "question": "\"Mărimea\" forței ce acționează asupra timonei este influențată de:",
+    "options": [
+      "puterea motorului, de câtă porțiune din elice este în apă, de tipul și pasul elicei.",
+      "numai de puterea motorului.",
+      "numai de pasul elicei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 444,
+    "question": "Instalația de guvernare se compune din:",
+    "options": [
+      "timonă și transmisie.",
+      "timona sau manipulatorul electric; servomotorul la navele mari; sistemul de transmisie timonă-servomotor-cârmă; cârma propiu-zisă.",
+      "timona."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 445,
+    "question": "Elicea are pas stânga dacă:",
+    "options": [
+      "la mersul înainte al ambarcațiunii elicea se învârte la dreapta.",
+      "la mersul înapoi al ambarcațiunii elicea se învârte la dreapta.",
+      "la mersul înainte al ambarcațiunii elicea se învârte la stânga."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 446,
+    "question": "În cazul acostării cu bordul:",
+    "options": [
+      "nava se apropie de cheu sub un unghi ascuțit, pentru a atenua impactul provei cu cheul.",
+      "ambarcațiunea se apropie de cheu pe o direcție perpendiculară pe acesta.",
+      "ambarcațiunea se apropie de cheu din orice pozitie."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 447,
+    "question": "Reusita ancorării depinde și de folosirea corectă a lungimii parâmei/lanțului de ancorare și anume:",
+    "options": [
+      "nu sunt stabilite reguli speciale privind lungimea lanțului/parâmei de ancorare.",
+      "lungimea parâmei/lanțului de ancorare nu influențează siguranța ancorării.",
+      "lungimea parâmei/lanțului la ancoră trebuie să fie de 3-5 ori adâncimea ancorării."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 448,
+    "question": "În zona de ecluzare:",
+    "options": [
+      "ancorele trebuie să fie ridicate la post și asigurate.",
+      "ancorele pot fi folosite în ecluză.",
+      "nu sunt prevăzute reguli speciale pentru acest caz."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 449,
+    "question": "O ambarcațiune este dificil de controlat în timpul navigației dacă este:",
+    "options": [
+      "echipată cu motoare de puteri mai mari decât cea pentru care a fost proiectată (\"overpower\").",
+      "este echipată cu motoare cu putere asemănătoare cu cea pentru care a fost proiectată.",
+      "nu este importantă puterea motorului."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 450,
+    "question": "Dacă barca devine instabilă:",
+    "options": [
+      "măriți viteza pentru a stabiliza deplasarea.",
+      "reduceți viteza în mod gradat, nu accelerați, opriți testul de navigație în viteza pe apă, apoi verificați barca și echipamentul, iar în cazul în care considerați că este nevoie, contactați dealer-ul sau un expert pentru a vă ajuta.",
+      "nu este nevoie de nici o verificare, continuați mersul la aceeași parametri, deoarece fenomenul de instabilitate dispare după scurt timp."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 451,
+    "question": "Pentru alegerea elicei care să corespundă exigențelor dvs. trebuie să țineți cont de următoarele elemente:",
+    "options": [
+      "tonajul bărcii.",
+      "experiența conducătorului.",
+      "viteza probabilă a bărcii, care este cea mai bună elice pentru designul și viteza bărcii dumneavoastră; modul în care doriți să folosiți barca; testarea pasului elicei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 452,
+    "question": "Înmulțind rotațiile pe minut (RPM) cu pasul elicei, se obține:",
+    "options": [
+      "valoarea rezistenței elicei.",
+      "spațiul parcurs de ambarcațiune într-un minut.",
+      "numărul de pale de elice."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 453,
+    "question": "Locul de ancorare trebuie să îndeplinească o serie de condiții:",
+    "options": [
+      "nu sunt impuse condiții speciale pentru ancorare.",
+      "este interzisă ancorarea în afara radelor.",
+      "să permită plecarea rapidă a navei de la ancoră, în orice condiții, ziua sau noaptea."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 454,
+    "question": "În zona de ecluzare este interzisă depășirea, navele au voie să treacă pe lângă alte nave care așteaptă în ecluză:",
+    "options": [
+      "atunci când conducătorul sau pasagerii consideră necesar.",
+      "numai atunci când ambarcațiunile trebuie să fie ecluzate înainte sau pentru a se poziționa în spațiile libere aflate la îndemână.",
+      "ori de câte ori conducătorul consideră că este o manevră sigură."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 455,
+    "question": "Înainte de pătrunderea în ecluză:",
+    "options": [
+      "nu trebuie făcute pregătiri speciale la bordul ambarcațiunilor.",
+      "la bordul ambarcațiunilor parâmele trebuie ținute din scurt și componentele echipamentului trebuie să nu depășească limitele navei.",
+      "conducătorul nu are nici o obligație."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 456,
+    "question": "În timpul ecluzării, în camerele ecluzelor:",
+    "options": [
+      "este permis să se lase pasagerii să urce sau să coboare de la bord.",
+      "este interzis să se lase pasagerii să urce sau să coboare fără permisiunea personalului ecluzei.",
+      "nu este prevăzută expres această regulă."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 457,
+    "question": "Conducerea de skyjet este supusă următoarelor limite:",
+    "options": [
+      "pe skyjet trebuie să se aplice numere de înmatriculare vizibile acordate de căpitănie.",
+      "pe skyjet nu trebuie să se aplice numere de înmatriculare, deoarece nu este loc.",
+      "nu sunt reguli prevăzute expres."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 458,
+    "question": "Conducătorul ambarcațiunii:",
+    "options": [
+      "poate să dea drumul timonei la orice viteză a bărcii.",
+      "poate să balanseze timona la o viteză mare a bărcii.",
+      "nu ar trebui să dea drumul timonei la nici un fel de viteză, din cauza forțelor turbionare prezente în sistemul de guvernare, barca ar putea să înceapă să se rotească rapid și să devină instabilă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 459,
+    "question": "Un motor înclinat în sus:",
+    "options": [
+      "are o abilitate de frânare mai redusă decât unul înclinat în jos și este nevoie de mai mult spațiu pentru a opri barca.",
+      "are o abilitate de a opri mai ușor barca.",
+      "nu are nici un fel de influență."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 460,
+    "question": "Schimbarea direcției de deplasare a ambarcațiunii se realizează prin:",
+    "options": [
+      "navigarea în ape cu salinități diferite.",
+      "punerea cârmei într-un bord sau altul și este determinată de forța curentului care apasă asupra penei cârmei, sau orientarea propulsorului în cazul propulsiei în \"Z\".",
+      "ambarcațiunea schimbă direcția când este influențată de curent și vânt."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 461,
+    "question": "Prin rotația elicei se generează efect de:",
+    "options": [
+      "propulsie și guvernare.",
+      "propulsie.",
+      "guvernare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 462,
+    "question": "Dacă înclinați motorul în sus la viteze mari:",
+    "options": [
+      "nu se observa nici un efect.",
+      "forțele turbionare vor acționa brusc și pot cauza pierderea controlului ambarcatiunii.",
+      "barca se înclina în bordul pasului elicei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 463,
+    "question": "La trecerea prin avanporturi de ecluză și la intrarea în ecluze, navele trebuie:",
+    "options": [
+      "să-și micșoreze viteza, pentru a fi posibilă în orice condiții o oprire sigură cu ajutorul cablurilor de otel, parâmelor și a altor măsuri potrivite, astfel încât să fie exclusă o coliziune cu porțile ecluzei sau cu dispozitivele de protecție.",
+      "să execute manevra de intrare cu viteza cea mai mare pentru reducerea timpului de staționare în ecluză.",
+      "nu sunt impuse reguli speciale."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 464,
+    "question": "Ordinea ecluzării este:",
+    "options": [
+      "nu există reguli privind ordinea ecluzării.",
+      "navele administrației; navele care sunt plecate pentru îndeplinirea unor misiuni excepționale; navele avariate grav au prioritate la ecluzare în fața celorlalte, fără a sta la rând; navele de pompieri și de salvare aflate în drum spre locul accidentului; celelalte nave.",
+      "operatorul ecluzei dispune cum crede de cuviință."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 465,
+    "question": "O persoană care nu este pregătită pentru operarea unei bărci de mare viteză:",
+    "options": [
+      "poate încerca să se conducă, crescând succesiv viteza fără a se instrui din partea unor conducători mai experimentați.",
+      "nu este nici o problemă, deoarece nu există riscuri.",
+      "nu ar trebui să încerce să conducă fără o instruire prealabilă și o aplicație practică cu un conducător experimentat sau un dealer, pierderea controlului ar putea avea ca rezultat accidente grave."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 466,
+    "question": "Înainte de a părăsi locul de acostare:",
+    "options": [
+      "nu se fac nici un fel de verificări.",
+      "asigurați-vă că toate mecanismele folosite pentru a atașa motorul de barcă sunt bine strânse și la locul lor, procedați la fel pentru toată aparatura din sistemul de guvernare.",
+      "nu sunt reguli prevăzute expres."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 467,
+    "question": "Ce fenomene hidrologice și meteorologice pot influența manevra navei?",
+    "options": [
+      "vântul, valurile, curentul, adâncimi mari.",
+      "vântul, valurile, curentul.",
+      "vântul, valurile, curentul, adâncimi mici."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 468,
+    "question": "În cazul în care ambarcațiunea dvs. este utilizată în regim de mare viteză în mod constant, este nevoie:",
+    "options": [
+      "să alimentați mai des barca cu combustibil.",
+      "să schimbați uleiul mai des.",
+      "să fie verificate instalațiile de elevare a motorului, de guvernare și de cuplare-accelerare, precum și elicea/elicele, la intervale mai scurte de timp."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 469,
+    "question": "În ce constă manevrabilitatea bărcii?",
+    "options": [
+      "manevrabilitatea constă în capacitatea bărcii de a-și menține direcția de înaintare sau de a schimba această direcție cu ajutorul cârmei și elicei.",
+      "manevrabilitatea consta în incapacitatea bărcii de a-si menține direcția de înaintare.",
+      "nu este o definiție prevăzuta pentru aceasta caracteristica a ambarcațiunii."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 470,
+    "question": "Elicea are pas dreapta dacă:",
+    "options": [
+      "la mersul înainte al ambarcațiunii elicea se învârte la dreapta.",
+      "la mersul înapoi al ambarcațiunii elicea se învârte la dreapta.",
+      "la mersul înainte al ambarcațiunii elicea se învârte la stânga."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 471,
+    "question": "Manevrele de acostare și plecare:",
+    "options": [
+      "sunt manevre simple, care nu solicită cunoștințe de specialitate.",
+      "se fac numai cu piloți specializați.",
+      "prezintă grad sporit de dificultate, solicitând cunoașterea calităților manevriere ale navei și deprinderi marinărești."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 472,
+    "question": "Reusita ancorării depinde și de folosirea corectă a lungimii parâmei/lanțului de ancorare:",
+    "options": [
+      "lungimea parâmei/lanțului la ancoră trebuie să fie de 3-5 ori adâncimea măsurată.",
+      "nu sunt stabilite reguli speciale privind lungimea lanțului/parâmei de ancorare.",
+      "lungimea parâmei/lanțului de ancorare nu influențează siguranța ancorării."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 473,
+    "question": "În zona de ecluze navele care sunt dotate cu o instalație de emisie-recepție:",
+    "options": [
+      "închid aparatul VHF.",
+      "folosesc canalul pe care îl consideră util.",
+      "trebuie să aibă comutat la recepție canalul ecluzei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 474,
+    "question": "În timpul ecluzării, în camerele ecluzelor:",
+    "options": [
+      "este permis să se folosească după legarea navei și până la permiterea ieșirii atât propulsia mecanică, cât și instalația de guvernare prova.",
+      "nu este prevăzută expres această regulă.",
+      "este interzis să se folosească după legarea navei și până la permiterea ieșirii atât propulsia mecanică, cât și instalația de guvernare prova; din motive de siguranță acest lucru este permis numai pentru fracțiuni scurte de timp."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 475,
+    "question": "Motorul atașabil al unui ambarcațiuni se montează:",
+    "options": [
+      "având placa anticavitatie la nivelul chilei ambarcatiunii.",
+      "având placa anticavitatie deasupra nivelului chilei ambarcatiunii, la decalajul maxim permis de dispozitivul de fixare al motorului și dimensiunile oglinzii bărcii.",
+      "se poate monta oricum, deoarece nu sunt influențati parametrii de mișcare ai bărcii."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 476,
+    "question": "În cazul în care ambarcațiunea dvs. este utilizată în regim de mare viteză în mod constant, este nevoie:",
+    "options": [
+      "să alimentați mai des barca cu combustibil.",
+      "să schimbați uleiul mai des.",
+      "să fie verificate instalațiile de elevare a motorului, de guvernare și de cuplare-accelerare, precum și elicea/elicele, la intervale mai scurte de timp."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 477,
+    "question": "La deplasarea înapoi a bărcii, efectul cârmei determină:",
+    "options": [
+      "nu are nici o influență.",
+      "orientarea provei în bordul în care s-a pus cârma și a pupei în sensul opus cârmei.",
+      "orientarea provei în bordul opus celui în care s-a pus cârma și a pupei în sensul punerii cârmei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 478,
+    "question": "La marș înapoi, pupa este abătută:",
+    "options": [
+      "în bordul opus pasului elicei, iar prova va gira în bordul pasului elicei.",
+      "spre stânga.",
+      "spre dreapta."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 479,
+    "question": "Acostarea ambarcațiunii la o navă se face în următoarele condiții:",
+    "options": [
+      "nava la care urmează a se acosta reduce viteza și păstrează direcția fără abatere, iar ambarcațiunea va acosta totdeauna în bordul de sub vânt și cât mai spre centrul navei.",
+      "nu contează condițiile.",
+      "aceasta manevrare este interzisă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 480,
+    "question": "La întâlniri, conducătorul ambarcațiunii:",
+    "options": [
+      "păstrează direcția și viteza de deplasare.",
+      "va reduce viteza în întâmpinarea valurilor provocate de nava ce vine din sens opus și va adopta o viteză corespunzătoare evitării răsturnării.",
+      "se vor evita constant întâlnirile."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 481,
+    "question": "În camerele ecluzei:",
+    "options": [
+      "navele trebuie să se mențină în interiorul limitelor, în cazul în care pe pereții ecluzelor sunt marcate granițe/limite.",
+      "navele se pot lega oriunde consideră.",
+      "nu este nevoie de legarea navelor în timpul ecluzării."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 482,
+    "question": "Schiul nautic pe căile navigabile interioare este permis:",
+    "options": [
+      "numai în zonele stabilite și marcate, acest lucru fiind valabil și pentru activități în care persoanele sunt trase de o ambarcațiune fără schiuri nautice sau pe altfel de obiecte.",
+      "fără restricție de zonă, deoarece ambarcațiunile au o viteză mare.",
+      "nu sunt reguli prevăzute special pentru schiul nautic."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 483,
+    "question": "Când motorul este înclinat în jos la capătul cursei:",
+    "options": [
+      "barca glisează orizontal pe apă.",
+      "pupa bărcii va intra mai adânc în apă, la ambarcațiunile mai mici se observă apuparea.",
+      "inclinarea motorului/cizmei nu influențează alura deplasării."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 484,
+    "question": "Pasul elicei reprezintă:",
+    "options": [
+      "mărimea diametrului butucului.",
+      "lungimea palei.",
+      "spațiul parcurs de marginea exterioară a elicei în mișcarea de translație efectuată de-a lungul axei de rotație în timpul unei rotații complete."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 485,
+    "question": "Guvernarea clasică poate fi ajutată prin instalarea în corpul ambarcațiunii de:",
+    "options": [
+      "propulsoare prova și pupa (bowtruster și sterntruster).",
+      "reducerea suprafeței penei cârmei.",
+      "micșorarea unghiului de rotire a cârmei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 486,
+    "question": "Conducerea de skyjet pe căile navigabile interioare:",
+    "options": [
+      "este interzisă.",
+      "este permisă numai în porțiunile stabilite și marcate.",
+      "nu sunt reguli expres enunțate."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 487,
+    "question": "Dacă barca pe care ați cumpărat-o nu are placa de capacitate:",
+    "options": [
+      "nu este nici o problemă, parametrii limită de exploatare pot fi apreciați.",
+      "contactați dealer-ul dumneavoastră sau producătorul bărcii, pentru a intra în posesia informațiilor garantate.",
+      "calculați dumneavoastră datele de care aveți nevoie."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 488,
+    "question": "Înainte de a părăsi locul de acostare:",
+    "options": [
+      "verificați funcționarea butonului pentru oprire de urgență, dați drumul motorului, trageți saula și vedeți dacă motorul se oprește; asigurați-vă că saula este bine legată de hainele sau vesta dumneavoastră de salvare.",
+      "nu se fac nici un fel de verificări.",
+      "nu trebuie legată saula de haine sau vesta de salvare."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 489,
+    "question": "Dacă pupa intră adânc în apă, datorită înclinării motorului la viteze mari:",
+    "options": [
+      "barca ar putea să înceapă să se rotească rapid și să se arunce pasagerii peste bord.",
+      "barca își mărește stabilitatea de drum.",
+      "nu se observă nici un efect."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1001,
+    "question": "Care este durata maximă a masajului cardio-respirator?",
+    "options": [
+      "30 - 40 min.",
+      "10 - 15 min.",
+      "60 min."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1002,
+    "question": "Care este prima acțiune întreprinsă la acordarea primului ajutor victimelor unei coliziuni?",
+    "options": [
+      "spalarea plăgilor.",
+      "dezinfectarea și pansarea rănilor.",
+      "degajarea căilor respiratorii și asigurarea funcției respiratorii."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1003,
+    "question": "Care este prima măsură pe care o luați în cazul accidentării unei persoane pe apă?",
+    "options": [
+      "transportul imediat până la prima localitate și anunțarea la 112.",
+      "transportul la cel mai apropiat spital.",
+      "acordarea primului ajutor până la sosirea cadrelor de pe ambulanță."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1004,
+    "question": "Care este rolul bandajului?",
+    "options": [
+      "să prevină murdărirea hainelor.",
+      "să împiedice hemoragia.",
+      "să împiedice intrarea corpilor străini în rană."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1005,
+    "question": "Care poate fi cauza obturării căilor respiratorii după o coliziune?",
+    "options": [
+      "inflamarea mucoasei nazale.",
+      "poziția necorespunzătoare în care a fost așezată victima.",
+      "intrarea unor corpi străini în nasul sau gura victimei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1006,
+    "question": "Care sunt simptomele unei fracturi a membrelor?",
+    "options": [
+      "temperatura ridicată a membrului fracturat.",
+      "decolorarea zonei fraturate.",
+      "poziția nefireasca a membrului respectiv miscarea nenaturala."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1007,
+    "question": "Care tip de hemoragie este cea mai periculoasă?",
+    "options": [
+      "hemoragia arterială.",
+      "hemoragia venoasă.",
+      "hemoragia care determină o pierdere rapidă a sângelui."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1008,
+    "question": "Ce criterii trebuie să îndeplinească o atelă?",
+    "options": [
+      "să fie suficient de lungă pentru a imobiliza articulațiile superioară și inferioară a membrului fracturat și să fie rigidă.",
+      "să fie rigidă.",
+      "să fie sterilă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1009,
+    "question": "Ce manevre se fac pentru a acorda primul ajutor în caz de fracturi de membre?",
+    "options": [
+      "se imobilizează membrul în atele care să fie destul de lungi pentru a cuprinde articulația de deasupra și cea de dedesubtul fracturii.",
+      "se unesc capetele oaselor care au ieșit prin piele, apoi se bandajează locul.",
+      "se aplică un garou deasupra fracturii."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1010,
+    "question": "Ce măsuri de iau în cazul victimelor cu fracturi de claviculă (umărul victimei este deplasat ușor înainte și în jos)?",
+    "options": [
+      "aduceți umărul în poziție normală.",
+      "culcați victima pe spate.",
+      "suspendați brațul într-o eșarfă sau chingă delată de gât."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1011,
+    "question": "Ce măsuri de prim ajutor se iau în cazul victimelor care nu mai au puls?",
+    "options": [
+      "se efectuează doar masaj cardiac.",
+      "se efectuează doar respirație artificială.",
+      "se efectuează masaj cardio respirator."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1012,
+    "question": "Ce măsuri de prim ajutor se iau în cazul victimelor care prezintă o entorsă a gleznei?",
+    "options": [
+      "se aplică un bandaj elastic strâns, eventual se aplică și gheață.",
+      "se imobilizează glezna cu atele.",
+      "se transportă urgent victima la mal."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1013,
+    "question": "Ce măsuri de prim ajutor se iau în cazul victimelor care prezintă plăgi tăiate?",
+    "options": [
+      "se transportă de urgență victima la spital.",
+      "se coase plaga.",
+      "se opreste hemoragia și se transportă victima la spital."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1014,
+    "question": "Ce măsuri de prim ajutor se iau în cazul victimelor care și-au pierdut cunoștința?",
+    "options": [
+      "se verifică existența pulsului și a respirației.",
+      "se administrează medicamente de resuscitare.",
+      "se imobilizează membre."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1015,
+    "question": "Ce măsuri de prim ajutor se iau în cazul victimelor cu traumatisme ale coloanei vertebrale, dacă funcțiile vitale ale acesteia sunt asigurate?",
+    "options": [
+      "se transportă imediat victima la spital cu orice mijloc de transport aflat la îndemână.",
+      "se transportă imediat victima la spital așezată pe o platformă improvizată.",
+      "dacă nu există un alt pericol, nu se mișcă accidentatul din poziția în care se află până la sosirea serviciilor de urgență."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1016,
+    "question": "Ce rol au bandajele?",
+    "options": [
+      "imobilizează fracturile.",
+      "dezinfectează rănile.",
+      "acoperă rănile, eventual opresc hemoragiile."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1017,
+    "question": "Ce trebuie să urmăriți la scoaterea victimelor dintr-o ambarcațiune accidentată?",
+    "options": [
+      "să nu produceți pagube suplimentare ambarcațiunii accidentate.",
+      "să nu le agravați leziunile.",
+      "să conservați urmele accidentului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1018,
+    "question": "Cu ce se pot transporta la spital victimele unui accident naval, după ce au fost scoase la mal?",
+    "options": [
+      "Cu orice vehicul, dacă situația victimei permite acest lucru.",
+      "numai cu ambulanța SMURD.",
+      "cu o ambulanță însoțită de un medic specialist."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1019,
+    "question": "Cum extrageți corpii străini din interiorul plăgilor?",
+    "options": [
+      "prin spalare cu apă.",
+      "prin extragere cu mâna.",
+      "renunțăm la asemenea manevră întrucât riscăm să agravăm starea victimei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1020,
+    "question": "Cum pot fi recunoscute fracturile la membrele victimelor unei coliziuni?",
+    "options": [
+      "prin elasticitatea exagerată a membrului fracturat.",
+      "prin culoarea roșie a zonei fracturate.",
+      "prin mișcarea nenaturală a membrului fracturat."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1021,
+    "question": "Cum procedați dacă în timpul masajului cardio-respirator victima își recapătă pulsul?",
+    "options": [
+      "continuați compresiile exterioare ale pieptului.",
+      "încetați compresiile exterioare ale pieptului.",
+      "continuați cu respirație artificială."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1022,
+    "question": "Cum procedați pentru a evita complicațiile în cazul unei fracturi?",
+    "options": [
+      "suspendați zona fracturată cu o fașă.",
+      "imobilizați zona fracturată.",
+      "sterilizați zona fracturată."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1023,
+    "question": "Cum se imobilizează fractura labei piciorului?",
+    "options": [
+      "cu o atelă de la gleznă până la genunchi.",
+      "prin fixarea piciorului într-o chingă de piele.",
+      "cu atele sau bandaj, cât mai rigide, de la degete până la genunchi."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1024,
+    "question": "Cum se imobilizează membrele superioare care au suferit fracturi?",
+    "options": [
+      "cu o eșarfă.",
+      "cu o legătură elastică.",
+      "cu atele, chiar improvizate."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1025,
+    "question": "Se poate imobiliza o fractură fără atele?",
+    "options": [
+      "cu carton.",
+      "cu file de material plastic.",
+      "cu eșarfe și triunghi de pânză."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1026,
+    "question": "Cum se recunoaște o fractură deschisă?",
+    "options": [
+      "zona fracturată nu se poate mișca.",
+      "zona fracturată este înroșită.",
+      "pielea este străpunsă în zona fracturii și se vede osul."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1027,
+    "question": "Cum trebuie așezat accidentatul care prezintă hemoragie externă?",
+    "options": [
+      "astfel încât zona să fie mai jos decât nivelul corpului.",
+      "astfel încât zona să fie mai sus decât nivelul corpului.",
+      "cu picioarele mai sus decât nivelul capului."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1028,
+    "question": "Cum trebuie așezată o persoană rănită care prezintă leziuni ale coloanei vertebrale?",
+    "options": [
+      "dacă este posibil, victima nu trebuie mișcată până la sosirea medicului.",
+      "orizontal, cu fața în jos.",
+      "orizontal, cu fața în sus."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1029,
+    "question": "Cum trebuie resuscitată o victimă a unei coliziuni, care are puls, dar nu respiră?",
+    "options": [
+      "prin aplicarea de palme peste fața victimei.",
+      "prin masaj cardio-respirator.",
+      "prin executarea respirației artificiale."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1030,
+    "question": "Cum trebuie să fie atela destinată imobilizării unei fracturi?",
+    "options": [
+      "flexibilă.",
+      "cât mai rigidă și suficient de lungă pentru a cuprinde articulațiile superioară și inferioară a membrului fracturat.",
+      "cât mai scurtă pentru a nu incomoda rânitul."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1031,
+    "question": "Cum veți proceda dacă victima căreia i-ați efectuat masaj cardio-respirator își revine?",
+    "options": [
+      "așteptați să vedeți cum evoluează starea ei de sănătate.",
+      "o conduceți la mal.",
+      "luați măsuri pentru transportarea ei la spital."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1032,
+    "question": "Hemoragia nazală a unei victime se poate opri dacă aceasta:",
+    "options": [
+      "stă culcată cu mâna stângă ridicată deasupra capului.",
+      "stă culcată cu capul dat pe spate.",
+      "își strânge ambele nări cu degetele timp de aproximativ 5-10 minute."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1033,
+    "question": "În cazul unei coliziuni din care au rezultat mai multe victime, primul ajutor se acordă mai întâi:",
+    "options": [
+      "victimei cu cele mai mari șanse de supraviețuire.",
+      "victimei care comunică ușor.",
+      "victimei în starea cea mai gravă."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1034,
+    "question": "În ce constă primul ajutor în caz de traumatism al capului?",
+    "options": [
+      "aplicarea unor comprese pe frunte și pansarea pârților tumefiante.",
+      "imobilizarea capului cu un dispozitiv improvizat.",
+      "bandajarea plăgilor, degajarea căilor respiratorii, așezarea victimei pe o suprafață plană."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1035,
+    "question": "În ce loc se execută degajarea căilor respiratorii ale victimei unei coliziuni?",
+    "options": [
+      "la locul producerii coliziunii, cât mai urgent.",
+      "la spital, cu instrumente speciale.",
+      "la sosirea ambulanței, de către personalul specializat."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1036,
+    "question": "În ce ordine se va lua măsurile de prim ajutor în funcție de starea victimei?",
+    "options": [
+      "oprirea hemoragiei, respirație artificială, masaj cardiac, pansarea rănilor, imobilizarea fracturilor.",
+      "pansarea rănilor, imobilizarea fracturilor, oprire hemoragie, respirație artificială, masaj cardiac.",
+      "imobilizarea fracturilor, pansarea rănilor, respirație artificială, masaj cardiac, oprirea hemoragiei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1037,
+    "question": "Masajul cardio-respirator trebuie efectuat victimelor:",
+    "options": [
+      "care nu respiră.",
+      "care nu au puls și nu respiră.",
+      "care au suferit traumatisme craniene."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1038,
+    "question": "Transportul victimelor unei coliziuni care prezintă hemoragii se face:",
+    "options": [
+      "imediat după oprirea hemoragiei.",
+      "imediat după pansarea rănilor.",
+      "imediat după anunțarea coliziunii."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1039,
+    "question": "Unde se verifică dacă victima unei coliziuni are puls, dacă aceasta respiră?",
+    "options": [
+      "lângă mărul lui Adam, în scobitura dintre trahee și mușchii gâtului.",
+      "în zona inimii.",
+      "la încheietura mâinii."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1040,
+    "question": "Unde trebuie aplicat garoul de cauciuc în cazul persoanelor rânite care prezintă plăgi însoțite de hemoragii arteriale?",
+    "options": [
+      "peste plagă.",
+      "sub plagă.",
+      "deasupra plăgii."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1041,
+    "question": "Substanțele antiseptice se folosesc pentru:",
+    "options": [
+      "calmarea durerilor.",
+      "dezinfectarea rănilor.",
+      "oprirea hemoragiei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1042,
+    "question": "Victima care a pierdut mult sânge trebuie să fie așezată:",
+    "options": [
+      "cu fața în sus.",
+      "cu picioarele situate mai sus decât restul corpului.",
+      "cu fața în jos."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1043,
+    "question": "În cazul rănilor cu hemoragie se va avea în vedere la început:",
+    "options": [
+      "pansarea rânii.",
+      "curățarea și pansarea rânii.",
+      "oprirea hemoragiei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1044,
+    "question": "Când gura unui rănit rămâne încleștată respirația artificială se poate face?",
+    "options": [
+      "prin gura închisă a victimei.",
+      "prin nările victimei.",
+      "nu se mai face respirație artificială în acest caz."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1045,
+    "question": "Cât poate fi menținut un garou pentru a nu afecta țesuturile?",
+    "options": [
+      "minimum 2 ore.",
+      "maximum 4 ore.",
+      "maximum 2 ore."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1046,
+    "question": "Dezinfectarea plăgilor ce necesită a fi pansate se face cu:",
+    "options": [
+      "apă oxigenată sau iod.",
+      "ser fiziologic.",
+      "apă potabilă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 1047,
+    "question": "Cum se opresc hemoragiile la trunchi și cap?",
+    "options": [
+      "prin aplicarea unui garou de cauciuc.",
+      "prin orice mijloace.",
+      "compreselor sterile și a pansamentelor compresive."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1048,
+    "question": "Cum procedați în cazul unei victime cu multiple arsuri pe cap și membre?",
+    "options": [
+      "arsurile se spală, se bandajează și apoi victima este transportată la cea mai apropiată unitate medicală.",
+      "după stingerea flăcărilor persoana este dezbrăcată rapid de hainele arse.",
+      "trebuie să fie transportată imediat la o unitate medicală."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 1049,
+    "question": "Biletul care se prinde lângă garoul aplicat unei persoane rânite trebuie să conțină:",
+    "options": [
+      "poziția în care a fost găsită victima.",
+      "ora și minutul aplicării garoului.",
+      "numele persoanei care l-a aplicat."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1050,
+    "question": "Ce trebuie să conțină un pansament aplicat pe plagă?",
+    "options": [
+      "o compresă de tifon steril.",
+      "o compresă de orice tip.",
+      "o compresă de vată sterilă."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2001,
+    "question": "Care din următoarele fapte constituie infracțiune?",
+    "options": [
+      "îmbarcarea de pasageri peste limita admisă.",
+      "schimbarea poziției, scoaterea din funcțiune, avarierea gravă sau distrugerea unui semnal de navigație.",
+      "nerespectarea dispozițiilor personalului de la ecluze."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2002,
+    "question": "Care dintre următoarele fapte constituie infracțiune?",
+    "options": [
+      "necomunicarea unor informații.",
+      "refuzul de a pune la dispoziția ANR documente și date necesare investigării.",
+      "împiedicarea îndeplinirii atribuțiilor de serviciu ale personalului navigant."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2003,
+    "question": "Care este cauza agravantă a infracțiunii de preluare fără drept a comenzii unei nave?",
+    "options": [
+      "dacă a fost făcută în scopul devierii navei de la itinerarul său.",
+      "dacă a fost făcută de către un membru al echipajului.",
+      "dacă a fost făcută de două sau mai multe persoane."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2004,
+    "question": "Luarea în stăpânire a unei platforme fixe sau exercitarea controlului asupra acesteia constituie infracțiune?",
+    "options": [
+      "da, dacă s-a produs prin violență ori amenințare cu violența.",
+      "da, dacă s-a produs în scopul devierii de la itinerarul său.",
+      "da, dacă s-a perturbat funcționarea acesteia sau s-a pus în pericol siguranța navigației."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2005,
+    "question": "Ce reprezintă blocarea șenalului navigabil a unei dane sau a bazinului portuar și neexecutarea ordinului căpitanului portului privind măsurile de deblocare?",
+    "options": [
+      "contravenție, dacă este fără urmări.",
+      "infracțiune.",
+      "infracțiune, dar numai dacă a avut ca urmare întreruperea navigației ori a activităților portuare."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2006,
+    "question": "Ultrajul săvârşit împotriva personalului operativ al căpităniei portului, constituie infracțiune?",
+    "options": [
+      "da, dacă persoana se află în exercițiul funcțiunii.",
+      "da, chiar dacă este ca urmare a unor fapte îndeplinite în afara exercițiului funcțiunii.",
+      "da, dacă are ca urmare punerea în pericol a siguranței navigației."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2007,
+    "question": "În ce termen trebuie transcris contractul de construcție al unei nave în registrul de evidență al navelor în construcție?",
+    "options": [
+      "15 zile de la începerea construcției.",
+      "15 zile înainte de începerea construcției.",
+      "15 zile înainte de finalizarea construcției."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2008,
+    "question": "Care este termenul în care proprietarul unei nave are obligația de a înmatricula nava?",
+    "options": [
+      "15 zile.",
+      "30 zile.",
+      "60 zile."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2009,
+    "question": "Care este termenul limită pentru depunerea la căpitănia portului a actului de naționalitate de către proprietar în cazul suspendării dreptului de arborare a pavilionului român?",
+    "options": [
+      "15 zile de când decizia a rămas definitivă.",
+      "30 de zile de la comunicarea deciziei.",
+      "15 zile de la comunicarea deciziei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2010,
+    "question": "Exploatarea în scopuri comerciale a ambarcațiunii de agrement, cu excepția celor autorizate în acest sens, constituie:",
+    "options": [
+      "infracțiune, dacă periclitează siguranța navigației.",
+      "contravenție la regimul siguranței navigației.",
+      "infracțiune, dacă se depășește numărul maxim de pasageri."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2011,
+    "question": "Folosirea de către proprietar a unui nume, număr de identificare sau port de înmatriculare ce nu a fost aprobat de Autoritatea competentă constituie:",
+    "options": [
+      "contravenție.",
+      "infracțiune la regimul înmatriculării navelor.",
+      "contravenție, dacă nava a fost depistată pe șenalul navigabil."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2012,
+    "question": "Care este sancțiunea pentru nerespectarea \"Avizelor către navigatori\"?",
+    "options": [
+      "amendă de la 20.000 la 50.000 lei.",
+      "amendă de la 5.000 la 10.000 lei.",
+      "amendă de la 10.000 la 20.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2013,
+    "question": "Care este sancțiunea pentru navigația în zone nepermise a unei nave?",
+    "options": [
+      "amendă de la 20.000 la 50.000 lei.",
+      "amendă de la 5.000 la 20.000 lei.",
+      "amendă de la 10.000 la 20.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2014,
+    "question": "Care este sancțiunea pentru așezarea de plase ori unelte fixe de pescuit în apele naționale navigabile precum și în rade, porturi, canale sau senale navigabile?",
+    "options": [
+      "amendă de la 10.000 la 30.000 lei.",
+      "amendă de la 5.000 la 10.000 lei.",
+      "amendă de la 5.000 la 20.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2015,
+    "question": "Care este sancțiunea pentru folosirea mijloacelor de semnalizare de la bord în mod nejustificat sau neadecvat regulamentelor de navigație?",
+    "options": [
+      "amendă de la 10.000 la 20.000 lei.",
+      "amendă de la 5.000 la 20.000 lei.",
+      "amendă de la 1.000 la 5.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2016,
+    "question": "Care este sancțiunea pentru poluarea apelor naționale navigabile cu hidrocarburi?",
+    "options": [
+      "amendă de la 5.000 la 20.000 lei.",
+      "amendă de la 1.000 la 8.000 lei.",
+      "amendă de la 20.000 la 40.000 lei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2017,
+    "question": "Care este sancțiunea pentru refuzul prezentării documentului de atestare reprezentanților ANR?",
+    "options": [
+      "amendă de la 2.000 la 5.000 lei.",
+      "amendă de la 1.000 la 5.000 lei.",
+      "amendă de la 500 la 8.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2018,
+    "question": "Care este sancțiunea pentru neanunțarea de către conducătorul unei nave cu privire la evenimentele de navigație ale propriei nave cum ar fi: abordaje, coliziuni, incendii, poluare, scufundare?",
+    "options": [
+      "amendă de la 40.000 la 50.000 lei.",
+      "amendă de la 5.000 la 10.000 lei.",
+      "amendă de la 5.000 la 20.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2019,
+    "question": "Care este sancțiunea pentru nearborarea la bordul navei a pavilionului național în apele naționale navigabile ale României?",
+    "options": [
+      "amendă de la 2.000 la 5.000 lei.",
+      "amendă de la 1.000 la 5.000 lei.",
+      "amendă de la 5.000 la 20.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2020,
+    "question": "Cum se sancționează refuzul de a se supune cercetărilor întreprinse de ANR sau de a pune la dispoziția ANR documentele și datele necesare investigării:",
+    "options": [
+      "amendă de la 1.000 la 5.000 lei.",
+      "amendă de la 30.000 la 50.000 lei.",
+      "amendă de la 10.000 la 20.000 lei."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2021,
+    "question": "Cum se sancționează refuzul de a se supune controlului ANR:",
+    "options": [
+      "amendă de la 1.000 la 5.000 lei.",
+      "amendă de la 5.000 la 20.000 lei.",
+      "amendă de la 20.000 la 30.000 lei."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2022,
+    "question": "Nepredarea la ANR în termen de 5 zile de la comunicarea deciziei de suspendare sau anulare a documentului de atestare se sancționează:",
+    "options": [
+      "amendă de la 100 la 500 lei.",
+      "amendă de la 100 la 1.000 lei.",
+      "amendă de la 1.000 la 5.000 lei."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2023,
+    "question": "Constatarea contravențiilor și aplicarea sancțiunilor prevăzute de HG 1704/2024 se face de către:",
+    "options": [
+      "personalul împuternicit al ANR.",
+      "personal ANR în asistență reprezentant poliție transporturi navale.",
+      "personalul ANR în asistență reprezentant Administrația Portuară."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2024,
+    "question": "Se poate constata contravenția fără oprirea navei?",
+    "options": [
+      "da.",
+      "nu.",
+      "da, dacă săvârșirea contravenției este probată cu un mijloc tehnic."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2025,
+    "question": "Se poate constata contravenția în lipsa contravenientului?",
+    "options": [
+      "nu.",
+      "da, dacă săvârșirea contravenției este probată cu un mijloc tehnic.",
+      "da."
+    ],
+    "correct": 1
+  }
+]
