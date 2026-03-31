@@ -39,7 +39,7 @@ export default function HomeScreen() {
       {/* Header */}
       <View style={{ marginBottom: 24 }}>
         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-          <Text style={{ fontSize: 32, fontWeight: "800", color: colors.text, marginBottom: 6 }}>Quiz Navigație</Text>
+          <Text style={{ fontSize: 32, fontWeight: "800", color: colors.text, marginBottom: 6 }}>Chestionare Barca</Text>
           <Pressable onPress={() => router.push("/settings")} hitSlop={8}>
             <Text style={{ fontSize: 14, fontWeight: "600", color: colors.primary }}>Setări</Text>
           </Pressable>
@@ -86,10 +86,17 @@ export default function HomeScreen() {
         <Text style={{ fontSize: 20, color: colors.textMuted }}>›</Text>
       </Pressable>
 
+      {/* Nautical divider */}
+      <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 20 }}>
+        <View style={{ flex: 1, height: 1, backgroundColor: colors.border }} />
+        <Text style={{ marginHorizontal: 12, fontSize: 16, color: colors.textMuted }}>⚓</Text>
+        <View style={{ flex: 1, height: 1, backgroundColor: colors.border }} />
+      </View>
+
       {/* Actions */}
       <View style={{ gap: 12 }}>
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.primary }}
+          style={{ flexDirection: "row", alignItems: "center", paddingVertical: 22, paddingHorizontal: 18, borderRadius: 14, gap: 14, backgroundColor: colors.primary }}
           onPress={() => router.push("/quiz?mode=exam")}
         >
           <Text style={{ fontSize: 28 }}>⚓</Text>
@@ -139,9 +146,14 @@ export default function HomeScreen() {
         </Pressable>
       )}
 
-      <Text style={{ position: "absolute", bottom: 40, left: 20, right: 20, textAlign: "center", fontSize: 12, color: colors.textMuted }}>
-        Pregătire pentru examenul teoretic CAA — Clasa C și D
-      </Text>
+      <View style={{ position: "absolute", bottom: 40, left: 20, right: 20 }}>
+        <Text style={{ textAlign: "center", fontSize: 12, color: colors.textMuted }}>
+          Pregătire pentru examenul teoretic CAA — Clasa C și D
+        </Text>
+        <Text style={{ textAlign: "center", fontSize: 10, color: colors.textMuted, opacity: 0.5, marginTop: 4 }}>
+          Ultima actualizare a datelor: 2025
+        </Text>
+      </View>
     </View>
   );
 }

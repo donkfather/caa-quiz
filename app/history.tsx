@@ -1,4 +1,5 @@
 import { View, Text, FlatList, Pressable, StyleSheet, Alert } from "react-native";
+import { Feather } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useCallback } from "react";
 import { useTheme } from "../src/lib/ThemeContext";
@@ -18,13 +19,11 @@ const MODE_LABELS: Record<string, string> = {
   learn: "Învață",
 };
 
-function formatDate(iso: string): string {
+function formatDateShort(iso: string): string {
   const d = new Date(iso);
   const day = d.getDate().toString().padStart(2, "0");
   const month = (d.getMonth() + 1).toString().padStart(2, "0");
-  const hours = d.getHours().toString().padStart(2, "0");
-  const mins = d.getMinutes().toString().padStart(2, "0");
-  return `${day}.${month}.${d.getFullYear()} ${hours}:${mins}`;
+  return `${day}.${month}.${d.getFullYear()}`;
 }
 
 function timeAgo(iso: string): string {
@@ -35,6 +34,115 @@ function timeAgo(iso: string): string {
   if (hrs < 24) return `acum ${hrs}h`;
   const days = Math.floor(hrs / 24);
   return `acum ${days}z`;
+}
+
+/**
+ * Circular progress ring using the classic RN "two half-circles" technique.
+ * Works without react-native-svg.
+ */
+function ProgressRing({
+  progress,
+  size,
+  strokeWidth,
+  color,
+  trackColor,
+  centerBg,
+}: {
+  progress: number;
+  size: number;
+  strokeWidth: number;
+  color: string;
+  trackColor: string;
+  centerBg: string;
+}) {
+  const half = size / 2;
+  const innerSize = size - strokeWidth * 2;
+  const clamped = Math.min(Math.max(progress, 0), 100);
+  const angle = (clamped / 100) * 360;
+
+  // Right half rotates from 0 to 180
+  const rightRotation = Math.min(angle, 180);
+  // Left half rotates from 0 to 180 (only when angle > 180)
+  const leftRotation = Math.max(angle - 180, 0);
+
+  return (
+    <View style={{ width: size, height: size }}>
+      {/* Track (full circle border) */}
+      <View style={{
+        position: "absolute",
+        width: size,
+        height: size,
+        borderRadius: half,
+        borderWidth: strokeWidth,
+        borderColor: trackColor,
+      }} />
+
+      {/* Right half clip */}
+      <View style={{
+        position: "absolute",
+        top: 0,
+        left: half,
+        width: half,
+        height: size,
+        overflow: "hidden",
+      }}>
+        <View style={{
+          width: size,
+          height: size,
+          borderRadius: half,
+          borderWidth: strokeWidth,
+          borderColor: color,
+          borderLeftColor: "transparent",
+          borderBottomColor: "transparent",
+          position: "absolute",
+          right: 0,
+          top: 0,
+          transform: [{ rotate: `${rightRotation}deg` }],
+        }} />
+      </View>
+
+      {/* Left half clip — only visible past 180 degrees */}
+      {angle > 180 && (
+        <View style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: half,
+          height: size,
+          overflow: "hidden",
+        }}>
+          <View style={{
+            width: size,
+            height: size,
+            borderRadius: half,
+            borderWidth: strokeWidth,
+            borderColor: color,
+            borderRightColor: "transparent",
+            borderTopColor: "transparent",
+            position: "absolute",
+            left: 0,
+            top: 0,
+            transform: [{ rotate: `${leftRotation}deg` }],
+          }} />
+        </View>
+      )}
+
+      {/* Center label */}
+      <View style={{
+        position: "absolute",
+        top: strokeWidth,
+        left: strokeWidth,
+        width: innerSize,
+        height: innerSize,
+        borderRadius: innerSize / 2,
+        backgroundColor: centerBg,
+        alignItems: "center",
+        justifyContent: "center",
+      }}>
+        <Text style={{ fontSize: 12, fontWeight: "700", color }}>{clamped}%</Text>
+      </View>
+    </View>
+  );
 }
 
 export default function HistoryScreen() {
@@ -84,62 +192,70 @@ export default function HistoryScreen() {
     ]);
   };
 
-  const renderActiveSession = ({ item }: { item: ActiveSession }) => {
+  // Group history by date
+  const groupedHistory = history.reduce<Record<string, SessionRecord[]>>((acc, item) => {
+    const dateKey = formatDateShort(item.date);
+    if (!acc[dateKey]) acc[dateKey] = [];
+    acc[dateKey].push(item);
+    return acc;
+  }, {});
+  const dateGroups = Object.entries(groupedHistory);
+
+  const renderActiveSession = (item: ActiveSession) => {
     const answered = item.answers.filter((a) => a !== null).length;
     const progress = Math.round((answered / item.answers.length) * 100);
     return (
-      <View style={styles.card}>
-        <View style={styles.cardHeader}>
-          <View style={styles.activeBadge}>
-            <Text style={styles.activeBadgeText}>În curs</Text>
-          </View>
-          <Text style={styles.dateText}>{timeAgo(item.updatedAt)}</Text>
+      <Pressable key={item.id} style={[styles.activeCard, { overflow: "hidden" }]} onPress={() => handleResume(item)}>
+        <Pressable
+          onPress={() => handleDeleteSession(item.id)}
+          hitSlop={12}
+          style={{ position: "absolute", top: 10, right: 10, zIndex: 2 }}
+        >
+          <Feather name="trash-2" size={20} color={colors.error} style={{ opacity: 0.35 }} />
+        </Pressable>
+        <View style={{ alignSelf: "flex-start", marginRight: 20 }}>
+          <Text style={styles.activeMeta}>
+            {MODE_LABELS[item.mode] || item.mode} · {timeAgo(item.updatedAt)}
+          </Text>
+          <Text style={styles.activeDetail}>
+            {answered} / {item.answers.length} răspunse · {progress}%
+          </Text>
         </View>
-        <Text style={styles.modeLabel}>{MODE_LABELS[item.mode] || item.mode}</Text>
-        <View style={styles.activeProgressBar}>
-          <View style={[styles.activeProgressFill, { width: `${progress}%` }]} />
-        </View>
-        <Text style={styles.activeProgressText}>
-          {answered} / {item.answers.length} răspunse ({progress}%)
+        <Text style={{ fontSize: 11, color: colors.textMuted, opacity: 0.4, marginTop: 6, alignSelf: "flex-start" }}>
+          Apasă pentru a continua
         </Text>
-        <View style={styles.activeActions}>
-          <Pressable
-            style={styles.resumeButton}
-            onPress={() => handleResume(item)}
-          >
-            <Text style={styles.resumeText}>Continuă</Text>
-          </Pressable>
-          <Pressable
-            style={styles.deleteButton}
-            onPress={() => handleDeleteSession(item.id)}
-          >
-            <Text style={styles.deleteText}>Șterge</Text>
-          </Pressable>
-        </View>
-      </View>
+        {/* Progress bar at bottom */}
+        <View style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: `${progress}%`,
+          height: 4,
+          backgroundColor: colors.primary,
+        }} />
+      </Pressable>
     );
   };
 
-  const renderHistoryItem = ({ item }: { item: SessionRecord }) => {
+  const renderHistoryItem = (item: SessionRecord) => {
     const passed = item.score >= 70;
     return (
-      <View style={styles.card}>
-        <View style={styles.cardHeader}>
-          <Text style={styles.modeLabel}>{MODE_LABELS[item.mode] || item.mode}</Text>
-          <Text style={styles.dateText}>{formatDate(item.date)}</Text>
-        </View>
-        <View style={styles.cardBody}>
-          <Text style={[styles.score, passed ? styles.scorePass : styles.scoreFail]}>
-            {item.score}%
+      <View key={item.id} style={styles.historyRow}>
+        <Text style={[styles.historyScore, passed ? styles.scorePass : styles.scoreFail]}>
+          {item.score}%
+        </Text>
+        <View style={styles.historyInfo}>
+          <Text style={styles.historyMode}>
+            {MODE_LABELS[item.mode] || item.mode}
           </Text>
-          <Text style={styles.detail}>
+          <Text style={styles.historyMeta}>
             {item.correct}/{item.total} corecte
           </Text>
-          <View style={[styles.badge, passed ? styles.badgePass : styles.badgeFail]}>
-            <Text style={[styles.badgeText, passed ? styles.badgeTextPass : styles.badgeTextFail]}>
-              {passed ? "ADMIS" : "RESPINS"}
-            </Text>
-          </View>
+        </View>
+        <View style={[styles.passBadge, passed ? styles.passBadgePass : styles.passBadgeFail]}>
+          <Text style={[styles.passBadgeText, passed ? styles.passBadgeTextPass : styles.passBadgeTextFail]}>
+            {passed ? "ADMIS" : "RESPINS"}
+          </Text>
         </View>
       </View>
     );
@@ -161,27 +277,35 @@ export default function HistoryScreen() {
           ListHeaderComponent={
             <>
               {sessions.length > 0 && (
-                <>
-                  <Text style={styles.sectionTitle}>Sesiuni active</Text>
-                  {sessions.map((s) => (
-                    <View key={s.id} style={{ marginBottom: 10 }}>
-                      {renderActiveSession({ item: s })}
-                    </View>
-                  ))}
-                </>
+                <View style={{ marginBottom: 28 }}>
+                  <Text style={styles.sectionLabel}>Sesiuni active</Text>
+                  <View style={{ gap: 14 }}>
+                    {sessions.map((s) => renderActiveSession(s))}
+                  </View>
+                </View>
               )}
-              {history.length > 0 && (
-                <>
-                  <Text style={styles.sectionTitle}>Rezultate</Text>
-                  {history.map((h) => (
-                    <View key={h.id} style={{ marginBottom: 10 }}>
-                      {renderHistoryItem({ item: h })}
+              {dateGroups.length > 0 && (
+                <View>
+                  <Text style={styles.sectionLabel}>Rezultate</Text>
+                  {dateGroups.map(([date, items], gi) => (
+                    <View key={date} style={gi > 0 ? { marginTop: 20 } : undefined}>
+                      {dateGroups.length > 1 && (
+                        <Text style={styles.dateGroupLabel}>{date}</Text>
+                      )}
+                      <View style={styles.historyList}>
+                        {items.map((h, i) => (
+                          <View key={h.id}>
+                            {renderHistoryItem(h)}
+                            {i < items.length - 1 && <View style={styles.separator} />}
+                          </View>
+                        ))}
+                      </View>
                     </View>
                   ))}
                   <Pressable style={styles.clearButton} onPress={handleClearHistory}>
                     <Text style={styles.clearText}>Șterge istoricul</Text>
                   </Pressable>
-                </>
+                </View>
               )}
             </>
           }
@@ -198,45 +322,86 @@ function makeStyles(colors: any) { return StyleSheet.create({
     backgroundColor: colors.bg,
   },
   list: {
-    padding: 16,
+    padding: 20,
   },
-  sectionTitle: {
-    fontSize: 16,
+  sectionLabel: {
+    fontSize: 12,
     fontWeight: "700",
-    color: colors.textSecondary,
-    marginBottom: 10,
-    marginTop: 6,
+    color: colors.textMuted,
+    textTransform: "uppercase",
+    letterSpacing: 1,
+    marginBottom: 12,
   },
-  card: {
+  // Active sessions — no border, lighter bg
+  activeCard: {
     backgroundColor: colors.bgCard,
     borderRadius: 14,
-    padding: 14,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    padding: 16,
     alignItems: "center",
-    marginBottom: 8,
   },
-  modeLabel: {
+  activeTop: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+    marginBottom: 14,
+  },
+  activeMeta: {
+    fontSize: 13,
+    color: colors.textMuted,
+    marginBottom: 4,
+  },
+  activeDetail: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: colors.textSecondary,
+  },
+  resumeButton: {
+    backgroundColor: colors.primary,
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 24,
+    alignItems: "center",
+    alignSelf: "stretch",
+    marginBottom: 10,
+  },
+  resumeText: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: "#fff",
+  },
+  deleteText: {
     fontSize: 13,
     fontWeight: "600",
-    color: colors.primary,
+    color: colors.error,
   },
-  dateText: {
+  // History results
+  dateGroupLabel: {
     fontSize: 12,
+    fontWeight: "600",
     color: colors.textMuted,
+    marginBottom: 8,
   },
-  cardBody: {
+  historyList: {
+    backgroundColor: colors.bgCard,
+    borderRadius: 14,
+    paddingHorizontal: 16,
+    paddingVertical: 4,
+  },
+  historyRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
+    paddingVertical: 14,
+    gap: 14,
   },
-  score: {
-    fontSize: 28,
+  separator: {
+    height: 1,
+    backgroundColor: colors.border,
+    opacity: 0.5,
+  },
+  historyScore: {
+    fontSize: 22,
     fontWeight: "800",
+    width: 56,
   },
   scorePass: {
     color: colors.success,
@@ -244,88 +409,38 @@ function makeStyles(colors: any) { return StyleSheet.create({
   scoreFail: {
     color: colors.error,
   },
-  detail: {
-    fontSize: 14,
-    color: colors.textSecondary,
+  historyInfo: {
     flex: 1,
   },
-  badge: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 6,
-  },
-  badgePass: {
-    backgroundColor: colors.correctBg,
-  },
-  badgeFail: {
-    backgroundColor: colors.wrongBg,
-  },
-  badgeText: {
-    fontSize: 11,
-    fontWeight: "700",
-  },
-  badgeTextPass: {
-    color: colors.success,
-  },
-  badgeTextFail: {
-    color: colors.error,
-  },
-  // Active sessions
-  activeBadge: {
-    backgroundColor: colors.warning + "20",
-    paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  activeBadgeText: {
-    fontSize: 11,
-    fontWeight: "700",
-    color: colors.warning,
-  },
-  activeProgressBar: {
-    height: 4,
-    backgroundColor: colors.border,
-    borderRadius: 2,
-    marginTop: 8,
-    marginBottom: 6,
-  },
-  activeProgressFill: {
-    height: 4,
-    backgroundColor: colors.primary,
-    borderRadius: 2,
-  },
-  activeProgressText: {
-    fontSize: 12,
-    color: colors.textMuted,
-    marginBottom: 10,
-  },
-  activeActions: {
-    flexDirection: "row",
-    gap: 10,
-  },
-  resumeButton: {
-    flex: 1,
-    backgroundColor: colors.primary,
-    paddingVertical: 10,
-    borderRadius: 8,
-    alignItems: "center",
-  },
-  resumeText: {
-    fontSize: 14,
-    fontWeight: "700",
-    color: "#fff",
-  },
-  deleteButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: colors.border,
-    alignItems: "center",
-  },
-  deleteText: {
+  historyMode: {
     fontSize: 14,
     fontWeight: "600",
+    color: colors.text,
+    marginBottom: 2,
+  },
+  historyMeta: {
+    fontSize: 12,
+    color: colors.textMuted,
+  },
+  passBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 10,
+  },
+  passBadgePass: {
+    backgroundColor: colors.correctBg,
+  },
+  passBadgeFail: {
+    backgroundColor: colors.wrongBg,
+  },
+  passBadgeText: {
+    fontSize: 10,
+    fontWeight: "800",
+  },
+  passBadgeTextPass: {
+    color: colors.success,
+  },
+  passBadgeTextFail: {
     color: colors.error,
   },
   // Empty & clear
@@ -345,16 +460,12 @@ function makeStyles(colors: any) { return StyleSheet.create({
     marginTop: 6,
   },
   clearButton: {
-    marginTop: 16,
-    padding: 14,
-    borderRadius: 12,
-    backgroundColor: colors.bgCard,
-    borderWidth: 1,
-    borderColor: colors.border,
+    marginTop: 20,
+    paddingVertical: 14,
     alignItems: "center",
   },
   clearText: {
-    fontSize: 14,
+    fontSize: 13,
     color: colors.error,
     fontWeight: "600",
   },

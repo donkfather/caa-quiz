@@ -124,7 +124,7 @@ export default function SettingsScreen() {
 
       {/* App info */}
       <Text style={[styles.footerText, { color: t.textMuted }]}>
-        Quiz Navigație CAA v1.0.0
+        Chestionare Barca v1.0.0
       </Text>
     </View>
   );

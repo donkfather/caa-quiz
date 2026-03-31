@@ -32,6 +32,17 @@ const BADGE_IMAGES_LOCKED: Record<string, any> = {
   admis: require("../assets/badges/admis_locked.png"),
 };
 
+const BADGE_RING_COLORS: Record<string, string> = {
+  prima_cursa: "#3b82f6", // blue
+  marinar: "#22c55e",     // green
+  capitan: "#f59e0b",     // amber
+  perfect: "#a855f7",     // purple
+  persistent: "#ef4444",  // red
+  dedicat: "#ec4899",     // pink
+  explorer: "#06b6d4",    // cyan
+  admis: "#22c55e",       // green
+};
+
 export default function BadgesScreen() {
   const insets = useSafeAreaInsets();
   const { theme: colors } = useTheme();
@@ -80,6 +91,7 @@ export default function BadgesScreen() {
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
         {BADGE_DEFS.map((badge) => {
           const isUnlocked = unlocked.has(badge.key);
+          const ringColor = BADGE_RING_COLORS[badge.key] || colors.primary;
           return (
             <View
               key={badge.key}
@@ -87,15 +99,17 @@ export default function BadgesScreen() {
                 width: "47%",
                 backgroundColor: colors.bgCard,
                 borderRadius: 14,
-                padding: 14,
+                padding: 16,
                 alignItems: "center",
-                borderWidth: 1,
-                borderColor: isUnlocked ? colors.primary + "40" : colors.border,
+                opacity: isUnlocked ? 1 : 0.4,
+                ...(isUnlocked
+                  ? { borderWidth: 1, borderColor: ringColor + "50" }
+                  : {}),
               }}
             >
               <Image
                 source={isUnlocked ? BADGE_IMAGES[badge.key] : BADGE_IMAGES_LOCKED[badge.key]}
-                style={{ width: 64, height: 64, marginBottom: 8 }}
+                style={{ width: 64, height: 64, marginBottom: 10 }}
                 resizeMode="contain"
               />
               <Text style={{
@@ -103,6 +117,7 @@ export default function BadgesScreen() {
                 fontWeight: "700",
                 color: isUnlocked ? colors.text : colors.textMuted,
                 textAlign: "center",
+                marginBottom: 4,
               }}>
                 {badge.name}
               </Text>
@@ -110,7 +125,7 @@ export default function BadgesScreen() {
                 fontSize: 11,
                 color: colors.textMuted,
                 textAlign: "center",
-                marginTop: 3,
+                lineHeight: 15,
               }}>
                 {badge.description}
               </Text>
