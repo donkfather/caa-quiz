@@ -1,0 +1,10 @@
+{
+  "defaultLanguage": "ro",
+  "title": "Chestionare Barca",
+  "shortDescription": "Teste pentru examenul CAA — Clasa C si D",
+  "fullDescription": "Pregateste-te pentru examenul de conducator de ambarcatiuni (CAA) cu Chestionare Barca!\n\nAplicatia contine toate cele 517 intrebari oficiale pentru Clasa C si Clasa D, organizate pe categorii.\n\nFunctionalitati:\n- Mod examen: simuleaza examenul real cu 26 de intrebari si cronometru\n- Mod practica: exerseaza pe categorii, la ritmul tau\n- Streak zilnic: mentine-ti motivatia cu zile consecutive de studiu\n- Realizari (badge-uri): deblocheaza trofee pe masura ce progresezi\n- Istoric complet: revizuieste toate chestionarele completate si urmareste-ti progresul\n- Tema intunecata si luminoasa: alege aspectul care ti se potriveste\n- Notificari locale: seteaza un reminder zilnic sa nu pierzi streak-ul\n- Functioneaza offline: nu necesita conexiune la internet pentru rezolvarea chestionarelor\n\nAplicatia este gratuita si sustinuta prin reclame. Poti dezactiva reclamele cu un cod promotional din sectiunea Setari.\n\nAplicatia colecteaza date limitate prin Google AdMob (identificatori de dispozitiv si date de interactiune cu reclamele) si Supabase (identificator de dispozitiv pentru gestionarea voucherelor). Nu se colecteaza informatii personale.",
+  "category": "EDUCATION",
+  "contentRating": "EVERYONE",
+  "contactEmail": "popescut94@gmail.com",
+  "privacyPolicyUrl": "https://sites.google.com/view/chestionare-barca-privacy/home"
+}

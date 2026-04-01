@@ -5,7 +5,11 @@ import {
   TextInput,
   StyleSheet,
   Alert,
+  Switch,
+  Modal,
+  Linking,
 } from "react-native";
+import { AdsConsent } from "react-native-google-mobile-ads";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useEffect } from "react";
 import { useRouter } from "expo-router";
@@ -14,9 +18,10 @@ import {
   ThemeMode,
   loadSettings,
   saveSettings,
-  redeemVoucher,
 } from "../src/lib/settings";
+import { redeemVoucher } from "../src/lib/vouchers";
 import { useTheme } from "../src/lib/ThemeContext";
+import { scheduleStreakReminder, cancelStreakReminder, testNotification } from "../src/lib/notifications";
 
 const THEME_OPTIONS: { value: ThemeMode; label: string }[] = [
   { value: "dark", label: "Întunecat" },
@@ -24,12 +29,15 @@ const THEME_OPTIONS: { value: ThemeMode; label: string }[] = [
   { value: "auto", label: "Automat" },
 ];
 
+const HOUR_OPTIONS = Array.from({ length: 24 }, (_, i) => i);
+
 export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
   const { theme: t, themeMode, setThemeMode } = useTheme();
   const [settings, setSettings] = useState<AppSettings | null>(null);
   const [voucher, setVoucher] = useState("");
   const [redeeming, setRedeeming] = useState(false);
+  const [voucherModalVisible, setVoucherModalVisible] = useState(false);
 
   useEffect(() => {
     loadSettings().then(setSettings);
@@ -43,21 +51,46 @@ export default function SettingsScreen() {
     setSettings(next);
   };
 
-  const handleRedeem = async () => {
-    if (!voucher.trim()) return;
-    setRedeeming(true);
-    const success = await redeemVoucher(voucher);
-    setRedeeming(false);
-    if (success) {
-      setSettings({ ...settings, adsDisabled: true });
-      setVoucher("");
-      Alert.alert("Succes", "Reclamele au fost dezactivate.");
+  const toggleReminder = async (enabled: boolean) => {
+    const next = { ...settings, reminderEnabled: enabled };
+    setSettings(next);
+    await saveSettings(next);
+    if (enabled) {
+      await scheduleStreakReminder(next.reminderHour, next.reminderMinute);
     } else {
-      Alert.alert("Cod invalid", "Codul introdus nu este valid.");
+      await cancelStreakReminder();
     }
   };
 
+  const changeHour = async (delta: number) => {
+    const newHour = (settings.reminderHour + delta + 24) % 24;
+    const next = { ...settings, reminderHour: newHour };
+    setSettings(next);
+    await saveSettings(next);
+    if (next.reminderEnabled) {
+      await scheduleStreakReminder(newHour, next.reminderMinute);
+    }
+  };
+
+  const handleRedeem = async () => {
+    if (!voucher.trim()) return;
+    setRedeeming(true);
+    const result = await redeemVoucher(voucher);
+    setRedeeming(false);
+    if (result.success) {
+      setSettings({ ...settings, adsDisabled: true });
+      setVoucher("");
+      setVoucherModalVisible(false);
+      Alert.alert("Succes", "Reclamele au fost dezactivate.");
+    } else {
+      Alert.alert("Eroare", result.message);
+    }
+  };
+
+  const formattedHour = `${settings.reminderHour.toString().padStart(2, "0")}:${settings.reminderMinute.toString().padStart(2, "0")}`;
+
   return (
+    <>
     <View style={[styles.container, { backgroundColor: t.bg, paddingBottom: insets.bottom }]}>
       {/* Theme */}
       <Text style={[styles.sectionTitle, { color: t.textSecondary }]}>Temă</Text>
@@ -81,45 +114,109 @@ export default function SettingsScreen() {
         ))}
       </View>
 
-      {/* Voucher */}
-      <Text style={[styles.sectionTitle, { color: t.textSecondary }]}>Dezactivare reclame</Text>
+      {/* Reminder */}
+      <Text style={[styles.sectionTitle, { color: t.textSecondary }]}>Reminder zilnic</Text>
       <View style={[styles.card, { backgroundColor: t.bgCard, borderColor: t.border }]}>
-        {settings.adsDisabled ? (
-          <View style={styles.voucherRow}>
-            <Text style={[styles.voucherStatus, { color: t.success }]}>
-              Reclamele sunt dezactivate
+        <View style={styles.reminderRow}>
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.reminderLabel, { color: t.text }]}>Notificare streak</Text>
+            <Text style={[styles.reminderHint, { color: t.textMuted }]}>
+              Primește un reminder să nu pierzi streak-ul
             </Text>
           </View>
-        ) : (
-          <>
-            <View style={styles.voucherRow}>
-              <TextInput
-                style={[
-                  styles.voucherInput,
-                  { color: t.text, backgroundColor: t.bg, borderColor: t.border },
-                ]}
-                placeholder="Introdu codul"
-                placeholderTextColor={t.textMuted}
-                value={voucher}
-                onChangeText={setVoucher}
-                autoCapitalize="none"
-                autoCorrect={false}
-              />
+          <Switch
+            value={settings.reminderEnabled}
+            onValueChange={toggleReminder}
+            trackColor={{ false: t.border, true: t.primary + "60" }}
+            thumbColor={settings.reminderEnabled ? t.primary : t.textMuted}
+          />
+        </View>
+        {settings.reminderEnabled && (
+          <View style={styles.timePickerRow}>
+            <Text style={[styles.timeLabel, { color: t.textSecondary }]}>Ora:</Text>
+            <View style={styles.timePicker}>
               <Pressable
-                style={[styles.redeemButton, { backgroundColor: t.primary }]}
-                onPress={handleRedeem}
-                disabled={redeeming}
+                onPress={() => changeHour(-1)}
+                style={[styles.timeButton, { backgroundColor: t.bg }]}
               >
-                <Text style={styles.redeemText}>
-                  {redeeming ? "..." : "Activează"}
-                </Text>
+                <Text style={[styles.timeButtonText, { color: t.text }]}>−</Text>
+              </Pressable>
+              <Text style={[styles.timeValue, { color: t.text }]}>{formattedHour}</Text>
+              <Pressable
+                onPress={() => changeHour(1)}
+                style={[styles.timeButton, { backgroundColor: t.bg }]}
+              >
+                <Text style={[styles.timeButtonText, { color: t.text }]}>+</Text>
               </Pressable>
             </View>
-            <Text style={[styles.voucherHint, { color: t.textMuted }]}>
-              Introdu un cod promoțional pentru a dezactiva reclamele
-            </Text>
-          </>
+          </View>
         )}
+      </View>
+
+      {/* Voucher */}
+      <Pressable
+        style={[styles.card, { backgroundColor: t.bgCard, borderColor: t.border, padding: 14, marginTop: 16 }]}
+        onPress={() => !settings.adsDisabled && setVoucherModalVisible(true)}
+        disabled={settings.adsDisabled}
+      >
+        {settings.adsDisabled ? (
+          <Text style={{ fontSize: 15, color: t.success, fontWeight: "600" }}>
+            Reclamele sunt dezactivate
+          </Text>
+        ) : (
+          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+            <Text style={{ fontSize: 15, color: t.text }}>Ai un cod promoțional?</Text>
+            <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
+          </View>
+        )}
+      </Pressable>
+
+      {/* Dev tools */}
+      {__DEV__ && settings.adsDisabled && (
+        <Pressable
+          style={{ marginTop: 12, padding: 14, borderRadius: 12, backgroundColor: t.bgCard, alignItems: "center", borderWidth: 1, borderColor: t.border }}
+          onPress={async () => {
+            const next = { ...settings, adsDisabled: false };
+            setSettings(next);
+            await saveSettings(next);
+            Alert.alert("Dev", "Reclamele au fost reactivate.");
+          }}
+        >
+          <Text style={{ fontSize: 14, color: t.error, fontWeight: "600" }}>Reactivează reclame (dev)</Text>
+        </Pressable>
+      )}
+      {__DEV__ && (
+        <Pressable
+          style={{ marginTop: 16, padding: 14, borderRadius: 12, backgroundColor: t.bgCard, alignItems: "center", borderWidth: 1, borderColor: t.border }}
+          onPress={testNotification}
+        >
+          <Text style={{ fontSize: 14, color: t.warning, fontWeight: "600" }}>Test notificare (dev)</Text>
+        </Pressable>
+      )}
+
+      {/* Legal & Privacy */}
+      <Text style={[styles.sectionTitle, { color: t.textSecondary }]}>Legal</Text>
+      <View style={[styles.card, { backgroundColor: t.bgCard, borderColor: t.border }]}>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14, borderBottomWidth: 1, borderBottomColor: t.border }}
+          onPress={() => Linking.openURL("https://sites.google.com/view/chestionare-barca-privacy/home")}
+        >
+          <Text style={{ fontSize: 15, color: t.text }}>Politica de confidentialitate</Text>
+          <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
+        </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14 }}
+          onPress={async () => {
+            try {
+              await AdsConsent.showForm();
+            } catch {
+              Alert.alert("Info", "Formularul de consimtamant nu este disponibil momentan.");
+            }
+          }}
+        >
+          <Text style={{ fontSize: 15, color: t.text }}>Preferinte reclame</Text>
+          <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
+        </Pressable>
       </View>
 
       {/* App info */}
@@ -127,6 +224,69 @@ export default function SettingsScreen() {
         Chestionare Barca v1.0.0
       </Text>
     </View>
+
+    {/* Voucher Modal */}
+    <Modal
+        visible={voucherModalVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setVoucherModalVisible(false)}
+      >
+        <Pressable
+          style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.5)", justifyContent: "center", padding: 24 }}
+          onPress={() => setVoucherModalVisible(false)}
+        >
+          <Pressable
+            style={{ backgroundColor: t.bgCard, borderRadius: 16, padding: 24 }}
+            onPress={() => {}}
+          >
+            <Text style={{ fontSize: 18, fontWeight: "700", color: t.text, marginBottom: 4 }}>
+              Cod promoțional
+            </Text>
+            <Text style={{ fontSize: 13, color: t.textMuted, marginBottom: 16 }}>
+              Introdu codul pentru a dezactiva reclamele
+            </Text>
+            <TextInput
+              style={{
+                borderWidth: 1,
+                borderColor: t.border,
+                borderRadius: 10,
+                paddingHorizontal: 14,
+                paddingVertical: 12,
+                fontSize: 16,
+                color: t.text,
+                backgroundColor: t.bg,
+                marginBottom: 14,
+              }}
+              placeholder="Introdu codul"
+              placeholderTextColor={t.textMuted}
+              value={voucher}
+              onChangeText={setVoucher}
+              autoCapitalize="characters"
+              autoCorrect={false}
+              autoFocus
+            />
+            <View style={{ flexDirection: "row", gap: 10 }}>
+              <Pressable
+                style={{ flex: 1, padding: 14, borderRadius: 10, alignItems: "center", borderWidth: 1, borderColor: t.border }}
+                onPress={() => { setVoucherModalVisible(false); setVoucher(""); }}
+              >
+                <Text style={{ fontSize: 15, fontWeight: "600", color: t.textSecondary }}>Anulează</Text>
+              </Pressable>
+              <Pressable
+                style={{ flex: 1, padding: 14, borderRadius: 10, alignItems: "center", backgroundColor: t.primary }}
+                onPress={handleRedeem}
+                disabled={redeeming}
+              >
+                <Text style={{ fontSize: 15, fontWeight: "700", color: "#fff" }}>
+                  {redeeming ? "..." : "Activează"}
+                </Text>
+              </Pressable>
+            </View>
+          </Pressable>
+        </Pressable>
+    </Modal>
+    </>
   );
 }
 
@@ -167,6 +327,53 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
   },
+  // Reminder
+  reminderRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 14,
+  },
+  reminderLabel: {
+    fontSize: 15,
+    fontWeight: "600",
+  },
+  reminderHint: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  timePickerRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 14,
+    paddingBottom: 14,
+    gap: 12,
+  },
+  timeLabel: {
+    fontSize: 14,
+  },
+  timePicker: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  timeButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  timeButtonText: {
+    fontSize: 20,
+    fontWeight: "600",
+  },
+  timeValue: {
+    fontSize: 20,
+    fontWeight: "700",
+    minWidth: 60,
+    textAlign: "center",
+  },
+  // Voucher
   voucherRow: {
     flexDirection: "row",
     alignItems: "center",

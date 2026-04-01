@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { ThemeProvider, useTheme } from "../src/lib/ThemeContext";
+import { initAds, preloadInterstitial } from "../src/lib/ads";
+import { validateAdsFree } from "../src/lib/vouchers";
 
 function AppStack() {
   const { theme, isDark } = useTheme();
+
+  useEffect(() => {
+    validateAdsFree().then(() => initAds().then(() => preloadInterstitial())).catch(() => {});
+  }, []);
 
   return (
     <>

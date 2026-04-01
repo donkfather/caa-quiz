@@ -36,6 +36,8 @@ import {
   checkAndUnlockBadges,
   BADGE_DEFS,
 } from "../src/lib/gamification";
+import { AdBanner } from "../src/components/AdBanner";
+import { showInterstitial } from "../src/lib/ads";
 
 type Mode = "exam" | "practice" | "learn";
 
@@ -177,7 +179,8 @@ export default function QuizScreen() {
     }
   }, [index, total, mode, answers, questionList]);
 
-  const handleFinish = useCallback(() => {
+  const handleFinish = useCallback(async () => {
+    await showInterstitial();
     router.back();
   }, [router]);
 
@@ -347,6 +350,7 @@ export default function QuizScreen() {
             </Text>
           </Pressable>
         </ScrollView>
+        <AdBanner />
       </View>
     </>
   );

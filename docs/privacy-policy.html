@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politica de Confidentialitate - Chestionare Barca</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 24px; margin-bottom: 4px; }
+    h2 { font-size: 20px; margin-top: 32px; }
+    h3 { font-size: 16px; margin-top: 24px; }
+    .subtitle { color: #666; font-size: 14px; margin-bottom: 32px; }
+    .lang-toggle { text-align: center; margin-bottom: 32px; }
+    .lang-toggle a {
+      display: inline-block;
+      padding: 8px 20px;
+      margin: 0 4px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .lang-toggle a.active { background: #0066cc; color: #fff; border-color: #0066cc; }
+    .section-ro, .section-en { display: none; }
+    .section-ro.active, .section-en.active { display: block; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: #0066cc; }
+    hr { border: none; border-top: 1px solid #e0e0e0; margin: 40px 0; }
+  </style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#" id="btn-ro" class="active" onclick="showLang('ro'); return false;">Romana</a>
+  <a href="#" id="btn-en" onclick="showLang('en'); return false;">English</a>
+</div>
+
+<!-- ROMANIAN -->
+<div id="lang-ro" class="section-ro active">
+
+<h1>Politica de Confidentialitate</h1>
+<p class="subtitle">Chestionare Barca &mdash; Ultima actualizare: 29 martie 2026</p>
+
+<h2>1. Introducere</h2>
+<p>Aceasta politica de confidentialitate descrie modul in care aplicatia <strong>Chestionare Barca</strong> colecteaza, utilizeaza si protejeaza datele dumneavoastra. Aplicatia este un instrument de pregatire pentru examenul CAA (Clasa C si D) si nu necesita crearea unui cont de utilizator sau autentificare.</p>
+
+<h2>2. Date stocate local pe dispozitiv</h2>
+<p>Aplicatia stocheaza urmatoarele date exclusiv pe dispozitivul dumneavoastra, folosind AsyncStorage:</p>
+<ul>
+  <li>Istoricul chestionarelor completate (raspunsuri, scoruri, date)</li>
+  <li>Setarile aplicatiei (tema, preferinte notificari)</li>
+  <li>Realizarile obtinute (badge-uri)</li>
+  <li>Streak-ul zilnic (numarul de zile consecutive de utilizare)</li>
+</ul>
+<p>Aceste date nu parasesc dispozitivul dumneavoastra si nu sunt transmise catre servere externe, cu exceptia cazurilor descrise mai jos.</p>
+
+<h2>3. Supabase (stocarea datelor pe server)</h2>
+<p>Aplicatia utilizeaza serviciul Supabase pentru urmatoarele functionalitati:</p>
+<ul>
+  <li><strong>Identificator de dispozitiv:</strong> Un ID unic de dispozitiv este generat si transmis catre Supabase. Acesta nu contine informatii personale identificabile.</li>
+  <li><strong>Rascumparare vouchere:</strong> Datele privind rascumpararea codurilor promotionale (voucher) sunt stocate pe serverele Supabase.</li>
+</ul>
+<p>Nu sunt colectate sau stocate informatii personale (nume, email, numar de telefon) prin Supabase.</p>
+
+<h2>4. Google AdMob (publicitate)</h2>
+<p>Aplicatia afiseaza reclame prin Google AdMob. AdMob poate colecta:</p>
+<ul>
+  <li>Identificatori de dispozitiv (Advertising ID)</li>
+  <li>Date despre interactiunile cu reclamele</li>
+  <li>Informatii tehnice despre dispozitiv (model, versiune sistem de operare)</li>
+</ul>
+<p>Colectarea acestor date este gestionata de Google conform <a href="https://policies.google.com/privacy" target="_blank">Politicii de Confidentialitate Google</a>. La prima utilizare, aplicatia va solicita consimtamantul dumneavoastra pentru personalizarea reclamelor, conform reglementarilor GDPR.</p>
+<p>Puteti modifica preferintele privind reclamele oricand din sectiunea <strong>Setari</strong> a aplicatiei.</p>
+
+<h2>5. Notificari</h2>
+<p>Aplicatia utilizeaza exclusiv notificari locale (programate pe dispozitiv) pentru remindere privind streak-ul zilnic. Nu exista un server de notificari push si nicio data nu este transmisa catre servere externe in scopul notificarilor.</p>
+
+<h2>6. Drepturile dumneavoastra (GDPR)</h2>
+<p>In conformitate cu Regulamentul General privind Protectia Datelor (GDPR), aveti urmatoarele drepturi:</p>
+<ul>
+  <li><strong>Dreptul de acces:</strong> Puteti solicita informatii despre datele colectate.</li>
+  <li><strong>Dreptul la stergere:</strong> Dezinstalarea aplicatiei sterge toate datele locale. Pentru datele de pe Supabase, contactati-ne la adresa de mai jos.</li>
+  <li><strong>Dreptul la opozitie:</strong> Puteti refuza personalizarea reclamelor prin formularul de consimtamant UMP sau din Setari.</li>
+  <li><strong>Dreptul la portabilitate:</strong> Datele locale sunt stocate pe dispozitivul dumneavoastra si pot fi sterse prin dezinstalarea aplicatiei.</li>
+</ul>
+
+<h2>7. Securitatea datelor</h2>
+<p>Datele locale sunt protejate de mecanismele de securitate ale sistemului de operare al dispozitivului. Comunicarea cu Supabase se realizeaza prin conexiuni criptate (HTTPS).</p>
+
+<h2>8. Modificari ale politicii</h2>
+<p>Ne rezervam dreptul de a actualiza aceasta politica. Orice modificare va fi publicata pe aceasta pagina cu data actualizarii.</p>
+
+<h2>9. Contact</h2>
+<p>Pentru intrebari sau solicitari privind confidentialitatea datelor:</p>
+<p><strong>Email:</strong> <a href="mailto:popescut94@gmail.com">popescut94@gmail.com</a></p>
+
+</div>
+
+<!-- ENGLISH -->
+<div id="lang-en" class="section-en">
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">Chestionare Barca &mdash; Last updated: March 29, 2026</p>
+
+<h2>1. Introduction</h2>
+<p>This privacy policy describes how the <strong>Chestionare Barca</strong> application collects, uses, and protects your data. The app is a study tool for the CAA exam (Class C and D) and does not require user account creation or authentication.</p>
+
+<h2>2. Data stored locally on device</h2>
+<p>The app stores the following data exclusively on your device using AsyncStorage:</p>
+<ul>
+  <li>Quiz history (answers, scores, dates)</li>
+  <li>App settings (theme, notification preferences)</li>
+  <li>Achievements (badges)</li>
+  <li>Daily streak (consecutive days of usage)</li>
+</ul>
+<p>This data does not leave your device and is not transmitted to external servers, except as described below.</p>
+
+<h2>3. Supabase (server-side data storage)</h2>
+<p>The app uses the Supabase service for the following functionality:</p>
+<ul>
+  <li><strong>Device identifier:</strong> A unique device ID is generated and sent to Supabase. It does not contain personally identifiable information.</li>
+  <li><strong>Voucher redemption:</strong> Data related to promotional code (voucher) redemption is stored on Supabase servers.</li>
+</ul>
+<p>No personal information (name, email, phone number) is collected or stored through Supabase.</p>
+
+<h2>4. Google AdMob (advertising)</h2>
+<p>The app displays advertisements through Google AdMob. AdMob may collect:</p>
+<ul>
+  <li>Device identifiers (Advertising ID)</li>
+  <li>Ad interaction data</li>
+  <li>Technical device information (model, OS version)</li>
+</ul>
+<p>Data collection is managed by Google according to the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>. On first use, the app will request your consent for ad personalization in compliance with GDPR regulations.</p>
+<p>You can change your ad preferences at any time from the <strong>Settings</strong> section of the app.</p>
+
+<h2>5. Notifications</h2>
+<p>The app uses only local notifications (scheduled on device) for daily streak reminders. There is no push notification server and no data is transmitted to external servers for notification purposes.</p>
+
+<h2>6. Your rights (GDPR)</h2>
+<p>In accordance with the General Data Protection Regulation (GDPR), you have the following rights:</p>
+<ul>
+  <li><strong>Right of access:</strong> You may request information about collected data.</li>
+  <li><strong>Right to erasure:</strong> Uninstalling the app deletes all local data. For data on Supabase, contact us at the address below.</li>
+  <li><strong>Right to object:</strong> You may refuse ad personalization via the UMP consent form or from Settings.</li>
+  <li><strong>Right to portability:</strong> Local data is stored on your device and can be deleted by uninstalling the app.</li>
+</ul>
+
+<h2>7. Data security</h2>
+<p>Local data is protected by the device operating system's security mechanisms. Communication with Supabase is conducted through encrypted connections (HTTPS).</p>
+
+<h2>8. Changes to this policy</h2>
+<p>We reserve the right to update this policy. Any changes will be published on this page with the updated date.</p>
+
+<h2>9. Contact</h2>
+<p>For questions or requests regarding data privacy:</p>
+<p><strong>Email:</strong> <a href="mailto:popescut94@gmail.com">popescut94@gmail.com</a></p>
+
+</div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('lang-ro').classList.toggle('active', lang === 'ro');
+  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ro').classList.toggle('active', lang === 'ro');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+</script>
+
+</body>
+</html>

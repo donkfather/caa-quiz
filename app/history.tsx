@@ -12,6 +12,7 @@ import {
   ActiveSession,
 } from "../src/lib/storage";
 import { useFocusEffect, useRouter } from "expo-router";
+import { showInterstitial } from "../src/lib/ads";
 
 const MODE_LABELS: Record<string, string> = {
   exam: "Examen",
@@ -174,7 +175,8 @@ export default function HistoryScreen() {
     ]);
   };
 
-  const handleResume = (session: ActiveSession) => {
+  const handleResume = async (session: ActiveSession) => {
+    await showInterstitial();
     router.push(`/quiz?mode=${session.mode}&sessionId=${session.id}`);
   };
 

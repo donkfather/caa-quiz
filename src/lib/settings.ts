@@ -10,11 +10,17 @@ export type ThemeMode = "dark" | "light" | "auto";
 export interface AppSettings {
   themeMode: ThemeMode;
   adsDisabled: boolean;
+  reminderEnabled: boolean;
+  reminderHour: number; // 0-23
+  reminderMinute: number;
 }
 
 const defaults: AppSettings = {
   themeMode: "dark",
   adsDisabled: false,
+  reminderEnabled: false,
+  reminderHour: 20,
+  reminderMinute: 0,
 };
 
 export async function loadSettings(): Promise<AppSettings> {
