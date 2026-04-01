@@ -32,6 +32,7 @@ let adsInitialized = false;
 
 export async function initAds(): Promise<void> {
   if (adsInitialized) return;
+  if (process.env.DISABLE_ADS === "true") return;
   try {
     const settings = await loadSettings();
     if (settings.adsDisabled) return;
@@ -42,7 +43,9 @@ export async function initAds(): Promise<void> {
       if (consentInfo.isConsentFormAvailable && consentInfo.status === AdsConsentStatus.REQUIRED) {
         await AdsConsent.showForm();
       }
-    } catch {}
+    } catch (e) {
+      if (__DEV__) console.warn("Consent check failed:", e);
+    }
 
     await mobileAds().initialize();
     adsInitialized = true;
@@ -82,6 +85,7 @@ export function preloadInterstitial(): void {
 }
 
 export async function showInterstitial(): Promise<void> {
+  if (process.env.DISABLE_ADS === "true") return;
   const settings = await loadSettings();
   if (settings.adsDisabled) return;
   if (isLoaded && interstitial) {

@@ -103,6 +103,9 @@ export default function SettingsScreen() {
               themeMode === opt.value && { backgroundColor: t.primary },
             ]}
             onPress={() => updateTheme(opt.value)}
+            accessibilityLabel={`Temă ${opt.label.toLowerCase()}`}
+            accessibilityRole="button"
+            accessibilityState={{ selected: themeMode === opt.value }}
           >
             <Text style={[
               styles.segmentedLabel,
@@ -129,6 +132,7 @@ export default function SettingsScreen() {
             onValueChange={toggleReminder}
             trackColor={{ false: t.border, true: t.primary + "60" }}
             thumbColor={settings.reminderEnabled ? t.primary : t.textMuted}
+            accessibilityLabel="Activează reminder"
           />
         </View>
         {settings.reminderEnabled && (
@@ -138,6 +142,8 @@ export default function SettingsScreen() {
               <Pressable
                 onPress={() => changeHour(-1)}
                 style={[styles.timeButton, { backgroundColor: t.bg }]}
+                accessibilityLabel="Micșorează ora"
+                accessibilityRole="button"
               >
                 <Text style={[styles.timeButtonText, { color: t.text }]}>−</Text>
               </Pressable>
@@ -145,6 +151,8 @@ export default function SettingsScreen() {
               <Pressable
                 onPress={() => changeHour(1)}
                 style={[styles.timeButton, { backgroundColor: t.bg }]}
+                accessibilityLabel="Mărește ora"
+                accessibilityRole="button"
               >
                 <Text style={[styles.timeButtonText, { color: t.text }]}>+</Text>
               </Pressable>
@@ -158,6 +166,8 @@ export default function SettingsScreen() {
         style={[styles.card, { backgroundColor: t.bgCard, borderColor: t.border, padding: 14, marginTop: 16 }]}
         onPress={() => !settings.adsDisabled && setVoucherModalVisible(true)}
         disabled={settings.adsDisabled}
+        accessibilityLabel={settings.adsDisabled ? "Reclamele sunt dezactivate" : "Introdu cod promoțional"}
+        accessibilityRole="button"
       >
         {settings.adsDisabled ? (
           <Text style={{ fontSize: 15, color: t.success, fontWeight: "600" }}>
@@ -189,6 +199,8 @@ export default function SettingsScreen() {
         <Pressable
           style={{ marginTop: 16, padding: 14, borderRadius: 12, backgroundColor: t.bgCard, alignItems: "center", borderWidth: 1, borderColor: t.border }}
           onPress={testNotification}
+          accessibilityLabel="Test notificare"
+          accessibilityRole="button"
         >
           <Text style={{ fontSize: 14, color: t.warning, fontWeight: "600" }}>Test notificare (dev)</Text>
         </Pressable>
@@ -199,9 +211,20 @@ export default function SettingsScreen() {
       <View style={[styles.card, { backgroundColor: t.bgCard, borderColor: t.border }]}>
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14, borderBottomWidth: 1, borderBottomColor: t.border }}
-          onPress={() => Linking.openURL("https://sites.google.com/view/chestionare-barca-privacy/home")}
+          onPress={() => Linking.openURL("https://sites.google.com/view/chestionare-barca-privacy-pol/home")}
+          accessibilityLabel="Deschide politica de confidențialitate"
+          accessibilityRole="link"
         >
           <Text style={{ fontSize: 15, color: t.text }}>Politica de confidentialitate</Text>
+          <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
+        </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14, borderBottomWidth: 1, borderBottomColor: t.border }}
+          onPress={() => Linking.openURL("https://sites.google.com/view/chestionare-barca-terms-and-co/home")}
+          accessibilityLabel="Deschide termeni și condiții"
+          accessibilityRole="link"
+        >
+          <Text style={{ fontSize: 15, color: t.text }}>Termeni și condiții</Text>
           <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
         </Pressable>
         <Pressable
@@ -213,6 +236,8 @@ export default function SettingsScreen() {
               Alert.alert("Info", "Formularul de consimtamant nu este disponibil momentan.");
             }
           }}
+          accessibilityLabel="Deschide preferințe reclame"
+          accessibilityRole="link"
         >
           <Text style={{ fontSize: 15, color: t.text }}>Preferinte reclame</Text>
           <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
@@ -235,10 +260,13 @@ export default function SettingsScreen() {
         <Pressable
           style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.5)", justifyContent: "center", padding: 24 }}
           onPress={() => setVoucherModalVisible(false)}
+          accessibilityLabel="Închide formularul"
+          accessibilityRole="button"
         >
           <Pressable
             style={{ backgroundColor: t.bgCard, borderRadius: 16, padding: 24 }}
             onPress={() => {}}
+            accessibilityRole="none"
           >
             <Text style={{ fontSize: 18, fontWeight: "700", color: t.text, marginBottom: 4 }}>
               Cod promoțional
@@ -270,6 +298,8 @@ export default function SettingsScreen() {
               <Pressable
                 style={{ flex: 1, padding: 14, borderRadius: 10, alignItems: "center", borderWidth: 1, borderColor: t.border }}
                 onPress={() => { setVoucherModalVisible(false); setVoucher(""); }}
+                accessibilityLabel="Anulează"
+                accessibilityRole="button"
               >
                 <Text style={{ fontSize: 15, fontWeight: "600", color: t.textSecondary }}>Anulează</Text>
               </Pressable>
@@ -277,6 +307,8 @@ export default function SettingsScreen() {
                 style={{ flex: 1, padding: 14, borderRadius: 10, alignItems: "center", backgroundColor: t.primary }}
                 onPress={handleRedeem}
                 disabled={redeeming}
+                accessibilityLabel="Activează codul promoțional"
+                accessibilityRole="button"
               >
                 <Text style={{ fontSize: 15, fontWeight: "700", color: "#fff" }}>
                   {redeeming ? "..." : "Activează"}

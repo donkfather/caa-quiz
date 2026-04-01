@@ -40,7 +40,7 @@ export default function HomeScreen() {
       <View style={{ marginBottom: 24 }}>
         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
           <Text style={{ fontSize: 32, fontWeight: "800", color: colors.text, marginBottom: 6 }}>Chestionare Barca</Text>
-          <Pressable onPress={() => router.push("/settings")} hitSlop={8}>
+          <Pressable onPress={() => router.push("/settings")} hitSlop={8} accessibilityLabel="Deschide setări" accessibilityRole="button">
             <Text style={{ fontSize: 14, fontWeight: "600", color: colors.primary }}>Setări</Text>
           </Pressable>
         </View>
@@ -73,6 +73,8 @@ export default function HomeScreen() {
       <Pressable
         style={{ flexDirection: "row", backgroundColor: colors.bgCard, borderRadius: 14, padding: 14, marginBottom: 16, borderWidth: 1, borderColor: colors.border, alignItems: "center" }}
         onPress={() => router.push("/badges")}
+        accessibilityLabel={`Streak: ${streak.current} zile, ${badgeCount} realizări. Deschide realizări`}
+        accessibilityRole="button"
       >
         <Text style={{ fontSize: 24 }}>🔥</Text>
         <View style={{ marginLeft: 10, flex: 1 }}>
@@ -98,6 +100,8 @@ export default function HomeScreen() {
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", paddingVertical: 22, paddingHorizontal: 18, borderRadius: 14, gap: 14, backgroundColor: colors.primary }}
           onPress={() => router.push("/quiz?mode=exam")}
+          accessibilityLabel="Începe examen"
+          accessibilityRole="button"
         >
           <Text style={{ fontSize: 28 }}>⚓</Text>
           <View>
@@ -111,6 +115,8 @@ export default function HomeScreen() {
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border }}
           onPress={() => router.push("/quiz?mode=practice")}
+          accessibilityLabel="Modul practică"
+          accessibilityRole="button"
         >
           <Text style={{ fontSize: 28 }}>📖</Text>
           <View>
@@ -121,7 +127,7 @@ export default function HomeScreen() {
           </View>
         </Pressable>
 
-        <View style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border, opacity: 0.5 }}>
+        <View style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border, opacity: 0.5 }} accessibilityLabel="Învață — în curând">
           <Text style={{ fontSize: 28 }}>🎓</Text>
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: colors.textMuted }}>Învață</Text>
@@ -135,6 +141,8 @@ export default function HomeScreen() {
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", marginTop: 20, paddingVertical: 14, paddingHorizontal: 16, backgroundColor: colors.bgCard, borderRadius: 12, borderWidth: 1, borderColor: colors.border }}
           onPress={() => router.push("/history")}
+          accessibilityLabel="Deschide istoric"
+          accessibilityRole="button"
         >
           <Text style={{ fontSize: 15, color: colors.textSecondary, flex: 1 }}>Istoric</Text>
           {activeSessions > 0 && (

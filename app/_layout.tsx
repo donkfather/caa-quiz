@@ -9,7 +9,7 @@ function AppStack() {
   const { theme, isDark } = useTheme();
 
   useEffect(() => {
-    validateAdsFree().then(() => initAds().then(() => preloadInterstitial())).catch(() => {});
+    validateAdsFree().then(() => initAds().then(() => preloadInterstitial())).catch((e) => { if (__DEV__) console.warn("Ad init chain failed:", e); });
   }, []);
 
   return (

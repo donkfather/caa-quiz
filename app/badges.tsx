@@ -106,6 +106,7 @@ export default function BadgesScreen() {
                   ? { borderWidth: 1, borderColor: ringColor + "50" }
                   : {}),
               }}
+              accessibilityLabel={`${badge.name}: ${badge.description}${isUnlocked ? " — deblocată" : " — blocată"}`}
             >
               <Image
                 source={isUnlocked ? BADGE_IMAGES[badge.key] : BADGE_IMAGES_LOCKED[badge.key]}

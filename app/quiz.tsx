@@ -242,7 +242,7 @@ export default function QuizScreen() {
               })}
             </View>
           )}
-          <Pressable style={[styles.button, styles.primaryButton]} onPress={handleFinish}>
+          <Pressable style={[styles.button, styles.primaryButton]} onPress={handleFinish} accessibilityLabel="Înapoi la ecranul principal" accessibilityRole="button">
             <Text style={styles.buttonText}>Înapoi</Text>
           </Pressable>
         </View>
@@ -320,6 +320,8 @@ export default function QuizScreen() {
                   style={getOptionStyle(i)}
                   onPress={() => handleSelect(i)}
                   disabled={selected !== null}
+                  accessibilityLabel={`Răspuns ${String.fromCharCode(65 + i)}: ${opt}`}
+                  accessibilityRole="button"
                 >
                   <Text style={styles.optionLabel}>
                     {String.fromCharCode(65 + i)}
@@ -344,6 +346,8 @@ export default function QuizScreen() {
             style={[styles.button, styles.nextButton, selected === null && { opacity: 0 }]}
             onPress={handleNext}
             disabled={selected === null}
+            accessibilityLabel={index + 1 >= total ? "Vezi rezultatul" : "Următoarea întrebare"}
+            accessibilityRole="button"
           >
             <Text style={styles.buttonText}>
               {index + 1 >= total ? "Vezi rezultatul" : "Următoarea →"}

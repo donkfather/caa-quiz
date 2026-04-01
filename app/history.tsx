@@ -207,11 +207,13 @@ export default function HistoryScreen() {
     const answered = item.answers.filter((a) => a !== null).length;
     const progress = Math.round((answered / item.answers.length) * 100);
     return (
-      <Pressable key={item.id} style={[styles.activeCard, { overflow: "hidden" }]} onPress={() => handleResume(item)}>
+      <Pressable key={item.id} style={[styles.activeCard, { overflow: "hidden" }]} onPress={() => handleResume(item)} accessibilityLabel={`Continuă sesiunea ${MODE_LABELS[item.mode] || item.mode}, ${answered} din ${item.answers.length} răspunse`} accessibilityRole="button">
         <Pressable
           onPress={() => handleDeleteSession(item.id)}
           hitSlop={12}
           style={{ position: "absolute", top: 10, right: 10, zIndex: 2 }}
+          accessibilityLabel="Șterge sesiunea"
+          accessibilityRole="button"
         >
           <Feather name="trash-2" size={20} color={colors.error} style={{ opacity: 0.35 }} />
         </Pressable>
@@ -304,7 +306,7 @@ export default function HistoryScreen() {
                       </View>
                     </View>
                   ))}
-                  <Pressable style={styles.clearButton} onPress={handleClearHistory}>
+                  <Pressable style={styles.clearButton} onPress={handleClearHistory} accessibilityLabel="Șterge tot istoricul" accessibilityRole="button">
                     <Text style={styles.clearText}>Șterge istoricul</Text>
                   </Pressable>
                 </View>

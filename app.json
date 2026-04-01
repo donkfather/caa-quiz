@@ -15,7 +15,11 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.donkfather.caaquiz"
+      "bundleIdentifier": "com.donkfather.caaquiz",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "Această permisiune ne ajută să afișăm reclame relevante."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,7 +28,8 @@
         "backgroundColor": "#0f172a"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.donkfather.caaquiz"
+      "package": "com.donkfather.caaquiz",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png",

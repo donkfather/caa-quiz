@@ -11,7 +11,7 @@ export function AdBanner() {
     loadSettings().then((s) => setHidden(s.adsDisabled));
   }, []);
 
-  if (hidden) return null;
+  if (hidden || process.env.DISABLE_ADS === "true") return null;
 
   return (
     <View style={{ alignItems: "center" }}>
