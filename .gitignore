@@ -43,3 +43,6 @@ credentials.json
 # generated native folders
 /ios
 /android
+
+# local builds
+build/

@@ -231,9 +231,14 @@ export default function SettingsScreen() {
           style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14 }}
           onPress={async () => {
             try {
-              await AdsConsent.showForm();
+              const consentInfo = await AdsConsent.requestInfoUpdate();
+              if (consentInfo.isConsentFormAvailable) {
+                await AdsConsent.showForm();
+              } else {
+                Alert.alert("Info", "Formularul de consimțământ nu este disponibil în regiunea ta.");
+              }
             } catch {
-              Alert.alert("Info", "Formularul de consimtamant nu este disponibil momentan.");
+              Alert.alert("Info", "Formularul de consimțământ nu a putut fi încărcat. Încearcă mai târziu.");
             }
           }}
           accessibilityLabel="Deschide preferințe reclame"

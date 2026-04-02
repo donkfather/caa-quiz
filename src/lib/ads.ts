@@ -8,7 +8,7 @@ import mobileAds, {
 } from "react-native-google-mobile-ads";
 import { loadSettings } from "./settings";
 
-const USE_TEST_ADS = false;
+const USE_TEST_ADS = process.env.USE_TEST_ADS === "true";
 
 const BANNER_ID = USE_TEST_ADS
   ? TestIds.BANNER
