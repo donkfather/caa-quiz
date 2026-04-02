@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.donkfather.caaquiz",
+      "bundleIdentifier": "com.bhdit.caaquiz",
       "buildNumber": "1",
       "infoPlist": {
         "NSUserTrackingUsageDescription": "Această permisiune ne ajută să afișăm reclame relevante."
@@ -28,7 +28,7 @@
         "backgroundColor": "#0f172a"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.donkfather.caaquiz",
+      "package": "com.bhdit.caaquiz",
       "versionCode": 3
     },
     "web": {

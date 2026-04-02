@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
 import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
-import { BANNER_ID } from "../lib/ads";
-import { loadSettings } from "../lib/settings";
+import { BANNER_ID, waitForAds } from "../lib/ads";
 
 export function AdBanner() {
-  const [hidden, setHidden] = useState(true);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    loadSettings().then((s) => setHidden(s.adsDisabled));
+    waitForAds().then((initialized) => setReady(initialized));
   }, []);
 
-  if (hidden || process.env.DISABLE_ADS === "true") return null;
+  if (!ready) return null;
 
   return (
     <View style={{ alignItems: "center" }}>
@@ -19,7 +18,6 @@ export function AdBanner() {
         unitId={BANNER_ID}
         size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
         requestOptions={{ requestNonPersonalizedAdsOnly: true }}
-        onAdFailedToLoad={() => setHidden(true)}
       />
     </View>
   );

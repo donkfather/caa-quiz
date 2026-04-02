@@ -7,7 +7,12 @@
       "tuturor navelor care navigă în rade, strâmtori și marea liberă.",
       "tuturor navelor aflate în largul mării ori pe toate apele învecinate accesibile navelor maritime."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2,
@@ -17,7 +22,12 @@
       "R.N.D.",
       "Codului ISPS."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 3,
@@ -27,7 +37,12 @@
       "nu.",
       "nu este precizat."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 4,
@@ -37,7 +52,12 @@
       "autoritatea competentă nu este obligată să țină seama de prescripțiile Regulamentului.",
       "în toate situațiile se vor aplica prevederile Regulamentului."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 5,
@@ -47,7 +67,12 @@
       "nu este precizat.",
       "da."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 6,
@@ -57,7 +82,12 @@
       "da.",
       "nu."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 7,
@@ -67,7 +97,12 @@
       "conformarea întocmai la prevederile regulii \"navă privilegiată\" scutește nava, comandantul sau armatorul de orice răspundere.",
       "dispozițiile Regulamentului nu scutesc nava, comandantul sau armatorul de consecințele unei neglijențe oarecare în ceea ce privește aplicarea Regulamentului sau în ceea ce privește luarea tuturor măsurilor cerute de o bună practică marinărească."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 8,
@@ -77,7 +112,12 @@
       "abateri de la prevederile autorităților portuare.",
       "abateri de la prevederile legilor specifice."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 9,
@@ -87,17 +127,27 @@
       "când există pericol de navigație, riscul unei coliziuni, precum și în toate împrejurările deosebite.",
       "indiferent de situație, nu este permisă abaterea de la prevederile Regulamentului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 10,
     "question": "Ce se înțelege prin expresia \"navă\", conform Regulamentului?",
     "options": [
       "orice construcție sau aparat, de orice natură, capabil să plutească pe apă fără propulsie.",
-      "orice construcție sau aparat, de orice natură ar fi, inclusiv construcțiile fără pescaj și hidro avioane, folosite sau susceptibile de a fi folosite ca mijloc de transport pe apă.",
+      "orice construcție sau aparat, de orice natură ar fi, inclusiv construcțiile fără pescaj și hidroavioane, folosite sau susceptibile de a fi folosite ca mijloc de transport pe apă.",
       "orice corp plutitor cu orice mijloc de propulsie."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 11,
@@ -107,7 +157,12 @@
       "navele care folosesc ca mijloc de propulsie un motor Diesel.",
       "toate navele care se pot deplasa pe apă, cu excepția navelor cu vele."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 12,
@@ -117,7 +172,12 @@
       "o navă cu propulsie mecanică, care folosește și velele.",
       "o navă care folosește ca mijloc de propulsie forța vântului."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 13,
@@ -127,7 +187,12 @@
       "o navă cu propulsie mecanică, care folosește și vele.",
       "o navă care navigă cu vele, chiar dacă are o mașină proprie, cu condiția ca aceasta să nu fie folosită."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 14,
@@ -137,7 +202,12 @@
       "navă cu capacitate de manevră redusă.",
       "navă stânjenită de pescajul său."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 15,
@@ -147,7 +217,12 @@
       "o navă cu avarii accidentale la cârmă și/sau mașină, în curs de remediere.",
       "o navă care nu se poate abate din drumul său, datorită unor pericole de navigație."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 16,
@@ -157,7 +232,12 @@
       "navă cu lungime mai mare de 200 m.",
       "navă cu capacitate de manevră redusă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 17,
@@ -167,7 +247,12 @@
       "navă în derivă.",
       "navă care ține la capă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 18,
@@ -177,7 +262,12 @@
       "nave aflate în vedere.",
       "nave în marș."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 19,
@@ -187,7 +277,12 @@
       "numai când una dintre ele poate fi observată vizual de către cealaltă.",
       "când navele se află în limita de observare cu radarul."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 20,
@@ -197,7 +292,12 @@
       "trebuie să se asigure în permanență o veghe vizuală pentru evitarea unor situații periculoase.",
       "în condiții de vizibilitate redusă, se va organiza o veghe corespunzătoare, pentru a aprecia existența unui pericol de coliziune."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 21,
@@ -207,7 +307,12 @@
       "viteză minimă.",
       "viteză de siguranță."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 22,
@@ -217,7 +322,12 @@
       "pregătirea echipajului, condițiile de navigație, vizibilitatea.",
       "vizibilitatea, densitatea traficului, capacitatea de manevră a navei, noaptea-existența unui fundal luminos, starea vântului și a mării, pescajul navei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 23,
@@ -227,7 +337,12 @@
       "un pericol iminent.",
       "un pericol de coliziune."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 24,
@@ -237,7 +352,12 @@
       "orice navă trebuie să folosească toate mijloacele vizuale, pentru a stabili dacă există pericolul de coliziune.",
       "orice navă trebuie să folosească radarul, pentru a stabili dacă există pericolul de coliziune."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 25,
@@ -247,7 +367,12 @@
       "pericol de coliziune.",
       "nave cu drumuri opuse."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 26,
@@ -257,7 +382,12 @@
       "când relevmentul compas la o navă care se apropie nu variază în mod apreciabil.",
       "când viteza de apropiere între cele două nave este foarte mare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 27,
@@ -267,7 +397,12 @@
       "hotărât, din timp și conform cu buna practică marinărească.",
       "hotărât, cu variații de viteză, pentru evitarea pericolului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 28,
@@ -277,7 +412,12 @@
       "schimbări destul de mari de viteză și mici de drum, pentru a nu devia prea mult de la drumul navei.",
       "dacă împrejurările permit, să fie destul de mare, pentru a putea fi percepută imediat de orice navă care o observă vizual sau cu radarul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 29,
@@ -287,7 +427,12 @@
       "se vor executa schimbări mari de drum, suficiente pentru evitarea coliziunii.",
       "se va efectua o schimbare de drum suficientă pentru ca să se elimine orice pericol de coliziune."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 30,
@@ -297,7 +442,12 @@
       "o distanță de siguranță.",
       "o distanță minimă."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 31,
@@ -307,17 +457,27 @@
       "până când nava cealaltă va fi într-un unghi de 45° tribord/babord.",
       "până când nava cealaltă a fost complet și definitiv depășită."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 32,
     "question": "Care este manevra cea mai indicată pentru a se câștiga mai mult timp pentru aprecierea situației, atunci când trebuie să se evite o coliziune?",
     "options": [
-      "reducerea vitezei sau opirea completă, stopând mașinile ori punându-le înapoi.",
+      "reducerea vitezei sau oprirea completă, stopând mașinile ori punându-le înapoi.",
       "stoparea navei.",
       "reducerea la minimum de viteză, până la limita guvernării."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 33,
@@ -327,7 +487,12 @@
       "cât mai aproape posibil de marginea exterioară din dreapta șenalului sau căii de acces respective, atunci când aceasta se poate face.",
       "se va naviga întotdeauna cât mai aproape posibil de marginea exterioară a șenalului sau căii de acces, pentru asigurarea unei veghe corespunzătoare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 34,
@@ -337,17 +502,27 @@
       "un semnal de avertizare compus din cinci sunete scurte.",
       "un semnal lung de atenționare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 35,
     "question": "Ce măsuri de siguranță trebuie să ia o navă care se apropie de un cot aflat într-un șenal sau o cale de acces îngustă?",
     "options": [
       "să emită cinci sunete scurte (de avertizare).",
-      "să emită un semnal scurt și să navige pe partea dreaptă a șenalului.",
-      "să emită un semnal lung și să navige cu prudență și vigilență."
+      "să emită un semnal scurt și să navigheze pe partea dreaptă a șenalului.",
+      "să emită un semnal lung și să navigheze cu prudență și vigilență."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 36,
@@ -357,27 +532,42 @@
       "Organizație.",
       "Organizație și guvernele anumitor țări."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 37,
-    "question": "Nava trebuie să navige pe banda de navigație corespunzătoare în direcția generală a traficului și să se îndepărteze, în măsura posibilului, de linia sau zona de separare a sensurilor de trafic atunci când trebuie să navige:",
+    "question": "Nava trebuie să navigheze pe banda de navigație corespunzătoare în direcția generală a traficului și să se îndepărteze, în măsura posibilului, de linia sau zona de separare a sensurilor de trafic atunci când trebuie să navigheze:",
     "options": [
       "în exteriorul unei scheme de separare a traficului.",
       "în interiorul unei scheme de separare a traficului.",
       "în interiorul unei benzi de separație."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 38,
     "question": "Cum trebuie să se angajeze o navă pentru intrarea sau ieșirea dintr-o schemă de separare a traficului?",
     "options": [
       "sub un unghi drept față de direcția generală a traficului.",
-      "ca regulă generală pe la una din extremități, dar atunci când se angajează să intre sau să iasă din orice parte, să facă manevra sub unghi cât mai mic față de direcția traficului.",
+      "ca regulă generală pe la una din extremități, dar atunci când se angajează să între sau să iasă din orice parte, să facă manevra sub unghi cât mai mic față de direcția traficului.",
       "prin zona de separare a traficului, dar cu aprobarea autorităților care supraveghează navigația în schema de separare a traficului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 39,
@@ -387,7 +577,12 @@
       "sub un unghi cât mai mic față de direcția generală a traficului și cu viteza maximă.",
       "pe cât posibil perpendicular față de direcția traficului."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 40,
@@ -397,7 +592,12 @@
       "pot fi folosite de toate navele aparținând țării riverane.",
       "pot fi folosite de navele cu capacitate de manevră redusă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 41,
@@ -405,19 +605,29 @@
     "options": [
       "când condițiile hidrometeorologice fac dificilă navigația în sensul general al traficului.",
       "în caz de urgență, pentru evitarea unui pericol imediat, sau pentru a pescui într-o zonă de separare.",
-      "zona de separare nu va fi traversată în nici o situație."
+      "zona de separare nu va fi traversată în nicio situație."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 42,
-    "question": "Cum trebuie să se navige în zone vecine cu extremitățile unei zone de separare a traficului?",
+    "question": "Cum trebuie să se navigheze în zone vecine cu extremitățile unei zone de separare a traficului?",
     "options": [
       "se va naviga în direcția generală a traficului.",
       "se vor semnaliza sonor și vizual intențiile de schimbare de drum.",
       "cu atenție deosebită."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 43,
@@ -425,19 +635,29 @@
     "options": [
       "se va evita în măsura maximă a posibilului ancorarea atât în schema de separare, cât și în zonele învecinate acesteia.",
       "se poate ancora, dar se vor da toate semnalele prevăzute în prezentele reguli.",
-      "nu se poate ancora în nici o situație."
+      "nu se poate ancora în nicio situație."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 44,
-    "question": "Cum trebuie să navige navele care nu folosesc o schemă de separare a traficului?",
+    "question": "Cum trebuie să navigheze navele care nu folosesc o schemă de separare a traficului?",
     "options": [
       "să folosească zonele de navigație costieră.",
       "să se îndepărteze cât mai mult de zona de separare a traficului.",
-      "să navige în apropiere, dar să nu intersecteze linia de separare."
+      "să navigheze în apropiere, dar să nu intersecteze linia de separare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 45,
@@ -447,7 +667,12 @@
       "navele cu defecțiuni la motorul principal.",
       "navele cu avarii la cârmă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 46,
@@ -457,7 +682,12 @@
       "nava care se află la o distanță de 100 m.",
       "nava care ajunge din urmă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 47,
@@ -467,7 +697,12 @@
       "nava ajunsă din urmă va manevra astfel încât să-i permită navei care o depășește deplasarea.",
       "orice navă care ajunge din urmă o altă navă trebuie să se abată din drumul navei ajunsă din urmă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 48,
@@ -477,7 +712,12 @@
       "când vede lumina din pupa și luminile din bordurile navei ajunsă din urmă.",
       "când vede lumina catargului pupa și luminile din pupa."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 49,
@@ -487,7 +727,12 @@
       "să se considere navă care ajunge din urmă și să manevreze în consecință.",
       "să dea semnalele corespunzătoare și după edificare să procedeze conform situației."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 50,
@@ -497,7 +742,12 @@
       "nava care primește vântul din tribord trebuie să se abată din drumul navei care primește vântul din babord.",
       "nava care primește vântul din pupa trebuie să se abată din drumul navei care primește vântul din tribord."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 51,
@@ -507,7 +757,12 @@
       "nava care este în vânt se va abate din drumul navei de sub vânt.",
       "nava care o vede pe cealaltă prin tribord trebuie să se abată din drumul celeilalte nave."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 52,
@@ -517,7 +772,12 @@
       "va schimba numai drumul, pentru a evita o situație periculoasă.",
       "va reduce viteza sau va stopa, pentru a evita situații periculoase."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 53,
@@ -527,7 +787,12 @@
       "imediat ce i se pare evident faptul că nava care are obligația de a se abate din drumul său nu face manevra.",
       "când în urma observării relevmentului și-a dat seama că există pericolul de coliziune."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 54,
@@ -537,7 +802,12 @@
       "velierelor care navigă numai cu mașina.",
       "velierelor care poartă la prova un semn conic negru, cu vârful în jos."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 55,
@@ -547,7 +817,12 @@
       "navelor care nu sunt stăpâne pe manevra lor.",
       "navelor petroliere sau navelor care transportă gaze lichefiate."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 56,
@@ -557,7 +832,12 @@
       "navelor petroliere.",
       "navelor cu capacitate de manevră redusă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 57,
@@ -567,7 +847,12 @@
       "traulelor aflate în marș spre zona de pescuit.",
       "navelor colectoare de pește aflate în marș."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 58,
@@ -577,7 +862,12 @@
       "navelor nestăpâne pe manevra lor.",
       "navelor petrolier sau navelor care transportă gaze lichefiate."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 59,
@@ -587,17 +877,27 @@
       "navelor care nu se văd una pe alta și care navigă înlăuntrul sau în apropierea zonelor de vizibilitate redusă.",
       "navelor care navigă în interiorul sau apropierea zonelor de vizibilitate redusă și observă una la alta numai luminile de catarg."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 60,
-    "question": "Cu ce viteză trebuie să navige o navă în condiții de vizibilitate redusă?",
+    "question": "Cu ce viteză trebuie să navigheze o navă în condiții de vizibilitate redusă?",
     "options": [
       "cu viteză redusă și veghe la prova.",
       "cu viteză economică, dar cu radarul în funcțiune și cu o veghe corespunzătoare, pentru a evita pericolul de coliziune.",
       "cu o viteză de siguranță adaptată împrejurărilor existente și condițiilor de vizibilitate redusă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "colreg",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 61,
@@ -607,7 +907,12 @@
       "pe orice vreme.",
       "în staționar ziua și noaptea."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 62,
@@ -617,7 +922,12 @@
       "pe timpul nopții și pe vizibilitate redusă.",
       "de la apusul la răsăritul soarelui."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 63,
@@ -627,7 +937,12 @@
       "semne.",
       "lumini și semne."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 64,
@@ -635,9 +950,14 @@
     "options": [
       "de la răsăritul la apusul soarelui, pe timp cu vizibilitate redusă, în toate împrejurările în care această măsură este necesară.",
       "când vizibilitatea este sub 3 Mm.",
-      "în srâmtori, când vizibilitatea este redusă."
+      "în strâmtori, când vizibilitatea este redusă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 65,
@@ -647,7 +967,12 @@
       "pe timpul zilei.",
       "ziua sau noaptea, când sunt iluminate."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 66,
@@ -657,7 +982,12 @@
       "lumina de catarg.",
       "lumina de remorcaj."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 67,
@@ -667,7 +997,12 @@
       "lumină de pupa.",
       "lumină de remorcaj."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 68,
@@ -677,7 +1012,12 @@
       "orice lumină albă vizibilă pe tot orizontul.",
       "o lumină albă așezată deasupra axului longitudinal al navei, arătând o lumină neîntreruptă pe un arc de orizont de 225°, astfel ca să arate 22°5 înapoia traversului fiecărui bord."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 69,
@@ -687,7 +1027,12 @@
       "lumină albă din borduri, de la scările de acces.",
       "lumină albă de la scările exterioare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 70,
@@ -697,7 +1042,12 @@
       "lumina de remorcaj.",
       "lumina de pupa."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 71,
@@ -707,7 +1057,12 @@
       "o lumină așezată cât mai aproape posibil în pupa, arătând o lumină neîntreruptă pe un arc de 135°, câte 67°5 în fiecare bord.",
       "o lumină albă instalată la pupa, care arată ca o lumină neîntreruptă pe un arc de cerc de 135°, câte 67°5 în fiecare bord."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 72,
@@ -717,7 +1072,12 @@
       "lumina de remorcaj.",
       "lumina de ancoră pupa."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 73,
@@ -727,7 +1087,12 @@
       "nestăpână pe manevra sa.",
       "stânjenită de pescajul ei când nu este în marș."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 74,
@@ -737,7 +1102,12 @@
       "o lumină galbenă neîntreruptă vizibilă la 360°.",
       "o lumină galbenă așezată cât mai aproape posibil de pupa, arătând o lumină neîntreruptă pe un arc de cerc de 135°, câte 67°5 în fiecare bord."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 75,
@@ -747,7 +1117,12 @@
       "cu capacitate de manevră redusă la ancoră.",
       "stânjenită de pescajul ei la ancoră."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 76,
@@ -757,7 +1132,12 @@
       "lumina cu sclipiri regulate.",
       "lumina vizibilă pe întreg orizontul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 77,
@@ -767,17 +1147,27 @@
       "stânjenită de pescajul ei.",
       "cu capacitate de manevră redusă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 78,
     "question": "Ce se înțelege prin expresia lumină vizibilă pe întreg orizontul?",
     "options": [
-      "lumină neîntreruptă pe un arc de de orizont de 360°.",
+      "lumină neîntreruptă pe un arc de orizont de 360°.",
       "lumină neîntreruptă vizibilă la prova și în borduri.",
       "lumină neîntreruptă vizibilă pe un arc de orizont de 180°."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 79,
@@ -787,7 +1177,12 @@
       "lumină cu sclipiri.",
       "lumină de remorcaj."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 80,
@@ -797,7 +1192,12 @@
       "stânjenită de pescajul ei la ancoră.",
       "nestăpână pe manevră la ancoră."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 81,
@@ -807,7 +1207,12 @@
       "o lumină cu sclipiri regulate cu frecvența de 120 sclipiri pe minut sau mai mult.",
       "o lumină cu sclipiri regulate foarte repezi."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 82,
@@ -817,7 +1222,12 @@
       "2 Mm.",
       "3 Mm."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 83,
@@ -827,7 +1237,12 @@
       "2 Mm.",
       "1 Mm."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 84,
@@ -837,7 +1252,12 @@
       "cu capacitate de manevră redusă.",
       "nestăpână pe manevră."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 85,
@@ -847,7 +1267,12 @@
       "2 Mm.",
       "1,5 Mm."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 86,
@@ -857,7 +1282,12 @@
       "0,5 Mm.",
       "1 Mm."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 87,
@@ -867,7 +1297,12 @@
       "2 Mm.",
       "1 Mm."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 88,
@@ -877,7 +1312,12 @@
       "1,5 Mm.",
       "2 Mm."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 89,
@@ -887,7 +1327,12 @@
       "4 Mm.",
       "3,5 Mm."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 90,
@@ -897,7 +1342,12 @@
       "2 Mm.",
       "5 Mm."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 91,
@@ -907,7 +1357,12 @@
       "3 Mm.",
       "2 Mm."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 92,
@@ -917,7 +1372,12 @@
       "cu lungimea mai mică de 100 m.",
       "cu lungimea între 12 și 20 m."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 93,
@@ -927,7 +1387,12 @@
       "2 Mm.",
       "1 Mm."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 94,
@@ -937,7 +1402,12 @@
       "o lumină galbenă cu sclipiri vizibile pe tot orizontul.",
       "luminile unei nave cu propulsie mecanică în marș plus o lumină galbenă cu sclipiri vizibilă pe tot orizontul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 95,
@@ -947,7 +1417,12 @@
       "luminile din borduri.",
       "o lumină albă care poate fi ridicată la nevoie."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 96,
@@ -957,7 +1432,12 @@
       "2 Mm.",
       "1 Mm."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 97,
@@ -967,7 +1447,12 @@
       "luminile din borduri și lumina de pupa.",
       "luminile de remorcher și lumina de pupa."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 98,
@@ -977,7 +1462,12 @@
       "lumina de catarg și luminile din borduri.",
       "lumină de catarg și lumină de pupa."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 99,
@@ -987,17 +1477,27 @@
       "lumina de pupa și luminile din borduri la extremitatea prova.",
       "luminile de borduri la extremitatea prova."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 100,
     "question": "Luminile din borduri și lumina din pupa sunt luminile pe care le poartă o navă:",
     "options": [
-      "în seviciul de pilotaj și este în marș.",
+      "în serviciul de pilotaj și este în marș.",
       "cu vele când este la ancoră.",
       "cu vele în marș."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 101,
@@ -1007,7 +1507,12 @@
       "luminile de catarg și luminile din borduri.",
       "luminile din borduri și lumina din pupa."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 102,
@@ -1017,7 +1522,12 @@
       "o navă cu rame.",
       "o navă cu vele la ancoră."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 103,
@@ -1027,7 +1537,12 @@
       "luminile din borduri.",
       "o lumină albă pe care să o arate la nevoie."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 104,
@@ -1037,7 +1552,12 @@
       "20 m.",
       "15 m."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 105,
@@ -1047,7 +1567,12 @@
       "la măr sau la partea superioară a catargului, în locul cel mai vizibil.",
       "la bastonul prova."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 106,
@@ -1057,7 +1582,12 @@
       "la măr o lumină roșie vizibilă pe tot orizontul.",
       "la măr sau la partea superioară a catargului o lumină roșie deasupra unei lumini verzi, vizibile pe tot orizontul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 107,
@@ -1067,7 +1597,12 @@
       "10 m.",
       "7 m."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 108,
@@ -1077,7 +1612,12 @@
       "luminile din borduri.",
       "o lumină albă la catarg."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 109,
@@ -1087,7 +1627,12 @@
       "o lumină roșie.",
       "dacă nu poartă luminile unei nave cu vele, să fie pregătită să arate o lanternă electrică sau un felinar cu lumină albă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 110,
@@ -1097,7 +1642,12 @@
       "o navă care navigă în același timp cu vele și cu ajutorul unui aparat propulsor.",
       "o navă sau obiect remorcat care este parțial în imersiune și greu de observat."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 111,
@@ -1107,7 +1657,12 @@
       "un bicon în locul cel mai vizibil.",
       "două conuri negre vârf la vârf."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 112,
@@ -1117,7 +1672,12 @@
       "o navă cu vele în marș.",
       "o navă care traulează și nu este în marș."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 113,
@@ -1127,7 +1687,12 @@
       "un bicon instalat la prova.",
       "un con negru instalat la prova."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 114,
@@ -1137,7 +1702,12 @@
       "la catargul pupa.",
       "în locul cel mai vizibil."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 115,
@@ -1147,7 +1717,12 @@
       "când sunt ancorate într-un bazin portuar.",
       "când sunt la ancoră și în radă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 116,
@@ -1157,7 +1732,12 @@
       "nave cu lungime mai mică de 15 m.",
       "nave cu lungime mai mică de 12 m."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 117,
@@ -1167,7 +1747,12 @@
       "un sunet emis de o navă propulsată, în marș, cu o durată mică, sub o secundă.",
       "un sunet a cărui durată este de aproximativ o secundă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 118,
@@ -1177,7 +1762,12 @@
       "un sunet emis de o navă propulsată, în marș, cu o durată de peste 6 secunde.",
       "un sunet sonor emis de o navă cu o durată de 2-3 secunde."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 119,
@@ -1187,7 +1777,12 @@
       "un clopot la prova sau pupa navei.",
       "un fluier și un clopot."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 120,
@@ -1197,7 +1792,12 @@
       "navele sub 12 m lungime sunt obligate să aibă un fluier și un clopot la prova.",
       "navele sub 12 m lungime nu sunt obligate să aibă la bord echipamentul de semnalizare prescris, în lipsa lui să fie dotate cu un alt mijloc de emitere a unui semnal sonor eficace."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 121,
@@ -1207,7 +1807,12 @@
       "când navele se văd unele pe altele.",
       "pe timp de vizibilitate redusă."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 122,
@@ -1217,7 +1822,12 @@
       "un sunet scurt, urmat de un sunet lung.",
       "două sunete lungi, urmate de unul scurt."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 123,
@@ -1227,7 +1837,12 @@
       "două sunete scurte.",
       "două sunete lungi, urmate de două scurte."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 124,
@@ -1237,7 +1852,12 @@
       "trei sunete scurte precedate și urmate de un sunet lung.",
       "trei sunete scurte."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 125,
@@ -1247,7 +1867,12 @@
       "cu orice alte semnale.",
       "cu una sau două bule negre ridicate la catarg."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 126,
@@ -1257,7 +1882,12 @@
       "după minim un minut.",
       "de câte ori este nevoie."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 127,
@@ -1267,7 +1897,12 @@
       "un sunet lung, un sunet scurt, un sunet lung și unul scurt (litera C).",
       "un sunet scurt pentru tribord și 2 sunete scurte pentru babord."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 128,
@@ -1277,7 +1912,12 @@
       "noaptea pe timp de ceață.",
       "atât ziua cât și noaptea, pe vizibilitate redusă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 129,
@@ -1287,7 +1927,12 @@
       "înlăuntrul unei zone în care vizibilitatea este redusă.",
       "numai pe timp de ceață."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 130,
@@ -1297,7 +1942,12 @@
       "3 sunete scurte precedate și urmate de un sunet lung, la intervale de 2 minute.",
       "un sunet lung urmat de 2 sunete scurte la intervale nu mai mari de 2 minute."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 131,
@@ -1307,7 +1957,12 @@
       "un sunet lung precedat și urmat de un sunet scurt la intervale de un minut.",
       "5 sunete scurte la intervale de 2 minute."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 132,
@@ -1317,7 +1972,12 @@
       "4 sunete scurte la intervale de două minute.",
       "un sunet lung urmat de 2 sunete scurte, la intervale ce nu vor fi mai mari de 2 minute."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 133,
@@ -1327,7 +1987,12 @@
       "să emită un semnal sonor eficace la intervale care să nu depășească 2 minute.",
       "să emită cu gongul bătăi repezi la interval de maxim un minut."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 134,
@@ -1337,7 +2002,12 @@
       "\"P.\"",
       "\"O.\""
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 135,
@@ -1347,7 +2017,12 @@
       "3 bule negre vertical.",
       "un pavilion roșu (B)."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 136,
@@ -1357,7 +2032,12 @@
       "fuzee sau facle de mână care produc lumină verde.",
       "fuzee sau facle de mână care produc lumină albă strălucitoare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 137,
@@ -1367,7 +2047,12 @@
       "ridicarea ambelor brațe vertical deasupra capului.",
       "mișcări lente și repetate de sus în jos a brațelor întinse lateral."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 138,
@@ -1377,7 +2062,12 @@
       "un semnal de ton continuu.",
       "un semnal compus din tonuri scurte, continuu."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 139,
@@ -1387,7 +2077,12 @@
       "navele ce aparțin țărilor riverane.",
       "navele cu capacitate de manevră redusă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 140,
@@ -1397,17 +2092,27 @@
       "când sunt considerate nave privilegiate.",
       "când sunt nave stânjenite de pescajul lor."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 141,
-    "question": "Ce semnificație au semnele aprobate transmise prin sisteme de radiocomunicații?",
+    "question": "Ce semnificație au semnalele aprobate transmise prin sisteme de radiocomunicații?",
     "options": [
       "sunt considerate semnale de pericol.",
       "sunt considerate semnale de test.",
       "sunt considerate semnale de avertizare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 142,
@@ -1417,7 +2122,12 @@
       "sunt considerate semnale de avertizare.",
       "sunt considerate semnale de pericol."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "lights_signals",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 143,
@@ -1427,7 +2137,12 @@
       "Un număr de catalog.",
       "Raportul dintre lungimea unitară de pe Pământ și corespondentul pe hartă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 144,
@@ -1437,7 +2152,12 @@
       "longitudinea punctului de plecare este mai mică decât longitudinea punctului de sosire.",
       "longitudinea punctului de plecare este mai mare decât longitudinea punctului de sosire."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 145,
@@ -1447,7 +2167,12 @@
       "grade Celsius.",
       "milimetri coloană de mercur."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 146,
@@ -1457,7 +2182,12 @@
       "tribord-albă fixa, babord-albă cu sclipiri.",
       "tribord-roșu, babord-verde."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 147,
@@ -1467,7 +2197,12 @@
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la axul prova al navei.",
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord giro până la axul prova al navei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 148,
@@ -1477,7 +2212,12 @@
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la linia de vizare la reperul costier.",
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 149,
@@ -1487,7 +2227,12 @@
       "Arcul de paralel măsurat de la meridianul Greenwich până la meridianul locului.",
       "Arcul de meridian măsurat de la ecuatorul terestru până la paralelul locului."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 150,
@@ -1497,7 +2242,12 @@
       "longitudinea punctului de sosire este mai mică decât longitudinea punctului de plecare.",
       "longitudinea punctului de sosire este mai mare decât longitudinea punctului de plecare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 151,
@@ -1507,7 +2257,12 @@
       "numai creșterea vitezei.",
       "micșorarea vitezei și derivă de vânt."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 152,
@@ -1517,7 +2272,12 @@
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la linia de vizare la reperul costier.",
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 153,
@@ -1527,7 +2287,12 @@
       "Arcul de paralel măsurat de la meridianul Greenwich până la meridianul locului.",
       "Arcul de meridian măsurat de la ecuatorul terestru până la paralelul locului."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 155,
@@ -1537,7 +2302,12 @@
       "latitudinea punctului de plecare este mai mare decât latitudinea punctului de sosire.",
       "longitudinea punctului de plecare este mai mică decât longitudinea punctului de sosire."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 156,
@@ -1547,7 +2317,12 @@
       "Nord giro.",
       "Nord compas."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 157,
@@ -1557,7 +2332,12 @@
       "Limitele laterale ale unei serii de pericole de navigație.",
       "Limitele laterale ale șenalului navigabil."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 158,
@@ -1567,7 +2347,12 @@
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la axul prova al navei.",
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 159,
@@ -1577,7 +2362,12 @@
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la linia de vizare la reperul costier.",
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 160,
@@ -1587,7 +2377,12 @@
       "Punctele în care linia ce trece prin centrul Pământului și punctul navei intersectează suprafața Pământului.",
       "Punctele în care linia ce trece prin centrul Pământului și prin observatorul astronomic de la Greenwich intersectează suprafața Pământului."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 161,
@@ -1597,7 +2392,12 @@
       "sonda.",
       "barometrul."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 162,
@@ -1607,7 +2407,12 @@
       "alte nave aflate la ancoră.",
       "faruri."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 163,
@@ -1617,7 +2422,12 @@
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la axul prova al navei.",
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la axul prova al navei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 164,
@@ -1627,27 +2437,27 @@
       "doar creșterea vitezei.",
       "derivă de vânt."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 165,
     "question": "Lumina alternativă a unui far are următoarea semnificație:",
     "options": [
       "intensitatea luminii este variabilă.",
-      "lumina fixă combinată cu intensificare de lumina.",
+      "lumina fixă combinată cu intensificare de lumină.",
       "culori diferite în sectoare strict delimitate."
     ],
-    "correct": 2
-  },
-  {
-    "id": 166,
-    "question": "Longitudinea geografică este:",
-    "options": [
-      "Arcul de ecuator măsurat de la meridianul Greenwich până la meridianul locului.",
-      "Arcul de paralel măsurat de la meridianul Greenwich până la meridianul locului.",
-      "Arcul de meridian măsurat de la ecuatorul terestru până la paralelul locului."
-    ],
-    "correct": 0
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 168,
@@ -1657,17 +2467,27 @@
       "derivă de vânt la babord.",
       "micșorarea vitezei și derivă de vânt la babord."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 169,
     "question": "Lumina unui far în izofază are următoarea semnificație:",
     "options": [
-      "durata de lumina este egală cu durata de întuneric.",
-      "intensitatea luminii este constanta.",
-      "lumina fixă este combinată cu o intensificare de lumina."
+      "durata de lumină este egală cu durata de întuneric.",
+      "intensitatea luminii este constantă.",
+      "lumina fixă este combinată cu o intensificare de lumină."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 170,
@@ -1677,7 +2497,12 @@
       "unghiul din planul orizontului adevărat măsurat de la direcția nord compas până la axul prova al navei.",
       "unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 171,
@@ -1687,7 +2512,12 @@
       "o harta geografică a unei porțiuni din suprafața Pământului care conține mări și oceane.",
       "este o reprezentare în plan, convențională, micșorată și generalizată a oceanului planetar."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 172,
@@ -1697,7 +2527,12 @@
       "latitudinea punctului de plecare este mai mare decât latitudinea punctului de sosire.",
       "longitudinea punctului de plecare este mai mică decât longitudinea punctului de sosire."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 173,
@@ -1707,7 +2542,12 @@
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord adevărat până la linia de vizare la reperul costier.",
       "Unghiul din planul orizontului adevărat măsurat de la direcția nord magnetic până la axul prova al navei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 174,
@@ -1717,7 +2557,12 @@
       "relevmente.",
       "salinitate."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 175,
@@ -1727,7 +2572,12 @@
       "Axul longitudinal al navei.",
       "Direcția nord compas."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 176,
@@ -1737,17 +2587,12 @@
       "barometrul.",
       "lochul."
     ],
-    "correct": 2
-  },
-  {
-    "id": 177,
-    "question": "Adâncimea apei se măsoară cu:",
-    "options": [
-      "lochul.",
-      "sonda.",
-      "barometrul."
-    ],
-    "correct": 1
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 178,
@@ -1757,17 +2602,12 @@
       "numai creșterea vitezei.",
       "micșorarea vitezei și derivă de vânt."
     ],
-    "correct": 0
-  },
-  {
-    "id": 179,
-    "question": "Dacă vântul bate din travers acesta produce:",
-    "options": [
-      "creșterea vitezei și derivă de vânt.",
-      "doar creșterea vitezei.",
-      "derivă de vânt."
-    ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 180,
@@ -1777,7 +2617,12 @@
       "derivă de vânt la babord.",
       "micșorarea vitezei și derivă de vânt la babord."
     ],
-    "correct": 0
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 181,
@@ -1787,7 +2632,12 @@
       "grade Celsius.",
       "milimetri coloană de mercur."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 182,
@@ -1797,7 +2647,12 @@
       "Nord giro.",
       "Nord compas."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 183,
@@ -1807,7 +2662,12 @@
       "orice construcție de la coastă.",
       "faruri de aterizare."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 184,
@@ -1817,17 +2677,27 @@
       "axul longitudinal al ambarcațiunii.",
       "direcția Nord compas."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 185,
     "question": "Lumina unui far în izofaza are următoarea semnificație:",
     "options": [
       "durata de lumină este egală cu durata de întuneric.",
-      "intensitatea luminii este constanta.",
-      "lumina fixă este combinată cu o intensificare de lumina."
+      "intensitatea luminii este constantă.",
+      "lumina fixă este combinată cu o intensificare de lumină."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 186,
@@ -1837,7 +2707,12 @@
       "negru-galben-negru.",
       "negru-galben."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 187,
@@ -1847,7 +2722,12 @@
       "galben-negru-galben.",
       "negru-galben."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 188,
@@ -1857,7 +2737,12 @@
       "galben-negru-galben.",
       "negru-galben."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 189,
@@ -1867,7 +2752,12 @@
       "un cilindru verde.",
       "un cilindru roșu."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 190,
@@ -1877,7 +2767,12 @@
       "un cilindru verde.",
       "un cilindru roșu."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 191,
@@ -1887,7 +2782,12 @@
       "o sferă de culoare roșie.",
       "două bule suprapuse de culoare neagră."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 192,
@@ -1897,7 +2797,12 @@
       "în sensul de larg către coastă.",
       "este de competența guvernelor statelor riverane."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 193,
@@ -1907,7 +2812,12 @@
       "un semn de pericol izolat.",
       "un semn de vest."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 194,
@@ -1917,7 +2827,12 @@
       "un semn de pericol izolat.",
       "un semn de est."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 195,
@@ -1927,7 +2842,12 @@
       "un semn de pericol izolat.",
       "un semn de vest."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 196,
@@ -1937,7 +2857,12 @@
       "un semn de vest.",
       "un semn de pericol izolat."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 197,
@@ -1947,7 +2872,12 @@
       "un semn de pericol izolat.",
       "un semn de vest."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 198,
@@ -1957,7 +2887,12 @@
       "cardinal.",
       "inter-intercardinal."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 199,
@@ -1967,7 +2902,12 @@
       "cardinal.",
       "inter-intercardinal."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 200,
@@ -1977,7 +2917,12 @@
       "cardinal.",
       "inter-intercardinal."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 201,
@@ -1987,7 +2932,12 @@
       "inter-intercardinal.",
       "intermediar."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 202,
@@ -1997,7 +2947,12 @@
       "Est.",
       "Sud."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 203,
@@ -2007,7 +2962,12 @@
       "Est.",
       "Sud."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 204,
@@ -2017,7 +2977,12 @@
       "Est.",
       "Sud."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 205,
@@ -2027,7 +2992,12 @@
       "Est.",
       "Sud."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 206,
@@ -2037,7 +3007,12 @@
       "Dc = 034 grade.",
       "Dc = 328 grade."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 207,
@@ -2047,7 +3022,12 @@
       "Dc = 034 grade.",
       "Dc = 328 grade."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 208,
@@ -2057,7 +3037,12 @@
       "Dc = 234 grade.",
       "Dc = 328 grade."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 209,
@@ -2067,27 +3052,40 @@
       "Dc = 234 grade.",
       "Dc = 328 grade."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "navigation",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 210,
-    "question": "Piesa de rezistenta situată în extremitatea prova, constituind o prelungire a chilei, se numește:",
+    "question": "Piesa de rezistența situată în extremitatea prova, constituind o prelungire a chilei, se numește:",
     "options": [
       "contractilă.",
       "etravă.",
       "carlinga."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 211,
     "question": "Ce reprezintă un cui de strapazan?",
     "options": [
-      "un cui de lemn folosit la asamblarea pieselor de rezistenta.",
+      "un cui de lemn folosit la asamblarea pieselor de rezistența.",
       "un cui de lemn bătut în marginea bordajului, vertical de care se prinde rama.",
       "un cui de lemn, așezat la prova de care se leagă barca."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 212,
@@ -2095,9 +3093,13 @@
     "options": [
       "zalele de ancora nu au pod.",
       "la ghidare pe nara de ancora.",
-      "mărește rezistenta la întindere și împiedica încurcarea."
+      "mărește rezistența la întindere și împiedica încurcarea."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 213,
@@ -2107,7 +3109,11 @@
       "in cazul unei persoane căzută peste bord.",
       "pentru legare sau remorcat."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 214,
@@ -2117,7 +3123,11 @@
       "parâmă simplă sau garlin.",
       "parâmă simplă sau cordon."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 215,
@@ -2127,17 +3137,25 @@
       "rodante.",
       "binte."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 216,
     "question": "Babalele sunt piese metalice din fonta sau otel, simple sau duble și servesc pentru:",
     "options": [
-      "întărirea structurii de rezistenta a navei.",
+      "întărirea structurii de rezistența a navei.",
       "ancoraj.",
       "luarea voltelor cu parâme."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 217,
@@ -2147,7 +3165,11 @@
       "tacheti.",
       "turnicheti."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 218,
@@ -2157,7 +3179,11 @@
       "trecerea de la o parâma mai groasa spre una mai subțire.",
       "sporirea rezistentei la rupere a parâmei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 219,
@@ -2167,27 +3193,39 @@
       "totalitatea manevrelor mobile de la bord.",
       "ochiurile făcute de o parâma semirigida."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 220,
-    "question": "In cazul unei rame, pana reprezintă:",
+    "question": "În cazul unei rame, pana reprezintă:",
     "options": [
       "îngroșarea brațului imediat după manșon.",
       "partea ramei din care este manevrata.",
       "partea lată în forma de lopata."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 221,
-    "question": "In general o ancora se compune din următoarele parti:",
+    "question": "În general o ancora se compune din următoarele parti:",
     "options": [
       "brațe, fus, diamant, inel, traversa.",
       "traverse, brațe, diamant și eche.",
       "inel, traversa, brațe și pană."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 222,
@@ -2197,17 +3235,25 @@
       "ancora se târăște pe fundul apei.",
       "ancora s-a agățat într-un corp dur pe fundul apei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 223,
-    "question": "Dacă o parâma intra în compunerea altei parâme, mai groase, aceasta va purta denumirea de:",
+    "question": "Dacă o parâma intră în compunerea altei parâme, mai groase, aceasta va purta denumirea de:",
     "options": [
       "lanțană.",
       "garlin.",
       "cordon."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 224,
@@ -2217,7 +3263,11 @@
       "sonda.",
       "barometrul."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 225,
@@ -2227,17 +3277,25 @@
       "copastie.",
       "fila."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 226,
-    "question": "Un observator care sta pe puntea navei cu fata spre prova, are în dreapta:",
+    "question": "Un observator care stă pe puntea navei cu față spre prova, are în dreapta:",
     "options": [
       "bordul babord.",
       "bordul tribord.",
       "cuplul maestru."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 227,
@@ -2247,7 +3305,11 @@
       "dame și eche.",
       "pană și dama."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 228,
@@ -2257,17 +3319,25 @@
       "în golfuri și estuare.",
       "la mare în ape de adâncime medie."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 229,
-    "question": "O baba simpla, formata dintr-o singura coloană prevăzuta cu traversa se numește:",
+    "question": "O baba simpla, formată dintr-o singura coloană prevăzuta cu traversa se numește:",
     "options": [
       "tranchet.",
       "turnichet.",
       "binta."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 230,
@@ -2277,27 +3347,39 @@
       "babale.",
       "turnicheti."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 231,
     "question": "Ce reprezintă patronarea unei parâme?",
     "options": [
       "protejarea contra frecării, prin învelirea unei porțiuni.",
-      "înfășurarea capetelor ca sa nu se destrame.",
+      "înfășurarea capetelor ca să nu se destrame.",
       "eliminarea unei porțiuni uzate."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 232,
-    "question": "Piesa fundamentala de rezistenta a oricărei nave, situata în plan diametral, de la prova la pupa, se numește:",
+    "question": "Piesa fundamentală de rezistența a oricărei nave, situată în plan diametral, de la prova la pupa, se numește:",
     "options": [
       "chila.",
       "etrava.",
       "etambou."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 233,
@@ -2307,7 +3389,11 @@
       "firul.",
       "garlinul."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 234,
@@ -2317,7 +3403,11 @@
       "trancheti.",
       "turnicheti."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 235,
@@ -2327,7 +3417,11 @@
       "urechi.",
       "tacheti."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 236,
@@ -2337,7 +3431,11 @@
       "etrava.",
       "etambreul axului cârmei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 237,
@@ -2347,27 +3445,39 @@
       "Barometrul.",
       "Lochul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 238,
     "question": "Dama reprezintă:",
     "options": [
-      "o scobitura în marginea superioara a bordajului, în care se introduce rama.",
+      "o scobitura în marginea superioară a bordajului, în care se introduce rama.",
       "partea cea mai lată a ambarcațiunii.",
       "locul în care se întâlnesc filele de bordaj cu copastia."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 239,
-    "question": "In cazul unei ancore, diamantul este:",
+    "question": "În cazul unei ancore, diamantul este:",
     "options": [
       "locul de unde se leagă capătul lanțului.",
       "ramificația brațelor.",
       "locul de împreunare a brațelor cu fusul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 240,
@@ -2377,7 +3487,11 @@
       "lățimea maxima a zalei la interior.",
       "lungimea maxima a zalei la exterior."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 241,
@@ -2387,7 +3501,11 @@
       "urechi.",
       "tacheti."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 242,
@@ -2397,7 +3515,11 @@
       "troțe.",
       "pene."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 243,
@@ -2407,7 +3529,11 @@
       "o za de lat de ancora.",
       "o cheie de împreunare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 244,
@@ -2417,17 +3543,25 @@
       "selatura pupa.",
       "etambreul axului elicei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 245,
-    "question": "Un observator care sta pe puntea navei cu fata spre prova, are în stânga:",
+    "question": "Un observator care stă pe puntea navei cu față spre prova, are în stânga:",
     "options": [
       "bordul babord.",
       "bordul tribord.",
       "cuplul maestru."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 246,
@@ -2437,7 +3571,11 @@
       "coaste.",
       "traverse."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 247,
@@ -2447,7 +3585,11 @@
       "gurna.",
       "binta."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 248,
@@ -2457,7 +3599,11 @@
       "parâmele răsucite (garline).",
       "parâmele simple (lanțane)."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 249,
@@ -2465,19 +3611,27 @@
     "options": [
       "greutatea.",
       "grosimea.",
-      "rezistenta."
+      "rezistența."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 250,
     "question": "Chila reprezintă:",
     "options": [
-      "element de rezistenta al navei dispus în planul transversal al navei.",
-      "element de rezistenta dispus în planul longitudinal al navei.",
+      "element de rezistența al navei dispus în planul transversal al navei.",
+      "element de rezistența dispus în planul longitudinal al navei.",
       "element de rezistență dispus în planul cuplului maestru."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 251,
@@ -2485,9 +3639,13 @@
     "options": [
       "grosimea parâmei.",
       "greutatea parâmei.",
-      "rezistenta parâmei."
+      "rezistența parâmei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 252,
@@ -2497,17 +3655,25 @@
       "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
       "o parâmă subțire confecționată din trei sfilate, folosită la înfășurare, legături și patronări."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 253,
     "question": "Raiul unei macarale este:",
     "options": [
       "o rola care se învârtește liber în jurul unui ax.",
-      "o piesa formata din doua placi laterale ovale și doua tocuri.",
+      "o piesa formată din doua placi laterale ovale și doua tocuri.",
       "piesa de susținere a macaralei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 254,
@@ -2517,7 +3683,11 @@
       "prelungirea chilei în prova.",
       "prelungirea chilei în pupa."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 255,
@@ -2527,7 +3697,11 @@
       "parâmele vegetale.",
       "parâmele metalice."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 256,
@@ -2535,9 +3709,13 @@
     "options": [
       "flexibilitatea parâmei.",
       "greutatea parâmei.",
-      "rezistenta parâmei."
+      "rezistența parâmei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 257,
@@ -2547,17 +3725,25 @@
       "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
       "o lanțană subțire de 7-8mm folosită la înfășurări și patronări de parâme groase."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 258,
     "question": "Sbirul este:",
     "options": [
       "o rola care se învârtește liber în jurul unui ax.",
-      "o piesa formata din doua placi laterale ovale și doua tocuri.",
+      "o piesa formată din doua placi laterale ovale și doua tocuri.",
       "inel de parâmă confecționat prin matisire care servește la prinderea unui palanc pe o parâmă sau pe un scondru."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 259,
@@ -2567,17 +3753,25 @@
       "prelungirea chilei în prova.",
       "prelungirea chilei în pupa."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 260,
     "question": "Caracteristicile parâmelor sunt:",
     "options": [
-      "flotabilitatea, greutatea, rezistenta, elasticitatea.",
-      "grosimea, greutatea, rezistenta, flexibilitatea, elasticitatea.",
+      "flotabilitatea, greutatea, rezistența, elasticitatea.",
+      "grosimea, greutatea, rezistența, flexibilitatea, elasticitatea.",
       "grosimea, flotabilitatea, greutatea, flexibilitatea, elasticitatea, asieta."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 261,
@@ -2587,7 +3781,11 @@
       "îndepărtarea materialelor străine din materia prima.",
       "operațiunea prin care firele sunt răsucite."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 262,
@@ -2597,7 +3795,11 @@
       "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
       "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 263,
@@ -2607,7 +3809,11 @@
       "instalații de forță prevăzute cu cabina și panou de comandă.",
       "instalații compuse dintr-un ansamblu de grinzi metalice sudate sau nituite, aflate pe nave."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 264,
@@ -2617,7 +3823,11 @@
       "longitudinal.",
       "transversal."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 265,
@@ -2627,7 +3837,11 @@
       "distanta măsurată pe orizontală în planul cuplului maestru, între extremitățile celor doua borduri.",
       "distanța măsurată pe verticală, de la linia de bază până la linia de plutire."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 267,
@@ -2637,7 +3851,11 @@
       "îndepărtarea materialelor străine din materia primă.",
       "operațiunea prin care firele sunt rasucite."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 268,
@@ -2647,7 +3865,11 @@
       "o lanțană mai fină decât merlinul, folosită la patronări și înfășurări fine.",
       "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 269,
@@ -2657,7 +3879,11 @@
       "căpățâna, raiul, troliul.",
       "căpățâna, raiul, spiraiul."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 270,
@@ -2667,7 +3893,11 @@
       "longitudinal.",
       "transversal."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 271,
@@ -2677,7 +3907,11 @@
       "proprietatea navei de a pluti, la pescajul mediu determinat, cu încărcătura sa.",
       "proprietatea navei de a-si schimba direcția mișcării."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 272,
@@ -2685,9 +3919,13 @@
     "options": [
       "întuneric și lipsa de ventilație.",
       "umezeala și radiația solara.",
-      "nu necesita masuri speciale pentru păstrare."
+      "nu necesită măsuri speciale pentru păstrare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 273,
@@ -2697,7 +3935,11 @@
       "îndepărtarea materialelor străine din materia prima.",
       "operațiunea prin care firele sunt răsucite spre dreapta."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 274,
@@ -2707,7 +3949,11 @@
       "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
       "o lanțână subțire de 7-8mm folosită la înfășurări și patronări de parâme groase."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 275,
@@ -2717,7 +3963,11 @@
       "instalații compuse din grinzi de otel sudate sau îmbinate prin nituire.",
       "ansamble alcătuite din mai multe bigi sau cranice, folosite la ridicarea de greutăți și deschiderea capacelor de magazii."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 276,
@@ -2727,7 +3977,11 @@
       "firul.",
       "lanțana."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 277,
@@ -2737,7 +3991,11 @@
       "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm.",
       "din fire de capron, relon, nailon, polipropilena."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 278,
@@ -2747,7 +4005,11 @@
       "dispozitiv de ridicat alcătuit dintr-o macara fixa, prin care trece o parâmă.",
       "dispozitiv de ridicat alcătuit dintr-o macara mobila, prin care trece un curent."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 279,
@@ -2757,7 +4019,11 @@
       "lanțane.",
       "cordoane."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 280,
@@ -2767,7 +4033,11 @@
       "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm.",
       "din fire de capron, relon, nailon, polipropilena."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 281,
@@ -2777,7 +4047,11 @@
       "montant de copastie.",
       "nu sunt necesari pentru ambarcatiuni."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 282,
@@ -2787,17 +4061,25 @@
       "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm.",
       "din fire de capron, relon, nailon, polipropilena."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 283,
-    "question": "Mai multe fire răsucite intre ele formează:",
+    "question": "Mai multe fire răsucite între ele formează:",
     "options": [
       "o suvița.",
       "o lanțână.",
       "o sfilata."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 284,
@@ -2807,7 +4089,11 @@
       "mijloc individual de salvare care face parte din inventarul ambarcațiunii.",
       "protejată termic."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 285,
@@ -2817,7 +4103,11 @@
       "parâme vegetale confecționate din fibre de bananier.",
       "parâme vegetale confecționate din frunze de cactus."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 286,
@@ -2825,9 +4115,13 @@
     "options": [
       "in magazii.",
       "pe punte.",
-      "intr-un cofferdam."
+      "într-un cofferdam."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 287,
@@ -2837,7 +4131,11 @@
       "la confecționarea baloanelor și paietelor.",
       "la confecționarea saulelor la ambarcațiuni sport și de agrement."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 288,
@@ -2845,9 +4143,13 @@
     "options": [
       "culoarea și mirosul.",
       "calitatea zincării.",
-      "sa nu fie îndoite."
+      "să nu fie îndoite."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 289,
@@ -2857,7 +4159,11 @@
       "la confecționarea baloanelor și paietelor.",
       "la confecționarea saulelor la ambarcațiuni sportive și de agrement."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 290,
@@ -2867,7 +4173,11 @@
       "capete de parâmă folosite la botare.",
       "capete de parâmă fixate la prova și la pupa bărcii."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 291,
@@ -2877,7 +4187,11 @@
       "siguranțe ale axului unei macarale.",
       "stifturi de siguranță ale unei chei de împreunare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 292,
@@ -2887,7 +4201,11 @@
       "tacheții sunt piese metalice în forma de T, montate pe punte, pe copastie și servesc pentru luarea voltelor la parâme mai subțiri.",
       "tacheții sunt piese metalice de ghidarea parâmelor, cu minimum de frecare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 293,
@@ -2897,7 +4215,11 @@
       "turnicheții sunt piese metalice de ghidarea parâmelor, cu minimum de frecare.",
       "turnicheții sunt piese metalice pentru agățat lanțuri, parâme vegetale și sârme."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 294,
@@ -2907,7 +4229,11 @@
       "viteza navei se măsoară în Mile marine pe ora (Mm/h).",
       "viteza navei se măsoară cu anemometrul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 295,
@@ -2917,7 +4243,11 @@
       "cu gheare de pisica.",
       "cu fus nearticulat."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 296,
@@ -2927,7 +4257,11 @@
       "cu gheare de pisica.",
       "cu fus nearticulat."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 297,
@@ -2937,7 +4271,11 @@
       "prin măsurarea sarcinii care se rupe parâma.",
       "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 298,
@@ -2947,17 +4285,25 @@
       "prin măsurarea sarcinii care se rupe parâma.",
       "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 299,
-    "question": "Cum se măsoară rezistenta unei parâme?",
+    "question": "Cum se măsoară rezistența unei parâme?",
     "options": [
       "prin măsurarea circumferinței ei.",
       "prin măsurarea sarcinii care se rupe parâma.",
       "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 300,
@@ -2967,7 +4313,11 @@
       "o piesa sub forma unei bare sau a unui sector ce se fixează în capul penei cârmei.",
       "partea de cârmă ce se afla deasupra liniei de plutire."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 301,
@@ -2977,7 +4327,11 @@
       "fus, diamant, brațe și gheare.",
       "stopa de lanț, lanțul de ancorare și tubul de ghidare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 302,
@@ -2987,157 +4341,221 @@
       "firul, șuvița, lanțana, cordonul, garlinul, gașa.",
       "firul, sfilata, suvița, lanțana, cordonul, carlinga."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 303,
-    "question": "In categoria nodurilor speciale intra:",
+    "question": "În categoria nodurilor speciale intră:",
     "options": [
       "nodul gura de știucă, nodul de remorca.",
       "nodul de bandula, nodul picior de câine.",
       "nodul de scaun, nodul de ancora."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 304,
-    "question": "In categoria obiectelor de armament destinate pentru navigație din inventarul bărcii, intra:",
+    "question": "În categoria obiectelor de armament destinate pentru navigație din inventarul bărcii, intră:",
     "options": [
       "ghiordel.",
       "cuțit de gabier.",
       "compas de barca."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 305,
-    "question": "In categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intra:",
+    "question": "În categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intră:",
     "options": [
       "pistol de semnalizare.",
       "butoiaș cu apă potabilă.",
       "ispol."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 306,
-    "question": "In categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intra:",
+    "question": "În categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intră:",
     "options": [
       "colaci de salvare.",
       "pavilioane de semnalizare cu brațele.",
       "veste de salvare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 307,
-    "question": "In categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intra:",
+    "question": "În categoria obiectelor de armament destinate pentru navigație și semnalizare din inventarul bărcii, intră:",
     "options": [
       "bastonul de pavilion cu pavilionul.",
       "ciocanul.",
       "ghiordelul."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 308,
-    "question": "In categoria obiectelor de armament destinate pentru salvare echipaj, în inventarul bărcii intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru salvare echipaj, în inventarul bărcii intră si:",
     "options": [
       "pistolul de semnalizare.",
       "butoias cu apă potabilă.",
       "ispolul."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 309,
-    "question": "In categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intră si:",
     "options": [
       "trusa cu scule de marangozerie.",
       "veste de salvare.",
       "compasul de barca."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 310,
-    "question": "In categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intră si:",
     "options": [
       "colaci de salvare.",
       "ghiordelul.",
       "compasul de barca."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 311,
-    "question": "In categoria obiectelor de armament destinate pentru salvarea personalului, în inventarul bărcii intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru salvarea personalului, în inventarul bărcii intră si:",
     "options": [
       "trusa cu medicamente.",
       "trusa cu scule de marangozerie.",
       "felinar de vânt."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 312,
-    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru vitalitatea bărcii, intră si:",
     "options": [
       "butoias cu apa potabila.",
       "ghiordelul.",
       "veste de salvare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 313,
-    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru vitalitatea bărcii, intră si:",
     "options": [
       "pavilioane de semnalizare cu brațele.",
       "ispolul.",
       "ciocanul."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 314,
-    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru vitalitatea bărcii, intră si:",
     "options": [
       "dopuri de lemn.",
       "bastonul de pavilion cu pavilionul.",
       "centuri de salvare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 315,
-    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru vitalitatea bărcii, intră si:",
     "options": [
       "trusa cu medicamente.",
       "pene, cuie, câlți.",
       "compasul de barca."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 316,
-    "question": "In categoria obiectelor de armament destinate pentru vitalitatea bărcii, intra si:",
+    "question": "În categoria obiectelor de armament destinate pentru vitalitatea bărcii, intră si:",
     "options": [
       "trusa cu medicamente.",
       "trusa cu scule de marangozerie.",
       "felinar de vânt."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 317,
-    "question": "In categoria propulsoarelor intra:",
+    "question": "În categoria propulsoarelor intră:",
     "options": [
       "zbaturile, ramele, elicele.",
       "linia de arbori, bulbul, cârma.",
       "cârma, timona, mașina cârmei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 318,
@@ -3147,7 +4565,11 @@
       "instalația cu care se realizează propulsia navei.",
       "instalația cu care se realizează fixarea într-o poziție bine determinată a navei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 319,
@@ -3157,7 +4579,11 @@
       "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
       "reprezintă un ansamblu de piese și mecanisme cu ajutorul cărora se guvernează nava în locul voit."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 320,
@@ -3167,7 +4593,11 @@
       "instalația cu care se realizează propulsia navei.",
       "instalatia cu care se realizează fixarea într-o poziție bine determinată a navei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 321,
@@ -3177,7 +4607,11 @@
       "reprezintă un ansamblu de piese și mecanisme care trebuie sa asigure respectarea drumului impus navei sau schimbarea direcției de înaintare a navei.",
       "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 322,
@@ -3187,7 +4621,11 @@
       "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
       "reprezintă un ansamblu de piese și mecanisme cu ajutorul cărora se asigura nava în locul voit și într-o pozitie aleasă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 323,
@@ -3197,7 +4635,11 @@
       "pentru dublarea forței de tracțiune a unei fungi.",
       "pentru ridicarea greutăților și la instalațiile de gruie."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 324,
@@ -3207,7 +4649,11 @@
       "operațiunea de îndepărtare a ruginii și a stratului de vopsea sub care se afla rugina.",
       "operațiunea de aplicare a grundului pe suprafețe curățate de rugină."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 325,
@@ -3217,7 +4663,11 @@
       "de legătură.",
       "de cârlig."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 326,
@@ -3227,7 +4677,11 @@
       "de cârlig.",
       "special."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 327,
@@ -3237,7 +4691,11 @@
       "de cârlig.",
       "special."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 328,
@@ -3247,7 +4705,11 @@
       "de legătură.",
       "de cârlig."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 329,
@@ -3257,7 +4719,11 @@
       "de legatura.",
       "de cârlig."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 330,
@@ -3267,7 +4733,11 @@
       "de cârlig.",
       "special."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 331,
@@ -3277,7 +4747,11 @@
       "de legătură.",
       "de cârlig."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 332,
@@ -3287,7 +4761,11 @@
       "de legatura.",
       "de cârlig."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 333,
@@ -3297,7 +4775,11 @@
       "de legătură.",
       "de cârlig."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 335,
@@ -3307,7 +4789,11 @@
       "nodurile folosite la împreunarea a doua capete de parâmă de grosimi aproximativ egale.",
       "nodurile folosite la fixarea unui capăt de parâmă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 336,
@@ -3317,7 +4803,11 @@
       "nodurile folosite la împreunarea a doua capete de parâmă de grosimi aproximativ egale.",
       "nodurile folosite la fixarea unui capăt de parâmă."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 337,
@@ -3327,7 +4817,11 @@
       "nodurile folosite la împreunarea a doua capete de parâmă de grosimi aproximativ egale.",
       "nodurile folosite la fixarea unui capăt de parâmă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 338,
@@ -3337,7 +4831,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 339,
@@ -3347,7 +4845,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 341,
@@ -3357,7 +4859,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 342,
@@ -3367,7 +4873,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 343,
@@ -3377,7 +4887,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 344,
@@ -3387,7 +4901,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 345,
@@ -3397,7 +4915,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 346,
@@ -3407,7 +4929,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 350,
@@ -3417,7 +4943,11 @@
       "da.",
       "uneori."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 351,
@@ -3427,7 +4957,11 @@
       "mecanism de ridicat sau tras, manual sau acționat mecanic, cu ax orizontal utilizat la bord pentru virarea ancorei, manevrelor unei bigi, a curenților palancurilor gruelor de barcă.",
       "instalație mecanica de forță."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 354,
@@ -3437,7 +4971,11 @@
       "legarea ambarcațiunii de instalațiile.",
       "nu are utilitate."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 355,
@@ -3447,7 +4985,11 @@
       "dispozitiv de manevra.",
       "Mecanism de punte, pentru virarea ancorei sau manevrarea parâmelor, acționat manual sau electro-mecanic, cu ax vertical."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 356,
@@ -3457,7 +4999,11 @@
       "suport ambarcatiune.",
       "dispozitiv de ridicare a greutatilor și a barcilor având o formă curbată, o raza relativ mică de actiune comparativ cu bigile și granicele și o capacitate de ridicare scăzută."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 358,
@@ -3467,7 +5013,11 @@
       "oricărui corp aflat la sol.",
       "oricarui corp scufundat în apă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 359,
@@ -3477,7 +5027,11 @@
       "apărătoare ale gașelor.",
       "dispozitive de vitalitate."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 360,
@@ -3487,7 +5041,11 @@
       "deschideri în punte de dimensiuni mici, destinate accesului oamenilor în compartimentele aflate sub punte.",
       "deschideri în punte destinate pentru iluminarea și aerisirea compartimentului masini și căldări."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 361,
@@ -3495,9 +5053,13 @@
     "options": [
       "grosimea parâmei.",
       "greutatea parâmei.",
-      "rezistenta pâramei."
+      "rezistența parâmei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 362,
@@ -3507,7 +5069,11 @@
       "bărcile de salvare.",
       "bărcile de serviciu, bărcile de agrement."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 363,
@@ -3517,7 +5083,11 @@
       "nu.",
       "nu contează."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 364,
@@ -3527,7 +5097,11 @@
       "babale, parâme, turnicheti.",
       "vinciuri de balansină, balansina și cârligul de sarcina."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 365,
@@ -3537,7 +5111,11 @@
       "ancora, nara de ancora și ghidajele de lanț.",
       "straiurile, sarturile și pataratinele."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 366,
@@ -3547,7 +5125,11 @@
       "deschideri în punte de dimensiuni mici, destinate accesului oamenilor în compartimentele aflate sub punte.",
       "deschideri în punte, destinate pentru iluminarea și aerisirea compartimentului mașini și căldări."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 367,
@@ -3557,7 +5139,11 @@
       "guvernare.",
       "ancorare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 368,
@@ -3567,7 +5153,11 @@
       "nu.",
       "uneori."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 369,
@@ -3577,7 +5167,11 @@
       "in mijlocul bărcii.",
       "pe fundul bărcii."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 370,
@@ -3587,7 +5181,11 @@
       "legături prin care se fixează parâmele la dispozitive speciale de legare.",
       "întoarceri ale navelor sub acțiunea vântului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 371,
@@ -3597,7 +5195,11 @@
       "baba, turnicheti, somare.",
       "baba, galion, goling."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "seamanship",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 408,
@@ -3607,7 +5209,11 @@
       "orientarea provei în bordul în care s-a pus cârma și a pupei în bordul opus.",
       "mersul în linie dreaptă."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 409,
@@ -3617,7 +5223,11 @@
       "în bordul pasului elicei, iar prova are tendința să gireze în bordul opus pasului elicei.",
       "spre stânga."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 410,
@@ -3627,7 +5237,11 @@
       "se face cu vigilență sporită, protejând elicea și cârma.",
       "este interzisă."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 411,
@@ -3637,7 +5251,11 @@
       "de către ambarcațiunea care merge pe mijlocul șenalului.",
       "oricum deoarece nu sunt reguli speciale de siguranță în cazul acestei manevre."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 412,
@@ -3647,7 +5265,11 @@
       "nu contează lungimea parâmei de legare.",
       "nu se fac remorcări cu ambarcatiuni."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 413,
@@ -3655,9 +5277,13 @@
     "options": [
       "nu trebuiesc făcute pregătiri speciale la bordul ambarcațiunilor.",
       "la bordul ambarcațiunilor parâmele trebuie ținute din scurt și componentele echipamentului trebuie să nu depășească limitele navei.",
-      "conducătorul nu are nici o obligație."
+      "conducătorul nu are nicio obligație."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 414,
@@ -3667,7 +5293,11 @@
       "personalul de supraveghere a ecluzelor nu are permisiunea de a emite ordine care să completeze regulile inițial prevăzute.",
       "este permisă orice măsură propusă de conducătorii navelor."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 415,
@@ -3677,7 +5307,11 @@
       "suprafața udată la viteza maximă este mai mică.",
       "elicea are mai multe pale."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 416,
@@ -3687,7 +5321,11 @@
       "nu este nevoie de asemenea pregătire.",
       "puteți depozita materialele după libera dvs. alegere."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 417,
@@ -3697,7 +5335,11 @@
       "lungimea bărcii.",
       "pescajul și lățimea bărcii."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 418,
@@ -3707,7 +5349,11 @@
       "spațiul parcurs de elice într-un minut.",
       "viteza de rotație a elicei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 419,
@@ -3717,7 +5363,11 @@
       "parâma prova și pupa.",
       "parâma prova."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 420,
@@ -3727,7 +5377,11 @@
       "nu sunt impuse condiții speciale pentru ancorare.",
       "este interzisă ancorarea în afara radelor."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 421,
@@ -3735,9 +5389,13 @@
     "options": [
       "nu facem manevra de recuperare a celui căzut în apă.",
       "venim inițial cu prova pe direcția inversă a rezultantei, căutând efectul minim de derivă și ne apropiem de cel căzut în apă cu viteza scăzută.",
-      "nu este nevoie de nici o estimare a efectului curentului și vântului."
+      "nu este nevoie de nicio estimare a efectului curentului și vântului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 422,
@@ -3747,7 +5405,11 @@
       "este permisă curățarea și maturarea navelor și corpurilor flotante.",
       "nu este prevăzută expres această regulă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 423,
@@ -3757,7 +5419,11 @@
       "regulile de construcție privesc pe constructor.",
       "motorul trebuie sau să se oprească automat la căderea conducătorului, sau să fie cuplat automat pe cea mai mică viteză, în timp ce vehiculul trebuie să se oprească sau să descrie o traiectorie circulară."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 424,
@@ -3767,27 +5433,39 @@
       "componentele sistemului pot fi alese după aprecierea proprietarului.",
       "nu există reguli și standarde pentru această instalație."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 425,
     "question": "Manevra de oprire se execută astfel:",
     "options": [
-      "în cazul în care nu exista nici un motiv sa faceți altfel, reduceți în mod gradat viteza, deoarece reducerea brusca a bărcii poate face ca valul de pupa sa se lovească de oglinda bărcii și sa se reverse în interior.",
+      "în cazul în care nu există niciun motiv să faceți altfel, reduceți în mod gradat viteza, deoarece reducerea brusca a bărcii poate face ca valul de pupa sa se lovească de oglinda bărcii și sa se reverse în interior.",
       "ambarcațiunea se opreste rapid, prin punerea pe zero și cuplarea pe înapoi a motorului.",
       "barca se opreste din mers prin scoaterea cheii din contact."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 426,
     "question": "Dacă înclinați motorul în sus la viteze mari:",
     "options": [
-      "nu se observa nici un efect.",
+      "nu se observă niciun efect.",
       "forțele turbionare vor acționa brusc și pot cauza pierderea controlului ambarcatiunii.",
       "barca se înclina în bordul pasului elicei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 427,
@@ -3797,7 +5475,11 @@
       "corpul ambarcațiunii nu se protejează.",
       "orice fel de obiecte din metal sau lemn."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 428,
@@ -3807,7 +5489,11 @@
       "presiunea apei asupra penei cârmei va fi mai mică, iar schimbarea direcției mai înceată.",
       "viteza nu influențează rapiditatea schimbării direcției de navigație."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 429,
@@ -3817,7 +5503,11 @@
       "puterea motorului, mărimea corpului ambarcațiunii și scopul pentru care este destinată barca, tracțiune sau viteză.",
       "parametrii motorului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 430,
@@ -3827,7 +5517,11 @@
       "mărimea suprafeței penei cârmei.",
       "micșorarea unghiului de rotire a cârmei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 431,
@@ -3837,17 +5531,25 @@
       "ca forța acestora să fie folosită în ajutorul manevrei și nu manevra să se împotrivească acestora.",
       "nu se ține cont de vânt și curent."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 432,
     "question": "Manevra de \"Om la apă\" este o manevră clasică de recuperare care se efectuează:",
     "options": [
       "ținând cont de efectul vântului și curentului asupra ambarcațiunii și persoanei căzute în apă, astfel încât ambarcațiunea să nu derive peste omul din apă.",
-      "nu este nevoie de nici o estimare a efectului curentului și vântului.",
+      "nu este nevoie de nicio estimare a efectului curentului și vântului.",
       "această manevră o fac numai navele de salvare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 433,
@@ -3857,7 +5559,11 @@
       "este obligatorie folosirea trancheților pentru acostare.",
       "se folosesc trancheți care trebuie să fie flotabili, dacă nu sunt legați strâns de navă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 434,
@@ -3867,7 +5573,11 @@
       "este permisă numai ziua.",
       "nu sunt prevăzute reguli exprese."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 435,
@@ -3877,17 +5587,25 @@
       "numai de persoanele autorizate.",
       "să orienteze motorul la un unghi predeterminat pentru o performanță mai bună în navigație."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 436,
     "question": "Înainte de a părăsi locul de acostare:",
     "options": [
       "asigurați-vă că operațiunile de pe algoritmul verificărilor dumneavoastră au fost parcurse.",
-      "nu se fac nici un fel de verificări.",
+      "nu se fac niciun fel de verificări.",
       "toate verificările sunt făcute de către un service."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 437,
@@ -3897,7 +5615,11 @@
       "lungimea palei.",
       "spațiul parcurs de marginea exterioară a elicei în mișcarea de translație efectuată de-a lungul axei de rotație în timpul unei rotații complete."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 438,
@@ -3907,7 +5629,11 @@
       "să fie un loc ferit de efectele curenților, valurilor și vântului.",
       "nu sunt impuse condiții speciale pentru ancorare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 439,
@@ -3917,7 +5643,11 @@
       "barajele și porțile amonte și aval.",
       "numai sasurile ecluzelor."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 440,
@@ -3927,7 +5657,11 @@
       "ambarcațiunile mici nu au voie să ecluzeze.",
       "ambarcațiunile mici trebuie să păstreze suficientă distanță față de alte nave."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 441,
@@ -3937,7 +5671,11 @@
       "conducătorul și însoțitorul nu trebuie să poarte veste de salvare.",
       "conducătorul și însoțitorul nu trebuie să poarte veste de salvare, dacă sunt buni înotători."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 442,
@@ -3947,7 +5685,11 @@
       "ruliu.",
       "mișcare ascensională."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 443,
@@ -3957,7 +5699,11 @@
       "numai de puterea motorului.",
       "numai de pasul elicei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 444,
@@ -3967,7 +5713,11 @@
       "timona sau manipulatorul electric; servomotorul la navele mari; sistemul de transmisie timonă-servomotor-cârmă; cârma propiu-zisă.",
       "timona."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 445,
@@ -3977,7 +5727,11 @@
       "la mersul înapoi al ambarcațiunii elicea se învârte la dreapta.",
       "la mersul înainte al ambarcațiunii elicea se învârte la stânga."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 446,
@@ -3987,7 +5741,11 @@
       "ambarcațiunea se apropie de cheu pe o direcție perpendiculară pe acesta.",
       "ambarcațiunea se apropie de cheu din orice pozitie."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 447,
@@ -3997,7 +5755,11 @@
       "lungimea parâmei/lanțului de ancorare nu influențează siguranța ancorării.",
       "lungimea parâmei/lanțului la ancoră trebuie să fie de 3-5 ori adâncimea ancorării."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 448,
@@ -4007,7 +5769,11 @@
       "ancorele pot fi folosite în ecluză.",
       "nu sunt prevăzute reguli speciale pentru acest caz."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 449,
@@ -4017,7 +5783,11 @@
       "este echipată cu motoare cu putere asemănătoare cu cea pentru care a fost proiectată.",
       "nu este importantă puterea motorului."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 450,
@@ -4025,9 +5795,13 @@
     "options": [
       "măriți viteza pentru a stabiliza deplasarea.",
       "reduceți viteza în mod gradat, nu accelerați, opriți testul de navigație în viteza pe apă, apoi verificați barca și echipamentul, iar în cazul în care considerați că este nevoie, contactați dealer-ul sau un expert pentru a vă ajuta.",
-      "nu este nevoie de nici o verificare, continuați mersul la aceeași parametri, deoarece fenomenul de instabilitate dispare după scurt timp."
+      "nu este nevoie de nicio verificare, continuați mersul la aceeași parametri, deoarece fenomenul de instabilitate dispare după scurt timp."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 451,
@@ -4037,7 +5811,11 @@
       "experiența conducătorului.",
       "viteza probabilă a bărcii, care este cea mai bună elice pentru designul și viteza bărcii dumneavoastră; modul în care doriți să folosiți barca; testarea pasului elicei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 452,
@@ -4047,7 +5825,11 @@
       "spațiul parcurs de ambarcațiune într-un minut.",
       "numărul de pale de elice."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 453,
@@ -4057,7 +5839,11 @@
       "este interzisă ancorarea în afara radelor.",
       "să permită plecarea rapidă a navei de la ancoră, în orice condiții, ziua sau noaptea."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 454,
@@ -4067,7 +5853,11 @@
       "numai atunci când ambarcațiunile trebuie să fie ecluzate înainte sau pentru a se poziționa în spațiile libere aflate la îndemână.",
       "ori de câte ori conducătorul consideră că este o manevră sigură."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 455,
@@ -4075,9 +5865,13 @@
     "options": [
       "nu trebuie făcute pregătiri speciale la bordul ambarcațiunilor.",
       "la bordul ambarcațiunilor parâmele trebuie ținute din scurt și componentele echipamentului trebuie să nu depășească limitele navei.",
-      "conducătorul nu are nici o obligație."
+      "conducătorul nu are nicio obligație."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 456,
@@ -4087,7 +5881,11 @@
       "este interzis să se lase pasagerii să urce sau să coboare fără permisiunea personalului ecluzei.",
       "nu este prevăzută expres această regulă."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 457,
@@ -4097,7 +5895,11 @@
       "pe skyjet nu trebuie să se aplice numere de înmatriculare, deoarece nu este loc.",
       "nu sunt reguli prevăzute expres."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 458,
@@ -4105,9 +5907,13 @@
     "options": [
       "poate să dea drumul timonei la orice viteză a bărcii.",
       "poate să balanseze timona la o viteză mare a bărcii.",
-      "nu ar trebui să dea drumul timonei la nici un fel de viteză, din cauza forțelor turbionare prezente în sistemul de guvernare, barca ar putea să înceapă să se rotească rapid și să devină instabilă."
+      "nu ar trebui să dea drumul timonei la niciun fel de viteză, din cauza forțelor turbionare prezente în sistemul de guvernare, barca ar putea să înceapă să se rotească rapid și să devină instabilă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 459,
@@ -4115,9 +5921,13 @@
     "options": [
       "are o abilitate de frânare mai redusă decât unul înclinat în jos și este nevoie de mai mult spațiu pentru a opri barca.",
       "are o abilitate de a opri mai ușor barca.",
-      "nu are nici un fel de influență."
+      "nu are niciun fel de influență."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 460,
@@ -4127,7 +5937,11 @@
       "punerea cârmei într-un bord sau altul și este determinată de forța curentului care apasă asupra penei cârmei, sau orientarea propulsorului în cazul propulsiei în \"Z\".",
       "ambarcațiunea schimbă direcția când este influențată de curent și vânt."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 461,
@@ -4137,17 +5951,11 @@
       "propulsie.",
       "guvernare."
     ],
-    "correct": 0
-  },
-  {
-    "id": 462,
-    "question": "Dacă înclinați motorul în sus la viteze mari:",
-    "options": [
-      "nu se observa nici un efect.",
-      "forțele turbionare vor acționa brusc și pot cauza pierderea controlului ambarcatiunii.",
-      "barca se înclina în bordul pasului elicei."
-    ],
-    "correct": 1
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 463,
@@ -4157,7 +5965,11 @@
       "să execute manevra de intrare cu viteza cea mai mare pentru reducerea timpului de staționare în ecluză.",
       "nu sunt impuse reguli speciale."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 464,
@@ -4167,27 +5979,39 @@
       "navele administrației; navele care sunt plecate pentru îndeplinirea unor misiuni excepționale; navele avariate grav au prioritate la ecluzare în fața celorlalte, fără a sta la rând; navele de pompieri și de salvare aflate în drum spre locul accidentului; celelalte nave.",
       "operatorul ecluzei dispune cum crede de cuviință."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 465,
     "question": "O persoană care nu este pregătită pentru operarea unei bărci de mare viteză:",
     "options": [
       "poate încerca să se conducă, crescând succesiv viteza fără a se instrui din partea unor conducători mai experimentați.",
-      "nu este nici o problemă, deoarece nu există riscuri.",
+      "nu este nicio problemă, deoarece nu există riscuri.",
       "nu ar trebui să încerce să conducă fără o instruire prealabilă și o aplicație practică cu un conducător experimentat sau un dealer, pierderea controlului ar putea avea ca rezultat accidente grave."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 466,
     "question": "Înainte de a părăsi locul de acostare:",
     "options": [
-      "nu se fac nici un fel de verificări.",
+      "nu se fac niciun fel de verificări.",
       "asigurați-vă că toate mecanismele folosite pentru a atașa motorul de barcă sunt bine strânse și la locul lor, procedați la fel pentru toată aparatura din sistemul de guvernare.",
       "nu sunt reguli prevăzute expres."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 467,
@@ -4197,7 +6021,11 @@
       "vântul, valurile, curentul.",
       "vântul, valurile, curentul, adâncimi mici."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 468,
@@ -4207,7 +6035,11 @@
       "să schimbați uleiul mai des.",
       "să fie verificate instalațiile de elevare a motorului, de guvernare și de cuplare-accelerare, precum și elicea/elicele, la intervale mai scurte de timp."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 469,
@@ -4217,7 +6049,11 @@
       "manevrabilitatea consta în incapacitatea bărcii de a-si menține direcția de înaintare.",
       "nu este o definiție prevăzuta pentru aceasta caracteristica a ambarcațiunii."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 470,
@@ -4227,7 +6063,11 @@
       "la mersul înapoi al ambarcațiunii elicea se învârte la dreapta.",
       "la mersul înainte al ambarcațiunii elicea se învârte la stânga."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 471,
@@ -4237,7 +6077,11 @@
       "se fac numai cu piloți specializați.",
       "prezintă grad sporit de dificultate, solicitând cunoașterea calităților manevriere ale navei și deprinderi marinărești."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 472,
@@ -4247,7 +6091,11 @@
       "nu sunt stabilite reguli speciale privind lungimea lanțului/parâmei de ancorare.",
       "lungimea parâmei/lanțului de ancorare nu influențează siguranța ancorării."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 473,
@@ -4257,7 +6105,11 @@
       "folosesc canalul pe care îl consideră util.",
       "trebuie să aibă comutat la recepție canalul ecluzei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 474,
@@ -4267,7 +6119,11 @@
       "nu este prevăzută expres această regulă.",
       "este interzis să se folosească după legarea navei și până la permiterea ieșirii atât propulsia mecanică, cât și instalația de guvernare prova; din motive de siguranță acest lucru este permis numai pentru fracțiuni scurte de timp."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 475,
@@ -4277,27 +6133,25 @@
       "având placa anticavitatie deasupra nivelului chilei ambarcatiunii, la decalajul maxim permis de dispozitivul de fixare al motorului și dimensiunile oglinzii bărcii.",
       "se poate monta oricum, deoarece nu sunt influențati parametrii de mișcare ai bărcii."
     ],
-    "correct": 1
-  },
-  {
-    "id": 476,
-    "question": "În cazul în care ambarcațiunea dvs. este utilizată în regim de mare viteză în mod constant, este nevoie:",
-    "options": [
-      "să alimentați mai des barca cu combustibil.",
-      "să schimbați uleiul mai des.",
-      "să fie verificate instalațiile de elevare a motorului, de guvernare și de cuplare-accelerare, precum și elicea/elicele, la intervale mai scurte de timp."
-    ],
-    "correct": 2
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 477,
     "question": "La deplasarea înapoi a bărcii, efectul cârmei determină:",
     "options": [
-      "nu are nici o influență.",
+      "nu are nicio influență.",
       "orientarea provei în bordul în care s-a pus cârma și a pupei în sensul opus cârmei.",
       "orientarea provei în bordul opus celui în care s-a pus cârma și a pupei în sensul punerii cârmei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 478,
@@ -4307,7 +6161,11 @@
       "spre stânga.",
       "spre dreapta."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 479,
@@ -4317,7 +6175,11 @@
       "nu contează condițiile.",
       "aceasta manevrare este interzisă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 480,
@@ -4327,7 +6189,11 @@
       "va reduce viteza în întâmpinarea valurilor provocate de nava ce vine din sens opus și va adopta o viteză corespunzătoare evitării răsturnării.",
       "se vor evita constant întâlnirile."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 481,
@@ -4337,7 +6203,11 @@
       "navele se pot lega oriunde consideră.",
       "nu este nevoie de legarea navelor în timpul ecluzării."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 482,
@@ -4347,27 +6217,25 @@
       "fără restricție de zonă, deoarece ambarcațiunile au o viteză mare.",
       "nu sunt reguli prevăzute special pentru schiul nautic."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 483,
     "question": "Când motorul este înclinat în jos la capătul cursei:",
     "options": [
       "barca glisează orizontal pe apă.",
-      "pupa bărcii va intra mai adânc în apă, la ambarcațiunile mai mici se observă apuparea.",
+      "pupa bărcii va intră mai adânc în apă, la ambarcațiunile mai mici se observă apuparea.",
       "inclinarea motorului/cizmei nu influențează alura deplasării."
     ],
-    "correct": 1
-  },
-  {
-    "id": 484,
-    "question": "Pasul elicei reprezintă:",
-    "options": [
-      "mărimea diametrului butucului.",
-      "lungimea palei.",
-      "spațiul parcurs de marginea exterioară a elicei în mișcarea de translație efectuată de-a lungul axei de rotație în timpul unei rotații complete."
-    ],
-    "correct": 2
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 485,
@@ -4377,7 +6245,11 @@
       "reducerea suprafeței penei cârmei.",
       "micșorarea unghiului de rotire a cârmei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 486,
@@ -4387,27 +6259,39 @@
       "este permisă numai în porțiunile stabilite și marcate.",
       "nu sunt reguli expres enunțate."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 487,
     "question": "Dacă barca pe care ați cumpărat-o nu are placa de capacitate:",
     "options": [
-      "nu este nici o problemă, parametrii limită de exploatare pot fi apreciați.",
-      "contactați dealer-ul dumneavoastră sau producătorul bărcii, pentru a intra în posesia informațiilor garantate.",
+      "nu este nicio problemă, parametrii limită de exploatare pot fi apreciați.",
+      "contactați dealer-ul dumneavoastră sau producătorul bărcii, pentru a intră în posesia informațiilor garantate.",
       "calculați dumneavoastră datele de care aveți nevoie."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 488,
     "question": "Înainte de a părăsi locul de acostare:",
     "options": [
       "verificați funcționarea butonului pentru oprire de urgență, dați drumul motorului, trageți saula și vedeți dacă motorul se oprește; asigurați-vă că saula este bine legată de hainele sau vesta dumneavoastră de salvare.",
-      "nu se fac nici un fel de verificări.",
+      "nu se fac niciun fel de verificări.",
       "nu trebuie legată saula de haine sau vesta de salvare."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 489,
@@ -4415,9 +6299,13 @@
     "options": [
       "barca ar putea să înceapă să se rotească rapid și să se arunce pasagerii peste bord.",
       "barca își mărește stabilitatea de drum.",
-      "nu se observă nici un efect."
+      "nu se observă niciun efect."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "maneuvering",
+    "license": [
+      "C"
+    ]
   },
   {
     "id": 1001,
@@ -4427,7 +6315,12 @@
       "10 - 15 min.",
       "60 min."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1002,
@@ -4437,7 +6330,12 @@
       "dezinfectarea și pansarea rănilor.",
       "degajarea căilor respiratorii și asigurarea funcției respiratorii."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1003,
@@ -4447,7 +6345,12 @@
       "transportul la cel mai apropiat spital.",
       "acordarea primului ajutor până la sosirea cadrelor de pe ambulanță."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1004,
@@ -4457,7 +6360,12 @@
       "să împiedice hemoragia.",
       "să împiedice intrarea corpilor străini în rană."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1005,
@@ -4467,7 +6375,12 @@
       "poziția necorespunzătoare în care a fost așezată victima.",
       "intrarea unor corpi străini în nasul sau gura victimei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1006,
@@ -4477,7 +6390,12 @@
       "decolorarea zonei fraturate.",
       "poziția nefireasca a membrului respectiv miscarea nenaturala."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1007,
@@ -4487,7 +6405,12 @@
       "hemoragia venoasă.",
       "hemoragia care determină o pierdere rapidă a sângelui."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1008,
@@ -4497,7 +6420,12 @@
       "să fie rigidă.",
       "să fie sterilă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1009,
@@ -4507,7 +6435,12 @@
       "se unesc capetele oaselor care au ieșit prin piele, apoi se bandajează locul.",
       "se aplică un garou deasupra fracturii."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1010,
@@ -4517,7 +6450,12 @@
       "culcați victima pe spate.",
       "suspendați brațul într-o eșarfă sau chingă delată de gât."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1011,
@@ -4527,7 +6465,12 @@
       "se efectuează doar respirație artificială.",
       "se efectuează masaj cardio respirator."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1012,
@@ -4537,7 +6480,12 @@
       "se imobilizează glezna cu atele.",
       "se transportă urgent victima la mal."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1013,
@@ -4547,7 +6495,12 @@
       "se coase plaga.",
       "se opreste hemoragia și se transportă victima la spital."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1014,
@@ -4557,7 +6510,12 @@
       "se administrează medicamente de resuscitare.",
       "se imobilizează membre."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1015,
@@ -4567,7 +6525,12 @@
       "se transportă imediat victima la spital așezată pe o platformă improvizată.",
       "dacă nu există un alt pericol, nu se mișcă accidentatul din poziția în care se află până la sosirea serviciilor de urgență."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1016,
@@ -4577,7 +6540,12 @@
       "dezinfectează rănile.",
       "acoperă rănile, eventual opresc hemoragiile."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1017,
@@ -4587,7 +6555,12 @@
       "să nu le agravați leziunile.",
       "să conservați urmele accidentului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1018,
@@ -4597,7 +6570,12 @@
       "numai cu ambulanța SMURD.",
       "cu o ambulanță însoțită de un medic specialist."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1019,
@@ -4607,7 +6585,12 @@
       "prin extragere cu mâna.",
       "renunțăm la asemenea manevră întrucât riscăm să agravăm starea victimei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1020,
@@ -4617,7 +6600,12 @@
       "prin culoarea roșie a zonei fracturate.",
       "prin mișcarea nenaturală a membrului fracturat."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1021,
@@ -4627,7 +6615,12 @@
       "încetați compresiile exterioare ale pieptului.",
       "continuați cu respirație artificială."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1022,
@@ -4637,7 +6630,12 @@
       "imobilizați zona fracturată.",
       "sterilizați zona fracturată."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1023,
@@ -4647,7 +6645,12 @@
       "prin fixarea piciorului într-o chingă de piele.",
       "cu atele sau bandaj, cât mai rigide, de la degete până la genunchi."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1024,
@@ -4657,7 +6660,12 @@
       "cu o legătură elastică.",
       "cu atele, chiar improvizate."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1025,
@@ -4667,7 +6675,12 @@
       "cu file de material plastic.",
       "cu eșarfe și triunghi de pânză."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1026,
@@ -4677,7 +6690,12 @@
       "zona fracturată este înroșită.",
       "pielea este străpunsă în zona fracturii și se vede osul."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1027,
@@ -4687,7 +6705,12 @@
       "astfel încât zona să fie mai sus decât nivelul corpului.",
       "cu picioarele mai sus decât nivelul capului."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1028,
@@ -4697,7 +6720,12 @@
       "orizontal, cu fața în jos.",
       "orizontal, cu fața în sus."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1029,
@@ -4707,7 +6735,12 @@
       "prin masaj cardio-respirator.",
       "prin executarea respirației artificiale."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1030,
@@ -4717,7 +6750,12 @@
       "cât mai rigidă și suficient de lungă pentru a cuprinde articulațiile superioară și inferioară a membrului fracturat.",
       "cât mai scurtă pentru a nu incomoda rânitul."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1031,
@@ -4727,7 +6765,12 @@
       "o conduceți la mal.",
       "luați măsuri pentru transportarea ei la spital."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1032,
@@ -4737,7 +6780,12 @@
       "stă culcată cu capul dat pe spate.",
       "își strânge ambele nări cu degetele timp de aproximativ 5-10 minute."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1033,
@@ -4747,7 +6795,12 @@
       "victimei care comunică ușor.",
       "victimei în starea cea mai gravă."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1034,
@@ -4757,7 +6810,12 @@
       "imobilizarea capului cu un dispozitiv improvizat.",
       "bandajarea plăgilor, degajarea căilor respiratorii, așezarea victimei pe o suprafață plană."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1035,
@@ -4767,7 +6825,12 @@
       "la spital, cu instrumente speciale.",
       "la sosirea ambulanței, de către personalul specializat."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1036,
@@ -4777,7 +6840,12 @@
       "pansarea rănilor, imobilizarea fracturilor, oprire hemoragie, respirație artificială, masaj cardiac.",
       "imobilizarea fracturilor, pansarea rănilor, respirație artificială, masaj cardiac, oprirea hemoragiei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1037,
@@ -4787,7 +6855,12 @@
       "care nu au puls și nu respiră.",
       "care au suferit traumatisme craniene."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1038,
@@ -4797,7 +6870,12 @@
       "imediat după pansarea rănilor.",
       "imediat după anunțarea coliziunii."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1039,
@@ -4807,7 +6885,12 @@
       "în zona inimii.",
       "la încheietura mâinii."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1040,
@@ -4817,7 +6900,12 @@
       "sub plagă.",
       "deasupra plăgii."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1041,
@@ -4827,7 +6915,12 @@
       "dezinfectarea rănilor.",
       "oprirea hemoragiei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1042,
@@ -4837,7 +6930,12 @@
       "cu picioarele situate mai sus decât restul corpului.",
       "cu fața în jos."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1043,
@@ -4847,7 +6945,12 @@
       "curățarea și pansarea rânii.",
       "oprirea hemoragiei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1044,
@@ -4857,7 +6960,12 @@
       "prin nările victimei.",
       "nu se mai face respirație artificială în acest caz."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1045,
@@ -4867,7 +6975,12 @@
       "maximum 4 ore.",
       "maximum 2 ore."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1046,
@@ -4877,7 +6990,12 @@
       "ser fiziologic.",
       "apă potabilă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1047,
@@ -4887,7 +7005,12 @@
       "prin orice mijloace.",
       "compreselor sterile și a pansamentelor compresive."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1048,
@@ -4897,7 +7020,12 @@
       "după stingerea flăcărilor persoana este dezbrăcată rapid de hainele arse.",
       "trebuie să fie transportată imediat la o unitate medicală."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1049,
@@ -4907,7 +7035,12 @@
       "ora și minutul aplicării garoului.",
       "numele persoanei care l-a aplicat."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 1050,
@@ -4917,7 +7050,12 @@
       "o compresă de orice tip.",
       "o compresă de vată sterilă."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "first_aid",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2001,
@@ -4927,7 +7065,12 @@
       "schimbarea poziției, scoaterea din funcțiune, avarierea gravă sau distrugerea unui semnal de navigație.",
       "nerespectarea dispozițiilor personalului de la ecluze."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2002,
@@ -4937,7 +7080,12 @@
       "refuzul de a pune la dispoziția ANR documente și date necesare investigării.",
       "împiedicarea îndeplinirii atribuțiilor de serviciu ale personalului navigant."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2003,
@@ -4947,7 +7095,12 @@
       "dacă a fost făcută de către un membru al echipajului.",
       "dacă a fost făcută de două sau mai multe persoane."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2004,
@@ -4957,7 +7110,12 @@
       "da, dacă s-a produs în scopul devierii de la itinerarul său.",
       "da, dacă s-a perturbat funcționarea acesteia sau s-a pus în pericol siguranța navigației."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2005,
@@ -4967,7 +7125,12 @@
       "infracțiune.",
       "infracțiune, dar numai dacă a avut ca urmare întreruperea navigației ori a activităților portuare."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2006,
@@ -4977,7 +7140,12 @@
       "da, chiar dacă este ca urmare a unor fapte îndeplinite în afara exercițiului funcțiunii.",
       "da, dacă are ca urmare punerea în pericol a siguranței navigației."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2007,
@@ -4987,7 +7155,12 @@
       "15 zile înainte de începerea construcției.",
       "15 zile înainte de finalizarea construcției."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2008,
@@ -4997,7 +7170,12 @@
       "30 zile.",
       "60 zile."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2009,
@@ -5007,7 +7185,12 @@
       "30 de zile de la comunicarea deciziei.",
       "15 zile de la comunicarea deciziei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2010,
@@ -5017,7 +7200,12 @@
       "contravenție la regimul siguranței navigației.",
       "infracțiune, dacă se depășește numărul maxim de pasageri."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2011,
@@ -5027,7 +7215,12 @@
       "infracțiune la regimul înmatriculării navelor.",
       "contravenție, dacă nava a fost depistată pe șenalul navigabil."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2012,
@@ -5037,7 +7230,12 @@
       "amendă de la 5.000 la 10.000 lei.",
       "amendă de la 10.000 la 20.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2013,
@@ -5047,7 +7245,12 @@
       "amendă de la 5.000 la 20.000 lei.",
       "amendă de la 10.000 la 20.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2014,
@@ -5057,7 +7260,12 @@
       "amendă de la 5.000 la 10.000 lei.",
       "amendă de la 5.000 la 20.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2015,
@@ -5067,7 +7275,12 @@
       "amendă de la 5.000 la 20.000 lei.",
       "amendă de la 1.000 la 5.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2016,
@@ -5077,7 +7290,12 @@
       "amendă de la 1.000 la 8.000 lei.",
       "amendă de la 20.000 la 40.000 lei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2017,
@@ -5087,7 +7305,12 @@
       "amendă de la 1.000 la 5.000 lei.",
       "amendă de la 500 la 8.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2018,
@@ -5097,7 +7320,12 @@
       "amendă de la 5.000 la 10.000 lei.",
       "amendă de la 5.000 la 20.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2019,
@@ -5107,7 +7335,12 @@
       "amendă de la 1.000 la 5.000 lei.",
       "amendă de la 5.000 la 20.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2020,
@@ -5117,7 +7350,12 @@
       "amendă de la 30.000 la 50.000 lei.",
       "amendă de la 10.000 la 20.000 lei."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2021,
@@ -5127,7 +7365,12 @@
       "amendă de la 5.000 la 20.000 lei.",
       "amendă de la 20.000 la 30.000 lei."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2022,
@@ -5137,7 +7380,12 @@
       "amendă de la 100 la 1.000 lei.",
       "amendă de la 1.000 la 5.000 lei."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2023,
@@ -5147,7 +7395,12 @@
       "personal ANR în asistență reprezentant poliție transporturi navale.",
       "personalul ANR în asistență reprezentant Administrația Portuară."
     ],
-    "correct": 0
+    "correct": 0,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2024,
@@ -5157,7 +7410,12 @@
       "nu.",
       "da, dacă săvârșirea contravenției este probată cu un mijloc tehnic."
     ],
-    "correct": 2
+    "correct": 2,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   },
   {
     "id": 2025,
@@ -5167,6 +7425,11 @@
       "da, dacă săvârșirea contravenției este probată cu un mijloc tehnic.",
       "da."
     ],
-    "correct": 1
+    "correct": 1,
+    "topic": "law",
+    "license": [
+      "C",
+      "D"
+    ]
   }
 ]

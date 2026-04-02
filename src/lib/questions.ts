@@ -1,10 +1,15 @@
 import data from "../../assets/questions.json";
 
+export type Topic = "colreg" | "lights_signals" | "navigation" | "seamanship" | "maneuvering" | "first_aid" | "law";
+export type License = "C" | "D";
+
 export interface Question {
   id: number;
   question: string;
   options: string[];
   correct: number;
+  topic: Topic;
+  license: License[];
 }
 
 export const allQuestions: Question[] = data as Question[];

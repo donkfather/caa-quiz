@@ -3,8 +3,6 @@ import mobileAds, {
   InterstitialAd,
   AdEventType,
   TestIds,
-  AdsConsent,
-  AdsConsentStatus,
 } from "react-native-google-mobile-ads";
 import { loadSettings } from "./settings";
 
@@ -29,29 +27,34 @@ const INTERSTITIAL_ID = USE_TEST_ADS
 export { BANNER_ID };
 
 let adsInitialized = false;
+let initPromise: Promise<void> | null = null;
+
+export function isAdsReady(): boolean {
+  return adsInitialized;
+}
+
+export async function waitForAds(): Promise<boolean> {
+  if (initPromise) await initPromise;
+  return adsInitialized;
+}
 
 export async function initAds(): Promise<void> {
   if (adsInitialized) return;
-  if (process.env.DISABLE_ADS === "true") return;
-  try {
-    const settings = await loadSettings();
-    if (settings.adsDisabled) return;
+  if (initPromise) return initPromise;
 
-    // GDPR consent check before ad initialization
+  initPromise = (async () => {
     try {
-      const consentInfo = await AdsConsent.requestInfoUpdate();
-      if (consentInfo.isConsentFormAvailable && consentInfo.status === AdsConsentStatus.REQUIRED) {
-        await AdsConsent.showForm();
-      }
-    } catch (e) {
-      if (__DEV__) console.warn("Consent check failed:", e);
-    }
+      const settings = await loadSettings();
+      if (settings.adsDisabled) return;
 
-    await mobileAds().initialize();
-    adsInitialized = true;
-  } catch (e) {
-    if (__DEV__) console.warn("AdMob init failed:", e);
-  }
+      await mobileAds().initialize();
+      adsInitialized = true;
+    } catch (e) {
+      if (__DEV__) console.warn("AdMob init failed:", e);
+    }
+  })();
+
+  return initPromise;
 }
 
 // --- Interstitial ---

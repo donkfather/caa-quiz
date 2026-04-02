@@ -9,7 +9,6 @@ import {
   Modal,
   Linking,
 } from "react-native";
-import { AdsConsent } from "react-native-google-mobile-ads";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useEffect } from "react";
 import { useRouter } from "expo-router";
@@ -225,26 +224,6 @@ export default function SettingsScreen() {
           accessibilityRole="link"
         >
           <Text style={{ fontSize: 15, color: t.text }}>Termeni și condiții</Text>
-          <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
-        </Pressable>
-        <Pressable
-          style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14 }}
-          onPress={async () => {
-            try {
-              const consentInfo = await AdsConsent.requestInfoUpdate();
-              if (consentInfo.isConsentFormAvailable) {
-                await AdsConsent.showForm();
-              } else {
-                Alert.alert("Info", "Formularul de consimțământ nu este disponibil în regiunea ta.");
-              }
-            } catch {
-              Alert.alert("Info", "Formularul de consimțământ nu a putut fi încărcat. Încearcă mai târziu.");
-            }
-          }}
-          accessibilityLabel="Deschide preferințe reclame"
-          accessibilityRole="link"
-        >
-          <Text style={{ fontSize: 15, color: t.text }}>Preferinte reclame</Text>
           <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
         </Pressable>
       </View>

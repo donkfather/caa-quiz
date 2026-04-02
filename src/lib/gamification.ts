@@ -89,7 +89,7 @@ export const BADGE_DEFS: BadgeDef[] = [
   { key: "perfect", name: "Perfect", description: "Obține 100% la un examen" },
   { key: "persistent", name: "Persistent", description: "Streak de 7 zile" },
   { key: "dedicat", name: "Dedicat", description: "Streak de 30 de zile" },
-  { key: "explorer", name: "Explorer", description: "Răspunde la toate cele 517 întrebări" },
+  { key: "explorer", name: "Explorer", description: "Răspunde la toate cele 511 întrebări" },
   { key: "admis", name: "Admis", description: "Promovează 5 examene consecutiv" },
 ];
 
@@ -141,8 +141,8 @@ export async function checkAndUnlockBadges(): Promise<string[]> {
   // Dedicat — 30-day streak
   await tryUnlock("dedicat", streak.best >= 30);
 
-  // Explorer — seen all 517 questions
-  await tryUnlock("explorer", seen.size >= 517);
+  // Explorer — seen all questions
+  await tryUnlock("explorer", seen.size >= 511);
 
   // Admis — 5 consecutive passed exams (score >= 70)
   let consecutive = 0;
