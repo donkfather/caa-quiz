@@ -34,6 +34,8 @@ export interface SessionRecord {
   total: number;
   score: number;
   date: string;
+  topic?: string;
+  license?: string;
 }
 
 export async function getHistory(): Promise<SessionRecord[]> {
@@ -46,6 +48,7 @@ export async function saveQuizResult(
   mode: string,
   correct: number,
   total: number,
+  filters?: { topic?: string; license?: string },
 ): Promise<void> {
   const score = Math.round((correct / total) * 100);
   const history = await getHistory();
@@ -56,6 +59,8 @@ export async function saveQuizResult(
     total,
     score,
     date: new Date().toISOString(),
+    topic: filters?.topic,
+    license: filters?.license,
   });
   if (history.length > MAX_HISTORY) history.length = MAX_HISTORY;
   await AsyncStorage.setItem(HISTORY_KEY, JSON.stringify(history));
@@ -75,6 +80,8 @@ export interface ActiveSession {
   currentIndex: number;
   startedAt: string;
   updatedAt: string;
+  topic?: string;
+  license?: string;
 }
 
 export async function getActiveSessions(): Promise<ActiveSession[]> {

@@ -1,9 +1,9 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet, Modal, ScrollView } from "react-native";
 import { useRouter, useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useCallback } from "react";
 import { useTheme } from "../src/lib/ThemeContext";
-import { EXAM_QUESTION_COUNT, TOTAL_QUESTIONS } from "../src/lib/questions";
+import { EXAM_QUESTION_COUNT, TOTAL_QUESTIONS, TOPIC_LABELS, LICENSE_LABELS, Topic, License, getQuestionCount } from "../src/lib/questions";
 import { getStats, getActiveSessions, getHistory, QuizStats } from "../src/lib/storage";
 import { getStreak, getUnlockedBadges, BADGE_DEFS, StreakData } from "../src/lib/gamification";
 
@@ -16,6 +16,7 @@ export default function HomeScreen() {
   const [historyCount, setHistoryCount] = useState(0);
   const [streak, setStreak] = useState<StreakData>({ current: 0, best: 0, lastQuizDate: null });
   const [badgeCount, setBadgeCount] = useState(0);
+  const [practiceModal, setPracticeModal] = useState(false);
 
   useFocusEffect(
     useCallback(() => {
@@ -114,7 +115,7 @@ export default function HomeScreen() {
 
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border }}
-          onPress={() => router.push("/quiz?mode=practice")}
+          onPress={() => setPracticeModal(true)}
           accessibilityLabel="Modul practică"
           accessibilityRole="button"
         >
@@ -127,13 +128,18 @@ export default function HomeScreen() {
           </View>
         </Pressable>
 
-        <View style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border, opacity: 0.5 }} accessibilityLabel="Învață — în curând">
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border }}
+          onPress={() => router.push("/learn")}
+          accessibilityLabel="Invata teorie"
+          accessibilityRole="button"
+        >
           <Text style={{ fontSize: 28 }}>🎓</Text>
           <View>
-            <Text style={{ fontSize: 17, fontWeight: "700", color: colors.textMuted }}>Învață</Text>
-            <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>În curând</Text>
+            <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Învață</Text>
+            <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>8 module de teorie + quiz</Text>
           </View>
-        </View>
+        </Pressable>
       </View>
 
       {/* History */}
@@ -162,6 +168,68 @@ export default function HomeScreen() {
           Ultima actualizare a datelor: 2025
         </Text>
       </View>
+
+      {/* Practice filter modal */}
+      <Modal visible={practiceModal} transparent animationType="fade" onRequestClose={() => setPracticeModal(false)}>
+        <Pressable
+          style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.5)", justifyContent: "flex-end" }}
+          onPress={() => setPracticeModal(false)}
+        >
+          <Pressable
+            style={{ backgroundColor: colors.bgCard, borderTopLeftRadius: 20, borderTopRightRadius: 20, paddingTop: 20, paddingBottom: insets.bottom + 20, paddingHorizontal: 20, maxHeight: "80%" }}
+            onPress={() => {}}
+          >
+            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 4 }}>Practică</Text>
+            <Text style={{ fontSize: 13, color: colors.textMuted, marginBottom: 16 }}>Alege o categorie sau rezolvă totul</Text>
+
+            <ScrollView showsVerticalScrollIndicator={false}>
+              {/* All questions */}
+              <Pressable
+                style={{ flexDirection: "row", alignItems: "center", padding: 14, borderRadius: 12, backgroundColor: colors.bg, marginBottom: 8 }}
+                onPress={() => { setPracticeModal(false); router.push("/quiz?mode=practice"); }}
+              >
+                <View style={{ flex: 1 }}>
+                  <Text style={{ fontSize: 15, fontWeight: "600", color: colors.text }}>Toate întrebările</Text>
+                  <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>{TOTAL_QUESTIONS} întrebări</Text>
+                </View>
+                <Text style={{ fontSize: 20, color: colors.textMuted }}>›</Text>
+              </Pressable>
+
+              {/* License filter */}
+              <Text style={{ fontSize: 12, fontWeight: "600", color: colors.textSecondary, marginTop: 12, marginBottom: 8, marginLeft: 4, textTransform: "uppercase", letterSpacing: 0.5 }}>Categorie permis</Text>
+              {(Object.entries(LICENSE_LABELS) as [License, string][]).map(([key, label]) => (
+                <Pressable
+                  key={key}
+                  style={{ flexDirection: "row", alignItems: "center", padding: 14, borderRadius: 12, backgroundColor: colors.bg, marginBottom: 8 }}
+                  onPress={() => { setPracticeModal(false); router.push(`/quiz?mode=practice&license=${key}`); }}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 15, fontWeight: "600", color: colors.text }}>{label}</Text>
+                    <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>{getQuestionCount({ license: key })} întrebări</Text>
+                  </View>
+                  <Text style={{ fontSize: 20, color: colors.textMuted }}>›</Text>
+                </Pressable>
+              ))}
+
+              {/* Topic filter */}
+              <Text style={{ fontSize: 12, fontWeight: "600", color: colors.textSecondary, marginTop: 12, marginBottom: 8, marginLeft: 4, textTransform: "uppercase", letterSpacing: 0.5 }}>Materie</Text>
+              {(Object.entries(TOPIC_LABELS) as [Topic, string][]).map(([key, label]) => (
+                <Pressable
+                  key={key}
+                  style={{ flexDirection: "row", alignItems: "center", padding: 14, borderRadius: 12, backgroundColor: colors.bg, marginBottom: 8 }}
+                  onPress={() => { setPracticeModal(false); router.push(`/quiz?mode=practice&topic=${key}`); }}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 15, fontWeight: "600", color: colors.text }}>{label}</Text>
+                    <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>{getQuestionCount({ topic: key })} întrebări</Text>
+                  </View>
+                  <Text style={{ fontSize: 20, color: colors.textMuted }}>›</Text>
+                </Pressable>
+              ))}
+            </ScrollView>
+          </Pressable>
+        </Pressable>
+      </Modal>
     </View>
   );
 }

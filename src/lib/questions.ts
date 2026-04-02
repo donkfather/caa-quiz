@@ -29,9 +29,31 @@ export function getQuizQuestions(count: number = 26): Question[] {
   return shuffle(allQuestions).slice(0, count);
 }
 
-/** Get all questions in order (practice mode) */
-export function getAllQuestions(): Question[] {
-  return [...allQuestions];
+/** Get all questions in order, optionally filtered */
+export function getAllQuestions(filters?: { topic?: Topic; license?: License }): Question[] {
+  let qs = [...allQuestions];
+  if (filters?.topic) qs = qs.filter((q) => q.topic === filters.topic);
+  if (filters?.license) qs = qs.filter((q) => q.license.includes(filters.license!));
+  return qs;
+}
+
+export const TOPIC_LABELS: Record<Topic, string> = {
+  colreg: "COLREG",
+  lights_signals: "Lumini și semnale",
+  navigation: "Navigație",
+  seamanship: "Marinărie",
+  maneuvering: "Manevră",
+  first_aid: "Prim ajutor",
+  law: "Legislație",
+};
+
+export const LICENSE_LABELS: Record<License, string> = {
+  C: "Clasa C",
+  D: "Clasa D",
+};
+
+export function getQuestionCount(filters?: { topic?: Topic; license?: License }): number {
+  return getAllQuestions(filters).length;
 }
 
 export const EXAM_QUESTION_COUNT = 26;

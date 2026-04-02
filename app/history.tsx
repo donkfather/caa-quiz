@@ -13,12 +13,20 @@ import {
 } from "../src/lib/storage";
 import { useFocusEffect, useRouter } from "expo-router";
 import { showInterstitial } from "../src/lib/ads";
+import { TOPIC_LABELS, LICENSE_LABELS, Topic, License } from "../src/lib/questions";
 
 const MODE_LABELS: Record<string, string> = {
   exam: "Examen",
   practice: "Practică",
   learn: "Învață",
 };
+
+function formatFilter(topic?: string, license?: string): string {
+  const parts: string[] = [];
+  if (topic && topic in TOPIC_LABELS) parts.push(TOPIC_LABELS[topic as Topic]);
+  if (license && license in LICENSE_LABELS) parts.push(LICENSE_LABELS[license as License]);
+  return parts.length > 0 ? parts.join(" · ") : "";
+}
 
 function formatDateShort(iso: string): string {
   const d = new Date(iso);
@@ -177,7 +185,10 @@ export default function HistoryScreen() {
 
   const handleResume = async (session: ActiveSession) => {
     await showInterstitial();
-    router.push(`/quiz?mode=${session.mode}&sessionId=${session.id}`);
+    let url = `/quiz?mode=${session.mode}&sessionId=${session.id}`;
+    if (session.topic) url += `&topic=${session.topic}`;
+    if (session.license) url += `&license=${session.license}`;
+    router.push(url);
   };
 
   const handleClearHistory = () => {
@@ -219,7 +230,7 @@ export default function HistoryScreen() {
         </Pressable>
         <View style={{ alignSelf: "flex-start", marginRight: 20 }}>
           <Text style={styles.activeMeta}>
-            {MODE_LABELS[item.mode] || item.mode} · {timeAgo(item.updatedAt)}
+            {formatFilter(item.topic, item.license) || MODE_LABELS[item.mode] || item.mode} · {timeAgo(item.updatedAt)}
           </Text>
           <Text style={styles.activeDetail}>
             {answered} / {item.answers.length} răspunse · {progress}%
@@ -250,7 +261,7 @@ export default function HistoryScreen() {
         </Text>
         <View style={styles.historyInfo}>
           <Text style={styles.historyMode}>
-            {MODE_LABELS[item.mode] || item.mode}
+            {formatFilter(item.topic, item.license) || MODE_LABELS[item.mode] || item.mode}
           </Text>
           <Text style={styles.historyMeta}>
             {item.correct}/{item.total} corecte

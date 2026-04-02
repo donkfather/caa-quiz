@@ -22,6 +22,8 @@ import {
   getAllQuestions,
   allQuestions,
   Question,
+  Topic,
+  License,
   EXAM_QUESTION_COUNT,
 } from "../src/lib/questions";
 import {
@@ -42,7 +44,7 @@ import { showInterstitial } from "../src/lib/ads";
 type Mode = "exam" | "practice" | "learn";
 
 export default function QuizScreen() {
-  const { mode, sessionId } = useLocalSearchParams<{ mode: Mode; sessionId?: string }>();
+  const { mode, sessionId, topic, license } = useLocalSearchParams<{ mode: Mode; sessionId?: string; topic?: Topic; license?: License }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { theme: colors } = useTheme();
@@ -54,10 +56,12 @@ export default function QuizScreen() {
   const sessionRef = useRef<ActiveSession | null>(null);
 
   const questions = useMemo(() => {
-    // If resuming, we'll set questions from the session in useEffect
     if (mode === "exam") return getQuizQuestions(EXAM_QUESTION_COUNT);
-    return getAllQuestions();
-  }, [mode]);
+    const filters: { topic?: Topic; license?: License } = {};
+    if (topic) filters.topic = topic;
+    if (license) filters.license = license;
+    return getAllQuestions(Object.keys(filters).length > 0 ? filters : undefined);
+  }, [mode, topic, license]);
 
   const [questionList, setQuestionList] = useState<Question[]>(questions);
   const [index, setIndex] = useState(0);
@@ -113,6 +117,8 @@ export default function QuizScreen() {
         currentIndex: 0,
         startedAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
+        topic: topic || undefined,
+        license: license || undefined,
       };
       sessionRef.current = session;
       setAnswers(session.answers);
@@ -158,7 +164,7 @@ export default function QuizScreen() {
         (a, i) => a !== null && a === questionList[i]?.correct,
       ).length;
       const finalTotal = finalAnswers.filter((a) => a !== null).length;
-      if (finalTotal > 0) saveQuizResult(mode || "exam", finalCorrect, finalTotal);
+      if (finalTotal > 0) saveQuizResult(mode || "exam", finalCorrect, finalTotal, { topic: topic || undefined, license: license || undefined });
       if (sessionRef.current) deleteActiveSession(sessionRef.current.id);
       // Gamification
       const seenIds = questionList.map((q) => q.id);

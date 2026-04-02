@@ -11,7 +11,7 @@
       },
       "env": {
         "EXPO_ROUTER_APP_ROOT": "./app",
-        "USE_TEST_ADS": "true",
+        "EXPO_PUBLIC_USE_TEST_ADS": "true",
         "EXPO_PUBLIC_SUPABASE_URL": "https://heuooollkwoksqfncvoc.supabase.co",
         "EXPO_PUBLIC_SUPABASE_KEY": "sb_publishable_l2_o9DCf7qRXkHXLTgYUPg_uDYTvNIm"
       }

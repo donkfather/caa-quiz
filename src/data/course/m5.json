@@ -1,0 +1,80 @@
+{
+  "id": "m5",
+  "title": "Comunicatii",
+  "description": "Apeluri radio, disciplina comunicatiilor, echipamente VHF/AIS, GMDSS.",
+  "sections": [
+    {
+      "id": "m5_s1",
+      "title": "Apeluri",
+      "content": "\nOrdinea priorităţii convorbirilor radiotelefonice\n- Staţiile (de navă sau terestre) trebuie să acorde prioritate tuturor informaţiilor referitoare la viaţa umană pe apă, pe pământ, în aer sau în afara atmosferei.\n\n### Ordinea priorităţii comunicaţiilor este următoarea\n\n\n1.1. Apel de pericol/primejdie (MAYDAY);\n\nSemnalul de primejdie consta din cuvantul \"MAYDAY\" spus de 3 ori. Acest semnal indica faptul ca nava sau persoana care l-a folosit este amenintata de un pericol grav si iminent si cere asistenta imediata. Acest semnal de primejdie nu trebuie utilizat in nici o alta situatie. El nu se extinde pentru situatiile de asistenta imediata in privinta unei singure persoane, de exemplu o urgenta medicala. In astfel de situatii trebuie utilizat semnalul de urgenta. Utilizarea gresita a unui semnal de primejdie poate duce la situatia in care asistenta sa fie chemata dintr-o situatie in care chiar era nevoie de ea.\n\n\n### Apelul de primejdie\n\n- semnalul de primejdie \"MAYDAY\", spus de 3 ori;\n- cuvintele \"THIS IS\" (sau DE pronuntate DELTA\nECHO in caz de dificultati de limbaj);\n- numele si indicativul de apel al navei in primejdie, spus de 3 ori.\n\n### Mesajul de primejdie\n\n- semnalul de primejdie \"MAYDAY\";\n- numele si indicativul navei in primejdie,\n- informatii legate de pozitia navei;\n- natura pericolului si felul asistentei dorite;\n- orice alta informatie ce poate veni in ajutorul operatiunilor de cautare si salvare.\n\n*MOB - Man Over Board este MAYDAY, in cazul in care s-a pierdut contactul vizual cu persoana!\n\n1.2. Apel de urgenta (PAN PAN);\n\nSemnalul de urgenta consta din cuvintele ”PAN PAN” spuse de 3 ori. Acesta are prioritate in fata tuturor celorlalte comunicatii exceptandu-le pe cele de primejdie. Utilizarea unui semnal de urgenta indica faptul ca statia ce l-a transmis are un mesaj urgent de transmis privitor la siguranta unei nave sau a unei persoane.\nToate statiile ce aud un semnal de urgenta trebuie sa aiba grija sa nu interfereze cu mesajul ce urmeaza. Semnalul de urgenta si mesajul de urgenta sunt transmise in mod normal pe una sau mai multe frecvente de primejdie. Insa transmisia mesajul ce urmeaza semnalul de urgenta trebuie transferata pe o frecventa de lucru daca: este lung sau priveste un caz de urgenta medicala. Mesajele de urgenta pot fi adresate tuturor statiilor sau unei statii anume. Daca mesajul este adresat catre toate statiile, statia initiatoare trebuie sa anuleze mesajul cand nu mai este necesar ajutorul.\n\n1.3. Apel de siguranţă (SECURITE);\n\nSemnalul de siguranta consta din cuvantul ”SECURITE” spus de trei ori. Acesta indica faptul ca statia ce il foloseste este pe cale sa transmita un mesaj cu privire la avertismentele de navigatie si meteorologice importante. Statiile de nava ce aud mesajul de siguranta trebuie sa continue ascultarea pana ce se asigura ca mesajul nu ii priveste. Ele nu trebuie sa faca nici un fel de transmisie ce ar putea sa interfereze cu mesajul de siguranta. Semnalul si apelul de siguranta catre toate navele trebuie facut in mod normal pe o frecventa de primejdie. Insa, mesajul ce urmeaza privitor la siguranta trebuie facut pe o frecventa de lucru.\n\n1.4. Forma apelului si a raspunsului de rutina.\n\n\n### Apelul este constituit după cum urmează\n\n- de trei ori, cel mult, numele staţiei apelate;\n- cuvântul “AICI” (sau DE silabisit cu ajutorul cuvintelor de cod DELTA ECHO în caz de dificultăţi de limbaj);\n- de trei ori maxim numele staţiei care face apelul.\n\nTotuşi, atunci când contactul se stabileşte uşor, apelul descris mai sus poate fi înlocuit cu apelul descris mai jos:\n- o dată numele staţiei apelate;\n- cuvântul “AICI” (sau DE silabisit cu ajutorul cuvintelor de cod DELTA ECHO în caz de dificultăţi de limbaj);\n- de două ori numele staţiei care face apelul.\n\nDupă stabilirea contactului, numele staţiei nu poate fi emis decât o singură dată.\n\n\n### Răspunsul la apel este constituit după cum urmează\n\n- de trei ori maxim numele staţiei care face apelul;\n- cuvântul”AICI” (sau DE silabisit cu ajutorul cuvintelor de cod DELTA ECHO în caz de dificultăţi de limbaj);\n- de trei ori maxim numele staţiei apelate.\n\nTotuşi, atunci când contactul este uşor de stabilit apelul descris mai sus poate fi înlocuit cu apelul descris mai jos:\n- o dată numele staţiei care face apelul;\n- cuvântul “AICI” (sau DE silabisit cu ajutorul cuvintelor de cod DELTA ECHO în caz de dificultăţi de limbaj);\n- de două ori numele staţiei apelate.\n\nDupă stabilirea contactului numele staţiei nu poate fi emis decât o singură dată.\n",
+      "images": [
+        "m5_p54_0.png",
+        "m5_p54_1.png",
+        "m5_p55_0.png",
+        "m5_p56_0.png"
+      ],
+      "quiz": [
+        {
+          "question": "Căror nave li se aplică prevederile Colreg-1972? tuturor navelor care navigă în apele internaționale.",
+          "options": [
+            "tuturor navelor care navigă în rade, strâmtori și marea liberă.",
+            "tuturor navelor aflate în largul mării ori pe toate apele învecinate accesibile navelor maritime."
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "m5_s2",
+      "title": "Disciplina comunicatiilor",
+      "content": "\nDisciplina necesară pentru garantarea desfăşurării corecte a comunicaţiilor radiotelefonice impune:\n- ca acestea să fie limitate la minimul indispensabil;\n- să se folosească fraze scurte, vorbindu-se lent şi clar, fără să se forţeze vocea;\n- să se respecte interdicţia de a întreţine convorbiri personale sau comerciale pe categoriile de servicii navă-navă, informaţii nautice şi comunicaţii de bord (în afara canalului 77 pentru convorbirile personale);\n- să se limiteze puterea de emisie pe categoria informaţii nautice pe cât posibil pentru evitarea bruiajelor celorlalte legături de radiocomunicaţii;\n",
+      "images": [
+        "m5_p56_0.png"
+      ],
+      "quiz": [
+        {
+          "question": "Tuturor navelor aflate în largul mării ori pe toate apele învecinate accesibile navelor maritime li se aplică prevederile: COLREG-1972.",
+          "options": [
+            "R.N.D.",
+            "Codului ISPS."
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "m5_s3",
+      "title": "Echipamente",
+      "content": "\n3.1. Radiotelefoane VHF (putere maxima 25W, raza de pana la 40Nm, in limita orizontului vizibil)\n\n### Pentru operare, se va proceda in felul urmator\n\n\nSe pune aparatul in functiune apasand butonul ON;\n\nSe selecteaza canalul dorit apasand butonul de selectare pana cand pe ecran apare cifra respectiva;\n\nSe alege puterea de transmisie;\n\nSe regleaza nivelul sonor cu butoanele de volum;\n\n\nSe regleaza nivelul zgomotului de fond cu butoanele de squelch, daca este cazul, pana la valoarea minima; se va avea grija ca nivelul de squelch sa nu fie prea mare, caci se inrautateste receptia semnalelor slabe;\n\nPentru transmisia apelului, se apasa tasta PTT (Push To Talk) si se vorbeste;\n\n**Dupa ce s** — a terminat mesajul, se elibereaza butonul PTT\n\n3.2. AIS - Automatic Identification System\n\nSistemele de identificare automată a navelor permit nu numai îmbunătăţirea posibilităţilor de monitorizare a acestor nave, ci şi, mai ales, creşterea siguranţei lor în situaţii de navigare la mică distanţă una de cealaltă.\nAIS este cel mai important progres pentru navigarea în siguranță din domeniul navigației de la introducerea radarului. Sistemul a fost dezvoltat iniţial ca un instrument de evitare a coliziunilor, pentru a permite navelor comerciale să se \"vadă\" reciproc, în mod mai clar în toate condiţiile și de a îmbunătăți informațiile conducătorului navei despre mediul ce-l înconjoară.\nSistemul AIS reprezintă o modalitate electronică de transmitere automată la distanță a unor informații complexe privind identitatea unei nave sau a unui convoi de barje, încărcătura aflată la bord, destinația transportului, viteza deplasării, etc.\nAIS este un sistem transponder de transmitere de la bordul navei, prin care navele trimit în mod continuu ID-ul lor, poziția, cursul, viteza și alte date către toate navele aflate în apropiere precum și stațiilor VTS.\nAceste informaţii sunt primite si de alte Transpordere AIS la bordul navelor și de alte stații de coastă, folosindu-le pentru a construi un ecran grafic în timp real cu traficul naval din zonă. Oferă, de asemenea, autorităţilor portuare şi organelor de siguranța navigației capacitatea de a gestiona traficul de nave şi de a reduce riscurile navigaţiei.\n",
+      "images": [
+        "m5_p56_0.png",
+        "m5_p57_0.png"
+      ],
+      "quiz": []
+    },
+    {
+      "id": "m5_s4",
+      "title": "Sistemul GMDSS",
+      "content": "\nSistemul GMDSS (Global Maritime Distress and Safety System) este un sistem de proceduri de siguranta si protocoale de comunicare agreate la nivel international menit sa mareasca siguranta pe apa si sa faciliteze salvarea ambarcatiunilor si aeronavelor aflate in situatii de primejdie. Potrivit\n\n### GMDSS, zonele globului sunt impartite in\n\n\nZona A 1 - in raza de actiune a unui statii de coasta VHF (vey high frequency) dotata cu sistem DSC pana la 50nm depinzand de inaltimea antenei.\nZona A 2 - in raza de actiunii a unei statii de coasta MF (frecventa medie) , dotata cu sistem DSC, pana la 100-300 nm.\nZona A 3 - intre 70 grade N - 70 grade S lat.\nZona A 4 - zonele polare\n\nStatia fixa sau mobila VHF functioneaza in zona A 1 si este prima metoda de a trimite un semnal de primejdie. De asemenea, o metoda foarte buna in zonele costiere este apelul la 112 folosind telefonia celulara.\n\n\n### Echipamentele acoperite de GMDSS includ\n\n statiile radio VHF;\n statiile radio pe unde medii si lungi;\n\nNavtex;\n\nEPIRB (transmit pozitia, dupa activare prin satelit);\n\nPLB (personal locator beacon) - este un EPIRB personal care trasmite pozitia prin satelit sau direct catre navele serviciilor de salvare (121,5 MHz);\n\nSART  (search and rescue radar transponder) - produce pe ecranele radar din zona o amprenta specifica, prin emisia in banda radar a unui impuls de semnal.\n",
+      "images": [
+        "m5_p57_0.png",
+        "m5_p58_0.png"
+      ],
+      "quiz": []
+    },
+    {
+      "id": "m5_s5",
+      "title": "Serviciul RIS",
+      "content": "(River Information Services)\n\nRIS sunt un concept de servicii de informaţii având ca scop încadrarea organizării traficului şi transportului pe căile de navigaţie interioară, cuprinzând interferenţa cu alte moduri de transport. RIS vizează să contribuie la desfăşurarea unui transport sigur şi eficace şi a unei utilizări optime a căilor de navigaţie interioară.\nRIS presupune interrelaţionarea cu alte modalităţi de transport: maritim, rutier şi feroviar. RIS se aplică tuturor tipurilor de cai de navigaţie interioară (fluvii, râuri, canale, lacuri şi porturi)\nRIS este de asemenea un termen generic pentru toate serviciile de informaţii individuale ce servesc susţinerea desfaşurării unei navigaţii fluviale într-o manieră armonizată.\nRIS recepţionează, tratează, evaluează şi difuzează informaţii despre canale,trafic şi transport. RIS nu tratează activităţi comerciale interne între una sau mai multe companii dar sunt dispuse la implicare în acest sens.\nÎn cadrul RIS, sistemele moderne constau în unul sau mai multe sisteme de tehnologia informației conjugate. Un sistem de tehnologie a informaţiei acoperă totalitatea resurselor umane, materiale, logistice, mijloace de comunicare şi reglementări pentru realizarea prelucrării informaţiei.\nConform Directivei 44/2005/CE nu este necesar ca cerinţele şi specificaţiile tehnice să fie obligatorii pe căile navigabile interioare naţionale care nu sunt legate de reţeaua navigabilă a unui alt stat membru.\nEste necesar ca dezvoltarea RIS să se bazeze pe obiective precum siguranţa, eficienţa navigaţiei interioare şi respectul pentru mediu, care sunt realizate prin sarcini cum ar fi gestionarea traficului şi a transportului, protecţia mediului şi a infrastructurii şi aplicarea normelor specifice.\nConform aceleeaşi directive, este necesar ca specificaţiile tehnice să cuprindă sisteme precum hărţile electronice de navigaţie, notificarea electronică a navelor, inclusiv un sistem european uniform de numerotare a navelor, notificările către căpitani şi reperarea şi urmărirea navelor. În scopul aplicării\nRIS, care necesită determinarea exactă a poziţiei, se recomandă utilizarea tehnologiilor de determinare a poziţiei prin satelit. Atunci când este posibil, respectivele tehnologii trebuie să fie interoperabile cu alte sisteme relevante şi trebuie integrate cu acestea, în conformitate cu deciziile aplicabile în acest domeniu.\n\nCentre RIS\nUn centru RIS reprezintă zona în care serviciile sunt administrate de către operatori. Atunci când interacţiunea nava/bază trebuie să se facă în ambele sensuri (de ex. printr-un serviciu VHF), sunt necesare unul sau mai multe centre RIS. În cazul în care un centru VTS sau o ecluză se află în zona RIS, el poate fi utilizat la fel de bine în calitate de centru RIS. Este recomandat a se concentra toate serviciile unei zone RIS într-un singur centru RIS.\nConform Directivei 44/2005/CE, cerinţele privind datele minime furnizate de către centrul RIS sunt următoarele:\n axa căii navigabile cu indicarea kilometrilor;\n restricţii pentru nave sau convoaie cu privire la lungime, lăţime, pescaj şi înălţime;\n orarul de funcţionare al structurilor restrictive, în special al ecluzelor şi podurilor;\n amplasarea porturilor şi a locurilor de transbordare;\n date de referinţă privind indicatoarele nivelului apei relevante pentru navigaţie.\n\nManevra usoara!\n\n1.\n\nA\nAlpha\nI have a diver down, please keep well clear at low speed.\nN\nNovember\nNo (negative or \" The significance of the previous group should be read in the negative\" )\nB\nBravo\nI am loading or discharging or carrying dangerous goods.\nO\nOscar\nMan overboard\nC\nCharlie\nYes (afirmative or \" The significance of the previous group should be read in the afirmative\"\n)\nP\nPapa\nIn harbour: All persons should report on-board as the vesel is about to proced to sea.\nD\nDelta\n**Keep clear of me** — I am manouvering with dificulty\nQ\nQuebec\nMy vesel is healthy and I request free practique.\nE\nEcho\nI am altering my course to starboard.\nR\nRomeo\nNo signal\nF\nFoxtrot\nI am disabled. Communicate with me.\nS\nSierra\nMy engines are going astern.\nG\nGolf\nI require a Pilot.\nT\nTango\nKeep clear of me; I am engaged in pair trawling.\nH\nHotel\nI have a Pilot on board.\nU\nUniform\nYou are running into danger.\nI\nIndia\nI am altering my course to port.\nV\nVictor\nI require assistance.\nJ\nJuliett\nI am on fire and have dangerous goods on board, keep well clear of me.\nW\nWhiskey\nI require medical assistance.\nK\nKilo\nI wish to communicate with you.\nX\nX-Ray\nStop carrying out your intentions and watch for my signals.\nL\nLima\nYou should stop your vesel instantly.\nY\nYankee\nI am dragging my anchor.\nM\nMike\nMy vesel is stoped.\nZ\nZulu\nI require a tug.\nInternational Code Flags\n",
+      "images": [
+        "m5_p58_0.png",
+        "m5_p59_0.png",
+        "m5_p59_1.png",
+        "m5_p60_0.png",
+        "m5_p61_0.png",
+        "m5_p62_0.png"
+      ],
+      "quiz": []
+    }
+  ]
+}

@@ -28,6 +28,9 @@ function AppStack() {
         <Stack.Screen name="history" options={{ title: "Istoric" }} />
         <Stack.Screen name="settings" options={{ title: "Setări" }} />
         <Stack.Screen name="badges" options={{ title: "Realizări" }} />
+        <Stack.Screen name="learn/index" options={{ title: "Învață" }} />
+        <Stack.Screen name="learn/[moduleId]" options={{ title: "Modul" }} />
+        <Stack.Screen name="learn/section" options={{ title: "Secțiune" }} />
       </Stack>
     </>
   );

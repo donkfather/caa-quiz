@@ -1,0 +1,245 @@
+{
+  "id": "m6",
+  "title": "Navigatie si Balizaj IALA",
+  "description": "Coordonate, harti nautice, drumuri, relevmente si sistemul de balizaj.",
+  "sections": [
+    {
+      "id": "m6_s1",
+      "title": "Coordonate geografice",
+      "content": "\nSistemul de coordonate geografice este un sistem de referinta care utilizeaza coordonatele unghiulare, latitudine (nordica sau sudica) si longitudine (estica si vestica) si serveste la determinarea unghiurilor laterale ale suprafetei terestre (sau mai general ale unui sferoid, ca aproximatie la forma neregulata a Pamantului care este denumita geoid).\n\nAxa de rotatie a Pamantului este axa teoretica ce uneste cei doi poli geografici.\nMeridianul este semicercul de pe suprafaţa Pamantului ce uneşte  Polul Nord cu Polul Sud,  semicerc determinat de intersecţia Pamantului cu un plan ce conţine axa sa de rotaţie.\nMeridianul Greenwich este meridianul materializat fizic de axa optica a observatorului astronomic\nGreenwich. Este meridianul 0 sau primul meridian si imparte sfera terestra in doua semisfere, de Est si de vest.\nMeridianul opus Primului meridian se numeste Anti-Meridian sau meridianul de schimbare a datei.\n\nEcuatorul este cercul imaginar de pe suprafaţa Pamantului, format de intersecţia acesteia cu un plan ce trece prin centrul sau şi care este perpendicular pe axa sa de rotaţie (axa ce uneşte Polul Nord cu\nPolul Sud).\nParalelele sunt niste cercuri rezultate din intersectia unor planuri paralele cu planul ecuatorului si suprafata terestra.\nVerticala locului reprezinta directia care uneste punctul observatorului cu centrul sferei terestre.\nLatitudinea (Lat.) este unghiul dintre orice punct si ecuatorul. Liniile cu o latitudine constanta sunt numite paralele.\nLongitudinea (Long.) este unghiul spre est sau vest al unui punct arbitrar de pe Pamant.\nCombinand aceste doua unghiuri, poate fi specificata pozitia orizontala a oricarui punct de pe\nPamant.\n\nDe obicei precizia de exprimare a unei pozitii pe harta se face in zecimi de minut.\n\n### Ex\n\nLatitudine: ϕ (phi)=24°56’.7 N sau ϕ=+24°56’.7 (24°56’.7 S sau ϕ=-24°56’.7)\nLongitudine: λ (lambda)=10°24’.7 E sau λ=+10°24’.7 (λ=10°24.7\nW sau λ=-10°24.7)\n\nMila marina (Nm) este unitatea de masura a distantelor, egala cu lungimea unui minut  de  arc  de  meridian terestru: 1 M = 1852 m in\nRomania si alte state europene.\n- cablul = 1/10 din mila marina;\n- bratul = 1/1000 din mila marina\n- leghea marina = 3 mile marine\n",
+      "images": [
+        "m6_p64_0.png",
+        "m6_p64_1.png",
+        "m6_p64_2.png",
+        "m6_p65_0.png",
+        "m6_p65_1.png",
+        "m6_p65_2.png",
+        "m6_p66_0.png",
+        "m6_p66_1.png",
+        "m6_p66_2.png"
+      ],
+      "quiz": [
+        {
+          "question": "Guvernul unui stat poate stabili prescripţiile speciale cu privire la numărul luminilor de poziţie, a semnalelor luminoase, prescripţii care să fie astfel încât să facă imposibilă confundarea lor cu Regulamentul? nu.",
+          "options": [
+            "nu este precizat.",
+            "da."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Este permisă ancorarea în schemele de separare a traficului? se va evita în măsura maximă a posibilului ancorarea atât în schema de separare, cât şi în zonele învecinate acesteia.",
+          "options": [
+            "se poate ancora, dar se vor da toate semnalele prevăzute în prezentele reguli.",
+            "nu se poate ancora în nici o situaţie."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Când mai pot fi purtate luminile prevăzute de reguli? de la răsăritul la apusul soarelui, pe timp cu vizibilitate redusă, în toate împrejurările în care această măsură este necesară.",
+          "options": [
+            "când vizibilitatea este sub 3 Mm.",
+            "în srâmtori, când vizibiliatea este redusă."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "La 2 Mm se văd luminile albe, roşii, verzi sau galbene pe întreg orizontul la navele: cu lungimea mai mare de 50 m.",
+          "options": [
+            "cu lungimea mai mică de 100 m.",
+            "cu lungimea între 12 şi 20 m."
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "m6_s2",
+      "title": "Hartile nautice",
+      "content": "\nHarta este reprezentarea in plan, la o anumita scara, a unei zone din suprafata terestra.\nScara hartii este raportul dintre lungimea unui segment de pe planul de proiectie si lungimea segmentului corespunzator din realitate, exprimate in aceeasi unitate de masura. Scara se specifica numeric (1:100000), grafic prin afisarea unui segment gradat care indica o echivalenta similara cu scara numerica si descriptiv (un cm reprezinta o mila).\n\n\n### Reprezentarea plana se face prin proiectie, proiectiile pot fi\n\n\n\nProiectii  cilindrice,  la  care  suprafata  de  proiectie  este  un  cilindru, normala daca axa cilindrului este axa de rotatie a pamantului si transversala daca axa cilindrului de proiectie este perpendiculara pe axa de rotatie a pamantului.\n\nProiectii conice, la care suprafata de proiecie este un con.\n\nProiectii azimutale (sau gnomice), la care suprafata de proiectie este un plan.\n\nHartile marine sunt reprezentari plane ale unei zone maritime, fluviale sau oceanice, zona reprezentata fiind incadrata de scarile latitudinilor si longitudinilor.\n\nEste important sa stim sa citim o harta si pentru a face acest lucru trebuie sa cunoastem semnificatiile simbolurilor acesteia. Pe harti sunt prezentate informatii despre natura si relieful coastei, zonele de pericol, marcaje, contururi,sisteme de balizaj, zone de separatie a traficului, practic toate informatiile folositoare pentru a naviga in siguranta in zona respectiva.\n\nHartile se corecteaza pe baza avizelor pentru navigatori, facand corecturi temporare sau permanente.\n\n\n### O harta marina trebuie sa indeplineasca urmatoarele conditii\n\n\nSa fie conforma, adica contururile de coasta  sau alte forme sa fie asemenea cu proiectia lor pe harta,\n\nLoxodroma sa apara ca un segment de dreapta, drumul adevarat fiind unghiul dintre loxodroma si meridiane\n\nSa permita masurarea facila si cu precizie a distantelor\n\nSa permita stabilirea coordonatelor geografice a orcarui punct\n\nCea mai folosita proiectie care si satisface conditiile enuntate anterior este harta in proiectie\nMercator (realizata in secolul 16 de Gerhard Kremer, cu pseudonimul Mercator)\n\nHartile digitale\n\nECDIS (Electronic Chart Display and Information System) este un sistem standardizat, folosit la nivel mondial, destinat afisarii unor harti digitale pe un display electronic.\n\n### Hartile electronice sunt de doua feluri\n\n\nRaster, obtinuta prin scanarea unor harti pe hartie (nu este acceptata de sistemul ECDIS)\n\nVector, este de fapt o baza de date structurate pe mai multe nivele care contine informatii geografice despre eleméntele ce se doresc afisate o\nPermite estimari de drum, distanta, relevmente, adancimi, setarea de alarme functie de diversi factori de navigatie o\nPermite stocarea de informatii suplimentare pentru puncte de interes de pe harta\n(pericole, faruri, repere la mal, etc) o\nPermite schimbarea scarii de afisare (zoom in si zoom out)\n\nHarta digitala nu inlocuieste complet harta de navigatie pe hartie, ci doar o suplineste pe aceasta.\n",
+      "images": [
+        "m6_p66_0.png",
+        "m6_p66_1.png",
+        "m6_p66_2.png",
+        "m6_p67_0.png",
+        "m6_p67_1.png",
+        "m6_p67_2.png"
+      ],
+      "quiz": [
+        {
+          "question": "Cum se navigă în şenal sau cale navigabilă îngustă? pe mijlocul şenalului sau căii de acces.",
+          "options": [
+            "cât mai aproape posibil de marginea exterioară din dreapta şenalului sau căii de acces respective, atunci când aceasta se poate face.",
+            "se va naviga întotdeauna cât mai aproape posibil de marginea exterioară a şenalului sau căii de acces, pentru asigurarea unei veghe corespunzătoare."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Când se consideră că o navă ajunge din urmă altă navă? când vine dintr-o direcţie mai mare de 22°5 dinapoia traversului celeilalte nave, astfel încât noaptea se vede numai lumina din pupa şi luminile din bordurile navei ajunsă din urmă.",
+          "options": [
+            "când vede lumina din pupa şi luminile din bordurile navei ajunsă din urmă.",
+            "când vede lumina catargului pupa şi luminile din pupa."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "La ce distanţă trebuie să se vadă luminile de la catarge pentru navele cu lungimea între 12 şi 20 m? 1-2 Mm.",
+          "options": [
+            "2 Mm.",
+            "3 Mm."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce lumini trebuie să poarte o navă împinsă înainte când formează o singură unitate? trebuie să poarte la extremitatea prova luminile din borduri.",
+          "options": [
+            "lumina de catarg şi luminile din borduri.",
+            "lumină de catarg şi lumină de pupa."
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "m6_s3",
+      "title": "Orizontul vizibil",
+      "content": "\nOrice plan perpendicular pe perpendiculara locului se numeste orizont.\nPentru a face posibilă determinarea cu exactitate a distanţei la orizontul vizibil ar trebui să se stabilească cu rigurozitate traiectoria razei de lumină.\n\n### Formula aproximativa\n\n\nd(Nm) = 2radical( i(m))\n\nLa bordul navelor comerciale exista tabele cu rezultatul exact.\nExemplu: pentru un observator aflat la 5.5m, linia orizontului in tabele se afla la 4.9Nm.\nDin calculul aproximativ, distanta este 4.7Nm.\n",
+      "images": [
+        "m6_p67_0.png",
+        "m6_p67_1.png",
+        "m6_p67_2.png",
+        "m6_p68_0.png",
+        "m6_p68_1.png",
+        "m6_p68_2.png",
+        "m6_p68_3.png"
+      ],
+      "quiz": [
+        {
+          "question": "Ce semnale pot da navele care navigă prin şenal şi se îndoiesc de intenţiile navei care traversează şenalul? un sunet lung şi două scurte.",
+          "options": [
+            "un semnal de avertizare compus din cinci sunete scurte.",
+            "un semnal lung de atenţionare."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Cum trebuie să manevreze o navă care nu poate stabili cu siguranţă că ajunge din urmă altă navă? să se considere navă privilegiată şi şă-şi menţină viteza şi drumul.",
+          "options": [
+            "să se considere navă care ajunge din urmă şi să manevreze în consecinţă.",
+            "să dea semnalele corespunzătoare şi după edificare să procedeze conform situaţiei."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "La ce distanţă trebuie să se vadă luminile de la catarge pentru navele cu lungimea mai mică de 12 m? 3 Mm.",
+          "options": [
+            "2 Mm.",
+            "1 Mm."
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "m6_s4",
+      "title": "Drumuri si relevmente",
+      "content": "\nDrumul adevarat al navei reprezinta unghiul in planul orizontului adevarat format intre direcţia nord adevarat şi axa longitudinala a navei. In figura drumul adevarat al navei este unghiul NaAB = Da, acest unghi determinand direcţia de deplasare a navei in raport cu meridianul locului.\n\nRelevmentul adevarat (Ra) reprezinta unghiul in planul orizontului adevarat format intre direcţia\nNord adevarat şi direcţia la obiect. Astfel relevmentul adevarat la farul F este unghiul NaAF = Ra.\nAcest unghi determina direcţia la obiect in raport cu meridianul locului.\n\nUnghiul dintre axa longitudinala a navei şi direcţia la un obiect se numeşte relevment prova (Rp), astfel relevmentul prova la farul F pentru observatorul situat in A este unghiul BAFa = Rp.\n\nSistemul circular\nIn navigaţia de astazi, drumurile şi relevmentele se exprima in grade sexagemale, contandu-se de la direcţia N in sens retrograd putand lua valori intre 0°-360°.\n\n0°(360°) reprezinta / indica direcţia NORD\n\n90° reprezinta / indica direcţia Est\n\n180° reprezinta / indica direcţia SUD\n\n270° reprezinta / indica direcţia WEST\n\nDrumul adevarat reprezinta unghiul masurat de la direcţia N in sens retrograd pana la axul longitudinal al navei putand lua valori de la 0° la 360° (Da).\nRelevmentul adevarat la un obiect se masoara de la direcţia\nNord in sens retrograd pana la direcţia la obiect (Ra).\nRelevmentul prova la un obiect se masoara de la direcţia prova in sens retrograd pana la direcţia la obiect. Poate lua valori de la 0°  la 360°  (Rp).\n\nRa = Da + Rp\n\nDeterminarea directiilor la bordul navei\n\n Compasul magnetic, a carui funcţionare se bazeaza pe proprietatea acului magnetic liber suspendat de a se orienta pe direcţia liniilor de forţa ale campului magnetic sub a carui influenţa se afla, este primul tip de compas folosit la bordul navelor.\nCompasurile pot sa fie umede sau uscate. Lichidul din interior are rolul de amortizare a oscilatiilor navei si a micsora frictiunea rozei pe pivotul de sustinere. Acest lichid este format din alcool, apa distilata si glicerina.\n Compasul giroscopic este o instalaţie electromecanica complexa, constand in principiu dintr- un tor (un corp rotund de masa omogena), liber suspendat printr-un sistem cardanic, care este rotit cu o viteza foarte mare de rotaţie; sub influenţa forţei de gravitaţie a Pamantului, axa torului tinde sa-şi menţina orientarea in planul meridianului locului, indicand linia nord- sud in planul orizontului adevarat. Guvernarea navei se asigura dupa compasul giroscopic printr-un control continuu al indicaţiilor acestuia cu acelea ale compasului magnetic, masura de o importanţa vitala pentru siguranţa navigaţiei. Deviatia girocompasului variaza functie de viteza navei, drum si latitudinea locului.\n Compasul giromagnetic, a carui orientare pe meridian se obţine prin asocierea unui giroscop cu un sistem de ace magnetice. Compasurile giromagnetice se folosesc indeosebi la navele militare şi in general la navele mici şi rapide.\n\nDeclinatia magnetica\n\nForţa care acţioneaza asupra acului magnetic este magnetismul terestru. Pamantul cu atmosfera care il inconjura se comporta ca un imens magnet natural.\nCercetarile efectuate au dus la concluzia ca polii magnetici tereştri se afla la o anumita adancime faţa de suprafaţa\nPamantului, iar poziţia lor are o variaţie lenta in timp.\n\nUnghiul cu varful in centrul de suspensie al acului magnetic, format in orizontul adevarat intre direcţia nord adevarat şi direcţia nord magnetic, se numeşte declinaţie magnetica (d).\n\nDeclinaţia se considera estica sau pozitiva, daca direcţia nord magnetic se afla la est faţa de direcţia nord adevarat;\n\nO declinaţie estica de 70° 10’ se noteaza: d = 70° 10’  E sau d = +70° 10’.\n\nDeclinaţia se considera vestica sau negativa, daca direcţia nord magnetic se afla la vest faţa de direcţia nord adevarat; o declinaţie vestica de 40° 12’  se noteaza: d = 40° 12’ W sau d = -40° 12’.\n\nDeclinaţia magnetica poate lua valori de la zero la 180° asa cum se vede in exemplificarea de mai jos\n\nMagnetismul terestru, 2020\n\nDeviatia magnetica este datorata fortelor magnetice de la bordul navei care influenteaza compasul magnetic. Astfel unghiul format in planul orizontului adevarat intre nordul magnetic Nm si nordul indicat de compas NC se noteaza cu δ si se numeste deviatia compasului. Deviatia compasului trebuie stabilita de doua ori pe zi, astronomic, cu soarele la apus si la rasarit.\n\nDrumul compas (Dc) este unghiul in planul orizontului adevarat cu varful in centrul rozei (O), format intre direcţia nord compas şi axa longitudinala a navei, materializata prin linia de credinţa (L) a compasului. Drumul compas (compass course) in care nava este guvernata la un moment dat, se citeşte la gradaţia de pe roza din dreptul liniei de credinţa dinspre prova.\n\nRelevmentele la bord se masoara cu alidada.\n\nIn cazul in care se foloseste un girocompas, drumul giro reprezinta unghiul din planul orizontului addevarat masurat de la directia nord giro pana la axul prova al navei.\nPrecizia de masurare a drumul giro este de 0.5 grade.\n\nConvertirea drumurilor si a relevmentelor\n\ndirecţia nord adevarat (O - Na);\ndirecţia nord magnetic (O - Nm);\ndirecţia nord compas (O – Nc).\n\ndrumul adevarat al navei (Da = unghiul NaOL);\ndrumul magnetic al navei (Dm = unghiul NmOL);\ndrumul compas al navei (Dc = unghiul NcOL).\n\nrelevmentul adevarat (Ra = unghiul NaOF);\nrelevmentul magnetic (Rm = unghiul NaOF);\nrelevmentul compas (Rc = unghiul NcOF).\n\nRa = Da + Rp\nRm = Dm + Rp\nRc = Dc + Rp\n\nDa = Dm + d = Dc + ∆c = Dc + d + δ\n\nDirecţia nord magnetic este determinata in raport de direcţia nord adevarat, in funcţie de valoarea şi sensul (semnul) declinaţiei magnetice d; direcţia nord compas este determinata in raport de direcţia nord magnetic in funcţie de valoarea şi sensul (semnul) deviaţiei magnetice δ. Suma, a declinaţiei şi deviaţiei de numeşte corecţia compasului:  ∆c = d +δ.\n\nImpartirea orizontului in carturi este specific velierelor. Cartul este unitatea de masura pentru unghiuri reprezentand  a 32-a parte din orizont deci  360°/32 = 11°15' = 11°1/4. Fiecare  cart  are o denumire proprie, asa cum  rezulta  din figura de mai jos ,  precum  si un numar de ordine propriu de la  0  la  8 incepand  de  la  N catre E si W, respectiv de la S catre E si W. Exprimarea  directiei se face fie prin  denumirea  cartului, fie  prin  precizarea  cadranului  de orizont  si  a  numarului  de  ordine  a cartului  din  cadranul respectiv de orizont.\n\n\n### Carturile principale sunt\n\n carturile  N,  E,  S, W: acestea  indica directiile cardinale ;\n carturile  NE,  SE,  SW, NW: acestea  indica directiile intercardinale;\n carturile  NNE,  ENE, ESE, SSE, SSW, WSW, WNW,  NNW:  acestea indica directiile inter- intercardinale.\n\nImpartirea orizontului in carturi; un cart = 11.25 grade\n\n5. Loxodroma si ortodroma (doar pentru categoria C)\n\nDeplasarea unei navei  intre  doua  puncte  pe  suprafata pamantului  se  asigura tinand constant  drumul  ambarcatiunii.\nTraiectoria  navei  este o curba  sferica  ce  intersecteaza meridianele sub  acelasi unghi. Acest unghi se numeste drum adevarat. Aceasta curba se numeste Loxodroma si nu reprezinta drumul cel mai scurt intre doua puncte. Loxodroma este o spirala logaritmica.\n\nOrtodroma (Great Circle) este arcul de cerc mare 1 - 2 (Fig. 1.) care uneste doua puncte de pe suprafata terestra. Acest arc de cerc este situat la intersectia dintre sfera terestra si orice plan care trece prin centrul pamantului. Ortodroma este caracterizata de faptul ca reprezinta distanta cea mai scurta intre doua puncte  de pe glob si de faptul ca taie meridianele sub unghiuri diferite.\n\nPe o harta Mercator, Loxodroma apare ca o linie dreapta care taie meridianele sub acelasi unghi. Ortodroma pe o harta\nMercator apare ca un arc de cerc. Ortodroma apare insa ca o linie dreapta pe hartile gnomice, pe care se poate face navigatie ortodromica. In practica, navigatia ortodromica se realizeaza pe segmente de loxodroma, cat mai apropiate de ortodroma.\nSegmentul de ortodroma dintre doua locuri situate de aceeasi parte a ecuatorului, este in orice punct mai aproape de polul emisferei respective decat orice punct de pe loxodroma dintre cele doua locuri.\n\nDaca doua puncte sunt situate in emisfere diferite, ortodroma dintre ele schimba curbura in raport cu segmentul de loxodroma, la ecuator. Daca cele doua puncte sunt situate pe ortodroma la distante egale de o parte si de alta a ecuatorului, atunci ortodroma va intersecta loxodroma dintre ele pe ecuator.\n\n6. Dunarea. Prezentare generala. (doar pentru categoria D)\n\nDunarea este cel mai mare fluviu al Europei centrale si de sud-est. Dupa Volga, care are o lungime de\n3688 km, Dunarea, cu o lungime de 2850 km, dintre care 2588 km navigabili, este al doilea fluviu din\nEuropa si al 17-lea fluviu din lume ca lungime.\nPe tot parcursul sau, de la izvoare pana la varsarea in Marea Neagra, Dunărea uda teritoriile a 8 state.\nDistanţele de-a lungul firului apei sunt marcate prin borne kilometrice de la Galati km 150 in amonte si prin borne miliare, de la Galaţi la Mm 80 în aval până la Sulina care este situată la Mm 0.\n\n### Dunărea se varsă în Marea Neagră prin 3 braţe secundare\n\n\nChilia, la Nord;\n\nSulina, la mijloc;\n\nSf.Gheorghe, la Sud.\nDin punct de vedere al caracteristicilor fizico-geografice şi geologice, Dunărea se împarte în trei sectoare:\n\nDunărea de sus, de la izvoare km 2863 până la Gőnyu km 1791 având lungimea totală de\n1072 km;\n\nDunărea de mijloc, de la Gőnyu km 1791 până la Drobeta Turnu Severin km 931 având lungimea totală de 860 km;\n\nDunărea de jos, de la Drobeta Turnu Severin până la Sulina Mm 0, având o lungime 931 km.\n\n7. Particularitatile navigatiei pe Dunare. (doar pentru categoria D)\n\nNavigatia pe Dunare prezinta particularităţi care impun navigatorilor pe lângă o practică îndelungată şi o cunoaştere temeinică a sectorului în care se navigă.\nAstfel, in afara de vant şi valuri care influenţează asupra marşului şi manevrei navelor, navigatorii trebuie să ţină seama şi de următorii factori exteriori, extrem de importanţi şi anume:\n parametrii curbelor şi elementele trecerilor dificile;\n curentul apei care are diferite direcţii şi viteze poate avantaja sau dezavantaja manevra şi marşul navei;\n varietatea adâncimilor este de asemenea un alt factor exterior, care prezintă o importanţă deosebită, de acesta fiind influențate navigaţia, manevrele şi exploatarea navei;\n direcţia şi lăţimea şenalului navigabil, care poate fi în linie dreaptă sau sinuoasă, largă sau îngustă, va avea influenţă asupra marşului, spaţiului de manevră şi vitezei de deplasare;\n contra curenţii şi anafoarele au o influenţă asupra stabilităţii direcţiei de marş, în special în momentele de întâlnire sau depăşire a navelor;\n efectul de sugere, care se manifestă în locurile înguste, în special în canale, determină o atenţie deosebită în marş, mai ales la întâlniri sau depăşiri, uneori impunând restricţii de navigaţie marcate şi de semnele de navigaţie instalate pe maluri;\n bancurile de nisip neidentificate şi pragurile stâncoase sunt considerate elemente care pot stânjeni sau chiar să aducă prejudicii navigaţiei, fapt ce necesită ca acestea să fie cunoscute sau depistate şi delimitate atunci când apar, pentru a fi marcate ca pericole de navigaţie.\n\nDepăşirea dificultăţilor rezultate din particularităţile cursului Dunării şi care de fapt constituie principala problemă pentru navigaţie, se poate realiza luându-se următoarele măsuri:\n cunoaşterea caracteristicilor hidrografice şi hidrologice ale cursului Dunării cum sunt configuraţia longitudinală şi transversală, praguri, adâncimi şi viteze ale apei, precum şi amenajările existente şi în curs de executare, în vederea regularizării şenalului navigabil;\n informarea despre adâncimea apei în locurile cele mai critice ale trecerii, ţinându-se cont de rezerva de apă destul de mică la trecerile dificile;\n nava odată angajată în albia trecerii dificile, aceasta va trebui să navige pe mijlocul şenalului unde se află curentul principal şi adâncimea cea mai mare, iar în cazul înâîlnirilor cu alte nave în aceste condiţii, se vor lua măsurile impuse de Regulamentele de Navigaţie;\n în orice situaţie, se va sonda în ambele borduri adâncimea apei, respectându-se semnalele de navigaţie plutitoare şi costiere;\n se va întocmi schiţa trecerii dificile în care se vor da elemente de navigaţie practică, informaţii asupra semnalelor, adâncimilor (raportate la cota din ziua trecerii), distanţa faţă de maluri, natura fundurilor, contracurenţii, anafoare şi viteza apei în diferite locuri.\n\nAceste indicaţii au un caracter orientativ, urmând ca la executarea marşului în aceste zone, să se ţină cont atât de condiţiile hidrometeorologice, de semnalizare cât şi de compunerea şi caracteristicile convoiului.\n\n8. Caracteristicile hidrologice si de navigatie a cailor navigabile. (doar pentru categoria D)\n\n\n### Căile navigabile pot fi clasificate după mai multe criterii\n\n\n### - după caracterul curgerii\n\n căi navigabile naturale;\n căi navigabile artificiale.\n\n### - din punct de vedere al perioadei de navigaţie\n\n\n###  căi navigabile cu exploatare permanentă\n\n căi navigabile cu exploatare periodică.\n\nDebitul unui curs de apă este cantitatea de apă (în metri cubi) care se scurge printr-o secţiune transversală a lui în unitatea de timp (o secundă), la un moment dat. Creşterea şi scăderea debitului de apă depind de regimul precipitaţiilor din bazinul de recepţie şi de felul cum acestea sunt repartizate în timp.\n\nNivelul unui curs de apă într-un anumit punct se măsoară fie în raport cu cota zero convenţională a unei mire hidrometrice apropiate, fie faţă de nivelul suprafeţei mării, considerată ca nivel de bază.\n\nNivelurile caracteristice ale unui curs de apă la un punct dat sunt următoarele:\n nivelul cel mai scăzut cunoscut, cel mai coborât nivel care s-a înregistrat de când se fac observaţii;\n etiajul, nivelul convenţional de referinţă de pe un curs de apă, corespunzător în general apelor scăzute; de obicei se consideră nivel de etiaj media nivelurilor mici ale râului pe o perioadă lungă de observaţii;\n etiajul de navigaţie şi de regularizare (ENR), nivelul a carui frecvenţă atinge 94%;\n nivelurile mai mici decât acesta pot avea loc cel mult pe o durată de 6% dintr-un an, adică cel mult 22 zile;\n nivelul mediu, media tuturor nivelurilor care au avut loc într-o perioadă de timp considerată;\n nivelul cel mai înalt cunoscut, nivelul cel mai ridicat care s-a înregistrat de când se fac observaţii.\n\nNivelurile minime şi maxime, luate de obicei în consideraţie, sunt cele care se înregistrează în regim de curgere liberă a cursului de apă. În anumite cazuri se formează zăpoare de gheaţă puternice care împiedică curgerea normală a apelor şi determină apariţia unor niveluri excepţionale, mai mari şi respectiv mai mici decât nivelurile înregistrate în regimul de scurgere fără zăpor.\n\nPanta unui curs de apă se determină prin raportul dintre diferenţa de nivel a suprafeţei apei considerată în două puncte şi distanţa dintre aceste puncte măsurată pe orizontală\n\nCota apei este nivelul apei citit pe miră faţă de cota zero.\n\nLinia sau curba batimetrică\nÎn afară de nivelul apelor raportat la graniţa mirei hidrometrice, mai prezintă interes pentru navigaţie adâncimea fundului apei respective raportată la etiaj. Adâncimea se stabileşte prin măsurători hidrografice, în urma cărora se întocmeşte harta albiei.\n\nTalvegul (firul văii albiei) este linia care uneşte puncte de adâncime maximă ale secţiunilor transversale succesive ale unui curs de apă.\n\nŞenalul navigabil sau calea navigabilă este partea dintr-un curs de apă pe care se realizează navigaţia pe tot parcursul anului sau numai într-un anumit interval de timp. Şenalul navigabil ocupă numai o parte a lăţimii cursului de apă, şi anume partea care are o adâncime navigabilă suficientă. În general, şenalul navigabil urmează linia talvegului. Şenalul navigabil are de obicei traseul continuu, lăţimea minimă necesară circulaţiei şi încrucişării navelor, precum şi adâncimea necesară pentru asigurarea pescajului maxim a celei mai mari nave admise pentru navigaţie.\n",
+      "images": [
+        "m6_p68_0.png",
+        "m6_p68_1.png",
+        "m6_p68_2.png",
+        "m6_p68_3.png",
+        "m6_p69_0.png",
+        "m6_p69_1.png",
+        "m6_p69_2.png",
+        "m6_p70_0.png",
+        "m6_p70_1.png",
+        "m6_p70_2.png",
+        "m6_p71_0.png",
+        "m6_p72_0.png",
+        "m6_p73_0.png",
+        "m6_p73_1.png",
+        "m6_p73_2.png",
+        "m6_p74_0.png",
+        "m6_p74_1.png",
+        "m6_p74_2.png",
+        "m6_p75_0.png",
+        "m6_p75_1.png",
+        "m6_p75_2.png",
+        "m6_p75_3.png",
+        "m6_p75_4.png",
+        "m6_p76_0.png",
+        "m6_p77_0.png",
+        "m6_p77_1.png"
+      ],
+      "quiz": [
+        {
+          "question": "Ce măsuri de siguranţă trebuie să ia o navă care se apropie de un cot aflat într-un şenal sau o cale de acces îngustă? să emită cinci sunete scurte (de avertizare)",
+          "options": [
+            "să emită un semnal scurt şi să navige pe partea dreaptă a şenalului.",
+            "să emită un semnal lung şi să navige cu prudenţă şi vigilenţă."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Căror nave li se aplică regulile de conducerea navelor pe vizibilitate redusă? navelor care navigă în interiorul zonelor de vizibiliate redusă şi numai una dintre ele nu o vede pe cealaltă.",
+          "options": [
+            "navelor care nu se văd una pe alta şi care navigă înlăuntrul sau în apropierea zonelor de vizibilitate redusă.",
+            "navelor care navigă în interiorul sau în apropierea zonelor de vizibilitate redusă şi observă una la alta numai luminile de catarg."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "La ce distanţă trebuie să se vadă luminile din borduri pentru navele cu o lungime  între 12 şi 50 m? 3 Mm.",
+          "options": [
+            "2 Mm.",
+            "1,5 Mm."
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "m6_s5",
+      "title": "Sistemul IALA de balizaj maritim",
+      "content": "categoria C)\n\nIn 1980, IALA(International  Association Lighthouse Authorities), pentru a elimina confuziile ce puteau da nastere unor situatii periculoase pentru navigatie, a hotarat elaborarea unor reguli unitare privind balizajul pe mare si canale; in prezent exista doua sisteme de balizaj, astfel:\n sistemul combinat, cardinal si lateral rosu la babord - sistemul A;\n sistemul combinat, cardinal si lateral rosu la tribord - sistemul B;\n\n\n### Marcajele sistemul de balizaj IALA sunt formate din urmatoarele\n\n1. geamandura cu suprastructura;\n2. baliza;\nMarcajele sunt dotate cu semn de varf (cilindric, conic, sferic) pentru recunoasterea pe timp de zi si cu lumina specifica, pentru recunoasterea pe timp de noapte.\n\nSistemul de balizaj IALA se aplica tuturor semnelor plutitoare si fixe care au menirea sa marcheze:\n\n1. limitele laterale ale canalelor navigabile;\n2. pericolele naturale si alte obstacole;\n3. ape nepericuloase;\n4. zone sau configuratii neimportante pentru navigatori;\n5. pericole noi.\n\nSemnificatia unui semn este data de caracteristicile sale si anume forma, culoarea si semnul de varf cat si culoarea si ritmul luminii.\n\nSemnele laterale definesc limitele stanga si dreapta ale drumului ce trebuie urmat de nava.\n1. Semnul de babord: marcheaza partea stanga a senalului navigabil\n2. Semnul de tribord: marcheaza partea dreapta a senalului navigabil\n\nOrice sclipire altfel decat (2+1).\n\nSemnale de bifurcatie sunt folosite pentru a semnala senalul principal la o bifurcatie.\n\nSemnele cardinale\n\n\n### Semnalul cardinal se foloseste\n\n pentru a indica apele mai adanci in cadranul care-i poarta numele;\n pentru a indica pe ce parte a unui pericol sunt apele nepericuloase;\n pentru a atrage atentia asupra unei configuratii deosebite a unui canal, jonctiune, cot, bifurcatie sau extremitatea unui banc.\nCele patru cadrane care le reprezinta sunt: N, S, E, W si sunt delimitate de relevmentele adevarate\n**NW** — NE, NE - SE, SE - SW, SW - NW, cu originea in punctul marcat (v.fig.13.2). Numele semnului indica faptul ca se poate trece in raport de semnal prin cadranul cu acest nume\n\nSemnul de pericol izolat\nSemnul de pericol izolat se instaleaza pe un pericol de intindere mica, inconjurat de ape navigabile. Corpul este negru cu dungi rosii, are in varf doua sfere negre si noaptea are o lumina alba cu doua sclipiri.\n\nSemnul de ape sigure\nCorpul este cu benzi verticale rosii si albe si are in varf o sfera rosie, iar noaptea prezinta o lumina alba cu ocultatii sau o sclipire lunga la 10 secunde, isofaza sau la litera \"A\" in morse.\n\nSemnul special\nAcest semn marcheaza zone speciale sau configuratii cuprinse în documentele nautice (statii oceanografice, zone de separare a traficului, cabluri, zone de agrement, zone de depozitare material dragat). Pe timp de noapte prezinta lumina galbena, oricare alta decat la semnalele cardinale, pericol izolat sau ape sigure.\n\nSemnul de pericol nou\nAcest semn marcheaza un obstacol descoperit recent, nementionat în documentele nautice. Se marcheaza conform regulilor anterioare. Pentru pericolele deosebit de grave se dubleaza cel putin un semnal. Pe timp de noapte prezinta lumina cu sclipiri foarte rapide sau rapide corespunzatoare semnalului cardinal sau lateral folosit.\n\nManevra usoara!\n\n1.\nNavigaţia (Chirita M.,Pavica)\n2.\n3.\nThe new complete sailing manual (Steve Sleight)\n\nTipuri de lumini\n",
+      "images": [
+        "m6_p77_0.png",
+        "m6_p77_1.png",
+        "m6_p78_0.png",
+        "m6_p79_0.png",
+        "m6_p79_1.png",
+        "m6_p80_0.png",
+        "m6_p81_0.png",
+        "m6_p81_1.png",
+        "m6_p82_0.png"
+      ],
+      "quiz": [
+        {
+          "question": "Cum trebuie să se navige în zone vecine cu extremităţile unei zone de separare a traficului? se va naviga în direcţia generală a traficului.",
+          "options": [
+            "se vor semnaliza sonor şi vizual intenţiile de schimbare de drum.",
+            "cu atenţie deosebită."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Pe timpul zilei se vor respecta regulile cu privire la: lumini.",
+          "options": [
+            "semne.",
+            "lumini şi semne."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "La ce distanţă trebuie să se vadă luminile din borduri pentru navele cu o lungime  mai mică de  12  m? 2 Mm.",
+          "options": [
+            "0,5 Mm.",
+            "1 Mm."
+          ],
+          "correct": 1
+        }
+      ]
+    }
+  ]
+}

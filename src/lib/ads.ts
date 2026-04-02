@@ -1,4 +1,5 @@
 import { Platform } from "react-native";
+import Constants from "expo-constants";
 import mobileAds, {
   InterstitialAd,
   AdEventType,
@@ -6,7 +7,7 @@ import mobileAds, {
 } from "react-native-google-mobile-ads";
 import { loadSettings } from "./settings";
 
-const USE_TEST_ADS = process.env.USE_TEST_ADS === "true";
+const USE_TEST_ADS = Constants.expoConfig?.extra?.useTestAds === true;
 
 const BANNER_ID = USE_TEST_ADS
   ? TestIds.BANNER

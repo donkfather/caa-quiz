@@ -1,0 +1,66 @@
+{
+  "title": "CAA Clasa C — Curs de pregatire",
+  "description": "Curs complet pentru certificatul de conducator ambarcatiune de agrement clasa C.",
+  "source": "Seanergya — Manual si note de curs",
+  "totalModules": 8,
+  "totalSections": 41,
+  "totalQuestions": 99,
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Notiuni introductive",
+      "description": "Introducere in navigatie: istoric si terminologie marinareasca.",
+      "sectionCount": 2,
+      "questionCount": 59
+    },
+    {
+      "id": "m2",
+      "title": "Constructia navei cu motor",
+      "description": "Tipuri de nave, elemente de constructie, calitati nautice si greement.",
+      "sectionCount": 2,
+      "questionCount": 0
+    },
+    {
+      "id": "m3",
+      "title": "Marinarie",
+      "description": "Parame, accesorii de punte, ancore, noduri marinaresti.",
+      "sectionCount": 6,
+      "questionCount": 0
+    },
+    {
+      "id": "m4",
+      "title": "Meteorologie",
+      "description": "Temperatura, presiune, vant, fronturi, precipitatii, ceata si nori.",
+      "sectionCount": 6,
+      "questionCount": 2
+    },
+    {
+      "id": "m5",
+      "title": "Comunicatii",
+      "description": "Apeluri radio, disciplina comunicatiilor, echipamente VHF/AIS, GMDSS.",
+      "sectionCount": 5,
+      "questionCount": 2
+    },
+    {
+      "id": "m6",
+      "title": "Navigatie si Balizaj IALA",
+      "description": "Coordonate, harti nautice, drumuri, relevmente si sistemul de balizaj.",
+      "sectionCount": 5,
+      "questionCount": 17
+    },
+    {
+      "id": "m7",
+      "title": "Manevra navei cu motor",
+      "description": "Efectul carmei si elicei, pregatire voiaj, ancorare, remorcare, om la apa.",
+      "sectionCount": 12,
+      "questionCount": 17
+    },
+    {
+      "id": "m8",
+      "title": "Vitalitatea navei. Prim-ajutor si salvare",
+      "description": "Etanseitate, incendii, prim-ajutor, mijloace de salvare.",
+      "sectionCount": 3,
+      "questionCount": 2
+    }
+  ]
+}

@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
-    "start": "EXPO_ROUTER_APP_ROOT=./app expo start",
-    "android": "EXPO_ROUTER_APP_ROOT=./app expo run:android",
-    "ios": "EXPO_ROUTER_APP_ROOT=./app expo run:ios",
+    "start": "EXPO_ROUTER_APP_ROOT=./app EXPO_PUBLIC_USE_TEST_ADS=true expo start",
+    "android": "EXPO_ROUTER_APP_ROOT=./app EXPO_PUBLIC_USE_TEST_ADS=true expo run:android",
+    "ios": "EXPO_ROUTER_APP_ROOT=./app EXPO_PUBLIC_USE_TEST_ADS=true expo run:ios",
     "web": "expo start --web",
-    "build:preview": "EXPO_ROUTER_APP_ROOT=./app eas build --platform android --profile preview --local --output build/preview.apk && ./scripts/save-build.sh preview",
+    "build:preview": "EXPO_ROUTER_APP_ROOT=./app EXPO_PUBLIC_USE_TEST_ADS=true eas build --platform android --profile preview --local --output build/preview.apk && ./scripts/save-build.sh preview",
     "build:production": "EXPO_ROUTER_APP_ROOT=./app eas build --platform android --profile production --local --output build/production.aab && ./scripts/save-build.sh production"
   },
   "dependencies": {
