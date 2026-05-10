@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CAA HQ · Question manager</title>
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<!-- ───────────── login screen ───────────── -->
+<div id="login-screen" class="login hidden">
+  <form id="login-form" class="login-card">
+    <div class="brand-mark big">CQ</div>
+    <h1>CAA HQ</h1>
+    <p class="muted">Sign in to manage the question bank.</p>
+    <label>
+      <span>Email</span>
+      <input type="email" id="login-email" required autocomplete="username" />
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" id="login-password" required autocomplete="current-password" />
+    </label>
+    <button class="btn primary" type="submit" id="login-submit">Sign in</button>
+    <div class="login-error" id="login-error"></div>
+    <div class="muted small">
+      Forgot it? <a href="#" id="reset-link">Send a password reset link.</a>
+    </div>
+  </form>
+</div>
+
+<!-- ───────────── app shell ───────────── -->
+<div id="app" class="app hidden">
+  <header class="appbar">
+    <div class="brand">
+      <span class="brand-mark">CQ</span>
+      <span>Question manager</span>
+    </div>
+    <span class="total" id="total-pill">…</span>
+    <span class="save-status" id="save-status"><span class="dot"></span><span class="text">All saved</span></span>
+    <div class="right">
+      <span class="user-pill" id="user-pill"></span>
+      <button class="btn ghost" id="new-btn" title="New question (N)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        New
+      </button>
+      <button class="btn primary" id="deploy-btn" title="Publish to Supabase Storage">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"/><polyline points="5 12 12 5 19 12"/></svg>
+        Publish
+      </button>
+      <button class="btn icon ghost" id="logout-btn" title="Sign out">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input id="search" type="text" placeholder="Search questions and answers…" autocomplete="off" />
+          <button class="clear" id="search-clear" style="display:none">✕</button>
+        </div>
+        <div class="topic-row" id="topic-filter"></div>
+        <div class="lic-row" id="lic-filter">
+          <button class="lic-pill active" data-l="">All licenses</button>
+          <button class="lic-pill" data-l="C">Class C</button>
+          <button class="lic-pill" data-l="D">Class D</button>
+          <button class="lic-pill" data-l="C+D">C ∩ D</button>
+        </div>
+        <div class="coverage-strip" id="coverage"></div>
+      </div>
+
+      <div class="qlist-scroll">
+        <ul class="qlist" id="qlist"></ul>
+      </div>
+
+      <div class="shortcuts">
+        <span><kbd>↑↓</kbd> navigate</span>
+        <span><kbd>N</kbd> new</span>
+        <span><kbd>⌘S</kbd> save</span>
+        <span><kbd>⌘D</kbd> duplicate</span>
+        <span><kbd>⌘⌫</kbd> delete</span>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <div class="workspace-head">
+        <h2>
+          <span class="qid" id="qid">—</span>
+          <span id="qtitle">No question selected</span>
+        </h2>
+        <div class="breadcrumbs" id="breadcrumbs"></div>
+        <nav class="tabs" id="tabs">
+          <button class="tab active" data-tab="edit">Edit</button>
+          <button class="tab" data-tab="history">History <span class="tab-count" id="history-count"></span></button>
+        </nav>
+      </div>
+
+      <div class="workspace-scroll" id="workspace-content">
+        <div class="placeholder">Select a question from the list, or press <kbd>N</kbd> to create a new one.</div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div id="toast-host"></div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
