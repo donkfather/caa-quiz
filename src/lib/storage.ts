@@ -36,6 +36,8 @@ export interface SessionRecord {
   date: string;
   topic?: string;
   license?: string;
+  examType?: string;
+  passed?: boolean;
 }
 
 export async function getHistory(): Promise<SessionRecord[]> {
@@ -48,7 +50,7 @@ export async function saveQuizResult(
   mode: string,
   correct: number,
   total: number,
-  filters?: { topic?: string; license?: string },
+  extra?: { topic?: string; license?: string; examType?: string; passed?: boolean },
 ): Promise<void> {
   const score = Math.round((correct / total) * 100);
   const history = await getHistory();
@@ -59,8 +61,10 @@ export async function saveQuizResult(
     total,
     score,
     date: new Date().toISOString(),
-    topic: filters?.topic,
-    license: filters?.license,
+    topic: extra?.topic,
+    license: extra?.license,
+    examType: extra?.examType,
+    passed: extra?.passed,
   });
   if (history.length > MAX_HISTORY) history.length = MAX_HISTORY;
   await AsyncStorage.setItem(HISTORY_KEY, JSON.stringify(history));
@@ -82,6 +86,7 @@ export interface ActiveSession {
   updatedAt: string;
   topic?: string;
   license?: string;
+  examType?: string;
 }
 
 export async function getActiveSessions(): Promise<ActiveSession[]> {
@@ -106,4 +111,46 @@ export async function deleteActiveSession(id: string): Promise<void> {
   const sessions = await getActiveSessions();
   const filtered = sessions.filter((s) => s.id !== id);
   await AsyncStorage.setItem(SESSIONS_KEY, JSON.stringify(filtered));
+}
+
+// --- Recent exam questions (anti-overlap memory) ---
+//
+// Sliding window of question IDs served by recent EXAM sessions. New IDs are
+// pushed to the front; the buffer is trimmed to RECENT_CAPACITY. The exam
+// builder reads this list and prefers questions NOT in it, falling back only
+// when a topic's fresh pool runs out. Practice/learn modes don't use it.
+
+const RECENT_EXAM_KEY = "recent_exam_question_ids";
+const RECENT_CAPACITY = 80; // ~3 cat-c exams or ~8 dif-c exams of memory
+
+export async function getRecentExamQuestionIds(): Promise<number[]> {
+  const raw = await AsyncStorage.getItem(RECENT_EXAM_KEY);
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed.filter((x) => typeof x === "number") : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function pushRecentExamQuestionIds(ids: number[]): Promise<void> {
+  if (!ids.length) return;
+  const current = await getRecentExamQuestionIds();
+  // New IDs go to the front; de-dup keeps the most recent occurrence first.
+  const merged = [...ids, ...current];
+  const seen = new Set<number>();
+  const dedup: number[] = [];
+  for (const id of merged) {
+    if (!seen.has(id)) {
+      seen.add(id);
+      dedup.push(id);
+      if (dedup.length >= RECENT_CAPACITY) break;
+    }
+  }
+  await AsyncStorage.setItem(RECENT_EXAM_KEY, JSON.stringify(dedup));
+}
+
+export async function clearRecentExamQuestionIds(): Promise<void> {
+  await AsyncStorage.removeItem(RECENT_EXAM_KEY);
 }

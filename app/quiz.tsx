@@ -3,33 +3,56 @@ import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 
-function useTimer() {
+function useTimer(opts?: { limitSec?: number; onExpire?: () => void; paused?: boolean }) {
   const startTime = useRef(Date.now());
   const [elapsed, setElapsed] = useState(0);
+  const expiredRef = useRef(false);
+  const onExpireRef = useRef(opts?.onExpire);
+  onExpireRef.current = opts?.onExpire;
   useEffect(() => {
-    const id = setInterval(() => setElapsed(Date.now() - startTime.current), 1000);
+    if (opts?.paused) return;
+    const id = setInterval(() => {
+      const e = Date.now() - startTime.current;
+      setElapsed(e);
+      if (opts?.limitSec && !expiredRef.current && e >= opts.limitSec * 1000) {
+        expiredRef.current = true;
+        onExpireRef.current?.();
+      }
+    }, 1000);
     return () => clearInterval(id);
-  }, []);
-  const secs = Math.floor(elapsed / 1000);
+  }, [opts?.paused, opts?.limitSec]);
+
+  const limitMs = opts?.limitSec ? opts.limitSec * 1000 : null;
+  const remainingMs = limitMs !== null ? Math.max(0, limitMs - elapsed) : null;
+  const shownMs = remainingMs !== null ? remainingMs : elapsed;
+  const secs = Math.floor(shownMs / 1000);
   const m = Math.floor(secs / 60);
   const s = secs % 60;
-  return { elapsed, display: `${m}:${s.toString().padStart(2, "0")}` };
+  return {
+    elapsed,
+    display: `${m}:${s.toString().padStart(2, "0")}`,
+    remainingMs,
+    isCountdown: remainingMs !== null,
+  };
 }
 import { useTheme } from "../src/lib/ThemeContext";
 import Svg, { Circle, Line, Polygon, Text as SvgText, G } from "react-native-svg";
 import {
-  getQuizQuestions,
+  getExamQuestions,
   getAllQuestions,
   allQuestions,
   Question,
   Topic,
   License,
-  EXAM_QUESTION_COUNT,
+  ExamType,
+  EXAM_CONFIGS,
 } from "../src/lib/questions";
 import {
   saveQuizResult,
   saveActiveSession,
   deleteActiveSession,
+  getRecentExamQuestionIds,
+  pushRecentExamQuestionIds,
   ActiveSession,
 } from "../src/lib/storage";
 import {
@@ -44,24 +67,27 @@ import { showInterstitial } from "../src/lib/ads";
 type Mode = "exam" | "practice" | "learn";
 
 export default function QuizScreen() {
-  const { mode, sessionId, topic, license } = useLocalSearchParams<{ mode: Mode; sessionId?: string; topic?: Topic; license?: License }>();
+  const { mode, sessionId, topic, license, examType } = useLocalSearchParams<{ mode: Mode; sessionId?: string; topic?: Topic; license?: License; examType?: ExamType }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { theme: colors } = useTheme();
   const styles = makeStyles(colors);
 
-  const timer = useTimer();
+  const examCfg = mode === "exam" && examType ? EXAM_CONFIGS[examType] : null;
 
   // Build or restore session
   const sessionRef = useRef<ActiveSession | null>(null);
 
-  const questions = useMemo(() => {
-    if (mode === "exam") return getQuizQuestions(EXAM_QUESTION_COUNT);
+  // Non-exam modes can be built synchronously; exam mode is built lazily
+  // inside the init effect so it can read the recent-questions buffer
+  // (anti-overlap memory) from AsyncStorage first.
+  const questions = useMemo<Question[]>(() => {
+    if (mode === "exam") return [];
     const filters: { topic?: Topic; license?: License } = {};
     if (topic) filters.topic = topic;
     if (license) filters.license = license;
     return getAllQuestions(Object.keys(filters).length > 0 ? filters : undefined);
-  }, [mode, topic, license]);
+  }, [mode, topic, license, examType]);
 
   const [questionList, setQuestionList] = useState<Question[]>(questions);
   const [index, setIndex] = useState(0);
@@ -76,9 +102,6 @@ export default function QuizScreen() {
   useEffect(() => {
     if (initialized) return;
 
-    let ql = questions;
-    let startIndex = 0;
-    let startAnswers: (number | null)[] = new Array(ql.length).fill(null);
     let sid = sessionId || `${Date.now()}`;
 
     // Check if resuming
@@ -101,13 +124,26 @@ export default function QuizScreen() {
           }
         }
         // Fallback: start fresh
-        createNewSession(ql, sid);
+        startFreshSession(sid);
       });
     } else {
-      createNewSession(ql, sid);
+      startFreshSession(sid);
     }
 
-    function createNewSession(ql: Question[], sid: string) {
+    async function startFreshSession(sid: string) {
+      let ql: Question[];
+      if (mode === "exam") {
+        const t: ExamType = examType || "cat-c";
+        const recent = await getRecentExamQuestionIds();
+        ql = getExamQuestions(t, recent);
+        // Remember these for future sessions so we don't repeat them.
+        await pushRecentExamQuestionIds(ql.map((q) => q.id));
+      } else {
+        ql = questions;
+      }
+      setQuestionList(ql);
+      setAnswers(new Array(ql.length).fill(null));
+
       const questionIds = ql.map((q) => allQuestions.findIndex((aq) => aq.id === q.id));
       const session: ActiveSession = {
         id: sid,
@@ -119,9 +155,9 @@ export default function QuizScreen() {
         updatedAt: new Date().toISOString(),
         topic: topic || undefined,
         license: license || undefined,
+        examType: examType || undefined,
       };
       sessionRef.current = session;
-      setAnswers(session.answers);
       // Don't persist until first answer — empty sessions won't clutter history
       setInitialized(true);
     }
@@ -156,23 +192,37 @@ export default function QuizScreen() {
     [selected, index, isLearn],
   );
 
+  const finalizeRef = useRef<(() => Promise<void>) | null>(null);
+  const finalize = useCallback(async () => {
+    const finalAnswers = sessionRef.current?.answers || answers;
+    const finalCorrect = finalAnswers.filter(
+      (a, i) => a !== null && a === questionList[i]?.correct,
+    ).length;
+    const finalAnswered = finalAnswers.filter((a) => a !== null).length;
+    // For exams, "total" is the full exam length, not just answered
+    const reportTotal = examCfg ? examCfg.total : finalAnswered;
+    const passed = examCfg ? finalCorrect >= examCfg.passThreshold : finalCorrect / Math.max(finalAnswered, 1) >= 0.7;
+    if (finalAnswered > 0 || examCfg) {
+      saveQuizResult(mode || "exam", finalCorrect, reportTotal, {
+        topic: topic || undefined,
+        license: license || undefined,
+        examType: examType || undefined,
+        passed,
+      });
+    }
+    if (sessionRef.current) deleteActiveSession(sessionRef.current.id);
+    const seenIds = questionList.map((q) => q.id);
+    await recordQuizForStreak();
+    await addSeenQuestions(seenIds);
+    const badges = await checkAndUnlockBadges();
+    setNewBadges(badges);
+    setFinished(true);
+  }, [answers, questionList, mode, topic, license, examType, examCfg]);
+  finalizeRef.current = finalize;
+
   const handleNext = useCallback(async () => {
     if (index + 1 >= total) {
-      // Calculate final stats from answers
-      const finalAnswers = sessionRef.current?.answers || answers;
-      const finalCorrect = finalAnswers.filter(
-        (a, i) => a !== null && a === questionList[i]?.correct,
-      ).length;
-      const finalTotal = finalAnswers.filter((a) => a !== null).length;
-      if (finalTotal > 0) saveQuizResult(mode || "exam", finalCorrect, finalTotal, { topic: topic || undefined, license: license || undefined });
-      if (sessionRef.current) deleteActiveSession(sessionRef.current.id);
-      // Gamification
-      const seenIds = questionList.map((q) => q.id);
-      await recordQuizForStreak();
-      await addSeenQuestions(seenIds);
-      const badges = await checkAndUnlockBadges();
-      setNewBadges(badges);
-      setFinished(true);
+      await finalize();
       return;
     }
     const nextIndex = index + 1;
@@ -183,7 +233,13 @@ export default function QuizScreen() {
       sessionRef.current.currentIndex = nextIndex;
       saveActiveSession(sessionRef.current);
     }
-  }, [index, total, mode, answers, questionList]);
+  }, [index, total, finalize]);
+
+  const timer = useTimer({
+    limitSec: examCfg?.durationSec,
+    paused: finished,
+    onExpire: () => { finalizeRef.current?.(); },
+  });
 
   const handleFinish = useCallback(async () => {
     await showInterstitial();
@@ -198,8 +254,13 @@ export default function QuizScreen() {
     return [styles.option, selected !== null && styles.optionDisabled];
   };
 
-  const modeLabel =
-    mode === "exam" ? "Examen" : mode === "learn" ? "Învață" : "Practică";
+  const modeLabel = examCfg
+    ? examCfg.shortLabel
+    : mode === "exam"
+    ? "Examen"
+    : mode === "learn"
+    ? "Învață"
+    : "Practică";
 
   if (!initialized || !q) {
     return (
@@ -210,9 +271,13 @@ export default function QuizScreen() {
   }
 
   if (finished) {
-    const score = correct + wrong > 0 ? Math.round((correct / (correct + wrong)) * 100) : 0;
-    const passed = score >= 70;
-    const elapsedStr = timer.display;
+    const denominator = examCfg ? examCfg.total : Math.max(correct + wrong, 1);
+    const score = Math.round((correct / denominator) * 100);
+    const passed = examCfg ? correct >= examCfg.passThreshold : score >= 70;
+    const elapsedSec = Math.floor(timer.elapsed / 1000);
+    const em = Math.floor(elapsedSec / 60);
+    const es = elapsedSec % 60;
+    const elapsedStr = `${em}:${es.toString().padStart(2, "0")}`;
     return (
       <>
         <Stack.Screen options={{ title: "Rezultat", headerBackVisible: false }} />
@@ -222,9 +287,13 @@ export default function QuizScreen() {
             <Text style={styles.resultTitle}>
               {passed ? "Felicitări!" : "Mai exersează!"}
             </Text>
-            <Text style={styles.resultScore}>{score}%</Text>
+            <Text style={styles.resultScore}>
+              {examCfg ? `${correct}/${examCfg.total}` : `${score}%`}
+            </Text>
             <Text style={styles.resultDetail}>
-              {correct} corecte, {wrong} greșite din {correct + wrong}
+              {examCfg
+                ? `${correct} corecte din ${examCfg.total} · minim ${examCfg.passThreshold}`
+                : `${correct} corecte, ${wrong} greșite din ${correct + wrong}`}
             </Text>
             <Text style={styles.resultTime}>Timp: {elapsedStr}</Text>
             <View style={[styles.badge, passed ? styles.badgePass : styles.badgeFail]}>
@@ -270,7 +339,14 @@ export default function QuizScreen() {
         <View style={styles.statsRow}>
           <Text style={styles.statCorrect}>{correct} ✓</Text>
           <Text style={styles.statWrong}>{wrong} ✗</Text>
-          <Text style={styles.progressText}>{timer.display}</Text>
+          <Text
+            style={[
+              styles.progressText,
+              timer.isCountdown && timer.remainingMs !== null && timer.remainingMs < 60_000 && { color: colors.error, fontWeight: "700" },
+            ]}
+          >
+            {timer.isCountdown ? "⏱ " : ""}{timer.display}
+          </Text>
           <Text style={styles.progressText}>{index + 1} / {total}</Text>
         </View>
 
