@@ -33,82 +33,503 @@
 </div>
 
 <!-- ───────────── app shell ───────────── -->
-<div id="app" class="app hidden">
-  <header class="appbar">
+<div id="app" class="shell hidden">
+  <!-- topbar (slim) -->
+  <header class="topbar">
     <div class="brand">
       <span class="brand-mark">CQ</span>
-      <span>Question manager</span>
+      <span>CAA HQ</span>
     </div>
+    <span class="env-tag" id="env-tag">PROD</span>
     <span class="total" id="total-pill">…</span>
-    <span class="save-status" id="save-status"><span class="dot"></span><span class="text">All saved</span></span>
-    <div class="right">
-      <span class="user-pill" id="user-pill"></span>
-      <button class="btn ghost" id="new-btn" title="New question (N)">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        New
+
+    <button class="integrity" id="integrity-btn" title="Dataset integrity" hidden>
+      <span class="dot"></span>
+      <span class="integrity-label">Integrity OK</span>
+    </button>
+
+    <div class="spacer"></div>
+
+    <div class="topbar-actions">
+      <button class="btn ghost" id="cmdk-btn" title="Jump to… (⌘K)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Jump to…
+        <kbd class="kbd-hint">⌘K</kbd>
       </button>
-      <button class="btn primary" id="deploy-btn" title="Publish to Supabase Storage">
+      <span class="channel-pills" id="channel-pills"></span>
+      <button class="btn ghost" id="deploy-btn" title="Snapshot current questions and update the preview pointer">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"/><polyline points="5 12 12 5 19 12"/></svg>
-        Publish
+        Publish preview
       </button>
-      <button class="btn icon ghost" id="logout-btn" title="Sign out">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      <button class="btn primary" id="promote-btn" title="Point production at the latest preview bundle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
+        Promote
       </button>
+      <div class="user-chip-wrap">
+        <button class="user-chip" id="user-chip-btn">
+          <span id="user-pill"></span>
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5l3 3 3-3"/></svg>
+        </button>
+        <div class="user-chip-menu hidden" id="user-chip-menu">
+          <button class="user-chip-item" id="logout-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Sign out
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="sidebar-head">
-        <div class="search-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input id="search" type="text" placeholder="Search questions and answers…" autocomplete="off" />
-          <button class="clear" id="search-clear" style="display:none">✕</button>
+  <!-- left rail -->
+  <aside class="rail" id="rail">
+    <button class="rail-toggle" id="rail-toggle" title="Collapse sidebar">
+      <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      <span class="label-x">Collapse</span>
+    </button>
+
+    <div class="rail-section">
+      <div class="rail-label">Workbench</div>
+      <button class="rail-item" id="rail-overview" data-page="overview" data-tip="Overview">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Overview</span>
+      </button>
+      <button class="rail-item" id="rail-questions" data-page="questions" data-tip="Questions">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        <span>Questions</span>
+        <span class="count" id="rail-questions-count">…</span>
+      </button>
+      <button class="rail-item" id="rail-images" data-page="images" data-tip="Images">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Images</span>
+      </button>
+      <button class="rail-item" id="rail-course" data-page="course" data-tip="Course preview">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <span>Course</span>
+      </button>
+    </div>
+
+    <div class="rail-section">
+      <div class="rail-label">Data ops</div>
+      <button class="rail-item" id="rail-import" data-page="import" data-tip="Import">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Import</span>
+        <span class="count" id="rail-import-count" style="display:none">0</span>
+      </button>
+      <button class="rail-item" id="rail-labels" data-page="labels" data-tip="Labels">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41L13.42 20.58a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        <span>Labels</span>
+      </button>
+      <button class="rail-item" id="rail-export" data-page="export" data-tip="Export">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3" transform="rotate(180 12 9)"/></svg>
+        <span>Export</span>
+      </button>
+    </div>
+
+    <div class="rail-section">
+      <div class="rail-label">System</div>
+      <button class="rail-item" id="rail-audit" data-page="audit" data-tip="Audit log">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Audit log</span>
+      </button>
+      <button class="rail-item" id="rail-reports" data-drawer="reports" data-tip="Reports">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        <span>Reports</span>
+        <span class="count" id="rail-reports-count" style="display:none">0</span>
+      </button>
+      <button class="rail-item" id="rail-settings" data-page="settings" data-tip="Settings">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span>Settings</span>
+      </button>
+    </div>
+
+    <div class="rail-foot">
+      <div class="row"><span>Draft</span><b id="foot-draft">—</b></div>
+      <div class="row"><span>Preview</span><b id="foot-preview" style="color:var(--accent)">—</b></div>
+      <div class="row"><span>Production</span><b id="foot-prod" style="color:var(--ok)">—</b></div>
+    </div>
+  </aside>
+
+  <!-- page host -->
+  <main class="page-host" id="page-host">
+
+    <!-- Overview (NEW) -->
+    <section id="page-overview" class="page hidden">
+      <div class="page-head">
+        <h1>Overview</h1>
+        <div class="head-actions">
+          <button class="btn ghost" id="overview-refresh-btn" title="Refresh stats">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            Refresh
+          </button>
         </div>
-        <div class="topic-row" id="topic-filter"></div>
-        <div class="lic-row" id="lic-filter">
-          <button class="lic-pill active" data-l="">All licenses</button>
-          <button class="lic-pill" data-l="C">Class C</button>
-          <button class="lic-pill" data-l="D">Class D</button>
-          <button class="lic-pill" data-l="C+D">C ∩ D</button>
+      </div>
+      <div class="page-body" id="overview-body">
+        <div class="placeholder">Loading…</div>
+      </div>
+    </section>
+
+    <!-- Questions (re-dress of existing 3-pane) -->
+    <section id="page-questions" class="page hidden">
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <div class="search-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input id="search" type="text" placeholder="Search questions and answers…" autocomplete="off" />
+              <button class="clear" id="search-clear" style="display:none">✕</button>
+            </div>
+            <div class="qlist-tools">
+              <button class="btn ghost" id="new-btn" title="New question (N)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                New
+              </button>
+              <button class="btn ghost" id="filters-toggle" title="Show / hide filters">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                Filters
+                <span class="filters-count" id="filters-count" hidden>0</span>
+              </button>
+              <span class="filters-summary" id="filters-summary"></span>
+            </div>
+            <div class="filters-collapse hidden" id="filters-collapse">
+              <div class="topic-row" id="topic-filter"></div>
+              <div class="lic-row" id="lic-filter">
+                <button class="lic-pill active" data-l="">All licenses</button>
+                <button class="lic-pill" data-l="C">Class C</button>
+                <button class="lic-pill" data-l="D">Class D</button>
+                <button class="lic-pill" data-l="C+D">C ∩ D</button>
+              </div>
+              <div class="coverage-strip" id="coverage"></div>
+            </div>
+            <div class="bulk-bar" id="bulk-bar" hidden>
+              <span class="bulk-count" id="bulk-count">0 selected</span>
+              <div class="bulk-actions">
+                <select class="bulk-select" id="bulk-topic" title="Change topic"><option value="">Change topic…</option></select>
+                <div class="bulk-lic-row" id="bulk-lic">
+                  <button class="bulk-lic" data-l="C" title="Set license to Class C">C</button>
+                  <button class="bulk-lic" data-l="D" title="Set license to Class D">D</button>
+                  <button class="bulk-lic" data-l="C+D" title="Set license to C + D">C+D</button>
+                </div>
+                <button class="btn ghost small-btn" id="bulk-export" title="Export selected as JSON">Export</button>
+                <button class="btn bad-ghost small-btn" id="bulk-delete" title="Delete selected">Delete</button>
+                <button class="btn ghost small-btn" id="bulk-clear" title="Clear selection">Clear</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="qlist-scroll">
+            <ul class="qlist" id="qlist"></ul>
+          </div>
+
+          <div class="shortcuts">
+            <span><kbd>↑↓</kbd> navigate</span>
+            <span><kbd>N</kbd> new</span>
+            <span><kbd>⌘S</kbd> save</span>
+            <span><kbd>⌘D</kbd> duplicate</span>
+            <span><kbd>⌘⌫</kbd> delete</span>
+          </div>
+        </aside>
+
+        <main class="workspace">
+          <div class="workspace-head">
+            <h2>
+              <span class="qid" id="qid">—</span>
+              <span id="qtitle">No question selected</span>
+              <span class="head-spacer"></span>
+              <span class="save-status" id="save-status" hidden><span class="dot"></span><span class="text">All saved</span></span>
+              <button class="btn primary save-next-btn" id="save-next-btn" hidden title="Save & advance to next question">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Save &amp; next
+              </button>
+            </h2>
+            <div class="breadcrumbs" id="breadcrumbs"></div>
+            <nav class="tabs" id="tabs">
+              <button class="tab active" data-tab="edit">Edit</button>
+              <button class="tab" data-tab="history">History <span class="tab-count" id="history-count"></span></button>
+            </nav>
+          </div>
+
+          <div class="workspace-scroll" id="workspace-content">
+            <div class="placeholder">Select a question from the list, or press <kbd>N</kbd> to create a new one.</div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <!-- Images (was fullscreen overlay, now a routed page) -->
+    <section id="page-images" class="page hidden">
+      <header class="page-head">
+        <h1>Image gallery</h1>
+        <div class="head-actions" id="images-toolbar">
+          <input type="text" id="images-search" class="lic-pill" style="text-align:left;padding:0 12px;min-width:220px" placeholder="Filter by name…" />
+          <select id="images-usage" class="lic-pill" style="padding:0 24px 0 12px">
+            <option value="all">All images</option>
+            <option value="used">Used (in a question)</option>
+            <option value="unused">Orphans (no references)</option>
+          </select>
+          <button class="btn primary" id="images-upload-btn" title="Upload a new image (or paste from clipboard anywhere on this page)">+ Upload</button>
+          <input type="file" id="images-upload-input" accept="image/*" style="display:none" />
         </div>
-        <div class="coverage-strip" id="coverage"></div>
+        <div class="crumb" id="images-summary"></div>
+      </header>
+      <div class="page-body" id="images-body">
+        <div class="placeholder">Loading…</div>
       </div>
+    </section>
 
-      <div class="qlist-scroll">
-        <ul class="qlist" id="qlist"></ul>
+    <!-- Import (was fullscreen overlay, now a routed page) -->
+    <section id="page-import" class="page hidden">
+      <header class="page-head">
+        <h1>Import candidates</h1>
+        <div class="head-actions">
+          <button class="btn ghost" id="import-filters-toggle" title="Show / hide filters">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Filters
+            <span class="filters-count" id="import-filters-count" hidden>0</span>
+          </button>
+          <span class="filters-summary" id="import-filters-summary"></span>
+          <button class="btn ghost" id="recompute-similars-btn" title="Re-run trigram similarity check on all pending candidates against the current questions table">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            Recompute matches
+          </button>
+        </div>
+        <div class="crumb" id="import-summary"></div>
+        <div class="import-filters-collapse hidden" id="import-filters-collapse">
+          <select id="import-topic" class="lic-pill" style="padding:6px 10px">
+            <option value="">All topics</option>
+            <option value="colreg">colreg</option>
+            <option value="navigation">navigation</option>
+            <option value="seamanship">seamanship</option>
+            <option value="maneuvering">maneuvering</option>
+            <option value="first_aid">first_aid</option>
+            <option value="rnd">rnd</option>
+          </select>
+          <div class="import-status-filters">
+            <button class="lic-pill active" data-status="pending">Pending</button>
+            <button class="lic-pill" data-status="pending-similar">Pending · has match</button>
+            <button class="lic-pill" data-status="pending-clean">Pending · no match</button>
+            <button class="lic-pill" data-status="skipped">Skipped <span class="skipped-count" id="skipped-count" style="display:none">0</span></button>
+            <button class="lic-pill" data-status="all">All</button>
+          </div>
+          <div class="import-extra-filters" id="import-extra-filters"></div>
+        </div>
+      </header>
+      <div class="import-layout">
+        <aside class="cand-sidebar">
+          <div class="cand-sidebar-scroll">
+            <ul class="cand-list" id="cand-list"></ul>
+          </div>
+        </aside>
+        <main class="cand-workspace" id="cand-workspace">
+          <div class="placeholder">Select a candidate from the list to review.</div>
+        </main>
       </div>
+    </section>
 
-      <div class="shortcuts">
-        <span><kbd>↑↓</kbd> navigate</span>
-        <span><kbd>N</kbd> new</span>
-        <span><kbd>⌘S</kbd> save</span>
-        <span><kbd>⌘D</kbd> duplicate</span>
-        <span><kbd>⌘⌫</kbd> delete</span>
+    <!-- Labels (NEW · minimal) -->
+    <section id="page-labels" class="page hidden">
+      <div class="page-head">
+        <h1>Labels <span class="crumb">topic slug → display label</span></h1>
+        <div class="head-actions">
+          <span class="save-status" id="labels-status" style="margin-right:8px"></span>
+          <button class="btn ghost" id="labels-discard-btn" disabled>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10"/></svg>
+            Discard
+          </button>
+          <button class="btn primary" id="labels-save-btn" disabled>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Save labels
+          </button>
+        </div>
       </div>
-    </aside>
+      <div class="page-body" id="labels-body">
+        <div class="placeholder">Loading…</div>
+      </div>
+    </section>
 
-    <main class="workspace">
-      <div class="workspace-head">
-        <h2>
-          <span class="qid" id="qid">—</span>
-          <span id="qtitle">No question selected</span>
-        </h2>
-        <div class="breadcrumbs" id="breadcrumbs"></div>
-        <nav class="tabs" id="tabs">
-          <button class="tab active" data-tab="edit">Edit</button>
-          <button class="tab" data-tab="history">History <span class="tab-count" id="history-count"></span></button>
-        </nav>
+    <!-- Export (NEW) -->
+    <section id="page-export" class="page hidden">
+      <div class="page-head">
+        <h1>Export &amp; snapshots <span class="crumb">file downloads · publish history</span></h1>
+        <div class="head-actions">
+          <button class="btn ghost" id="export-refresh-btn" title="Refresh snapshot list">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            Refresh
+          </button>
+        </div>
       </div>
+      <div class="page-body" id="export-body">
+        <div class="placeholder">Loading…</div>
+      </div>
+    </section>
 
-      <div class="workspace-scroll" id="workspace-content">
-        <div class="placeholder">Select a question from the list, or press <kbd>N</kbd> to create a new one.</div>
+    <!-- Audit (NEW) -->
+    <section id="page-audit" class="page hidden">
+      <div class="page-head">
+        <h1>Audit log <span class="crumb" id="audit-crumb">global change history</span></h1>
+        <div class="head-actions">
+          <button class="btn ghost" id="audit-refresh-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            Refresh
+          </button>
+        </div>
       </div>
-    </main>
-  </div>
+      <div class="page-body" id="audit-body">
+        <div class="placeholder">Loading…</div>
+      </div>
+    </section>
+
+    <!-- Course preview (NEW) -->
+    <section id="page-course" class="page hidden">
+      <div class="page-head">
+        <h1>Course preview <span class="crumb" id="course-crumb">drop a module .json to render</span></h1>
+        <div class="head-actions">
+          <input type="file" id="course-json-input" accept=".json,application/json" style="display:none" />
+          <input type="file" id="course-img-input" accept="image/*" multiple style="display:none" />
+          <button class="btn ghost" id="course-back-btn" disabled>← Modules</button>
+          <button class="btn ghost" id="course-imgs-btn" disabled>Upload images…</button>
+          <button class="btn ghost" id="course-edit-btn" disabled>Edit</button>
+          <button class="btn primary" id="course-publish-btn" disabled>Publish</button>
+          <button class="btn ghost" id="course-download-btn" disabled title="Download a backup .json">Download</button>
+        </div>
+      </div>
+      <div class="page-body" id="course-body">
+        <div class="placeholder">No module loaded. Click <b>Load module…</b> above or drop a <code>m*.json</code> file here.</div>
+      </div>
+    </section>
+
+    <!-- Settings (NEW) -->
+    <section id="page-settings" class="page hidden">
+      <div class="page-head">
+        <h1>Settings</h1>
+        <div class="head-actions">
+          <span class="crumb" id="settings-build-tag"></span>
+        </div>
+      </div>
+      <div class="page-body" id="settings-body">
+        <div class="placeholder">Loading…</div>
+      </div>
+    </section>
+
+  </main>
 </div>
 
 <div id="toast-host"></div>
+
+<!-- ───────────── upload / replace modal ───────────── -->
+<div id="upload-modal" class="upload-modal hidden">
+  <div class="upload-modal-panel">
+    <header class="upload-modal-head">
+      <h2 id="upload-modal-title">Upload image</h2>
+      <button class="btn icon ghost" id="upload-modal-close" title="Close">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </header>
+    <div class="upload-dropzone" id="upload-dropzone">
+      <div class="upload-dz-empty" id="upload-dz-empty">
+        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        <p class="upload-dz-hint">Drop image(s) here · paste with <kbd>⌘V</kbd> · or</p>
+        <button class="btn primary" id="upload-pick-btn">Choose file(s)</button>
+        <input type="file" id="upload-file-input" accept="image/*" multiple style="display:none" />
+        <p class="upload-dz-hint subtle" style="margin-top:8px;font-size:11px;color:var(--muted)">Pick multiple files to upload them in bulk (keeps original filenames)</p>
+      </div>
+      <div class="upload-dz-preview hidden" id="upload-dz-preview">
+        <img id="upload-preview-img" alt="" />
+        <div class="upload-preview-meta" id="upload-preview-meta"></div>
+        <button class="btn ghost" id="upload-clear-btn">Choose different file</button>
+      </div>
+    </div>
+    <div class="upload-modal-form">
+      <label class="upload-field">
+        <span>Filename</span>
+        <input type="text" id="upload-filename" placeholder="example.jpg" autocomplete="off" />
+        <span class="upload-field-hint" id="upload-filename-hint">Letters, digits, dot, dash, underscore.</span>
+      </label>
+    </div>
+    <footer class="upload-modal-foot">
+      <button class="btn ghost" id="upload-cancel-btn">Cancel</button>
+      <button class="btn primary" id="upload-confirm-btn" disabled>Upload</button>
+    </footer>
+  </div>
+</div>
+
+<!-- ───────────── admins panel (drawer · owner-only) ───────────── -->
+<div id="admins-modal" class="reports-modal hidden">
+  <div class="reports-panel">
+    <header class="reports-head">
+      <h2>Admins</h2>
+      <button class="btn icon ghost" id="admins-close" title="Close">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </header>
+    <div class="reports-body" id="admins-body">
+      <div class="placeholder">Loading…</div>
+    </div>
+    <div style="padding:14px 18px;border-top:1px solid var(--line);display:flex;gap:8px">
+      <input type="email" id="admins-new-email" placeholder="email@example.com" style="flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:8px 10px;border-radius:8px;font-size:13px;font-family:inherit" />
+      <button class="btn primary" id="admins-add">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────── image gallery picker ───────────── -->
+<div id="image-picker" class="image-picker hidden">
+  <div class="image-picker-panel">
+    <header class="image-picker-head">
+      <h2>Pick an image</h2>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="text" id="image-picker-search" placeholder="Filter…" style="background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:6px 10px;border-radius:8px;font-size:12px;width:150px" />
+        <button class="btn ghost" id="image-picker-clear" title="Remove image">No image</button>
+        <button class="btn icon ghost" id="image-picker-close" title="Close">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="image-picker-body" id="image-picker-body">
+      <div class="placeholder">Loading…</div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────── reports modal (drawer) ───────────── -->
+<div id="reports-modal" class="reports-modal hidden">
+  <div class="reports-panel">
+    <header class="reports-head">
+      <h2>User reports</h2>
+      <div class="reports-toolbar">
+        <button class="lic-pill active" id="reports-filter-open" data-filter="open">Open</button>
+        <button class="lic-pill" id="reports-filter-all" data-filter="all">All</button>
+        <button class="btn icon ghost" id="reports-close" title="Close">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="reports-body" id="reports-body">
+      <div class="placeholder">Loading…</div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────── integrity drawer (anchored under topbar) ───────────── -->
+<div id="integrity-drawer" class="integrity-drawer hidden">
+  <h4>Integrity report</h4>
+  <div id="integrity-rows"></div>
+  <div class="integrity-foot">
+    <span id="integrity-scanned">Last scan: never</span>
+    <a href="#" id="integrity-rescan">Re-run →</a>
+  </div>
+</div>
+
+<!-- ───────────── command palette ───────────── -->
+<div id="cmdk-back" class="cmdk-back hidden">
+  <div class="cmdk" id="cmdk">
+    <input id="cmdk-input" type="text" placeholder="Jump to a screen, a question, or run a command…" autocomplete="off" />
+    <ul id="cmdk-list"></ul>
+  </div>
+</div>
 
 <script type="module" src="./app.js"></script>
 </body>

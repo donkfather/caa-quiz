@@ -59,13 +59,49 @@ caahq    CNAME    caahq.pages.dev    (proxied through Cloudflare)
 
 ## Local development
 
+Once-off build:
+
 ```sh
 cd dashboard
 ./build.sh
 npx serve dist                # any static server works
 ```
 
-Sign in with the admin email + password.
+Live-reload dev loop (recommended while editing the dashboard):
+
+```sh
+# 1. Spin up the local Supabase stack (Postgres + Auth + Storage + Studio).
+#    First run pulls ~2 GB of Docker images and takes 1-2 min.
+cd ~/projects/caa-quiz
+./scripts/local-supabase.sh start
+
+# 2. Start the dashboard dev server pointed at it.
+cd dashboard
+./dev.sh                      # http://localhost:3000 · auto-rebuild on save, auto-reload browser
+```
+
+`./dev.sh` defaults to `--env dev` and reads `../.env.local.dev` (auto-generated when you ran `local-supabase.sh start`). Sign in with **popescut94@gmail.com / localdev** — that's the seeded admin owner.
+
+To browse the local DB directly, open the Studio URL printed by `local-supabase.sh start` (usually http://127.0.0.1:54323).
+
+`./scripts/local-supabase.sh` commands:
+
+| Command | What it does |
+|---|---|
+| `start` | Boots the stack, runs migrations + `supabase/seed.sql`, writes `.env.local.dev` |
+| `stop` | Shuts down Docker containers |
+| `reset` | Wipes the local DB and replays migrations + seed |
+| `env` | Re-writes `.env.local.dev` from a running stack |
+| `status` | Prints URLs/keys |
+
+To point the dashboard at **production** (writes hit live data — be careful):
+
+```sh
+cd dashboard
+./dev.sh --env prod
+```
+
+The first run will fetch `chokidar-cli` and `live-server` via `npx`. If you have `fswatch` from Homebrew installed (`brew install fswatch`), the watcher uses that instead — it's snappier.
 
 ## How history works
 
