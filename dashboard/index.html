@@ -34,6 +34,10 @@
 
 <!-- ───────────── app shell ───────────── -->
 <div id="app" class="shell hidden">
+  <button class="focus-exit" data-focus-toggle title="Exit focus (Esc)" aria-label="Exit focus mode">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 14 4 14 4 9"/><polyline points="15 10 20 10 20 5"/><line x1="4" y1="14" x2="10" y2="8"/><line x1="20" y1="10" x2="14" y2="16"/></svg>
+    Exit focus <kbd class="kbd-hint">Esc</kbd>
+  </button>
   <!-- topbar (slim) -->
   <header class="topbar">
     <div class="brand">
@@ -51,6 +55,9 @@
     <div class="spacer"></div>
 
     <div class="topbar-actions">
+      <button class="btn ghost icon-only" data-focus-toggle title="Focus mode (hides chrome)" aria-label="Focus mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 14 4 20 10 20"/><polyline points="20 10 20 4 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+      </button>
       <button class="btn ghost" id="cmdk-btn" title="Jump to… (⌘K)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         Jump to…
@@ -71,6 +78,10 @@
           <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5l3 3 3-3"/></svg>
         </button>
         <div class="user-chip-menu hidden" id="user-chip-menu">
+          <button class="user-chip-item" id="theme-toggle-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <span id="theme-toggle-label">Light theme</span>
+          </button>
           <button class="user-chip-item" id="logout-btn">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
             Sign out
@@ -384,7 +395,10 @@
         <h1>Course preview <span class="crumb" id="course-crumb">drop a module .json to render</span></h1>
         <div class="head-actions">
           <input type="file" id="course-json-input" accept=".json,application/json" style="display:none" />
+          <input type="file" id="course-zip-input" accept=".zip,application/zip" style="display:none" />
           <input type="file" id="course-img-input" accept="image/*" multiple style="display:none" />
+          <input type="file" id="course-img-bulk-input" accept="image/*" multiple style="display:none" />
+          <input type="file" id="course-img-replace-input" accept="image/*" style="display:none" />
           <button class="btn ghost" id="course-back-btn" disabled>← Modules</button>
           <button class="btn ghost" id="course-imgs-btn" disabled>Upload images…</button>
           <button class="btn ghost" id="course-edit-btn" disabled>Edit</button>

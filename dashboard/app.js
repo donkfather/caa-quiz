@@ -120,6 +120,7 @@ const state = {
 
 // ─────────────── boot / auth gate ───────────────
 async function boot() {
+  applyThemeFromStorage();
   // Wire login form
   document.getElementById("login-form").addEventListener("submit", onLogin);
   document.getElementById("reset-link").addEventListener("click", onResetLink);
@@ -244,6 +245,9 @@ function goPage(name, { updateHash = true } = {}) {
     if (!el) continue;
     el.classList.toggle("hidden", p !== name);
   }
+  // Course page anchors toasts to bottom-right (heavy editor — top-right
+  // overlaps the toolbar).
+  document.body.classList.toggle("toast-bottom", name === "course");
   renderRail();
   if (updateHash) {
     const h = "#/" + name;
@@ -282,10 +286,49 @@ function toggleRail() {
 }
 
 function applyRailCollapsedFromStorage() {
+  // Default to collapsed; only expand if the user has explicitly chosen so.
   try {
-    const v = localStorage.getItem("caahq-rail-collapsed") === "1";
-    document.getElementById("app").classList.toggle("rail-collapsed", v);
+    const raw = localStorage.getItem("caahq-rail-collapsed");
+    const collapsed = raw === null ? true : raw === "1";
+    document.getElementById("app").classList.toggle("rail-collapsed", collapsed);
+  } catch {
+    document.getElementById("app").classList.add("rail-collapsed");
+  }
+}
+
+function toggleFocusMode() {
+  const next = !document.documentElement.classList.contains("focus-mode");
+  document.documentElement.classList.toggle("focus-mode", next);
+  // Update any focus-toggle button labels live
+  document.querySelectorAll("[data-focus-toggle]").forEach(b => {
+    b.title = next ? "Exit focus (Esc)" : "Focus mode";
+    b.classList.toggle("active", next);
+  });
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && document.documentElement.classList.contains("focus-mode")) {
+    toggleFocusMode();
+  }
+});
+
+function isLightTheme() {
+  return document.documentElement.classList.contains("theme-light");
+}
+function toggleTheme() {
+  const next = !isLightTheme();
+  document.documentElement.classList.toggle("theme-light", next);
+  try { localStorage.setItem("caahq-theme", next ? "light" : "dark"); } catch {}
+  applyThemeLabel();
+}
+function applyThemeFromStorage() {
+  try {
+    const v = localStorage.getItem("caahq-theme");
+    if (v === "light") document.documentElement.classList.add("theme-light");
   } catch {}
+}
+function applyThemeLabel() {
+  const lbl = document.getElementById("theme-toggle-label");
+  if (lbl) lbl.textContent = isLightTheme() ? "Dark theme" : "Light theme";
 }
 
 function detectEnvTag() {
@@ -1536,6 +1579,9 @@ function attachShell() {
   document.getElementById("logout-btn").onclick = () => onLogout();
   document.getElementById("cmdk-btn").onclick = () => openCmdK();
   document.getElementById("integrity-btn").onclick = () => toggleIntegrityDrawer();
+  document.getElementById("theme-toggle-btn").onclick = () => toggleTheme();
+  applyThemeLabel();
+  document.querySelectorAll("[data-focus-toggle]").forEach(b => { b.onclick = () => toggleFocusMode(); });
 
   // User-chip dropdown
   const userBtn = document.getElementById("user-chip-btn");
@@ -1570,6 +1616,16 @@ function attachShell() {
   const cDl = document.getElementById("course-download-btn");
   if (cBack) cBack.onclick = () => backToModulesList();
   if (cJsonInp) cJsonInp.onchange = (e) => loadCourseModuleFile(e.target.files?.[0]);
+  const cZipInp = document.getElementById("course-zip-input");
+  if (cZipInp) cZipInp.onchange = (e) => loadCourseModuleZip(e.target.files?.[0]);
+  const cImgBulk = document.getElementById("course-img-bulk-input");
+  if (cImgBulk) cImgBulk.onchange = (e) => bulkUploadCourseImages([...e.target.files]);
+  const cImgRepl = document.getElementById("course-img-replace-input");
+  if (cImgRepl) cImgRepl.onchange = (e) => {
+    const f = e.target.files?.[0];
+    const target = e.target.dataset.targetName;
+    if (f && target) replaceCourseImage(target, f);
+  };
   if (cImgBtn) cImgBtn.onclick = () => cImgInp.click();
   if (cImgInp) cImgInp.onchange = async (e) => {
     const files = [...e.target.files];
@@ -1583,7 +1639,11 @@ function attachShell() {
   };
   if (cEdit) cEdit.onclick = () => toggleCourseEditMode();
   if (cPub) cPub.onclick = () => publishActiveCourseModule();
-  if (cDl) cDl.onclick = () => downloadCourseModule();
+  if (cDl) cDl.onclick = () => {
+    if (!_course.mod) return;
+    if (_course.mod._virtual) { toast("warn", "Read-only", "Virtual modules can't be downloaded."); return; }
+    downloadCourseModuleZip(_course.mod.id);
+  };
 
   // Images page (now routed)
   document.getElementById("images-search").addEventListener("input", () => renderImagesPage());
@@ -3893,6 +3953,11 @@ const _course = {
   savedAt: null,
   saveTimer: null,
   previewSlideIdx: 0,          // slide-based phone preview (content + quiz)
+  globalGlossary: new Map(),   // Map<normTerm, {term, definition, image, source_module, source_title, source_section}>
+  imageUsage: new Map(),       // Map<filename, [{moduleId, moduleTitle, sectionIdx, sectionTitle, kind, term?}]>
+  libraryTab: "modules",       // "modules" | "library" — toggle on the course landing page
+  libraryFilter: { q: "", usage: "all" }, // search + usage filter for the Library tab
+  glossLetter: "ALL",          // alphabet filter on the Glossary virtual module
 };
 
 function escapeMd(s) { return escapeHtml(s); }
@@ -3926,10 +3991,27 @@ function renderCardMarkdown(text) {
       html += "<ul>" + items.map(it => `<li>${renderInline(it)}</li>`).join("") + "</ul>";
       continue;
     }
+    // GFM table: header row | separator (---|---) | body rows.
+    if (/^\s*\|/.test(line) && i + 1 < lines.length && /^\s*\|?\s*:?-{2,}/.test(lines[i+1])) {
+      const splitRow = (s) => s.trim().replace(/^\|/, "").replace(/\|\s*$/, "").split("|").map(c => c.trim());
+      const headers = splitRow(line);
+      const aligns = splitRow(lines[i+1]).map(c => {
+        const l = c.startsWith(":"), r = c.endsWith(":");
+        return l && r ? "center" : (r ? "right" : (l ? "left" : ""));
+      });
+      i += 2;
+      const rows = [];
+      while (i < lines.length && /^\s*\|/.test(lines[i])) { rows.push(splitRow(lines[i])); i++; }
+      const ta = (k) => aligns[k] ? ` style="text-align:${aligns[k]}"` : "";
+      const thead = `<thead><tr>${headers.map((h, k) => `<th${ta(k)}>${renderInline(h)}</th>`).join("")}</tr></thead>`;
+      const tbody = `<tbody>${rows.map(r => `<tr>${r.map((c, k) => `<td${ta(k)}>${renderInline(c)}</td>`).join("")}</tr>`).join("")}</tbody>`;
+      html += `<table class="course-table">${thead}${tbody}</table>`;
+      continue;
+    }
     // paragraph
     const para = [line];
     i++;
-    while (i < lines.length && lines[i].trim() && !/^###\s/.test(lines[i]) && !/^[•·\-\*]\s/.test(lines[i]) && !isBlockImage(lines[i])) {
+    while (i < lines.length && lines[i].trim() && !/^###\s/.test(lines[i]) && !/^[•·\-\*]\s/.test(lines[i]) && !isBlockImage(lines[i]) && !/^\s*\|/.test(lines[i])) {
       para.push(lines[i]); i++;
     }
     html += `<p>${renderInline(para.join(" "))}</p>`;
@@ -3938,15 +4020,8 @@ function renderCardMarkdown(text) {
 }
 
 function renderFigure(alt, src) {
-  const url = imageUrlFor(src);
-  if (url) {
-    return `<figure class="course-figure">
-      <img src="${url}" alt="${escapeHtml(alt)}" />
-      ${alt ? `<figcaption>${escapeHtml(alt)}</figcaption>` : ""}
-    </figure>`;
-  }
-  return `<figure class="course-figure missing">
-    <div class="ph">missing image · ${escapeHtml(src)}</div>
+  return `<figure class="course-figure">
+    ${courseImg(src, { alt })}
     ${alt ? `<figcaption>${escapeHtml(alt)}</figcaption>` : ""}
   </figure>`;
 }
@@ -3954,11 +4029,9 @@ function renderFigure(alt, src) {
 function renderInline(s) {
   // Escape HTML first, then apply markdown (none of !, [, ], (, ), : are escaped).
   let out = escapeHtml(s);
-  // inline images: ![alt](src)
+  // inline images: ![alt](src) — lazy-hydrated via data-course-img.
   out = out.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => {
-    const url = imageUrlFor(src.trim());
-    if (url) return `<img class="course-inline-img" src="${url}" alt="${escapeHtml(alt)}" title="${escapeHtml(src)}" />`;
-    return `<span class="course-img-missing" title="missing">⚠ ${escapeHtml(src)}</span>`;
+    return courseImg(src.trim(), { cls: "course-inline-img", alt });
   });
   // glossary term refs: :term: (Romanian letters allowed)
   out = out.replace(/:([^:\s][^:]{0,80}[^:\s]):/g, (m, term) => {
@@ -4050,15 +4123,112 @@ function renderQuizSlide(q) {
     <div class="ce-phone-quiz-opts">${opts}</div>`;
 }
 
+function normTerm(s) {
+  return String(s || "").toLowerCase().normalize("NFD")
+    .replace(/[̀-ͯ]/g, "").replace(/[șş]/g, "s").replace(/[țţ]/g, "t");
+}
+
+/** Resolve a :term: reference. Glossary is course-wide:
+ *  1. Current section (closest scope, may override).
+ *  2. Any other section in the active module.
+ *  3. The cross-module index `_course.globalGlossary` (built from all modules).
+ *  When the hit comes from outside the current module the image is still
+ *  shown — images live in the course-wide bucket, no folder prefix. */
 function lookupGlossaryTerm(term) {
-  const sec = (_course.mod?.sections || [])[_course.activeSectionIdx];
-  if (!sec) return null;
-  const norm = (s) => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[șş]/g, "s").replace(/[țţ]/g, "t");
-  const want = norm(term);
-  for (const g of sec.glossary || []) {
-    if (norm(g.term) === want) return g;
+  const want = normTerm(term);
+  const mod = _course.mod;
+  const activeIdx = _course.editMode
+    ? (_course.selection?.kind === "section" ? _course.selection.sectionIdx : 0)
+    : _course.activeSectionIdx;
+  const sec = (mod?.sections || [])[activeIdx];
+  for (const g of sec?.glossary || []) {
+    if (normTerm(g.term) === want) return g;
   }
-  return null;
+  for (const s of mod?.sections || []) {
+    if (s === sec) continue;
+    for (const g of s.glossary || []) {
+      if (normTerm(g.term) === want) return g;
+    }
+  }
+  return _course.globalGlossary?.get(want) || null;
+}
+
+/** Rebuild the cross-module glossary cache from every saved module. */
+async function refreshGlobalGlossary() {
+  try {
+    const { data, error } = await supabase
+      .from("course_modules")
+      .select("id, title, data");
+    if (error) { console.warn("globalGlossary load failed", error); return; }
+    const map = new Map();
+    for (const row of data || []) {
+      const mod = row.data || {};
+      for (const sec of mod.sections || []) {
+        for (const g of sec.glossary || []) {
+          if (!g.term) continue;
+          const key = normTerm(g.term);
+          if (!map.has(key)) {
+            map.set(key, {
+              term: g.term,
+              definition: g.definition || "",
+              image: g.image || null,
+              source_module: row.id,
+              source_title: row.title,
+              source_section: sec.title || "",
+            });
+          }
+        }
+      }
+    }
+    _course.globalGlossary = map;
+  } catch (e) { console.warn("globalGlossary refresh", e); }
+}
+
+/** Build a Map<filename, [usages]> from every module's content + glossary +
+ *  section.images list. Used by the Images tab to show where each file is
+ *  referenced (which module + section). The currently-open module is read
+ *  from in-memory state so unsaved edits still count. */
+async function computeCourseImageUsage() {
+  const map = new Map();
+  const add = (name, info) => {
+    if (!name) return;
+    const key = String(name).trim();
+    if (!key) return;
+    if (!map.has(key)) map.set(key, []);
+    map.get(key).push(info);
+  };
+  const rxImg = /!\[[^\]]*\]\(([^)]+)\)/g;
+  const walkMod = (mod, idForRow, titleForRow) => {
+    for (let si = 0; si < (mod.sections || []).length; si++) {
+      const sec = mod.sections[si];
+      const text = sec.content || "";
+      let m;
+      rxImg.lastIndex = 0;
+      while ((m = rxImg.exec(text)) !== null) {
+        add(m[1].trim(), { moduleId: idForRow, moduleTitle: titleForRow, sectionIdx: si, sectionTitle: sec.title, kind: "content" });
+      }
+      for (const g of sec.glossary || []) {
+        if (g.image) add(g.image, { moduleId: idForRow, moduleTitle: titleForRow, sectionIdx: si, sectionTitle: sec.title, kind: "glossary", term: g.term });
+      }
+      for (const img of sec.images || []) {
+        add(img, { moduleId: idForRow, moduleTitle: titleForRow, sectionIdx: si, sectionTitle: sec.title, kind: "images-list" });
+      }
+    }
+  };
+  try {
+    const { data, error } = await supabase
+      .from("course_modules")
+      .select("id, title, data");
+    if (error) { console.warn("image usage load failed", error); return map; }
+    const openId = _course.mod && !_course.mod._virtual ? _course.mod.id : null;
+    for (const row of data || []) {
+      if (row.id === openId) continue; // prefer in-memory copy below
+      walkMod(row.data || {}, row.id, row.title);
+    }
+    // Add the currently-edited module from memory so unsaved refs count.
+    if (openId) walkMod(_course.mod, openId, _course.mod.title);
+  } catch (e) { console.warn("image usage", e); }
+  return map;
 }
 
 /** Split a section's content into cards by `### header`. */
@@ -4080,9 +4250,28 @@ function splitIntoCards(content) {
   return cards.map(c => ({ ...c, body: c.body.join("\n").trim() }));
 }
 
+/** Direct public URL into the course-images bucket — same trick the
+ *  question-images gallery uses. No signing, no listing, no DB round-trip;
+ *  the browser fetches the file when the <img> is actually rendered. */
+function courseImageUrl(name) {
+  if (!name) return "";
+  const base = `${SUPABASE_URL}/storage/v1/object/public/course-images/${encodeURIComponent(name)}`;
+  const v = _imageVersions.get(name);
+  return v ? `${base}?v=${v}` : base;
+}
+
 function imageUrlFor(name) {
-  if (_course.images.has(name)) return _course.images.get(name);
-  return null;
+  // Kept for callers that still want a URL string. Always points at the
+  // public endpoint; the browser will 404 (and CSS shows .img-missing) if
+  // the file isn't in the bucket.
+  return courseImageUrl(name);
+}
+
+function courseImg(name, opts = {}) {
+  const cls = opts.cls ? ` class="${opts.cls}"` : "";
+  const style = opts.style ? ` style="${opts.style}"` : "";
+  const alt = opts.alt != null ? opts.alt : name;
+  return `<img${cls}${style} src="${courseImageUrl(name)}" alt="${escapeHtml(alt)}" loading="lazy" onerror="this.classList.add('img-missing')" />`;
 }
 
 function renderCoursePage() {
@@ -4091,13 +4280,15 @@ function renderCoursePage() {
   const mod = _course.mod;
   syncCourseModuleSelector();
 
-  // Toolbar: enabled whenever a module is loaded, regardless of edit/view mode.
+  // Toolbar: enabled whenever a module is loaded; virtual modules (Glossary)
+  // are read-only so edit/publish/upload are blocked.
   const hasMod = !!mod;
+  const isVirtual = !!mod?._virtual;
   document.getElementById("course-back-btn").disabled = !hasMod;
-  document.getElementById("course-imgs-btn").disabled = !hasMod;
-  document.getElementById("course-edit-btn").disabled = !hasMod;
-  document.getElementById("course-publish-btn").disabled = !hasMod;
-  document.getElementById("course-download-btn").disabled = !hasMod;
+  document.getElementById("course-imgs-btn").disabled = !hasMod || isVirtual;
+  document.getElementById("course-edit-btn").disabled = !hasMod || isVirtual;
+  document.getElementById("course-publish-btn").disabled = !hasMod || isVirtual;
+  document.getElementById("course-download-btn").disabled = !hasMod || isVirtual;
 
   if (!mod) {
     crumb.textContent = "pick a module to edit, or import one";
@@ -4106,10 +4297,20 @@ function renderCoursePage() {
     return;
   }
 
+  // GLOSSARY virtual module — custom A-Z + word-list layout.
+  if (mod._virtual && mod._kind === "glossary") {
+    crumb.textContent = `${mod.id} · ${mod.description || ""}`;
+    body.innerHTML = renderGlossaryView();
+    attachGlossaryHandlers(body);
+    lazyHydrateCourseImages(body);
+    return;
+  }
+
   // EDIT MODE — new editor v1 (tree + tabs)
   if (_course.editMode) {
     body.innerHTML = renderCourseEditorV1();
     attachCourseEditorV1Handlers();
+    lazyHydrateCourseImages(body);
     return;
   }
 
@@ -4197,54 +4398,147 @@ function renderCoursePage() {
     };
   });
 
+  lazyHydrateCourseImages(body);
 }
 
 // ─── Course module list (no module loaded state) ───
 async function renderCourseModulesList(body) {
   const list = await loadCourseModulesList();
+  // Refresh cross-module index used by the Glossary virtual module + library usage.
+  refreshGlobalGlossary();
+  // Single .list("") call so the Library tab count is accurate even before
+  // the user clicks into it. Cheap — no per-image work.
+  if (!_course.imagePaths) {
+    listCourseImagesFlat().then(names => {
+      _course.imagePaths = new Map(names.map(n => [n, n]));
+      renderCoursePage();
+    });
+  }
+  // Compute usage once per Library entry, not on every re-render — otherwise
+  // each renderCoursePage triggers a fresh full-table fetch + a re-render
+  // chain that hammers the browser.
+  if (_course.libraryTab === "library" && !_course.imageUsage?.size && !_course.imageUsageLoading) {
+    _course.imageUsageLoading = true;
+    computeCourseImageUsage().then(m => {
+      _course.imageUsage = m;
+      _course.imageUsageLoading = false;
+      if (_course.libraryTab === "library") renderCoursePage();
+    });
+  }
+
+  const tab = _course.libraryTab;
   body.innerHTML = `
     <div class="course-list-pane">
+      <div class="course-list-tabs" role="tablist">
+        <button class="course-list-tab ${tab === "modules" ? "active" : ""}" data-clt="modules">Modules <span class="muted small">${list.length}</span></button>
+        <button class="course-list-tab ${tab === "library" ? "active" : ""}" data-clt="library">Library <span class="muted small">${_course.imagePaths?.size ?? "—"}</span></button>
+      </div>
+      ${tab === "library" ? renderCourseLibraryPane() : renderCourseModulesPane(list)}
+    </div>`;
+
+  body.querySelectorAll(".course-list-tab").forEach(t => {
+    t.onclick = () => { _course.libraryTab = t.dataset.clt; renderCoursePage(); };
+  });
+
+  if (tab === "library") {
+    attachCourseLibraryHandlers(body);
+    lazyHydrateCourseImages(body);
+    return;
+  }
+
+  attachCourseModulesHandlers(body, list);
+}
+
+function renderCourseModulesPane(list) {
+  const glossOn = isGlossaryEnabled();
+  return `
       <div class="course-list-head">
         <h2>Modules <span class="muted small">${list.length} stored</span></h2>
         <div class="course-list-actions">
+          <label class="cm-toggle" title="Show the auto-aggregated Glossary card">
+            <input type="checkbox" id="cm-glossary-toggle" ${glossOn ? "checked" : ""} />
+            Glossary
+          </label>
           <button class="btn ghost" id="cm-new-btn">+ New empty module</button>
+          <button class="btn ghost" id="cm-import-zip-btn" title="Import a module from a .zip with module.json and images/">Import .zip…</button>
           <button class="btn primary" id="cm-import-btn">Import .json…</button>
         </div>
       </div>
-      ${list.length ? `
-        <div class="course-list-grid">
-          ${list.map(m => {
+      <div class="course-list-grid">
+        ${glossOn ? `
+        <div class="cm-card cm-card-virtual" data-cm-virtual="glossary">
+          <div class="cm-card-head">
+            <div class="cm-card-title">📖 Glossary</div>
+            <span class="cm-badge virtual">virtual</span>
+          </div>
+          <div class="cm-card-id">_glossary</div>
+          <div class="cm-card-desc">All glossary terms aggregated from every module — auto-generated, read-only.</div>
+          <div class="cm-card-meta"><span class="muted small">live</span></div>
+          <div class="cm-card-footer">
+            <div class="cm-card-actions">
+              <button class="btn ghost cm-open-glossary">Open</button>
+            </div>
+          </div>
+        </div>` : ""}
+        ${list.length ? list.map((m, i) => {
             const lastEdit = m.updated_at ? formatDate(m.updated_at) : "—";
             const pub = m.published_at
               ? `<span class="cm-badge published" title="${escapeHtml(m.published_at)}">published</span>`
               : `<span class="cm-badge draft">draft</span>`;
+            const upDisabled = i === 0 ? "disabled" : "";
+            const downDisabled = i === list.length - 1 ? "disabled" : "";
             return `
-              <div class="cm-card" data-cm-id="${escapeHtml(m.id)}">
+              <div class="cm-card" data-cm-id="${escapeHtml(m.id)}" data-cm-order="${m.sort_order ?? ""}" data-cm-idx="${i}">
                 <div class="cm-card-head">
                   <div class="cm-card-title">${escapeHtml(m.title || m.id)}</div>
                   ${pub}
                 </div>
                 <div class="cm-card-id">${escapeHtml(m.id)}</div>
                 <div class="cm-card-desc">${escapeHtml(m.description || "")}</div>
-                <div class="cm-card-foot">
-                  <span class="muted small">edited ${escapeHtml(lastEdit)}</span>
+                <div class="cm-card-meta"><span class="muted small">edited ${escapeHtml(lastEdit)}</span></div>
+                <div class="cm-card-footer">
                   <div class="cm-card-actions">
+                    <button class="btn ghost cm-up" data-idx="${i}" title="Move up" ${upDisabled}>↑</button>
+                    <button class="btn ghost cm-down" data-idx="${i}" title="Move down" ${downDisabled}>↓</button>
                     <button class="btn ghost cm-open" data-id="${escapeHtml(m.id)}">Open</button>
+                    <button class="btn ghost cm-zip" data-id="${escapeHtml(m.id)}" title="Download .zip (module + images)">⤓ zip</button>
                     <button class="btn ghost cm-publish" data-id="${escapeHtml(m.id)}" title="Publish to mobile app">Publish</button>
                     <button class="btn ghost cm-delete" data-id="${escapeHtml(m.id)}" title="Delete module">×</button>
                   </div>
                 </div>
               </div>`;
-          }).join("")}
-        </div>` : `<div class="course-list-empty">No modules yet. Use <b>Import .json</b> to add Marinărie, or <b>+ New empty module</b> to start from scratch.</div>`}
-    </div>`;
+          }).join("") : ""}
+      </div>
+      ${list.length ? "" : `<div class="course-list-empty">No modules yet. Use <b>Import .json</b> to add Marinărie, or <b>+ New empty module</b> to start from scratch.</div>`}`;
+}
 
+function attachCourseModulesHandlers(body, list) {
+  const glossaryBtn = body.querySelector(".cm-open-glossary");
+  if (glossaryBtn) glossaryBtn.onclick = (e) => { e.stopPropagation(); openGlossaryVirtualModule(); };
+  const glossaryCard = body.querySelector(".cm-card-virtual");
+  if (glossaryCard) glossaryCard.onclick = () => openGlossaryVirtualModule();
+  const glossToggle = body.querySelector("#cm-glossary-toggle");
+  if (glossToggle) glossToggle.onchange = () => { setGlossaryEnabled(glossToggle.checked); renderCoursePage(); };
   document.getElementById("cm-new-btn").onclick = () => createNewCourseModule();
   document.getElementById("cm-import-btn").onclick = () => {
     document.getElementById("course-json-input").click();
   };
+  document.getElementById("cm-import-zip-btn").onclick = () => {
+    const zipInput = document.getElementById("course-zip-input");
+    if (zipInput) zipInput.click();
+  };
   body.querySelectorAll(".cm-open").forEach(b => {
     b.onclick = (e) => { e.stopPropagation(); openCourseModuleById(b.dataset.id); };
+  });
+  body.querySelectorAll(".cm-zip").forEach(b => {
+    b.onclick = async (e) => {
+      e.stopPropagation();
+      const id = b.dataset.id;
+      const orig = b.innerHTML;
+      b.disabled = true; b.innerHTML = "⤓ …";
+      try { await downloadCourseModuleZip(id); }
+      finally { b.disabled = false; b.innerHTML = orig; }
+    };
   });
   body.querySelectorAll(".cm-publish").forEach(b => {
     b.onclick = async (e) => {
@@ -4278,9 +4572,229 @@ async function renderCourseModulesList(body) {
       }
     };
   });
+  // Reorder via up/down buttons. We swap sort_order with the neighbour and
+  // re-render the list; if a neighbour's sort_order is NULL we fall back to
+  // the index×10 sequence so the swap still has stable values.
+  const moveBy = async (idx, delta) => {
+    const target = idx + delta;
+    if (target < 0 || target >= list.length) return;
+    const a = list[idx], b = list[target];
+    const orderA = a.sort_order ?? (idx + 1) * 10;
+    const orderB = b.sort_order ?? (target + 1) * 10;
+    if (await swapCourseModuleOrder(a.id, orderA, b.id, orderB)) {
+      renderCoursePage();
+    }
+  };
+  body.querySelectorAll(".cm-up").forEach(b => {
+    b.onclick = (e) => { e.stopPropagation(); moveBy(parseInt(b.dataset.idx, 10), -1); };
+  });
+  body.querySelectorAll(".cm-down").forEach(b => {
+    b.onclick = (e) => { e.stopPropagation(); moveBy(parseInt(b.dataset.idx, 10), +1); };
+  });
   body.querySelectorAll(".cm-card").forEach(c => {
     c.onclick = () => openCourseModuleById(c.dataset.cmId);
   });
+}
+
+// ─── Course Library tab — gallery of every file in course-images bucket ───
+function renderCourseLibraryPane() {
+  const usage = _course.imageUsage || new Map();
+  const usageCI = new Map();
+  for (const [k, v] of usage) usageCI.set(String(k).toLowerCase(), v);
+  const useCount = (n) => (usage.get(n) || usageCI.get(String(n).toLowerCase()) || []).length;
+  const all = _course.imagePaths
+    ? [..._course.imagePaths.keys()].sort()
+    : [..._course.images.keys()].sort();
+  const filt = _course.libraryFilter;
+  const rows = all.filter(name => {
+    if (filt.q && !name.toLowerCase().includes(filt.q.toLowerCase())) return false;
+    const used = useCount(name) > 0;
+    if (filt.usage === "used"   && !used) return false;
+    if (filt.usage === "unused" && used)  return false;
+    return true;
+  });
+  const orphans = all.filter(n => !useCount(n)).length;
+
+  const tiles = rows.map(name => {
+    const uses = usage.get(name) || usageCI.get(String(name).toLowerCase()) || [];
+    const mods = [...new Set(uses.map(u => u.moduleTitle || u.moduleId))];
+    const refBadge = uses.length
+      ? `<span class="img-badge used" title="${escapeHtml(uses.map(u => `${u.moduleTitle || u.moduleId} · ${u.sectionTitle || u.sectionIdx} · ${u.kind}${u.term ? ` (${u.term})` : ""}`).join("\n"))}"><span class="img-badge-num">${uses.length}</span>× · ${mods.length} mod</span>`
+      : `<span class="img-badge orphan" title="No module references this image">orphan</span>`;
+    return `
+      <div class="image-card" data-cl-name="${escapeHtml(name)}">
+        <div class="image-card-thumb">
+          ${courseImg(name, { alt: name })}
+          <div class="image-card-overlay">
+            <button class="img-action" data-cl-replace="${escapeHtml(name)}" title="Upload new bytes under this name">Replace</button>
+            <button class="img-action" data-cl-rename="${escapeHtml(name)}" title="Rename — all module refs will be updated">Rename</button>
+          </div>
+        </div>
+        <div class="image-card-body">
+          <div class="image-card-name" title="${escapeHtml(name)}">${escapeHtml(name)}</div>
+          <div class="image-card-meta">
+            ${refBadge}
+            <button class="icon-btn cl-delete" data-cl-delete="${escapeHtml(name)}" title="${uses.length ? "Cannot delete — image is in use" : "Delete from bucket"}" ${uses.length ? "disabled" : ""}>×</button>
+          </div>
+        </div>
+      </div>`;
+  }).join("");
+
+  return `
+      <div class="course-list-head">
+        <h2>Library <span class="muted small">${rows.length} of ${all.length}${filt.q || filt.usage !== "all" ? " (filtered)" : ""} · ${orphans} orphan${orphans === 1 ? "" : "s"}</span></h2>
+        <div class="course-list-actions">
+          <input type="text" id="cl-search" placeholder="Filter by name…" value="${escapeHtml(filt.q || "")}" />
+          <select id="cl-usage">
+            <option value="all"    ${filt.usage === "all"    ? "selected" : ""}>All</option>
+            <option value="used"   ${filt.usage === "used"   ? "selected" : ""}>Used</option>
+            <option value="unused" ${filt.usage === "unused" ? "selected" : ""}>Orphans</option>
+          </select>
+          <button class="btn primary" id="cl-upload-btn">+ Upload images…</button>
+        </div>
+      </div>
+      ${rows.length
+        ? `<div class="images-grid">${tiles}</div>`
+        : `<div class="course-list-empty">No images match.${_course.images.size === 0 ? " Bucket may still be loading." : ""}</div>`}`;
+}
+
+function attachCourseLibraryHandlers(body) {
+  const search = body.querySelector("#cl-search");
+  if (search) {
+    let t;
+    search.oninput = () => {
+      clearTimeout(t);
+      t = setTimeout(() => { _course.libraryFilter.q = search.value; renderCoursePage(); }, 150);
+    };
+  }
+  const usage = body.querySelector("#cl-usage");
+  if (usage) usage.onchange = () => { _course.libraryFilter.usage = usage.value; renderCoursePage(); };
+
+  body.querySelector("#cl-upload-btn")?.addEventListener("click", () => {
+    const inp = document.getElementById("course-img-bulk-input");
+    if (inp) inp.click();
+  });
+
+  body.querySelectorAll("[data-cl-replace]").forEach(b => {
+    b.onclick = (e) => { e.stopPropagation(); promptReplaceCourseImage(b.dataset.clReplace); };
+  });
+  body.querySelectorAll("[data-cl-rename]").forEach(b => {
+    b.onclick = (e) => { e.stopPropagation(); promptRenameCourseImage(b.dataset.clRename); };
+  });
+  body.querySelectorAll("[data-cl-delete]").forEach(b => {
+    b.onclick = (e) => { e.stopPropagation(); promptDeleteCourseImage(b.dataset.clDelete); };
+  });
+}
+
+async function findCourseImagePath(name) {
+  // Root copy wins; fall back to any subfolder.
+  const root = await supabase.storage.from("course-images").list("", { limit: 1000 });
+  if (root.data?.some(o => o.name === name && o.id != null)) return name;
+  for (const obj of root.data || []) {
+    if (obj.id != null) continue;
+    const sub = await supabase.storage.from("course-images").list(obj.name, { limit: 1000 });
+    if (sub.data?.some(o => o.name === name && o.id != null)) return `${obj.name}/${name}`;
+  }
+  return null;
+}
+
+async function promptRenameCourseImage(oldName) {
+  const newName = prompt("Rename to:", oldName);
+  if (!newName || newName === oldName) return;
+  if (_course.images.has(newName)) {
+    toast("bad", "Already exists", `"${newName}" is already in the bucket.`);
+    return;
+  }
+  await renameCourseImage(oldName, newName);
+}
+
+/** Storage move + rewrite every reference inside `course_modules.data`. */
+async function renameCourseImage(oldName, newName) {
+  const fullPath = await findCourseImagePath(oldName);
+  if (!fullPath) { toast("bad", "Not found", oldName); return; }
+  const { error: mvErr } = await supabase.storage.from("course-images").move(fullPath, newName);
+  if (mvErr) { toast("bad", "Storage move failed", mvErr.message); return; }
+
+  // Rewrite refs across every module row that mentions the old name.
+  const { data: rows, error: selErr } = await supabase.from("course_modules").select("id, data");
+  if (selErr) { toast("bad", "Renamed in storage but DB load failed", selErr.message); return; }
+  let modsTouched = 0, refsTouched = 0;
+  for (const row of rows || []) {
+    const before = JSON.stringify(row.data || {});
+    if (!before.includes(oldName)) continue;
+    // Targeted rewrite: content markdown, section.images[], glossary[].image.
+    const mod = row.data || {};
+    for (const sec of mod.sections || []) {
+      if (typeof sec.content === "string") {
+        const next = sec.content.split(oldName).join(newName);
+        if (next !== sec.content) { sec.content = next; refsTouched++; }
+      }
+      if (Array.isArray(sec.images)) {
+        sec.images = sec.images.map(n => { if (n === oldName) { refsTouched++; return newName; } return n; });
+      }
+      for (const g of sec.glossary || []) {
+        if (g.image === oldName) { g.image = newName; refsTouched++; }
+      }
+    }
+    const { error: upErr } = await supabase.from("course_modules").update({ data: mod }).eq("id", row.id);
+    if (upErr) { toast("bad", `Renamed but ${row.id} update failed`, upErr.message); continue; }
+    modsTouched++;
+  }
+
+  _course.imagePaths = null;
+  _course.imageUsage = new Map(); // invalidate so next Library render refetches
+  toast("ok", "Renamed", `${refsTouched} ref${refsTouched === 1 ? "" : "s"} across ${modsTouched} module${modsTouched === 1 ? "" : "s"} updated`);
+  renderCoursePage();
+}
+
+function promptReplaceCourseImage(targetName) {
+  const inp = document.getElementById("course-img-replace-input");
+  if (!inp) return;
+  inp.dataset.targetName = targetName;
+  inp.value = "";
+  inp.click();
+}
+
+async function replaceCourseImage(targetName, file) {
+  try {
+    const fullPath = (await findCourseImagePath(targetName)) || targetName;
+    const { error } = await supabase.storage.from("course-images").upload(fullPath, file, { upsert: true, contentType: file.type || "image/png" });
+    if (error) { toast("bad", "Replace failed", error.message); return; }
+    // Force browser to refetch — same URL would otherwise serve the old bytes.
+    bumpImageVersion(targetName);
+    toast("ok", "Replaced", targetName);
+    renderCoursePage();
+  } catch (e) { toast("bad", "Replace failed", String(e)); }
+}
+
+async function promptDeleteCourseImage(name) {
+  const uses = (_course.imageUsage?.get(name) || []).length;
+  if (uses) { toast("bad", "Cannot delete", `${uses} reference${uses === 1 ? "" : "s"} still use this image.`); return; }
+  const ok = await confirmModal({
+    title: "Delete image?",
+    body: `${name} will be removed from the course-images bucket. No module references this file.`,
+    confirmText: "Delete",
+  });
+  if (!ok) return;
+  const fullPath = (await findCourseImagePath(name)) || name;
+  const { error } = await supabase.storage.from("course-images").remove([fullPath]);
+  if (error) { toast("bad", "Delete failed", error.message); return; }
+  _course.imagePaths = null;
+  _course.imageUsage = new Map();
+  toast("ok", "Deleted", name);
+  renderCoursePage();
+}
+
+async function bulkUploadCourseImages(files) {
+  let ok = 0, fail = 0;
+  for (const f of files || []) {
+    if (await uploadCourseImageToBucket(f, _course.mod?.id || "library")) ok++;
+    else fail++;
+  }
+  _course.imagePaths = null;
+  _course.imageUsage = new Map();
+  toast(fail ? "warn" : "ok", `${ok}/${(files || []).length} uploaded`, fail ? `${fail} failed` : "course-images bucket");
+  renderCoursePage();
 }
 
 async function openCourseModuleById(id) {
@@ -4297,10 +4811,150 @@ async function openCourseModuleById(id) {
   _course.editMode = true;
   _course.selection = { kind: "module" };
   _course.activeTab = "meta";
-  _course.images.clear();
   document.getElementById("course-edit-btn").textContent = "Done editing";
-  await fetchCourseImagesForModule(id);
+  // Public-URL <img>s — no signing, no preload. Browser fetches each file
+  // when it's actually rendered (loading="lazy" defers off-screen ones).
   renderCoursePage();
+}
+
+/** Build and open a synthesized "Glossary" module made of every term across
+ *  the saved modules. Opens in read-only preview (no edit, no save). */
+async function openGlossaryVirtualModule() {
+  await refreshGlobalGlossary();
+  const entries = [..._course.globalGlossary.values()]
+    .sort((a, b) => normTerm(a.term).localeCompare(normTerm(b.term)));
+
+  if (!entries.length) {
+    toast("warn", "Glossary is empty", "No terms found across modules.");
+    return;
+  }
+
+  // One section per term so the existing sidebar nav still works, even
+  // though renderCoursePage routes virtual+glossary to a custom layout.
+  const sections = entries.map(e => {
+    const imgLine = e.image ? `![${e.term}](${e.image})\n\n` : "";
+    const def = e.definition ? `${e.definition}\n\n` : "";
+    const src = `*sursă: ${e.source_title || e.source_module} → ${e.source_section || "—"}*`;
+    const first = (normTerm(e.term)[0] || "").toUpperCase();
+    const letter = /^[A-Z]$/.test(first) ? first : "#";
+    return {
+      id: `_glossary_${normTerm(e.term)}`,
+      title: e.term,
+      content: `${imgLine}${def}${src}`,
+      images: e.image ? [e.image] : [],
+      glossary: [],
+      quiz: [],
+      _letter: letter,
+    };
+  });
+
+  _course.mod = {
+    id: "_glossary",
+    title: "Glossary",
+    description: `${entries.length} termeni · agregat din toate modulele`,
+    sections,
+    _virtual: true,
+    _kind: "glossary",
+  };
+  _course.savedAt = null;
+  _course.dirty = false;
+  _course.editMode = false;
+  _course.selection = { kind: "module" };
+  _course.activeTab = "meta";
+  _course.activeSectionIdx = 0;
+  _course.activeCardIdx = 0;
+  _course.glossLetter = "ALL";
+  renderCoursePage();
+}
+
+function isGlossaryEnabled() {
+  try { return localStorage.getItem("caahq-glossary-enabled") !== "0"; } catch { return true; }
+}
+function setGlossaryEnabled(on) {
+  try { localStorage.setItem("caahq-glossary-enabled", on ? "1" : "0"); } catch {}
+}
+
+/** Render the Glossary virtual module: alphabet bar on top of sidebar,
+ *  word list below (filtered by the active letter), term detail on the right.
+ *  Active letter lives on `_course.glossLetter` — "ALL" shows every term;
+ *  "#" buckets non-letter starts (digits, symbols). */
+function renderGlossaryView() {
+  const mod = _course.mod;
+  const sections = mod.sections || [];
+  const presentLetters = new Set(sections.map(s => s._letter));
+  const letters = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].filter(L => presentLetters.has(L));
+  const hasHash = presentLetters.has("#");
+  const filter = _course.glossLetter || "ALL";
+
+  const buttons = [
+    { key: "ALL", label: "ALL" },
+    ...(hasHash ? [{ key: "#", label: "#" }] : []),
+    ...letters.map(L => ({ key: L, label: L })),
+  ];
+  const alphabetBar = buttons.map(b => `
+    <button class="gloss-letter ${b.key === filter ? "active" : ""}" data-gloss-letter="${b.key}">${b.label}</button>
+  `).join("");
+
+  const visible = filter === "ALL"
+    ? sections.map((s, i) => ({ s, i }))
+    : sections.map((s, i) => ({ s, i })).filter(x => x.s._letter === filter);
+
+  const activeIdx = visible.some(x => x.i === _course.activeSectionIdx)
+    ? _course.activeSectionIdx
+    : (visible[0]?.i ?? 0);
+  const active = sections[activeIdx];
+
+  const wordItems = visible.map(({ s, i }) => `
+    <li class="${i === activeIdx ? "active" : ""}" data-sec-idx="${i}">
+      <span class="gloss-word-letter">${s._letter}</span>
+      <span class="gloss-word-term">${escapeHtml(s.title)}</span>
+    </li>`).join("") || `<li class="gloss-empty">No terms.</li>`;
+
+  const detail = active ? renderGlossaryDetail(active) : `<div class="placeholder">No term selected.</div>`;
+
+  return `
+    <div class="course-layout gloss-layout">
+      <aside class="course-sidebar gloss-sidebar">
+        <div class="course-mod-head">
+          <div class="course-mod-title">${escapeHtml(mod.title)}</div>
+          <div class="course-mod-desc">${escapeHtml(mod.description || "")} · ${visible.length} of ${sections.length}</div>
+        </div>
+        <div class="gloss-alphabet">${alphabetBar}</div>
+        <ul class="gloss-word-list">${wordItems}</ul>
+      </aside>
+      <main class="course-workspace gloss-detail">${detail}</main>
+    </div>`;
+}
+
+function renderGlossaryDetail(sec) {
+  return `
+    <div class="gloss-card">
+      <h2 class="gloss-term">${escapeHtml(sec.title)}</h2>
+      <div class="gloss-body">${renderCardMarkdown(sec.content || "")}</div>
+    </div>`;
+}
+
+function attachGlossaryHandlers(body) {
+  body.querySelectorAll("[data-gloss-letter]").forEach(b => {
+    b.onclick = () => {
+      const L = b.dataset.glossLetter;
+      _course.glossLetter = L;
+      // Snap selection to the first term in the new filter so the detail
+      // pane shows something matching.
+      const sections = _course.mod.sections || [];
+      const firstIdx = L === "ALL"
+        ? 0
+        : sections.findIndex(s => s._letter === L);
+      if (firstIdx >= 0) _course.activeSectionIdx = firstIdx;
+      renderCoursePage();
+    };
+  });
+  body.querySelectorAll(".gloss-word-list li[data-sec-idx]").forEach(li => {
+    li.onclick = () => {
+      _course.activeSectionIdx = parseInt(li.dataset.secIdx, 10);
+      renderCoursePage();
+    };
+  });
 }
 
 async function createNewCourseModule() {
@@ -4320,10 +4974,23 @@ async function createNewCourseModule() {
 async function loadCourseModulesList() {
   const { data, error } = await supabase
     .from("course_modules")
-    .select("id, title, description, updated_at, published_at")
-    .order("updated_at", { ascending: false });
+    .select("id, title, description, updated_at, published_at, sort_order")
+    .order("sort_order", { ascending: true, nullsFirst: false })
+    .order("id", { ascending: true });
   if (error) { toast("bad", "Couldn't load modules", error.message); return []; }
   return data || [];
+}
+
+/** Swap the sort_order of two modules so the user-visible order shifts by 1. */
+async function swapCourseModuleOrder(idA, orderA, idB, orderB) {
+  // Atomic-ish: update both rows with the swapped values.
+  const { error: eA } = await supabase.from("course_modules")
+    .update({ sort_order: orderB }).eq("id", idA);
+  if (eA) { toast("bad", "Reorder failed", eA.message); return false; }
+  const { error: eB } = await supabase.from("course_modules")
+    .update({ sort_order: orderA }).eq("id", idB);
+  if (eB) { toast("bad", "Reorder failed", eB.message); return false; }
+  return true;
 }
 
 async function loadCourseModuleFromDb(id) {
@@ -4359,26 +5026,41 @@ async function publishCourseModuleRpc(id) {
   return true;
 }
 
-async function uploadCourseImageToBucket(file, moduleId) {
-  const path = `${moduleId}/${file.name}`;
+/** Images are now stored FLAT at the course bucket root — no per-module folder.
+ *  The filename is the only identifier; `![](filename.png)` resolves the same
+ *  way from any module. moduleId is accepted for back-compat but ignored. */
+async function uploadCourseImageToBucket(file, _moduleId) {
+  const path = file.name;
   const { error } = await supabase.storage.from("course-images")
-    .upload(path, file, { upsert: true, contentType: file.type || "image/png", cacheControl: "0" });
+    .upload(path, file, { upsert: true, contentType: file.type || "image/png", cacheControl: "3600" });
   if (error) { toast("bad", "Upload failed", error.message); return null; }
-  const { data: blob } = await supabase.storage.from("course-images").download(path);
-  if (blob) _course.images.set(file.name, URL.createObjectURL(blob));
   return path;
 }
 
-async function fetchCourseImagesForModule(moduleId) {
-  const { data, error } = await supabase.storage.from("course-images").list(moduleId, { limit: 1000 });
-  if (error) { console.error("list course-images", error); return; }
-  await Promise.all((data || []).filter(o => o.name && !o.name.endsWith("/")).map(async obj => {
-    const path = `${moduleId}/${obj.name}`;
-    try {
-      const dl = await supabase.storage.from("course-images").download(path);
-      if (dl.data) _course.images.set(obj.name, URL.createObjectURL(dl.data));
-    } catch {}
-  }));
+/** Load every image in the course-images bucket into the in-memory cache.
+ *  Walks the bucket root AND any per-module subfolders left over from the
+ *  earlier nested layout, so legacy uploads keep resolving by filename. */
+// No-op shims kept so the older call sites stay valid. Real loading happens
+// via direct public URLs (`courseImageUrl`); browser's native `loading="lazy"`
+// handles deferral when imgs are off-screen.
+function collectModuleImageNames() { return []; }
+async function signCourseImagesByName() {}
+async function fetchCourseImages() {}
+function lazyHydrateCourseImages() {}
+async function ensureCourseImagePathIndex() { return new Map(); }
+
+/** Single `.list("")` call against the bucket root. New uploads land at root,
+ *  so this is what Library needs. Returns just the filenames. */
+async function listCourseImagesFlat() {
+  const { data, error } = await supabase.storage.from("course-images")
+    .list("", { limit: 1000 });
+  if (error) { console.warn("list course-images", error); return []; }
+  return (data || []).filter(o => o.id != null).map(o => o.name);
+}
+
+// Back-compat shim — older callers still pass a moduleId arg.
+async function fetchCourseImagesForModule(_moduleId) {
+  return fetchCourseImages();
 }
 
 // ─── Course editor v1 (tree + tabs) ───
@@ -4442,7 +5124,7 @@ function renderCourseEditorV1() {
         <div class="ce-tabs">
           ${tabs.map(t => `<button class="ce-tab ${t === _course.activeTab ? "active" : ""}" data-tab="${t}">${tabLabel(t)}</button>`).join("")}
         </div>
-        <div class="ce-tab-body" id="ce-tab-body">
+        <div class="ce-tab-body${_course.activeTab === "content" ? " is-content" : ""}" id="ce-tab-body">
           ${renderCETabBody()}
         </div>
         <div class="ce-status">
@@ -4560,16 +5242,18 @@ function renderCEContentTab() {
     const sec = mod.sections[sel.sectionIdx];
     return `
       <div class="ce-content-pane">
-        <div class="ce-toolbar">
-          <button class="ce-tool" data-md="**" title="Bold">B</button>
-          <button class="ce-tool" data-md="### " data-md-block title="Card header">H</button>
-          <button class="ce-tool" data-md="• " data-md-line title="Bullet">•</button>
-          <button class="ce-tool" data-md-image title="Insert image">img</button>
-          <button class="ce-tool" data-md-term title="Insert glossary term">:term:</button>
-          <span class="muted small ce-toolbar-hint">type your markdown — preview updates live</span>
-        </div>
         <div class="ce-content-split">
-          <textarea id="ce-content" spellcheck="true">${escapeHtml(sec.content || "")}</textarea>
+          <div class="ce-editor-col">
+            <div class="ce-toolbar">
+              <button type="button" class="ce-tool" data-md="**" title="Bold">B</button>
+              <button type="button" class="ce-tool" data-md="### " data-md-block title="Card header">H</button>
+              <button type="button" class="ce-tool" data-md="• " data-md-line title="Bullet">•</button>
+              <button type="button" class="ce-tool" data-md-image title="Insert image">img</button>
+              <button type="button" class="ce-tool" data-md-term title="Insert glossary term">:term:</button>
+              <span class="ce-toolbar-hint">preview syncs to caret</span>
+            </div>
+            <textarea id="ce-content" spellcheck="true">${escapeHtml(sec.content || "")}</textarea>
+          </div>
           <div class="ce-phone-wrap">
             <div class="ce-phone-frame">
               <div class="ce-phone-notch"></div>
@@ -4597,22 +5281,34 @@ function renderCEImagesTab() {
   if (sel.kind !== "section") return `<div class="placeholder">Pick a section to manage its images.</div>`;
   const sec = _course.mod.sections[sel.sectionIdx];
   const imgs = sec.images || [];
+  const usage = _course.imageUsage || new Map();
+  const usageCI = new Map();
+  for (const [k, v] of usage) usageCI.set(String(k).toLowerCase(), v);
+  const renderUsage = (name) => {
+    const uses = usage.get(name) || usageCI.get(String(name).toLowerCase()) || [];
+    if (!uses.length) return `<span class="ce-img-uses none">unused</span>`;
+    // Collapse to "N module(s)" with hover title listing them.
+    const mods = [...new Set(uses.map(u => u.moduleTitle || u.moduleId))];
+    const title = uses.map(u => `${u.moduleTitle || u.moduleId} · ${u.sectionTitle || u.sectionIdx} · ${u.kind}${u.term ? ` (${u.term})` : ""}`).join("\n");
+    return `<span class="ce-img-uses" title="${escapeHtml(title)}">${uses.length}× · ${mods.length} mod</span>`;
+  };
   return `
     <div class="ce-images-pane">
       <div class="ce-images-toolbar">
         <button class="btn ghost" id="ce-img-pick">Pick from loaded…</button>
         <input type="text" id="ce-img-add-name" placeholder="filename.png" />
         <button class="btn ghost" id="ce-img-add">+ Add by name</button>
+        <span class="ce-toolbar-hint" style="margin-left:auto">${usage.size} files indexed</span>
       </div>
       <div class="ce-images-grid">
         ${imgs.map((name, i) => {
-          const url = imageUrlFor(name);
           return `
-            <div class="ce-img-tile ${url ? "" : "missing"}" data-img-idx="${i}" draggable="true">
+            <div class="ce-img-tile" data-img-idx="${i}" draggable="true">
               <div class="ce-img-thumb">
-                ${url ? `<img src="${url}" alt="${escapeHtml(name)}" />` : `<div class="ph">missing</div>`}
+                ${courseImg(name, { alt: name })}
               </div>
               <div class="ce-img-name">${escapeHtml(name)}</div>
+              <div class="ce-img-meta">${renderUsage(name)}</div>
               <div class="ce-img-actions">
                 <button class="icon-btn" data-img-copy="${escapeHtml(name)}" title="Copy ![](filename) markdown">md</button>
                 <button class="icon-btn" data-img-remove="${i}" title="Remove from section">×</button>
@@ -4780,9 +5476,12 @@ function attachCETabHandlers() {
   if (tab === "content") {
     const sec = () => mod.sections[sel.sectionIdx];
     const totalSlides = () => splitIntoCards(sec().content || "").length + (sec().quiz?.length || 0);
+    fitPhoneToTabBody();
     const repaintPreview = () => {
       const prev = document.getElementById("ce-content-preview");
       if (!prev) return;
+      const max = Math.max(0, totalSlides() - 1);
+      if (_course.previewSlideIdx > max) _course.previewSlideIdx = max;
       prev.innerHTML = renderPhoneDeck(sec());
       wirePhoneDeck();
     };
@@ -4828,11 +5527,31 @@ function attachCETabHandlers() {
     wirePhoneDeck();
     const ta = document.getElementById("ce-content");
     if (ta) {
+      const syncSlideToCaret = () => {
+        const idx = cardIndexAtCaret(ta.value, ta.selectionStart);
+        if (idx !== _course.previewSlideIdx) {
+          _course.previewSlideIdx = idx;
+          repaintPreview();
+        }
+      };
       ta.oninput = () => {
         sec().content = ta.value;
         markCourseDirty();
+        // Keep the textarea anchored where the user is typing — don't repaint
+        // anything that could trigger a scroll-into-view. Refresh the preview
+        // *content* on the same slide; don't auto-jump slides on keystrokes
+        // (caret-movement keys + clicks still sync via syncSlideToCaret).
+        const top = ta.scrollTop;
         repaintPreview();
+        ta.scrollTop = top;
       };
+      ta.addEventListener("click", syncSlideToCaret);
+      ta.addEventListener("keyup", (e) => {
+        // Only resync for caret-movement keys (avoid double work on every keystroke; oninput handles those).
+        if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight","Home","End","PageUp","PageDown"].includes(e.key)) {
+          syncSlideToCaret();
+        }
+      });
       attachCETools(ta, sec, (newText) => { sec().content = newText; });
       // Scroll to a particular card's ### header if a tree click requested it
       if (_course.scrollToCardIdx != null) {
@@ -4846,6 +5565,16 @@ function attachCETabHandlers() {
   }
 
   if (tab === "images") {
+    // Lazy-load the usage map once. Cached afterward so the tab doesn't
+    // refetch on every render.
+    if (!_course.imageUsage?.size && !_course.imageUsageLoading) {
+      _course.imageUsageLoading = true;
+      computeCourseImageUsage().then(m => {
+        _course.imageUsage = m;
+        _course.imageUsageLoading = false;
+        if (_course.activeTab === "images") renderCoursePage();
+      });
+    }
     document.querySelectorAll("[data-img-copy]").forEach(b => {
       b.onclick = () => {
         const md = `![](${b.dataset.imgCopy})`;
@@ -4975,6 +5704,8 @@ function scrollTextareaToCard(ta, sec, cardIdx) {
 
 function attachCETools(ta, getSec, setBody) {
   document.querySelectorAll(".ce-tool").forEach(btn => {
+    // Keep textarea focus on mousedown so caret + scroll position are preserved.
+    btn.addEventListener("mousedown", (e) => e.preventDefault());
     btn.onclick = () => {
       const start = ta.selectionStart, end = ta.selectionEnd;
       const before = ta.value.slice(0, start), selected = ta.value.slice(start, end), after = ta.value.slice(end);
@@ -4994,16 +5725,59 @@ function attachCETools(ta, getSec, setBody) {
       } else {
         insert = `${btn.dataset.md}${selected || "text"}${btn.dataset.md}`;
       }
+      const scrollTop = ta.scrollTop;
       ta.value = before + insert + after;
-      ta.focus();
+      ta.focus({ preventScroll: true });
       ta.selectionStart = ta.selectionEnd = before.length + insert.length;
-      // trigger input
+      ta.scrollTop = scrollTop;
       ta.dispatchEvent(new Event("input"));
     };
   });
 }
 
+/** Count how many `### ` headers precede `offset` in `text`.
+ *  Returns the 0-based card index the caret sits in. When the section has
+ *  no intro (starts with `### `), the first heading is card 0, not card 1. */
+function cardIndexAtCaret(text, offset) {
+  const upto = text.slice(0, offset);
+  const m = upto.match(/(^|\n)###\s/g);
+  let idx = m ? m.length : 0;
+  // No-intro section: drop the implicit "intro card" so indexes line up with
+  // splitIntoCards, which only emits the intro when it has content.
+  if (/^###\s/.test(text) && idx > 0) idx -= 1;
+  return idx;
+}
+
+// Measure the editor's tab-body and shrink the phone frame so it always
+// fits. Natural phone height = 660px (10px padding on each side included).
+// Falls back to scale 1 when the body is tall enough.
+let _phoneFitObserver = null;
+function fitPhoneToTabBody() {
+  const phone = document.querySelector(".ce-phone-frame");
+  const wrap = phone?.parentElement;
+  if (!phone || !wrap) return;
+  const apply = () => {
+    const cs = getComputedStyle(wrap);
+    const availH = wrap.clientHeight
+      - parseFloat(cs.paddingTop || 0)
+      - parseFloat(cs.paddingBottom || 0);
+    const availW = wrap.clientWidth
+      - parseFloat(cs.paddingLeft || 0)
+      - parseFloat(cs.paddingRight || 0);
+    if (availH <= 0 || availW <= 0) return;
+    // Uniform scale — whichever axis runs out first wins, so the 360:660
+    // aspect ratio is preserved.
+    const scale = Math.min(1, Math.max(0.4, Math.min(availH / 660, availW / 360)));
+    phone.style.setProperty("--phone-scale", scale.toFixed(3));
+  };
+  apply();
+  if (_phoneFitObserver) _phoneFitObserver.disconnect();
+  _phoneFitObserver = new ResizeObserver(apply);
+  _phoneFitObserver.observe(wrap);
+}
+
 function markCourseDirty() {
+  if (_course.mod?._virtual) return; // virtual modules (Glossary) are read-only
   _course.dirty = true;
   updateCourseStatusStrip();
   scheduleCourseAutosave();
@@ -5244,6 +6018,7 @@ function pickImageForSection(sec, loaded) {
 
 function toggleCourseEditMode() {
   if (!_course.mod) return;
+  if (_course.mod._virtual) { toast("warn", "Read-only", "The Glossary module is auto-generated."); return; }
   _course.editMode = !_course.editMode;
   document.getElementById("course-edit-btn").textContent = _course.editMode ? "Done editing" : "Edit";
   renderCoursePage();
@@ -5267,6 +6042,7 @@ function backToModulesList() {
 
 async function publishActiveCourseModule() {
   if (!_course.mod) return;
+  if (_course.mod._virtual) { toast("warn", "Read-only", "The Glossary module cannot be published — it's a live view."); return; }
   // Flush autosave first
   if (_course.dirty) {
     if (_course.saveTimer) clearTimeout(_course.saveTimer);
@@ -5293,6 +6069,71 @@ function downloadCourseModule() {
   downloadBlob(blob, `${_course.mod.id || "module"}.json`);
 }
 
+/** Build and download a zip for one module containing:
+ *    <module_id>.json
+ *    images/<file>   — every image referenced by content / glossary / images[]
+ *  Images are pulled from the course-images bucket (whatever path they live
+ *  under). If the module is the active one we can reuse `_course.images`
+ *  blob URLs; otherwise we download fresh. */
+async function downloadCourseModuleZip(moduleId) {
+  try {
+    const JSZip = (await import("https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm")).default;
+    let mod;
+    if (_course.mod?.id === moduleId) {
+      mod = _course.mod;
+    } else {
+      const row = await loadCourseModuleFromDb(moduleId);
+      if (!row) { toast("bad", "Module not found", moduleId); return; }
+      mod = row.data || { id: moduleId, title: row.title, description: row.description };
+    }
+    // Collect referenced images from content + glossary + images[]
+    const referenced = new Set();
+    const rxImg = /!\[[^\]]*\]\(([^)]+)\)/g;
+    for (const sec of mod.sections || []) {
+      let m;
+      rxImg.lastIndex = 0;
+      while ((m = rxImg.exec(sec.content || "")) !== null) referenced.add(m[1].trim());
+      for (const g of sec.glossary || []) if (g.image) referenced.add(g.image);
+      for (const img of sec.images || []) referenced.add(img);
+    }
+
+    const zip = new JSZip();
+    zip.file(`${moduleId}.json`, JSON.stringify(mod, null, 2));
+
+    // For each referenced image, find it in the bucket and add to the zip.
+    const imgFolder = zip.folder("images");
+    let ok = 0, missing = 0;
+    for (const name of referenced) {
+      const blob = await findImageBlob(name);
+      if (blob) { imgFolder.file(name, blob); ok++; }
+      else { missing++; }
+    }
+
+    const zipBlob = await zip.generateAsync({ type: "blob" });
+    downloadBlob(zipBlob, `${moduleId}.zip`);
+    toast(missing ? "warn" : "ok", "Zip ready", `${moduleId}.zip · ${ok} images${missing ? ` (${missing} missing)` : ""}`);
+  } catch (e) {
+    toast("bad", "Zip failed", e?.message || String(e));
+    console.error(e);
+  }
+}
+
+/** Locate an image file in course-images: try root first, then any subfolder
+ *  (legacy nested layout). Returns the blob or null. */
+async function findImageBlob(filename) {
+  // 1) Root
+  const root = await supabase.storage.from("course-images").download(filename);
+  if (root.data) return root.data;
+  // 2) Look for it in any subfolder by listing the root and recursing
+  const { data: top } = await supabase.storage.from("course-images").list("", { limit: 1000 });
+  for (const obj of top || []) {
+    if (obj.id != null) continue; // skip files
+    const sub = await supabase.storage.from("course-images").download(`${obj.name}/${filename}`);
+    if (sub.data) return sub.data;
+  }
+  return null;
+}
+
 function renderCardInner(card, sec) {
   if (!card) return `<div class="placeholder">Empty card.</div>`;
   if (card.kind === "content") {
@@ -5305,12 +6146,9 @@ function renderCardInner(card, sec) {
     const imgStrip = extras.length ? `
       <div class="course-img-strip">
         <div class="course-img-strip-label">other images for this section (not referenced inline)</div>
-        ${extras.map(name => {
-          const url = imageUrlFor(name);
-          return url
-            ? `<div class="course-img"><img alt="${escapeHtml(name)}" src="${url}" /><div class="course-img-name">${escapeHtml(name)}</div></div>`
-            : `<div class="course-img missing"><div class="ph">missing</div><div class="course-img-name">${escapeHtml(name)}</div></div>`;
-        }).join("")}
+        ${extras.map(name => `
+          <div class="course-img">${courseImg(name, { alt: name })}<div class="course-img-name">${escapeHtml(name)}</div></div>
+        `).join("")}
       </div>` : "";
     return `${titleHtml}<div class="course-card-body">${html}</div>${imgStrip}`;
   }
@@ -5349,6 +6187,68 @@ async function loadCourseModuleFile(file) {
     toast("bad", "Couldn't import module", e?.message || String(e));
   }
 }
+
+/** Import a module from a .zip. Expected structure:
+ *    m_xxx.json          (or any .json with an `id` field) at the root
+ *    images/<file>.png   one or more image files in an /images folder
+ *  The module is upserted to course_modules and all images are uploaded
+ *  to the course-images bucket under <module_id>/. */
+async function loadCourseModuleZip(file) {
+  if (!file) return;
+  try {
+    const JSZip = (await import("https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm")).default;
+    const zip = await JSZip.loadAsync(file);
+
+    // Find the module .json — prefer one at root, fall back to anywhere.
+    let jsonPath = null;
+    zip.forEach((path, entry) => {
+      if (entry.dir) return;
+      if (!path.toLowerCase().endsWith(".json")) return;
+      if (!path.includes("/")) jsonPath = path;
+      else if (!jsonPath) jsonPath = path;
+    });
+    if (!jsonPath) { toast("bad", "No .json found in zip"); return; }
+
+    const txt = await zip.file(jsonPath).async("string");
+    const mod = JSON.parse(txt);
+    if (!mod.id) { toast("bad", "Module .json missing id field"); return; }
+
+    const existing = await loadCourseModuleFromDb(mod.id);
+    if (existing) {
+      const ok = await confirmModal({
+        title: `Module ${mod.id} already exists`,
+        body: "Overwrite with this zip? The current draft will be replaced (history is kept).",
+        confirmText: "Overwrite",
+      });
+      if (!ok) return;
+    }
+    if (!await saveCourseModuleToDb(mod)) return;
+
+    // Collect all images under any */images/ folder.
+    const imageEntries = [];
+    zip.forEach((path, entry) => {
+      if (entry.dir) return;
+      const m = path.match(/(^|\/)images\/([^/]+)$/i);
+      if (m && /\.(png|jpe?g|gif|webp|svg)$/i.test(m[2])) {
+        imageEntries.push({ name: m[2], entry });
+      }
+    });
+
+    let okN = 0;
+    for (const { name, entry } of imageEntries) {
+      const blob = await entry.async("blob");
+      const f = new File([blob], name, { type: blob.type || "image/png" });
+      if (await uploadCourseImageToBucket(f, mod.id)) okN++;
+    }
+
+    await openCourseModuleById(mod.id);
+    toast("ok", "Zip imported", `${mod.id} · ${okN}/${imageEntries.length} images`);
+  } catch (e) {
+    toast("bad", "Couldn't import zip", e?.message || String(e));
+    console.error(e);
+  }
+}
+
 function addCourseImageFiles(files) {
   let added = 0;
   for (const f of files) {
@@ -5375,13 +6275,13 @@ function showTermPopover(anchor) {
   const pop = document.createElement("div");
   pop.className = "course-term-popover";
   pop.id = "course-term-popover";
-  const imgUrl = g.image ? imageUrlFor(g.image) : null;
   pop.innerHTML = `
     <div class="ctp-head">${escapeHtml(g.term)}</div>
-    ${imgUrl ? `<img class="ctp-img" src="${imgUrl}" alt="${escapeHtml(g.term)}" />` : (g.image ? `<div class="ctp-img missing">missing: ${escapeHtml(g.image)}</div>` : "")}
+    ${g.image ? courseImg(g.image, { cls: "ctp-img", alt: g.term }) : ""}
     ${g.definition ? `<div class="ctp-def">${escapeHtml(g.definition)}</div>` : ""}
   `;
   document.body.appendChild(pop);
+  lazyHydrateCourseImages(pop);
   const r = anchor.getBoundingClientRect();
   // try to place below; if it'd go off-screen, above
   const popH = 240;
