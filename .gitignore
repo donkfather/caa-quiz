@@ -32,6 +32,12 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env.local.dev
+
+# tools / IDE
+.claude/
+__pycache__/
+*.bak
 
 # credentials
 credentials/

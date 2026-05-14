@@ -46,7 +46,7 @@ def main() -> int:
     # Fetch all questions in id order, projecting only the app-bundle shape.
     req = urllib.request.Request(
         f"{url}/rest/v1/questions"
-        f"?select=id,question,options,correct,topic,license"
+        f"?select=id,question,options,correct,topic,license,image_path"
         f"&order=id.asc",
         method="GET",
     )
@@ -60,12 +60,13 @@ def main() -> int:
 
     rows = json.loads(body)
 
-    # Re-id contiguously starting at 0 for the bundled file (mobile uses the
-    # array index for storage). Drop the DB id; let the position be the id.
+    # Preserve the DB id verbatim so bundled, blob, and table stay aligned.
+    # When ids drift, anything that round-trips an id (reports, RPC lookups)
+    # ends up off-by-one.
     cleaned = []
-    for i, q in enumerate(rows):
+    for q in rows:
         cleaned.append({
-            "id": i,
+            "id": q["id"],
             "question": q["question"],
             "options": q["options"],
             "correct": q["correct"],

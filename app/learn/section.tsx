@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTheme } from "../../src/lib/ThemeContext";
 import { getModule } from "../../src/lib/courseData";
 import type { QuizQuestion } from "../../src/lib/courseData";
+import { ReportButton } from "../../src/components/ReportButton";
 
 // ─── Content parsing ────────────────────────────────────────────
 
@@ -55,6 +56,24 @@ function buildCards(content: string, quiz: QuizQuestion[]): Card[] {
   }
   if (current.blocks.length > 0) groups.push(current);
 
+  // Merge short cards (< 3 blocks) with the next card
+  const merged: typeof groups = [];
+  for (let i = 0; i < groups.length; i++) {
+    const g = groups[i];
+    const totalText = g.blocks.reduce((acc, b) => acc + ("text" in b ? b.text.length : 0), 0);
+    if (totalText < 180 && g.blocks.length < 3 && i + 1 < groups.length) {
+      // Merge into next card: add current blocks + a header block + next blocks
+      const next = groups[i + 1];
+      if (g.title) next.blocks.unshift({ type: "header", text: g.title } as ContentBlock);
+      next.blocks.unshift(...g.blocks);
+      // Don't push current, let next iteration handle the merged card
+    } else {
+      merged.push(g);
+    }
+  }
+  groups.length = 0;
+  groups.push(...merged);
+
   // If only 1 group with many blocks, split into chunks of ~5
   if (groups.length <= 1 && allBlocks.length > 6) {
     const blocks = groups[0]?.blocks ?? allBlocks.filter((b) => b.type !== "header");
@@ -66,27 +85,16 @@ function buildCards(content: string, quiz: QuizQuestion[]): Card[] {
     groups.push(...chunked);
   }
 
-  // Build cards, interleaving quiz
+  // Build cards: all content first, quiz at the end
   const cards: Card[] = [];
-  const quizInterval = quiz.length > 0 ? Math.max(1, Math.floor(groups.length / quiz.length)) : Infinity;
-  let qIdx = 0;
 
-  for (let i = 0; i < groups.length; i++) {
-    cards.push({ type: "content", title: groups[i].title, blocks: groups[i].blocks });
-
-    // Insert a quiz card every N content cards
-    if (qIdx < quiz.length && (i + 1) % quizInterval === 0) {
-      const batch = quiz.slice(qIdx, qIdx + Math.min(2, quiz.length - qIdx));
-      if (batch.length > 0) {
-        cards.push({ type: "quiz", questions: batch });
-        qIdx += batch.length;
-      }
-    }
+  for (const group of groups) {
+    cards.push({ type: "content", title: group.title, blocks: group.blocks });
   }
 
-  // Remaining quiz questions at the end
-  if (qIdx < quiz.length) {
-    cards.push({ type: "quiz", questions: quiz.slice(qIdx) });
+  // Quiz as the last card
+  if (quiz.length > 0) {
+    cards.push({ type: "quiz", questions: quiz });
   }
 
   return cards;
@@ -145,11 +153,17 @@ function BlockView({ block, theme }: { block: ContentBlock; theme: any }) {
   }
 }
 
-function InlineQuiz({ questions, theme, onDone }: { questions: QuizQuestion[]; theme: any; onDone: () => void }) {
+function InlineQuiz({ questions, theme, onDone, refPrefix }: { questions: QuizQuestion[]; theme: any; onDone: () => void; refPrefix: string }) {
   const [qIdx, setQIdx] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const done = qIdx >= questions.length;
+
+  const retry = () => {
+    setQIdx(0);
+    setSelected(null);
+    setScore(0);
+  };
 
   if (done) {
     return (
@@ -159,27 +173,36 @@ function InlineQuiz({ questions, theme, onDone }: { questions: QuizQuestion[]; t
           {score}/{questions.length} corecte
         </Text>
         <Text style={{ fontSize: 13, color: theme.textMuted, marginTop: 4, marginBottom: 16 }}>
-          {score === questions.length ? "Excelent!" : "Revizuieste materialul."}
+          {score === questions.length ? "Excelent!" : "Revizuieste materialul si incearca din nou."}
         </Text>
-        <Pressable
-          style={{ backgroundColor: theme.primary, borderRadius: 10, paddingVertical: 12, paddingHorizontal: 24 }}
-          onPress={onDone}
-        >
-          <Text style={{ color: "#fff", fontWeight: "600", fontSize: 14 }}>Continua</Text>
-        </Pressable>
+        <View style={{ gap: 10, width: "100%" }}>
+          <Pressable
+            style={{ backgroundColor: theme.bgCard, borderRadius: 10, paddingVertical: 12, alignItems: "center", borderWidth: 1, borderColor: theme.border }}
+            onPress={retry}
+          >
+            <Text style={{ color: theme.text, fontWeight: "600", fontSize: 14 }}>Reincearca</Text>
+          </Pressable>
+          <Pressable
+            style={{ backgroundColor: theme.primary, borderRadius: 10, paddingVertical: 12, alignItems: "center" }}
+            onPress={onDone}
+          >
+            <Text style={{ color: "#fff", fontWeight: "600", fontSize: 14 }}>Continua</Text>
+          </Pressable>
+        </View>
       </View>
     );
   }
 
   const q = questions[qIdx];
   const handleAnswer = (optIdx: number) => {
-    if (selected !== null) return;
-    setSelected(optIdx);
-    if (optIdx === q.correct) setScore((s) => s + 1);
-    setTimeout(() => {
+    if (selected !== null) {
+      // Second tap: go to next question
       setSelected(null);
       setQIdx((i) => i + 1);
-    }, 1000);
+      return;
+    }
+    setSelected(optIdx);
+    if (optIdx === q.correct) setScore((s) => s + 1);
   };
 
   return (
@@ -188,24 +211,29 @@ function InlineQuiz({ questions, theme, onDone }: { questions: QuizQuestion[]; t
         Verifica · {qIdx + 1}/{questions.length}
       </Text>
       <Text style={{ fontSize: 16, fontWeight: "600", color: theme.text, marginBottom: 14 }}>{q.question}</Text>
+      <ReportButton target={{ kind: "learn", externalRef: `${refPrefix}/${qIdx}`, questionText: q.question }} />
       {q.options.map((opt, oIdx) => {
         let bg = theme.bgCard;
         let border = theme.border;
         if (selected !== null) {
           if (oIdx === q.correct) { bg = theme.correctBg; border = theme.correct; }
-          else if (oIdx === selected) { bg = theme.wrongBg; border = theme.wrong; }
+          else if (oIdx === selected && oIdx !== q.correct) { bg = theme.wrongBg; border = theme.wrong; }
         }
         return (
           <Pressable
             key={oIdx}
             style={{ backgroundColor: bg, borderRadius: 10, padding: 12, marginBottom: 8, borderWidth: 1.5, borderColor: border }}
             onPress={() => handleAnswer(oIdx)}
-            disabled={selected !== null}
           >
             <Text style={{ fontSize: 14, color: theme.text }}>{opt}</Text>
           </Pressable>
         );
       })}
+      {selected !== null && (
+        <Text style={{ textAlign: "center", fontSize: 12, color: theme.textMuted, marginTop: 4 }}>
+          Apasa oriunde pentru urmatoarea intrebare
+        </Text>
+      )}
     </View>
   );
 }
@@ -319,7 +347,7 @@ export default function SectionScreen() {
                   ))}
                 </>
               ) : (
-                <InlineQuiz questions={card.questions} theme={theme} onDone={goNext} />
+                <InlineQuiz questions={card.questions} theme={theme} onDone={goNext} refPrefix={`${moduleId}/${idx}`} />
               )}
             </ScrollView>
           )}

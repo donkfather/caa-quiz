@@ -6,258 +6,45 @@
     {
       "id": "m1_s1",
       "title": "Istoric",
-      "content": "\nOriginile corabiilor şi barcilor nu au fost stabilite cu precizie de catre istorici. Aceştia au cazut, totuşi, de acord in privinţa faptului ca omul a folosit pentru prima data un dispozitiv plutitor inaintea anului\n6000 i.Hr., pentru a putea tranversa mici curgeri de apa. La inceput, el a calarit un buştean. Ramane totuşi o taina daca a facut aceasta isprava impins de dorinţa de a scapa de inundaţii, de vreo alta primejdie sau pentru a se deplasa in regiuni mai bogate in peşte şi in plante comestibile. Istoria devenirii popoarelor si civilizatiilor din timpuri imemoriale si pana astazi este intr-o legatura indisolubila, in cele mai multe cazuri, cu apele si navigatia. Nici nu se putea astfel, daca avem in vedere ca din suprafata totala a Pamantului - 510 mil km2 - uscatul reprezinta 147,8 mil. km2, respectiv 29%, iar apele insumeaza 362,3 mil. km2, respectiv 71%. De la primul trunchi de copac scobit cu uneltele omului primitiv, care cu siguranta a constituit prima ambarcatiune cu care ne-am desprins de uscat si pana la modernele nave de astazi, de pasageri, comerciale sau militare, unele adevarate uzine sau orase plutitoare, drumul parcurs de omenire este fascinant. Intr-o succinta enumerare amintim dintre mijloacele de transport pe ape: plutele, ambarcatiuni din coaja de copac, trestie, papirus, canoea cu o vasla, primii navigatori pe Marea Mediterana - cretanii, pe la 2500 i. Hr., apoi biremele si triremele fenicienilor, galerele grecesti, penterele romanilor, prima nava propulsata cu abur, a lui Robert Fulton in 1807, pana la \"Great Britain\" in anul 1843, primul vapor construit din metal, pentru 250 de pasageri.\n",
+      "content": "Omul a folosit prima ambarcatiune inainte de 6000 i.Hr. — un simplu bustean pe care plutea peste ape. De atunci, navigatia a evoluat continuu.\n\n### Repere istorice\n\n• Primii navigatori pe Marea Mediterana au fost **cretanii**, in jurul anului 2500 i.Hr.\n• **Fenicienii** au construit bireme si trireme — nave cu doua si trei randuri de vasle\n• **Grecii** au dezvoltat galerele, iar **romanii** penterele de lupta\n• In **1807**, Robert Fulton a lansat prima nava propulsata cu abur\n• In **1843**, \"Great Britain\" a devenit primul vapor construit din metal\n\n### De ce conteaza\n\nApele acopera **71%** din suprafata Pamantului (362 mil. km²), iar uscatul doar 29% (148 mil. km²). Istoria civilizatiilor este legata indisolubil de navigatie.\n\nDe la trunchiul de copac scobit pana la navele moderne de croaziera, drumul parcurs de omenire pe ape este fascinant.",
       "images": [
         "m1_p7_0.png",
         "m1_p7_1.png"
       ],
       "quiz": [
         {
-          "question": "Dispozițiile Regulamentului împiedică aplicarea prescripțiilor speciale stabilite de către autoritatea competentă referitoare la navigația în rade, porturi, pe fluvii, lacuri sau căi de navigaţie interioară accesibile navelor maritime? da.",
+          "question": "Cine au fost primii navigatori pe Marea Mediterana?",
           "options": [
-            "nu.",
-            "nu este precizat."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Dispoziţiile Regulamentului scutesc nava, comandantul sau armatorul de consecinţele unei neglijenţe oarecare în ceea ce priveşte aplicarea Regulamentului sau în ceea ce priveşte luarea tuturor măsurilor cerute de o bună practică marinărească? nu este precizat.",
-          "options": [
-            "da.",
-            "nu."
+            "Fenicienii",
+            "Cretanii",
+            "Romanii"
           ],
           "correct": 1
         },
         {
-          "question": "Când există riscul unei coliziuni, precum şi în toate împrejurările deosebite sunt permise: abaterea de la prevederile Regulamentului.",
+          "question": "Ce tip de nave au construit fenicienii?",
           "options": [
-            "abateri de la prevederile autorităţilor portuare.",
-            "abateri de la prevederile legilor specifice."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce se înţelege prin expresia\"navă\", conform Regulamentului? orice construcţie sau aparat, de orice natură, capabil să plutească pe apă fără propulsie.",
-          "options": [
-            "orice construcţie sau orice aparat, de orice natură ar fi, inclusiv construcţiile fără pescaj şi hidro avioane, folosite sau susceptibile de a fi folosite ca mijloc de transport pe apă.",
-            "orice corp plutitor cu orice mijloc de propulsie."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "O navă care navigă cu vele, chiar dacă are o maşină proprie, cu condiţia ca aceasta să nu fie folosită, reprezintă: o navă cu vele.",
-          "options": [
-            "o navă cu propulsie mecanică, care foloseşte şi velele.",
-            "o navă care foloseşte ca mijloc de propulsie forţa vântului."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "O navă care din cauza unei împrejurări excepţionale nu este în măsură să manevreze şi deci, nu poate să se îndepărteze din drumul altei nave trebuie considerată: nava nu este stăpână pe manevra sa.",
-          "options": [
-            "navă cu capacitate de manevră redusă.",
-            "navă stânjenită de pescajul său."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "O navă cu propulsie mecanică, care din cauza pescajului şi a adâncimii apei sub chilă poate să-şi modifice cu greu drumul, se consideră : navă stânjenită de pescajul său.",
-          "options": [
-            "navă cu lungime mai mare de 200 m",
-            "navă cu capacitate de manevră redusă."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Când una dintre nave poate fi observată vizual de către cealaltă navă, se consideră: navă în siguranţă.",
-          "options": [
-            "nave aflate în vedere.",
-            "nave în marş."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Pentru a se putea acţiona corect şi eficace pentru prevenirea unei coliziuni şi pentru ca nava să poată fi oprită pe o distanţă corespunzătoare împrejurărilor şi condiţiilor, se impune menţiunea de a naviga cu: viteză maximă.",
-          "options": [
-            "viteză minimă.",
-            "viteză de siguranţă."
+            "Galere si pentere",
+            "Bireme si trireme",
+            "Nave cu abur"
           ],
           "correct": 1
         },
         {
-          "question": "Ce mijloace trebuie să folosească o navă pentru a stabili dacă există pericolul de coliziune? orice navă trebuie să folosească toate mijloacele disponibile corespunzătoare împrejurărilor şi condiţiilor extrene, pentru a stabili dacă există un pericol de coliziune.",
+          "question": "In ce an a fost lansata prima nava propulsata cu abur de Robert Fulton?",
           "options": [
-            "orice navă trebuie să folosească toate mijloacele vizuale, pentru a stabili dacă există pericolul de coliziune.",
-            "orice navă trebuie să folosească radarul, pentru a stabili dacă există pericolul de coliziune."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Când se consideră că există pericol de coliziune? când navele navigă în drumuri opuse.",
-          "options": [
-            "când relevmentul compas la o navă care se apropie nu variază în mod apreciabil.",
-            "când viteza de apropiere între cele două nave este foarte mare."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Până când se controlează eficacitatea unei manevre de evitare? până când navele vor fi la travers una faţă de cealaltă.",
-          "options": [
-            "până când nava cealaltă va fi într-un unghi de 45° tribord/babord.",
-            "până când nava cealaltă a fost complet şi definitiv depăşită."
+            "1743",
+            "1807",
+            "1843"
           ],
           "correct": 1
-        },
-        {
-          "question": "Cum trebuie să se angajeze o navă pentru intrarea sau ieşirea dintr-o schemă de separare a traficului? sub un unghi drept faţă de direcţia generală a traficului.",
-          "options": [
-            "ca regulă generală pe la una din extremităţi,dar atunci când se angajează să intre sau să iasă,din orice parte,să facă manevra sub unghi cât mai mic faţă de direcţia traficului.",
-            "prin zona de separare a traficului,dar cu aprobarea autorităţilor care supraveghează navigaţia în schema de separare a traficului."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Zonele de navigaţie costieră pot fi folosite pentru traficul costier? în mod normal nu trebuie folosite pentru traficul direct, cu excepţia navelor mai mici de 20 m lungime şi a navelor cu vele.",
-          "options": [
-            "pot fi folosite de toate navele aparţinând ţării riverane.",
-            "pot fi folosite de navele cu capacitate de manevră redusă."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Care sunt navele exceptate de la  prevederile regulii referitoare la navigaţie în schemele de separare a traficului? navele cu capacitate de manevră redusă, angajate în manevra de menţinere a siguranţei navigaţiei.",
-          "options": [
-            "navele cu defecţiuni la motorul principal.",
-            "navele cu avarii la cârmă."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Cum se comportă o navă care ajunge din urmă (depăşeşte) o altă navă? nava care ajunge din urmă o altă navă va avea prioritate.",
-          "options": [
-            "nava ajunsă din urmă va manevra astfel încât să-i permită navei care o depăşeşte deplasarea.",
-            "orice navă care ajunge din urmă o altă navă trebuie să se abată din drumul navei ajunsă din urmă."
-          ],
-          "correct": 1
-        },
-        {
-          "question": "Din drumul căror nave trebuie să se abată o navă cu vele în marş? navelor cu propulsie mecanică cu viteză mică.",
-          "options": [
-            "navelor care nu sunt stăpâne pe manevra lor.",
-            "navelor petroliere sau navelor care transportă gaze lichefiate."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Din drumul căror nave trebuie să se abată o navă cu vele în marş? navelor în curs de pescuit.",
-          "options": [
-            "traulelor aflate în marş spre zona de pescuit.",
-            "navelor colectoare de peşte  aflate în marş."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Cu ce viteză trebuie să navige o navă în condiţii de vizibilitate redusă? cu viteză redusă şi veghe la prova.",
-          "options": [
-            "cu viteză economică, dar cu radarul în funcţiune şi cu o veghe corespunzătoare, pentru a evita pericolul de coliziune.",
-            "cu o viteză de siguranţă adaptată împrejurărilor existente şi condiţiilor de vizibilitate redusă."
-          ],
-          "correct": 1
-        },
-        {
-          "question": "În ce perioadă sunt respectate regulile referitoare la lumini? pe timpul nopţii.",
-          "options": [
-            "pe timpul nopţii şi pe vizibilitate redusă.",
-            "de la apusul la răsăritul  soarelui."
-          ],
-          "correct": 1
-        },
-        {
-          "question": "Ce se înţelege prin expresia \"lumină de catarg\"? orice lumină albă instalată pe catargul unei nave la o înălţime prevăzută de normele din registru.",
-          "options": [
-            "orice lumină albă vizibilă pe tot orizontul.",
-            "o lumină albă aşezată deasupra axului longitudinal al navei, arătând o lumină neîntreruptă pe un arc de orizont de 225°, astfel ca să arate 22°5 înapoia traversului fiecărui bord."
-          ],
-          "correct": 1
-        },
-        {
-          "question": "Ce se înţelege prin expresia \"lumină de pupa\"? o lumină albă instalată la pupa unei nave.",
-          "options": [
-            "o lumină aşezată cât mai aproape posibil în pupa, arătând o lumină neîntreruptă pe un arc de 135°, câte 67°5 în fiecare bord.",
-            "o lumină albă instalată la pupa, care arată ca o lumină întreruptă pe un arc de cerc de 135°, câte 67°5 în fiecare bord."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Luminile roşu-alb-roşu dispuse pe verticală, lumina de ancoră de la pupa sunt luminile purtate de o navă: nestăpână pe manevră la ancoră.",
-          "options": [
-            "cu capacitate de manevră redusă la ancoră.",
-            "stânjenită de pescajul ei la ancoră."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Trei semne suprapuse din care semnul superior şi inferior câte o bulă, iar cel din mijloc un bicon sunt semnele purtate de o navă: nestăpână pe manevra sa.",
-          "options": [
-            "stânjenită de pescajul ei.",
-            "cu capacitate de manevră redusă."
-          ],
-          "correct": 1
-        },
-        {
-          "question": "O lumină cu sclipiri regulate a cărei frecvenţă este de 120 sclipiri pe minut sau mai mult, reprezintă ceea ce se înţelege prin expresia: lumină de bord.",
-          "options": [
-            "lumină cu sclipiri.",
-            "lumină de remorcaj."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce se înţelege prin expresia \"lumină cu sclipiri\"? o lumină cu sclipiri regulate cu frecvenţa de 60 sclipiri pe minut.",
-          "options": [
-            "o lumină cu sclipiri regulate cu frecvenţa de 120 sclipiri pe minut sau mai mult.",
-            "o lumină cu sclipiri regulate  foarte repezi."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "La ce distanţă trebuie să se vadă lumina din pupa pentru navele cu o lungime între 12 şi 50 m? 3 Mm.",
-          "options": [
-            "2 Mm.",
-            "1 Mm."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "La ce distanţă trebuie să se vadă lumina albă, roşie, verde sau galbenă vizibilă pe întreg orizontul, pentru navele cu lungimea  între 12 şi 50 m? 3 Mm.",
-          "options": [
-            "2 Mm.",
-            "1 Mm."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce lumini trebuie să poarte o navă cu propulsie mecanică în marş cu lungimea mai mare de 7 m şi a cărei viteză depăşeşte 7 Nd? o lumină albă vizibilă peste tot orizontul şi dacă este posibil şi luminile din borduri.",
-          "options": [
-            "luminile din borduri.",
-            "o lumină albă care  poate fi ridicată la nevoie."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce lumini trebuie să poarte obiectele sau navele remorcate, altele decât cele cu forma nedefinită? luminile de catarg şi lumina de pupa.",
-          "options": [
-            "luminile din borduri şi lumina de pupa.",
-            "luminile de remorcher şi lumina de pupa."
-          ],
-          "correct": 0
         }
       ]
     },
     {
       "id": "m1_s2",
       "title": "Terminologie. Vocabular",
-      "content": "\nVocabularul de sailing este extrem de complex. Este recomandat ca denumirile partilor componente ale unei ambarcatiune cu motor cat si manevrele si comenzile cu care se opereaza in domeniu sa fie insusite ca atare, atat in limba romana, cat si in limba engleza, mai ales daca se intentioneaza navigarea in ape internationale.\n\n\n### Cateva definitii\n\n\n**Nava** — Orice mijloc plutitor, inclusiv mijloace fara pescaj si hidronavigabile, folosite sau capabile de a fi folosite ca mijloace de transport pe apa\n**Ambarcatiune de agrement** — orice ambarcatiune cu motor si/sau cu vele, indiferent de tip si modul de propulsie al carui corp are o lungime de cel mult 24 m si care este utilizata exclusiv pentru agrement\n**Activitate de agrement** — activitatea de transport naval efectuata in interes propriu de catre persoane fizice in scopuri de agrement\n**RND** — Regulamentul de navigatie pe Dunare\n**COLREG** — International Regulations for Preventing Collisions at Sea sau in romaneste RIPAM -\nRegulamentul International de Prevenire a Abordajelor pe Mare.\n\n\n### Cele mai des folosite comenzi la bord\n\n\n**Fila** — Da drumul usor (fileaza)\nVira - Trage\n**Mola** — Da drumul de tot (elibereaza)\n**La pic** — Tine (pe pozitie)\n\n\n### Mic dictionar de termeni marinaresti RO-ENGL\n\n### Zonele principale ale unei ambarcatiuni sunt\n\n**Pupa** (Stern) — partea din spate a unei ambarcatiuni\n**Prova** (Bow) — partea din fata a unei ambarcatiuni\n**Babord** (Port) — partea stanga a unei ambarcatiuni\n**Tribord** (Starboard) — partea dreapta a unei ambarcatiuni\n**Punte** (Deck) — zona superioara a navei\n**Salonul** (Saloon) — zona de living a unei ambarcatiuni\n**Cockpit** (Cockpit) — zona deschisa de sub nivelul puntii, care este intr-o anumita masura protejata\n**Cambuza** (Galley) — bucataria unei ambarcatiuni\n**Santina** (Bilge) — partea cea mai de jos a unei ambarcatiuni proiectata sa colecteze apa care intra in ambarcatiune\n\n\n### Ambarcatiunea poate fi\n\n**Esuata** (Aground) — nava a carei chila sau coca este pe fundul apei\n**In deriva** (Adrift) — miscarea unei ambarcatiuni fara guvernare\n**Rasturnata** (Capsized) — ambarcatiune rasturnata\n\n\n### Principalele accesorii ale unei ambarcatiuni sunt\n\n**Tachet** (Cleat) — piesa care foloseste pentru asigurarea/fixarea unei parame\n**Blocator** (Clutch) — piesa care blocheaza miscarea unei parame\n**Scripeti** (Blocks) — piese care schimba directia de actionare a unei parame sau daca sunt mai multi, pe aceeasi parama, demultiplica forta\n**Cange** (Boat Hook) — element cu care se agata mooring-ul\nFairlead = ghidaj de directionare a unei parame;\n**Linia vietii** (Lifeline) — manevra care inconjoara puntea menita sa evite caderea echipajului peste bord\n\n### Despre vant\n\n**Vant adevarat** (True wind) — vantul real care bate intr-un anumit moment\n**Vant aparent** (Apparent wind) — vantul compus din vantul real si viteza ambarcatiunii\n**In vant** — Windward; Sub vant - Leeward\n\nParti componente ale unei ambarcatiuni\n**Timona** (Helm) — roata cu care se manevreaza directia carmei\n**Coca** (Hull) — corpul navei\nCarma - Rudder\n\n\n### Caracteristicile unei ambarcatiuni\n\n**Latimea** (Beam) — latimea unei ambarcatiuni in locul unde aceasta este cea mai lata\n**Deplasamentul** (Displacement) — greutatea apei dizlocata de o ambarcatiune\n**Pescajul** (Draft) — Adancimea unei ambarcatiuni masurata de la linia de plutire pana la cel mai jos punct al acesteia\n\n\n### Roluri si responsabilitati pe barca\n\n**Timonier** (Helmsman) — membru al echipajului responsabil de carmirea barcii\nBowman = membru al echipajului care este responsabil de manevrele executate in prova barcii;\n**Navigator** (Navigator) — membru al echipajului responsabil de navigatie\nTrimmer = membru al echipajului care este responsabil de reglatul velelor\n\n\n### Unitati de masura\n\n**Nod** (Knot) — unitate de masura pentru viteza echivalenta cu 1 mila marina/ora\n\n### Istoric\n\nMarinarii din Antichitate obişnuiau sa estimeze cat de repede se deplasau ambarcaţiunile lor aruncand o bucata de lemn sau un alt obiect care plutea, peste prova (n.r. partea anterioara a navei) şi apoi observand perioada de timp care trecea inainte ca pupa (n.r. partea dinapoi a navei) sa treaca de acel obiect.\nSpre finele secolului 16, marinarii au inceput sa foloseasca un instrument special pentru a estima viteza de navigare a vasului. Noduri erau legate la intervale uniforme pe lungimea unei sfori şi apoi un capat al sforii, care avea ataşat de el o bucata de lemn, era aruncat in urma ambarcaţiunii. Cand vasul se mişca inainte, sforii i se permitea sa se intinda liber pentru o perioada de timp specifica, care era de cele mai multe ori urmarita cu ajutorul unei clepsidre. Dupa aceea, se numarau nodurile care au trecut peste pupa navei era şi numarul rezultat era folosit pentru a calcula viteza ambarcaţiunii.\nAceasta metoda era cunoscuta sub numele de \"buşteanul olandezului\".\n\n**Mila marina** (Nautical mile) — unitate de masura a distantei folosita pe apa egala cu 1852 m\n\n### Istoric\n\nIn 1929, prima Conferinta hidrografica internationala extraordinara (franceza Conférence hydrographique internationale extraordinaire), tinuta in Monaco, a fixat valoarea milei marine la exact 1852 de metri, ceea ce corespunde exact unui minut de arc, adica a 1/60 dintr-un grad al meridianului de longitudine zero.\n\n**Mila terestra** (Terrestrial mile) — unitate de masura a distantei folosita pe pamant egala cu 1609 km\n**Stanjen** (Fathom) — unitate de masura folosita pentru masurarea adancimii apei, 1 fathom = 6 feet\n**Picior** (Feet) — unitate de masura pentru lungime echivaland cu 0.3048 metri\n\n\n### Istoric\n\nDin vremurile cele mai indepartate, corpul uman a fost folosit pentru a furniza baza pentru unitati de lungime. Astfel, piciorul unui barbat alb este de obicei de aproximativ 15,3 % din inaltimea lui, astfel ca o persoana de 180 cm are o lungime a piciorului de aproximativ 275 mm.\n\nIn navigatie,\n\n adancimea se masoara cu sonda;\n viteza se masoara cu lochul;\n presiunea atmosferica se masoara cu barometrul;\n temperatura se masoara cu termometrul si este exprimata in grade Celsius.\n\nManevra usoara!\n\n1.           www.wikipedia.com\n2.           https://istoriiregasite.wordpress.com\n",
+      "content": "Vocabularul de navigatie este complex. Trebuie sa inveti termenii atat in romana cat si in engleza, mai ales daca navighezi in ape internationale.\n\n### Definitii esentiale\n\n**Nava** — orice mijloc plutitor capabil sa fie folosit ca transport pe apa\n**Ambarcatiune de agrement** — ambarcatiune cu motor si/sau vele, cu lungimea de max. 24 m, folosita exclusiv pentru agrement\n**COLREG** (RIPAM) — Regulamentul International de Prevenire a Abordajelor pe Mare\n**RND** — Regulamentul de Navigatie pe Dunare\n\n### Zonele principale ale ambarcatiunii\n\n**Pupa** (Stern) — partea din spate\n**Prova** (Bow) — partea din fata\n**Babord** (Port) — partea stanga\n**Tribord** (Starboard) — partea dreapta\n**Punte** (Deck) — zona superioara\n**Cambuza** (Galley) — bucataria\n**Santina** (Bilge) — partea cea mai de jos, colecteaza apa\n**Cockpit** — zona deschisa de sub nivelul puntii\n\n### Starea ambarcatiunii\n\n**Esuata** (Aground) — chila sau coca e pe fundul apei\n**In deriva** (Adrift) — se misca fara guvernare\n**Rasturnata** (Capsized) — ambarcatiune intoarsa\n\n### Accesorii de bord\n\n**Tachet** (Cleat) — piesa de fixare a paramelor\n**Blocator** (Clutch) — blocheaza miscarea unei parame\n**Scripeti** (Blocks) — schimba directia unei parame sau demultiplica forta\n**Cange** (Boat Hook) — element cu care se agata mooring-ul\n**Linia vietii** (Lifeline) — manevra care inconjoara puntea, previne caderea peste bord\n\n### Vantul\n\n**Vant adevarat** (True wind) — vantul real care bate intr-un moment dat\n**Vant aparent** (Apparent wind) — combinatia dintre vantul real si viteza ambarcatiunii\n**In vant** (Windward) — directia din care bate vantul\n**Sub vant** (Leeward) — directia opusa vantului\n\n### Parti componente\n\n**Timona** (Helm) — roata de manevra a carmei\n**Coca** (Hull) — corpul navei\n**Carma** (Rudder) — elementul care schimba directia\n\n### Caracteristici ale ambarcatiunii\n\n**Latimea** (Beam) — latimea maxima a ambarcatiunii\n**Deplasamentul** (Displacement) — greutatea apei dislocate de ambarcatiune\n**Pescajul** (Draft) — adancimea masurata de la linia de plutire la cel mai jos punct\n\n### Roluri la bord\n\n**Timonier** (Helmsman) — conduce si dirijeaza ambarcatiunea\n**Bowman** — responsabil de manevrele din prova\n**Navigator** — responsabil de navigatie si traseu\n**Trimmer** — responsabil de reglajul velelor\n\n### Unitati de masura\n\n**Nod** (Knot) — unitate de viteza = 1 mila marina/ora\n**Mila marina** (Nautical mile) — 1852 m (corespunde unui minut de arc pe meridian)\n**Mila terestra** — 1609 m\n**Stanjen** (Fathom) — 1.83 m (6 feet), masoara adancimea\n**Picior** (Feet) — 0.3048 m\n\n### Cum se numea instrumentul de masurare a vitezei?\n\nMarinarii din Antichitate aruncau un obiect plutitor in fata navei si masurau cat de repede trecea pe langa ea. In secolul XVI au inventat **busteanul olandezului**: o sfoara cu noduri la intervale egale, legata de o bucata de lemn. Se arunca sfoara in urma navei si se numarau nodurile care treceau de pupa intr-un interval de timp masurat cu clepsidra.\n\n### Instrumente de navigatie\n\n• **Sonda** — masoara adancimea apei\n• **Lochul** — masoara viteza\n• **Barometrul** — masoara presiunea atmosferica\n• **Termometrul** — masoara temperatura (grade Celsius)\n\n### Comenzi esentiale la bord\n\n**Fila** — da drumul usor (fileaza)\n**Vira** — trage\n**Mola** — da drumul complet (elibereaza)\n**La pic** — tine pe pozitie",
       "images": [
         "m1_p7_0.png",
         "m1_p7_1.png",
@@ -273,236 +60,85 @@
       ],
       "quiz": [
         {
-          "question": "Cum influenţează prevederile Regulamentului prescripţiile speciale referitoare la navigaţia în rade, porturi, pe fluvii, lacuri sau căi de navigaţie interioară accesibile navelor maritime? dispoziţiile regulamentului nu trebuie să împiedice aplicarea prescripţiilor speciale stabilite de către autoritatea competentă, dar asemenea prescripţii speciale trebuie să fie cât mai conforme cu prezentele reguli.",
+          "question": "Ce inseamna \"babord\" (Port)?",
           "options": [
-            "autoritatea competentă nu este obligată să ţină seama de prescripţiile Regulamentului.",
-            "în toate situaţiile se vor aplica prevederile Regulamentului."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Când este exonerată o navă, comanantul sau armatorul de consecinţele unei neglijenţe sau de neluarea tuturor măsurilor cerute de o bună practică marinărească? aplicarea regulilor scuteşte nava, comandantul sau armatorul de orice răspundere.",
-          "options": [
-            "conformarea întocmai la prevederile regulii \"navă privilegiată\" scuteşte nava, comandantul sau armatorul de orice răspundere.",
-            "dispoziţiile Regulamentului nu scutesc nava, comandantul sau armatorul de consecinţele unei neglijenţe oarecare în ceea ce priveşte aplicarea Regulamentului sau în ceea ce priveşte luarea tuturor măsurilor cerute de o bună practică marinărească."
+            "Partea din fata a ambarcatiunii",
+            "Partea stanga a ambarcatiunii",
+            "Partea dreapta a ambarcatiunii"
           ],
           "correct": 1
         },
         {
-          "question": "Când sunt permise abateri de la prevederile Regulamentului? în apele naţionale, rade şi în toate apele învecinate accesibile navelor maritime.",
+          "question": "Cum se numeste bucataria pe o ambarcatiune?",
           "options": [
-            "când există pericol de navigaţie, riscul unei coliziuni, precum şi în toate împrejurările deosebite.",
-            "indiferent de situaţie, nu este permisă abaterea de la prevederile Regulamentului."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce se înţelege prin \"navă cu propulsie mecanică\"? orice navă pusă în mişcare de către o maşină.",
-          "options": [
-            "navele care folosesc ca mijloc de propulsie un  motor Diesel.",
-            "toate navele care se pot  deplasa pe apă, cu excepţia navelor cu vele."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce se înţelege prin expresia \"navă cu vele\"? o navă care foloseşte ca mijloc de propulsie forţa vântului.",
-          "options": [
-            "o navă cu propulsie mecanică, care foloseşte şi vele.",
-            "o navă care navigă cu vele, chiar dacă are o maşină proprie, cu condiţia ca aceasta să nu fie folosită."
+            "Santina",
+            "Cambuza",
+            "Cockpit"
           ],
           "correct": 1
         },
         {
-          "question": "Ce se înţelege prin expresia \"navă cu capacitate de manevră redusă\"? o navă a cărei capacitate de manevră conform Regulamentului este limitată prin natura lucrărilor sale şi care, în consecinţă, nu se poate îndepărta din drumul altei nave.",
+          "question": "Cat masoara o mila marina?",
           "options": [
-            "o navă cu avarii accidentale la cârmă şi/sau maşină, în curs de remediere.",
-            "o navă care nu se poate abate din drumul său, datorită unor pericole de navigaţie."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "O navă care nu este nici la ancoră, nici legată la cheu, nici eşuată se consideră: navă \"în marş\".",
-          "options": [
-            "navă în derivă.",
-            "navă care ţine la capă."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Când două nave se consideră în vedere? când se observă  vizual reciproc.",
-          "options": [
-            "numai când una dintre ele poate fi observată vizual de către cealaltă.",
-            "când navele se află în limita de observare cu radarul."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Orice navă trebuie să folosească toate mijloacele disponibile corespunzătoare împrejurărilor şi condiţiilor externe pentru a stabili dacă există: un pericol de eşuare.",
-          "options": [
-            "un pericol iminent.",
-            "un pericol de coliziune."
+            "1609 m",
+            "1852 m",
+            "2000 m"
           ],
           "correct": 1
         },
         {
-          "question": "Când relevmentul compas la o navă care se apropie nu variază în mod apreciabil, se consideră : nave în vedere.",
+          "question": "Ce este pescajul (Draft) unei ambarcatiuni?",
           "options": [
-            "pericol de coliziune.",
-            "nave cu drumuri opuse."
+            "Latimea maxima a ambarcatiunii",
+            "Greutatea apei dislocate de ambarcatiune",
+            "Adancimea masurata de la linia de plutire la cel mai jos punct"
           ],
-          "correct": 0
+          "correct": 2
         },
         {
-          "question": "Cum trebuie să se execute schimbările de drum şi/sau de viteză pentru evitarea ueni coliziuni? schimbări mici de drum şi/sau de viteză, pentru a nu devia prea mult de la drumul navei.",
+          "question": "Ce masoara lochul?",
           "options": [
-            "schimbări destul de mari de viteză şi mici de drum, pentru  a nu devia prea mult de la drumul navei.",
-            "dacă împrejurările permit, să fie destul de mare, pentru a putea fi percepută imediat de orice navă care o observă vizual sau cu radarul."
+            "Adancimea apei",
+            "Viteza ambarcatiunii",
+            "Presiunea atmosferica"
           ],
           "correct": 1
         },
         {
-          "question": "Nava trebuie să navige pe banda de navigaţie corespunzătoare în direcţia generală a traficului şi să se îndepărteze,în măsura posibilului, de linia  sau zona de separare a sensurilor de trafic atunci când trebuie să navige: în exteriorul unei scheme de separare a traficului.",
+          "question": "Ce inseamna comanda \"Mola\"?",
           "options": [
-            "în interiorul unei scheme de separare a traficului.",
-            "în interiorul unei benzi de separaţie."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Cum trebuie să întretaie o navă benzile de separaţie, când este obligată să o facă? sub un unghi cât mai mic faţă de direcţia generală a traficului şi cu viteza redusă.",
-          "options": [
-            "sub un unghi cât mai mic faţă de direcţia generală a traficului şi cu viteză maximă.",
-            "pe cât posibil perpendicular faţă de direcţia generală a traficului."
+            "Trage parama",
+            "Da drumul complet (elibereaza)",
+            "Tine pe pozitie"
           ],
           "correct": 1
         },
         {
-          "question": "Cum trebuie să navige navele care nu folosesc o schemă de separare a traficului? să folosească zonele de navigaţie costieră.",
+          "question": "Ce este vantul aparent?",
           "options": [
-            "să se îndepărteze cât mai mult de zona de separare a traficului.",
-            "să navige în apropiere, dar să nu intersecteze linia de separare."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce navă trebuie să se abată din drumul navei  ajunsă  din urmă? nava care se află la o distanţă de 200 m.",
-          "options": [
-            "nava care se află la o distanţă de 100 m.",
-            "nava care ajunge din urmă."
+            "Vantul real care bate intr-un moment dat",
+            "Combinatia dintre vantul real si viteza ambarcatiunii",
+            "Directia opusa vantului"
           ],
           "correct": 1
         },
         {
-          "question": "Din drumul căror nave trebuie să se abată o navă cu propulsie mecanică în marş? navelor cu vele.",
+          "question": "Cat masoara un stanjen (Fathom)?",
           "options": [
-            "velierelor care navigă numai cu maşina.",
-            "velierelor care poartă la prova un semn conic negru, cu vârful în jos."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Din drumul căror nave trebuie să se abată o navă cu vele în marş? navelor frigorifice cu viteză mare.",
-          "options": [
-            "navelor petroliere.",
-            "navelor cu capacitate de manevră redusă."
+            "0.3048 m",
+            "1.83 m",
+            "1852 m"
           ],
           "correct": 1
         },
         {
-          "question": "Din drumul căror nave trebuie să se abată o navă stânjenită de pescajul său? navelor cu vele.",
+          "question": "Ce rol are timonierul (Helmsman) la bord?",
           "options": [
-            "navelor nestăpâne pe manevra lor.",
-            "navelor petrolier sau navelor care transportă gaze lichefiate."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Când se vor respecta regulile referitoare la \"lumini şi semne\"? în marş ziua şi noaptea.",
-          "options": [
-            "pe orice vreme.",
-            "în staţionare ziua şi noaptea."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Când se vor respecta regulile referitoare la semne? în timpul crepusculului.",
-          "options": [
-            "pe timpul zilei.",
-            "ziua sau noaptea, când sunt iluminate."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Ce se înţelege prin expresia \"lumină de bord\"? lumină verde din tribord şi lumină roşie din babord, vizibile pe un arc de 112°5, adică la prova până la 22°5 înapoia traversului.",
-          "options": [
-            "lumină albă din borduri, de la scările de acces.",
-            "lumină albă de la scările exterioare."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Trei lumini în poziţie verticală din care luminile de sus şi de jos roşii şi lumina din mijloc albă sunt luminile purtate de o navă: cu capacitate de manevră redusă când nu este în marş.",
-          "options": [
-            "nestăpână pe manevra sa.",
-            "stânjenită de pescajul ei când nu este în marş."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Lumina neîntreruptă pe un arc de orizont de 360° este: lumina de catarg.",
-          "options": [
-            "lumină cu sclipiri regulate.",
-            "lumină vizibilă pe întreg orizontul."
+            "Este responsabil de manevrele din prova",
+            "Conduce si dirijeaza ambarcatiunea",
+            "Este responsabil de reglajul velelor"
           ],
           "correct": 1
-        },
-        {
-          "question": "Ce se înţelege prin expresia \"lumină  vizibilă pe întreg orizontul\"? lumină neîntreruptă pe un arc de de orizont de 360°",
-          "options": [
-            "lumină neîntreruptă vizibilă la prova şi în borduri.",
-            "lumină neîntreruptă vizibilă pe un arc de orizont de 180°"
-          ],
-          "correct": 0
-        },
-        {
-          "question": "O bulă la prova şi trei semne dispuse vertical, dintre care semnul superior şi inferior bule şi cel din mijloc bicon, montate în locul cel mai vizibil sunt semnele purtate de o navă: cu capacitate de manevră redusă la ancoră.",
-          "options": [
-            "stânjenită de pescajul ei la ancoră.",
-            "nestăpână pe manevră la ancoră."
-          ],
-          "correct": 0
-        },
-        {
-          "question": "Un cilindru negru reprezintă semnul purtat de o navă: stânjenită de pescajul său.",
-          "options": [
-            "cu capacitate de manevră redusă.",
-            "nestăpână pe manevră"
-          ],
-          "correct": 0
-        },
-        {
-          "question": "La ce distanţă trebuie să se vadă lumina din pupa pentru navele cu o lungime mai mică de 12 m? 3 Mm.",
-          "options": [
-            "1,5 Mm.",
-            "2 Mm."
-          ],
-          "correct": 1
-        },
-        {
-          "question": "Ce lumini trebuie să poarte o navă cu pernă de aer în exploatare fără pescaj? aceleaşi lumini ca o navă cu propulsie mecanică în marş.",
-          "options": [
-            "o lumină galbenă cu sclipiri vizibile pe tot orizontul.",
-            "luminile unei nave cu propulsie mecanică în marş plus o lumină galbenă cu sclipiri vizibilă pe tot orizontul."
-          ],
-          "correct": 1
-        },
-        {
-          "question": "La ce distanţă trebuie să se vadă lumina albă vizibilă pe tot orizontul, a unei nave sau obiect de formă nedefinită, parţial în imersiune, care este remorcat? 3 Mm.",
-          "options": [
-            "2Mm.",
-            "1 Mm."
-          ],
-          "correct": 0
         }
       ]
     }

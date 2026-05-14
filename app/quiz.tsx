@@ -40,6 +40,9 @@ import Svg, { Circle, Line, Polygon, Text as SvgText, G } from "react-native-svg
 import {
   getExamQuestions,
   getAllQuestions,
+  getPracticeQuestions,
+  genShuffleOrder,
+  applyOptionOrder,
   allQuestions,
   Question,
   Topic,
@@ -62,12 +65,16 @@ import {
   BADGE_DEFS,
 } from "../src/lib/gamification";
 import { AdBanner } from "../src/components/AdBanner";
+import { ReportButton } from "../src/components/ReportButton";
+import { QuestionImage } from "../src/components/QuestionImage";
+import { recordAnswer, pickAdaptive } from "../src/lib/questionStats";
 import { showInterstitial } from "../src/lib/ads";
 
 type Mode = "exam" | "practice" | "learn";
 
 export default function QuizScreen() {
-  const { mode, sessionId, topic, license, examType } = useLocalSearchParams<{ mode: Mode; sessionId?: string; topic?: Topic; license?: License; examType?: ExamType }>();
+  const { mode, sessionId, topic, license, examType, adaptive } = useLocalSearchParams<{ mode: Mode; sessionId?: string; topic?: Topic; license?: License; examType?: ExamType; adaptive?: string }>();
+  const isAdaptive = adaptive === "1";
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { theme: colors } = useTheme();
@@ -83,11 +90,19 @@ export default function QuizScreen() {
   // (anti-overlap memory) from AsyncStorage first.
   const questions = useMemo<Question[]>(() => {
     if (mode === "exam") return [];
+    if (isAdaptive) return []; // built async in init effect
     const filters: { topic?: Topic; license?: License } = {};
     if (topic) filters.topic = topic;
     if (license) filters.license = license;
-    return getAllQuestions(Object.keys(filters).length > 0 ? filters : undefined);
-  }, [mode, topic, license, examType]);
+    const filterArg = Object.keys(filters).length > 0 ? filters : undefined;
+    // Practice shuffles the question ORDER here; the per-question option
+    // permutation is generated later in the init effect so it can be saved
+    // alongside the session and reapplied on resume. Learn-mode keeps the
+    // DB-id order so the lesson narrative reads naturally.
+    return mode === "practice"
+      ? getPracticeQuestions(filterArg)
+      : getAllQuestions(filterArg);
+  }, [mode, topic, license, examType, isAdaptive]);
 
   const [questionList, setQuestionList] = useState<Question[]>(questions);
   const [index, setIndex] = useState(0);
@@ -112,8 +127,15 @@ export default function QuizScreen() {
           const sessions: ActiveSession[] = JSON.parse(raw);
           const existing = sessions.find((s) => s.id === sessionId);
           if (existing) {
-            const restored = existing.questionIds.map((id) => allQuestions[id]).filter(Boolean);
-            if (restored.length > 0) {
+            const restoredRaw = existing.questionIds.map((id) => allQuestions[id]).filter(Boolean);
+            if (restoredRaw.length > 0) {
+              // Re-apply the saved option permutations so the user's stored
+              // answers still line up with the choices they originally saw.
+              // Legacy sessions (no optionOrders) get identity permutations.
+              const orders = existing.optionOrders;
+              const restored = restoredRaw.map((q, i) =>
+                orders && orders[i] ? applyOptionOrder(q, orders[i]) : q,
+              );
               setQuestionList(restored);
               setIndex(existing.currentIndex);
               setAnswers(existing.answers);
@@ -131,16 +153,29 @@ export default function QuizScreen() {
     }
 
     async function startFreshSession(sid: string) {
-      let ql: Question[];
+      let baseQl: Question[]; // questions in their canonical option order
       if (mode === "exam") {
         const t: ExamType = examType || "cat-c";
         const recent = await getRecentExamQuestionIds();
-        ql = getExamQuestions(t, recent);
-        // Remember these for future sessions so we don't repeat them.
-        await pushRecentExamQuestionIds(ql.map((q) => q.id));
+        baseQl = getExamQuestions(t, recent);
+        await pushRecentExamQuestionIds(baseQl.map((q) => q.id));
+      } else if (isAdaptive) {
+        baseQl = await pickAdaptive(getAllQuestions(), 20);
       } else {
-        ql = questions;
+        baseQl = questions;
       }
+
+      // For practice + adaptive, generate a per-question option permutation
+      // and save it on the session so resume reapplies the same order. Exam
+      // and learn keep their canonical option order.
+      const shouldShuffleOptions = mode === "practice" || isAdaptive;
+      const optionOrders = shouldShuffleOptions
+        ? baseQl.map((q) => genShuffleOrder(q.options.length))
+        : undefined;
+      const ql = optionOrders
+        ? baseQl.map((q, i) => applyOptionOrder(q, optionOrders[i]))
+        : baseQl;
+
       setQuestionList(ql);
       setAnswers(new Array(ql.length).fill(null));
 
@@ -149,6 +184,7 @@ export default function QuizScreen() {
         id: sid,
         mode: mode || "exam",
         questionIds,
+        optionOrders,
         answers: new Array(ql.length).fill(null),
         currentIndex: 0,
         startedAt: new Date().toISOString(),
@@ -176,6 +212,8 @@ export default function QuizScreen() {
     (optionIndex: number) => {
       if (selected !== null) return;
       setSelected(optionIndex);
+      const currentQ = questionList[index];
+      if (currentQ) recordAnswer(currentQ.id, optionIndex === currentQ.correct);
       setAnswers((prev) => {
         const next = [...prev];
         next[index] = optionIndex;
@@ -189,7 +227,7 @@ export default function QuizScreen() {
       });
       if (isLearn) setShowAnswer(true);
     },
-    [selected, index, isLearn],
+    [selected, index, isLearn, questionList],
   );
 
   const finalizeRef = useRef<(() => Promise<void>) | null>(null);
@@ -391,6 +429,8 @@ export default function QuizScreen() {
           </View>
 
           <Text style={styles.question}>{q.question}</Text>
+          {q.image_path ? <QuestionImage filename={q.image_path} /> : null}
+          <ReportButton target={{ kind: "main", questionId: q.id }} />
 
           <View style={styles.options}>
             {q.options.map((opt, i) => {

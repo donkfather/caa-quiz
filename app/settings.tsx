@@ -8,6 +8,8 @@ import {
   Switch,
   Modal,
   Linking,
+  BackHandler,
+  Platform,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useEffect } from "react";
@@ -18,9 +20,12 @@ import {
   loadSettings,
   saveSettings,
 } from "../src/lib/settings";
-import { redeemVoucher } from "../src/lib/vouchers";
+import Constants from "expo-constants";
+import { forgetDevice, redeemVoucher, validateAdsFree } from "../src/lib/vouchers";
+import { showConsentForm } from "../src/lib/ads";
 import { useTheme } from "../src/lib/ThemeContext";
 import { scheduleStreakReminder, cancelStreakReminder, testNotification } from "../src/lib/notifications";
+import { getQuestionsVersion, onQuestionsUpdated, refreshFromRemote, forceRefreshDebug } from "../src/lib/questionsRemote";
 
 const THEME_OPTIONS: { value: ThemeMode; label: string }[] = [
   { value: "dark", label: "Întunecat" },
@@ -37,10 +42,24 @@ export default function SettingsScreen() {
   const [voucher, setVoucher] = useState("");
   const [redeeming, setRedeeming] = useState(false);
   const [voucherModalVisible, setVoucherModalVisible] = useState(false);
+  const [questionsVersion, setQuestionsVersion] = useState(getQuestionsVersion());
+  const [versionTaps, setVersionTaps] = useState(0);
+  const [forceLoading, setForceLoading] = useState(false);
 
   useEffect(() => {
-    loadSettings().then(setSettings);
+    // Re-validate the ad-free state with the server before showing it, so we
+    // don't display "disabled" when it was already revoked / restored from a
+    // device backup.
+    validateAdsFree().finally(() => loadSettings().then(setSettings));
+    setQuestionsVersion(getQuestionsVersion());
+    refreshFromRemote().then((r) => {
+      if (r.version != null) setQuestionsVersion(r.version);
+    });
+    const unsub = onQuestionsUpdated((v) => setQuestionsVersion(v));
+    return unsub;
   }, []);
+
+  const isPreviewBuild = Constants.expoConfig?.extra?.isPreview === true;
 
   if (!settings) return null;
 
@@ -181,20 +200,22 @@ export default function SettingsScreen() {
       </Pressable>
 
       {/* Dev tools */}
-      {__DEV__ && settings.adsDisabled && (
+      {(__DEV__ || isPreviewBuild) && settings.adsDisabled && (
         <Pressable
           style={{ marginTop: 12, padding: 14, borderRadius: 12, backgroundColor: t.bgCard, alignItems: "center", borderWidth: 1, borderColor: t.border }}
           onPress={async () => {
             const next = { ...settings, adsDisabled: false };
             setSettings(next);
             await saveSettings(next);
-            Alert.alert("Dev", "Reclamele au fost reactivate.");
+            Alert.alert("Reset", "Reclamele au fost reactivate.");
           }}
         >
-          <Text style={{ fontSize: 14, color: t.error, fontWeight: "600" }}>Reactivează reclame (dev)</Text>
+          <Text style={{ fontSize: 14, color: t.error, fontWeight: "600" }}>
+            Reactivează reclame ({isPreviewBuild && !__DEV__ ? "preview" : "dev"})
+          </Text>
         </Pressable>
       )}
-      {__DEV__ && (
+      {(__DEV__ || isPreviewBuild) && (
         <Pressable
           style={{ marginTop: 16, padding: 14, borderRadius: 12, backgroundColor: t.bgCard, alignItems: "center", borderWidth: 1, borderColor: t.border }}
           onPress={testNotification}
@@ -226,12 +247,93 @@ export default function SettingsScreen() {
           <Text style={{ fontSize: 15, color: t.text }}>Termeni și condiții</Text>
           <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
         </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14, borderBottomWidth: 1, borderBottomColor: t.border }}
+          onPress={async () => {
+            const r = await showConsentForm();
+            if (!r.ok) {
+              Alert.alert(
+                "Preferințe reclame",
+                "Nu există preferințe de gestionat pentru regiunea ta.",
+              );
+            }
+          }}
+          accessibilityLabel="Gestionează preferințele de reclame"
+          accessibilityRole="button"
+        >
+          <Text style={{ fontSize: 15, color: t.text }}>Preferințe reclame</Text>
+          <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
+        </Pressable>
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 14 }}
+          onPress={() =>
+            Alert.alert(
+              "Șterge toate datele",
+              "Vei pierde streak-ul, realizările, codurile promoționale activate și setările. Acțiunea nu poate fi anulată.",
+              [
+                { text: "Anulează", style: "cancel" },
+                {
+                  text: "Șterge",
+                  style: "destructive",
+                  onPress: async () => {
+                    await cancelStreakReminder();
+                    await forgetDevice();
+                    if (Platform.OS === "android") {
+                      BackHandler.exitApp();
+                      return;
+                    }
+                    Alert.alert(
+                      "Datele au fost șterse",
+                      "Te rugăm să închizi aplicația complet (glisează în sus din bara de jos) și să o redeschizi.",
+                    );
+                  },
+                },
+              ],
+            )
+          }
+          accessibilityLabel="Șterge toate datele"
+          accessibilityRole="button"
+        >
+          <Text style={{ fontSize: 15, color: t.error }}>Șterge toate datele</Text>
+          <Text style={{ fontSize: 20, color: t.textMuted }}>›</Text>
+        </Pressable>
       </View>
 
       {/* App info */}
       <Text style={[styles.footerText, { color: t.textMuted }]}>
         Chestionare Barca v1.0.0
       </Text>
+      <Pressable
+        onPress={async () => {
+          const next = versionTaps + 1;
+          if (next < 5) {
+            setVersionTaps(next);
+            setTimeout(() => setVersionTaps((cur) => (cur === next ? 0 : cur)), 1500);
+            return;
+          }
+          setVersionTaps(0);
+          setForceLoading(true);
+          const r = await forceRefreshDebug();
+          setForceLoading(false);
+          if (r.ok) {
+            setQuestionsVersion(r.version);
+            Alert.alert("Sincronizat", `Versiunea ${r.version} • ${r.count} întrebări descărcate.`);
+          } else {
+            Alert.alert("Eroare sincronizare", `Pas: ${r.step}\nMotiv: ${r.reason}`);
+          }
+        }}
+        accessibilityLabel="Versiune întrebări"
+        accessibilityHint="Apasă de 5 ori pentru a forța sincronizarea"
+      >
+        <Text style={[styles.footerText, { color: t.textMuted, marginTop: 4 }]}>
+          {forceLoading
+            ? "Se sincronizează…"
+            : questionsVersion > 0
+              ? `Întrebări v${questionsVersion}`
+              : "Întrebări (versiune locală)"}
+          {versionTaps > 0 && versionTaps < 5 ? `  (${5 - versionTaps})` : ""}
+        </Text>
+      </Pressable>
     </View>
 
     {/* Voucher Modal */}

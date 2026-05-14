@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Question conflict review · CAA Quiz</title>
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+<style>
+  :root {
+    --bg: #0a0e14;
+    --panel: #0f141c;
+    --panel2: #141b25;
+    --line: #1f2733;
+    --muted: #7a8493;
+    --text: #e6edf3;
+    --accent: #22d3ee;
+    --ok: #22c55e;
+    --warn: #f59e0b;
+    --bad: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background: radial-gradient(1200px 600px at 80% -10%, #142031 0, transparent 60%),
+                radial-gradient(900px 500px at -10% 100%, #0d1922 0, transparent 60%),
+                var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  .layout { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; }
+  aside {
+    border-right: 1px solid var(--line);
+    background: rgba(15,20,28,.6); backdrop-filter: blur(8px);
+    padding: 20px 14px; overflow-y: auto; max-height: 100vh; position: sticky; top: 0;
+  }
+  aside h1 { font-size: 16px; margin: 0 0 4px; }
+  aside .sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  aside .progress { background: var(--panel2); border-radius: 999px; height: 6px; overflow: hidden; margin-bottom: 12px; }
+  aside .progress > span { display: block; height: 100%; background: linear-gradient(90deg, var(--ok), var(--accent)); transition: width .3s; }
+  aside .filter { display: flex; gap: 4px; margin-bottom: 12px; flex-wrap: wrap; }
+  aside .filter button {
+    background: var(--panel2); border: 1px solid var(--line); color: var(--muted);
+    border-radius: 999px; padding: 4px 10px; font-size: 11px; cursor: pointer;
+  }
+  aside .filter button.active { color: var(--text); border-color: var(--accent); background: rgba(34,211,238,.08); }
+  ul.list { list-style: none; padding: 0; margin: 0; }
+  ul.list li {
+    padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 13px;
+    border: 1px solid transparent; line-height: 1.35; margin-bottom: 4px;
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+  ul.list li:hover { background: rgba(255,255,255,.03); }
+  ul.list li.active { background: var(--panel2); border-color: var(--line); }
+  ul.list li.decided .text { opacity: .55; }
+  .badge {
+    flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 600;
+  }
+  .badge.pending { background: var(--panel2); color: var(--muted); border: 1px solid var(--line); }
+  .badge.done    { background: rgba(34,197,94,.12); color: var(--ok); border: 1px solid rgba(34,197,94,.4); }
+  .badge.skipped { background: rgba(245,158,11,.12); color: var(--warn); border: 1px solid rgba(245,158,11,.4); }
+  .badge.both    { background: rgba(34,211,238,.12); color: var(--accent); border: 1px solid rgba(34,211,238,.4); }
+  .kind {
+    display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 4px;
+    margin-right: 6px; vertical-align: 1px; font-weight: 500;
+  }
+  .kind.existing_disagrees { background: rgba(239,68,68,.12); color: var(--bad); }
+  .kind.correct_answer    { background: rgba(245,158,11,.12); color: var(--warn); }
+  .kind.option_set        { background: rgba(34,211,238,.10); color: var(--accent); }
+
+  main { padding: 28px 32px; min-width: 0; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+  .nav-btns { display: flex; gap: 6px; }
+  button.btn {
+    background: var(--panel2); border: 1px solid var(--line); color: var(--text);
+    padding: 6px 12px; border-radius: 8px; font-size: 13px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  button.btn:hover { background: var(--panel); }
+  button.btn.primary { background: rgba(34,211,238,.1); border-color: rgba(34,211,238,.4); color: var(--accent); }
+  button.btn.warn { background: rgba(245,158,11,.1); border-color: rgba(245,158,11,.4); color: var(--warn); }
+  button.btn.bad { background: rgba(239,68,68,.1); border-color: rgba(239,68,68,.4); color: var(--bad); }
+
+  h2 { font-size: 20px; margin: 0 0 18px; line-height: 1.4; font-weight: 500; }
+  .cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card.chosen { border-color: var(--ok); box-shadow: 0 0 0 1px var(--ok) inset; }
+  .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .card-label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .card-source { font-size: 11px; font-family: ui-monospace, monospace; color: var(--muted); }
+  .card-q { font-size: 14px; line-height: 1.5; color: var(--text); }
+  .card-q[contenteditable="true"] { outline: 1px dashed var(--accent); background: rgba(34,211,238,.04); padding: 4px; border-radius: 6px; }
+  ul.opts { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  .opt {
+    border: 1px solid var(--line); padding: 10px 12px; border-radius: 8px;
+    font-size: 13px; line-height: 1.45; cursor: pointer; user-select: none;
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--panel2);
+  }
+  .opt[contenteditable="true"] { outline: 1px dashed var(--accent); }
+  .opt .marker {
+    width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+    border: 1px solid var(--line); margin-top: 1px;
+    display: flex; align-items: center; justify-content: center; font-size: 10px;
+  }
+  .opt.correct { background: rgba(34,197,94,.07); border-color: rgba(34,197,94,.4); }
+  .opt.correct .marker { background: var(--ok); border-color: var(--ok); color: #06210e; }
+  .card-actions { display: flex; gap: 6px; margin-top: 8px; }
+  .empty {
+    text-align: center; padding: 80px 0; color: var(--muted); font-size: 14px;
+  }
+  .help { color: var(--muted); font-size: 11px; margin-left: 8px; }
+  kbd {
+    background: var(--panel2); border: 1px solid var(--line); border-bottom-width: 2px;
+    padding: 1px 6px; border-radius: 4px; font-size: 10px; font-family: ui-monospace, monospace;
+  }
+  .editing { font-size: 11px; color: var(--accent); margin-left: 6px; }
+  details summary { cursor: pointer; color: var(--muted); font-size: 12px; padding: 6px 0; }
+  pre { background: var(--panel2); padding: 10px; border-radius: 8px; overflow: auto; font-size: 11px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <h1>Conflict review</h1>
+    <div class="sub" id="status">Loading…</div>
+    <div class="progress"><span id="progress" style="width:0"></span></div>
+    <div class="filter" id="filter">
+      <button data-f="all" class="active">All</button>
+      <button data-f="pending">Pending</button>
+      <button data-f="done">Done</button>
+      <button data-f="existing_disagrees">App vs PDF</button>
+      <button data-f="correct_answer">C vs D answer</button>
+      <button data-f="option_set">C vs D options</button>
+    </div>
+    <ul class="list" id="list"></ul>
+    <div style="margin-top: 16px;">
+      <button class="btn primary" id="finalize">Generate final JSON</button>
+    </div>
+    <div class="help" style="margin-top:12px; line-height:1.7">
+      <kbd>1</kbd>–<kbd>3</kbd> pick<br>
+      <kbd>S</kbd> skip · <kbd>U</kbd> undo<br>
+      <kbd>←</kbd> <kbd>→</kbd> navigate<br>
+      <kbd>E</kbd> edit chosen
+    </div>
+  </aside>
+
+  <main id="main">
+    <div class="empty">Loading conflicts…</div>
+  </main>
+</div>
+
+<script>
+const KIND_LABEL = {
+  existing_disagrees: "Existing JSON disagrees with PDF",
+  correct_answer:    "C and D pick different correct answers",
+  option_set:        "C and D have different option text",
+};
+
+let conflicts = [];
+let decisions = {};
+let cursor = 0;
+let filter = "all";
+let editingCard = null;
+
+async function load() {
+  [conflicts, decisions] = await Promise.all([
+    fetch("/api/conflicts").then(r => r.json()),
+    fetch("/api/decisions").then(r => r.json()),
+  ]);
+  render();
+}
+
+function visibleConflicts() {
+  return conflicts.filter(c => {
+    const dec = decisions[c.id];
+    if (filter === "all") return true;
+    if (filter === "pending") return !dec;
+    if (filter === "done") return !!dec;
+    return c.kind === filter;
+  });
+}
+
+function render() {
+  renderList();
+  renderMain();
+  renderStatus();
+}
+
+function renderStatus() {
+  const total = conflicts.length;
+  const done = Object.keys(decisions).length;
+  document.getElementById("status").textContent = `${done} of ${total} decided`;
+  document.getElementById("progress").style.width = `${(done/total)*100}%`;
+}
+
+function renderList() {
+  const ul = document.getElementById("list");
+  const visible = visibleConflicts();
+  ul.innerHTML = visible.map((c, i) => {
+    const dec = decisions[c.id];
+    const isActive = c.id === conflicts[cursor]?.id;
+    const status = !dec ? "pending"
+      : (dec.choice === "skip" ? "skipped"
+      : dec.choice === "both" ? "both"
+      : "done");
+    const badgeChar = status === "done" ? "✓"
+      : status === "skipped" ? "—"
+      : status === "both" ? "⊕"
+      : "";
+    return `
+      <li class="${isActive ? "active" : ""} ${dec ? "decided" : ""}" data-id="${c.id}">
+        <span class="badge ${status}">${badgeChar}</span>
+        <span class="text">
+          <span class="kind ${c.kind}">${c.kind.split("_").map(w => w[0]).join("").toUpperCase()}</span>
+          ${escapeHtml(c.title.slice(0, 80))}${c.title.length > 80 ? "…" : ""}
+        </span>
+      </li>`;
+  }).join("");
+  ul.querySelectorAll("li").forEach(li => {
+    li.addEventListener("click", () => {
+      const id = li.getAttribute("data-id");
+      const idx = conflicts.findIndex(c => c.id === id);
+      if (idx >= 0) { cursor = idx; render(); }
+    });
+  });
+}
+
+function renderMain() {
+  const main = document.getElementById("main");
+  const c = conflicts[cursor];
+  if (!c) {
+    main.innerHTML = `<div class="empty">No conflicts to show.</div>`;
+    return;
+  }
+  const dec = decisions[c.id];
+  const chosenIdx = (dec && typeof dec.choice === "number") ? dec.choice : -1;
+
+  main.innerHTML = `
+    <div class="topbar">
+      <div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em">
+          ${KIND_LABEL[c.kind]} · ${cursor + 1} / ${conflicts.length}
+        </div>
+      </div>
+      <div class="nav-btns">
+        <button class="btn" id="prev">←</button>
+        <button class="btn" id="next">→</button>
+        ${c.kind !== "existing_disagrees"
+          ? `<button class="btn primary" id="both" title="Keep both as separate questions">Keep both (B)</button>`
+          : ""}
+        <button class="btn warn" id="skip">Skip (S)</button>
+        <button class="btn bad"  id="undo" ${dec ? "" : "disabled"}>Undo (U)</button>
+      </div>
+    </div>
+
+    <h2>${escapeHtml(c.title)}</h2>
+    ${dec ? `<div style="margin:-10px 0 14px;font-size:12px;color:var(--muted)">
+      Current decision: <span style="color:var(--accent)">${
+        dec.choice === "skip" ? "skipped"
+        : dec.choice === "both" ? "keep BOTH versions"
+        : `picked card ${dec.choice + 1} (${c.cards[dec.choice]?.label})${dec.edited ? " · edited" : ""}`
+      }</span>
+    </div>` : ""}
+
+    <div class="cards">
+      ${c.cards.map((card, i) => renderCard(card, i, chosenIdx === i, c.id)).join("")}
+    </div>
+
+    <details style="margin-top:24px">
+      <summary>Raw conflict + decision JSON</summary>
+      <pre>${escapeHtml(JSON.stringify({ conflict: c, decision: dec ?? null }, null, 2))}</pre>
+    </details>
+  `;
+
+  document.getElementById("prev").onclick = () => navigate(-1);
+  document.getElementById("next").onclick = () => navigate(+1);
+  document.getElementById("skip").onclick = () => decide({ choice: "skip" });
+  document.getElementById("undo").onclick = () => decide({ choice: null });
+  const bothBtn = document.getElementById("both");
+  if (bothBtn) bothBtn.onclick = () => decide({ choice: "both" });
+
+  c.cards.forEach((card, i) => {
+    document.querySelector(`[data-card="${i}"] .pick`)
+      .addEventListener("click", () => decide({ choice: i }));
+    document.querySelector(`[data-card="${i}"] .edit`)
+      .addEventListener("click", () => toggleEdit(i));
+    document.querySelector(`[data-card="${i}"] .save`)
+      .addEventListener("click", () => saveEdit(c, i));
+  });
+}
+
+function renderCard(card, i, chosen, conflictId) {
+  const optHtml = card.options.map((o, oi) => `
+    <li class="opt ${oi === card.correct ? "correct" : ""}" data-oi="${oi}">
+      <span class="marker">${oi === card.correct ? "✓" : ""}</span>
+      <span class="opt-text">${escapeHtml(o)}</span>
+    </li>
+  `).join("");
+
+  const refBits = [];
+  if (card.ref?.license) refBits.push(`license ${card.ref.license}`);
+  if (card.ref?.pdf_id) refBits.push(`pdf #${card.ref.pdf_id}`);
+  if (card.ref?.page) refBits.push(`p.${card.ref.page}`);
+  if (card.ref?.existing_id != null) refBits.push(`existing #${card.ref.existing_id}`);
+  if (card.ref?.topic) refBits.push(card.ref.topic);
+
+  return `
+    <div class="card ${chosen ? "chosen" : ""}" data-card="${i}">
+      <div class="card-head">
+        <div>
+          <div class="card-label">${card.label}</div>
+          <div class="card-source">${refBits.join(" · ") || ""}</div>
+        </div>
+        <div>${chosen ? '<span class="editing">CHOSEN</span>' : ''}</div>
+      </div>
+      <div class="card-q">${escapeHtml(card.question)}</div>
+      <ul class="opts">${optHtml}</ul>
+      <div class="card-actions">
+        <button class="btn primary pick">Use this (${i+1})</button>
+        <button class="btn edit">Edit</button>
+        <button class="btn save" style="display:none">Save edit</button>
+      </div>
+    </div>
+  `;
+}
+
+function toggleEdit(i) {
+  const card = document.querySelector(`[data-card="${i}"]`);
+  const isEditing = card.classList.toggle("editing");
+  const q = card.querySelector(".card-q");
+  q.contentEditable = isEditing;
+  card.querySelectorAll(".opt-text").forEach(el => el.contentEditable = isEditing);
+  card.querySelectorAll(".opt").forEach(el => {
+    el.contentEditable = false;
+    el.addEventListener("click", (e) => {
+      if (!isEditing) return;
+      if (e.target.classList.contains("opt-text")) return;
+      // toggle correct flag on click of marker area
+      card.querySelectorAll(".opt").forEach(x => x.classList.remove("correct"));
+      el.classList.add("correct");
+      card.querySelectorAll(".opt .marker").forEach(m => m.textContent = "");
+      el.querySelector(".marker").textContent = "✓";
+    });
+  });
+  card.querySelector(".save").style.display = isEditing ? "" : "none";
+  card.querySelector(".edit").textContent = isEditing ? "Cancel" : "Edit";
+  if (!isEditing) {
+    // Re-render to discard unsaved edits if user cancels
+    renderMain();
+  }
+}
+
+function saveEdit(conflict, i) {
+  const card = document.querySelector(`[data-card="${i}"]`);
+  const q = card.querySelector(".card-q").innerText.trim();
+  const opts = [...card.querySelectorAll(".opt")];
+  const correct = opts.findIndex(o => o.classList.contains("correct"));
+  const options = opts.map(o => o.querySelector(".opt-text").innerText.trim());
+  const edited = { ...conflict.cards[i], question: q, options, correct, edited: true };
+  decide({ choice: i, edited });
+}
+
+async function decide(payload) {
+  const c = conflicts[cursor];
+  const body = { conflict_id: c.id, ...payload };
+  await fetch("/api/decide", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  if (payload.choice === null) delete decisions[c.id];
+  else decisions[c.id] = body;
+  // Auto-advance to next pending
+  if (payload.choice !== null) {
+    const nextIdx = findNextPending(cursor);
+    if (nextIdx >= 0) cursor = nextIdx;
+  }
+  render();
+}
+
+function findNextPending(from) {
+  for (let i = from + 1; i < conflicts.length; i++) {
+    if (!decisions[conflicts[i].id]) return i;
+  }
+  for (let i = 0; i < from; i++) {
+    if (!decisions[conflicts[i].id]) return i;
+  }
+  return -1;
+}
+
+function navigate(delta) {
+  const next = cursor + delta;
+  if (next >= 0 && next < conflicts.length) {
+    cursor = next;
+    render();
+  }
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.target.isContentEditable) return;
+  if (e.key === "ArrowLeft")  navigate(-1);
+  if (e.key === "ArrowRight") navigate(+1);
+  if (e.key === "s" || e.key === "S") decide({ choice: "skip" });
+  if (e.key === "u" || e.key === "U") decide({ choice: null });
+  if (e.key === "b" || e.key === "B") {
+    const c = conflicts[cursor];
+    if (c && c.kind !== "existing_disagrees") decide({ choice: "both" });
+  }
+  if (/^[1-9]$/.test(e.key)) {
+    const i = parseInt(e.key, 10) - 1;
+    const c = conflicts[cursor];
+    if (c && i < c.cards.length) decide({ choice: i });
+  }
+});
+
+document.getElementById("filter").addEventListener("click", (e) => {
+  const f = e.target.getAttribute("data-f");
+  if (!f) return;
+  filter = f;
+  document.querySelectorAll("#filter button").forEach(b => b.classList.toggle("active", b.getAttribute("data-f") === f));
+  renderList();
+});
+
+document.getElementById("finalize").addEventListener("click", async () => {
+  const r = await fetch("/api/finalize", { method: "POST" }).then(r => r.json());
+  alert(`Wrote final_questions.json\nApplied: ${r.applied}\nSkipped: ${r.skipped}\nDecided: ${r.decided}/${r.total_conflicts}\nFinal: ${r.final_count} questions`);
+});
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+load();
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@ import { loadSettings, saveSettings } from "./settings";
 
 const DEVICE_ID_KEY = "device_id";
 
-async function getDeviceId(): Promise<string> {
+export async function getDeviceId(): Promise<string> {
   let id = await AsyncStorage.getItem(DEVICE_ID_KEY);
   if (!id) {
     id = `${Platform.OS}-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
@@ -45,6 +45,18 @@ const ERROR_MESSAGES: Record<string, string> = {
   used_up: "Codul a fost utilizat de prea multe ori.",
   already_redeemed: "Ai folosit deja acest cod.",
 };
+
+export async function forgetDevice(): Promise<void> {
+  try {
+    const deviceId = await AsyncStorage.getItem(DEVICE_ID_KEY);
+    if (deviceId) {
+      await supabase.rpc("forget_device", { p_device_id: deviceId });
+    }
+  } catch {
+    // Best-effort — even if the server call fails we still wipe locally.
+  }
+  await AsyncStorage.clear();
+}
 
 export async function redeemVoucher(code: string): Promise<RedeemResult> {
   const trimmed = code.trim().toUpperCase();

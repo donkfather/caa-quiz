@@ -1,13 +1,16 @@
 import { Platform } from "react-native";
 import Constants from "expo-constants";
 import mobileAds, {
+  AdsConsent,
+  AdsConsentStatus,
   InterstitialAd,
   AdEventType,
   TestIds,
 } from "react-native-google-mobile-ads";
 import { loadSettings } from "./settings";
 
-const USE_TEST_ADS = Constants.expoConfig?.extra?.useTestAds === true;
+const USE_TEST_ADS =
+  __DEV__ || Constants.expoConfig?.extra?.useTestAds === true;
 
 const BANNER_ID = USE_TEST_ADS
   ? TestIds.BANNER
@@ -39,6 +42,30 @@ export async function waitForAds(): Promise<boolean> {
   return adsInitialized;
 }
 
+async function requestConsentIfNeeded(): Promise<void> {
+  try {
+    const info = await AdsConsent.requestInfoUpdate();
+    if (
+      info.isConsentFormAvailable &&
+      info.status === AdsConsentStatus.REQUIRED
+    ) {
+      await AdsConsent.showForm();
+    }
+  } catch (e) {
+    if (__DEV__) console.warn("UMP consent flow failed:", e);
+  }
+}
+
+export async function showConsentForm(): Promise<{ ok: boolean; reason?: string }> {
+  try {
+    await AdsConsent.showPrivacyOptionsForm();
+    return { ok: true };
+  } catch (e: any) {
+    if (__DEV__) console.warn("UMP showPrivacyOptionsForm failed:", e);
+    return { ok: false, reason: e?.message ?? String(e) };
+  }
+}
+
 export async function initAds(): Promise<void> {
   if (adsInitialized) return;
   if (initPromise) return initPromise;
@@ -48,6 +75,7 @@ export async function initAds(): Promise<void> {
       const settings = await loadSettings();
       if (settings.adsDisabled) return;
 
+      await requestConsentIfNeeded();
       await mobileAds().initialize();
       adsInitialized = true;
     } catch (e) {

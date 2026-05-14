@@ -80,6 +80,10 @@ export interface ActiveSession {
   id: string;
   mode: string;
   questionIds: number[]; // indices into allQuestions
+  /** Per-question option permutation. `optionOrders[i][j] = k` means the j-th
+   * displayed option for question i is the k-th option of the original. Absent
+   * on legacy sessions (treated as identity) and on exam/learn modes. */
+  optionOrders?: number[][];
   answers: (number | null)[]; // user's selected option per question, null = unanswered
   currentIndex: number;
   startedAt: string;

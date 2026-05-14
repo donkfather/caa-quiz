@@ -1,11 +1,23 @@
 import { View, Text, Pressable, StyleSheet, Modal, ScrollView } from "react-native";
 import { useRouter, useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTheme } from "../src/lib/ThemeContext";
-import { EXAM_QUESTION_COUNT, TOTAL_QUESTIONS, TOPIC_LABELS, LICENSE_LABELS, Topic, License, getQuestionCount } from "../src/lib/questions";
-import { getStats, getActiveSessions, getHistory, QuizStats } from "../src/lib/storage";
+import { TOPIC_LABELS, LICENSE_LABELS, Topic, License, ExamType, EXAM_CONFIGS, getQuestionCount, totalQuestions } from "../src/lib/questions";
+import { onQuestionsUpdated } from "../src/lib/questionsRemote";
+import { getStats, getActiveSessions, getHistory, QuizStats, ActiveSession } from "../src/lib/storage";
+import { showInterstitial } from "../src/lib/ads";
 import { getStreak, getUnlockedBadges, BADGE_DEFS, StreakData } from "../src/lib/gamification";
+
+function sessionLabel(s: ActiveSession): string {
+  if (s.mode === "exam") return s.examType ? (EXAM_CONFIGS[s.examType as ExamType]?.shortLabel ?? "Examen") : "Examen";
+  if (s.mode === "practice") {
+    if (s.topic) return TOPIC_LABELS[s.topic as Topic] ?? "Practică";
+    if (s.license) return `Practică ${LICENSE_LABELS[s.license as License] ?? ""}`.trim();
+    return "Practică";
+  }
+  return s.mode;
+}
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -13,15 +25,31 @@ export default function HomeScreen() {
   const { theme: colors } = useTheme();
   const [stats, setStats] = useState<QuizStats | null>(null);
   const [activeSessions, setActiveSessions] = useState(0);
+  const [latestSession, setLatestSession] = useState<ActiveSession | null>(null);
   const [historyCount, setHistoryCount] = useState(0);
   const [streak, setStreak] = useState<StreakData>({ current: 0, best: 0, lastQuizDate: null });
   const [badgeCount, setBadgeCount] = useState(0);
   const [practiceModal, setPracticeModal] = useState(false);
+  const [examModal, setExamModal] = useState(false);
+  // Live total count. The bundled JSON has fewer questions than the most
+  // recent remote bundle, and the remote refresh resolves asynchronously
+  // after first paint — so we re-read on focus and on every remote update.
+  const [total, setTotal] = useState(totalQuestions());
+
+  useEffect(() => {
+    const unsub = onQuestionsUpdated(() => setTotal(totalQuestions()));
+    return unsub;
+  }, []);
 
   useFocusEffect(
     useCallback(() => {
+      setTotal(totalQuestions());
       getStats().then(setStats);
-      getActiveSessions().then((s) => setActiveSessions(s.length));
+      getActiveSessions().then((s) => {
+        setActiveSessions(s.length);
+        const sorted = [...s].sort((a, b) => (b.updatedAt || "").localeCompare(a.updatedAt || ""));
+        setLatestSession(sorted[0] ?? null);
+      });
       getHistory().then((h) => setHistoryCount(h.length));
       getStreak().then(setStreak);
       getUnlockedBadges().then((b) => setBadgeCount(b.size));
@@ -46,7 +74,7 @@ export default function HomeScreen() {
           </Pressable>
         </View>
         <Text style={{ fontSize: 15, color: colors.textSecondary }}>
-          {TOTAL_QUESTIONS} întrebări pentru examenul CAA — Clasa C și D
+          {total} întrebări pentru examenul CAA — Clasa C și D
         </Text>
       </View>
 
@@ -98,9 +126,35 @@ export default function HomeScreen() {
 
       {/* Actions */}
       <View style={{ gap: 12 }}>
+        {latestSession && (
+          <Pressable
+            style={{ flexDirection: "row", alignItems: "center", padding: 16, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1.5, borderColor: colors.warning + "88" }}
+            onPress={async () => {
+              const s = latestSession;
+              await showInterstitial();
+              let url = `/quiz?mode=${s.mode}&sessionId=${s.id}`;
+              if (s.topic) url += `&topic=${s.topic}`;
+              if (s.license) url += `&license=${s.license}`;
+              if (s.examType) url += `&examType=${s.examType}`;
+              router.push(url);
+            }}
+            accessibilityLabel="Continuă ultima sesiune"
+            accessibilityRole="button"
+          >
+            <Text style={{ fontSize: 24 }}>↻</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>Continuă ultima sesiune</Text>
+              <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>
+                {sessionLabel(latestSession)} · întrebarea {Math.min(latestSession.currentIndex + 1, latestSession.questionIds.length)}/{latestSession.questionIds.length}
+              </Text>
+            </View>
+            <Text style={{ fontSize: 20, color: colors.textMuted }}>›</Text>
+          </Pressable>
+        )}
+
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", paddingVertical: 22, paddingHorizontal: 18, borderRadius: 14, gap: 14, backgroundColor: colors.primary }}
-          onPress={() => router.push("/quiz?mode=exam")}
+          onPress={() => setExamModal(true)}
           accessibilityLabel="Începe examen"
           accessibilityRole="button"
         >
@@ -108,7 +162,7 @@ export default function HomeScreen() {
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: "#fff" }}>Examen</Text>
             <Text style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", marginTop: 2 }}>
-              {EXAM_QUESTION_COUNT} întrebări aleatorii
+              Categoria C, D sau diferență
             </Text>
           </View>
         </Pressable>
@@ -123,7 +177,7 @@ export default function HomeScreen() {
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Practică</Text>
             <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>
-              Toate {TOTAL_QUESTIONS} întrebările
+              Toate {total} întrebările
             </Text>
           </View>
         </Pressable>
@@ -169,6 +223,39 @@ export default function HomeScreen() {
         </Text>
       </View>
 
+      {/* Exam picker modal */}
+      <Modal visible={examModal} transparent animationType="fade" onRequestClose={() => setExamModal(false)}>
+        <Pressable
+          style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.5)", justifyContent: "flex-end" }}
+          onPress={() => setExamModal(false)}
+        >
+          <Pressable
+            style={{ backgroundColor: colors.bgCard, borderTopLeftRadius: 20, borderTopRightRadius: 20, paddingTop: 20, paddingBottom: insets.bottom + 20, paddingHorizontal: 20, maxHeight: "80%" }}
+            onPress={() => {}}
+          >
+            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 4 }}>Alege examenul</Text>
+            <Text style={{ fontSize: 13, color: colors.textMuted, marginBottom: 16 }}>Examen complet sau de diferență</Text>
+            <ScrollView showsVerticalScrollIndicator={false}>
+              {(Object.values(EXAM_CONFIGS) as typeof EXAM_CONFIGS[ExamType][]).map((cfg) => (
+                <Pressable
+                  key={cfg.type}
+                  style={{ flexDirection: "row", alignItems: "center", padding: 14, borderRadius: 12, backgroundColor: colors.bg, marginBottom: 8 }}
+                  onPress={() => { setExamModal(false); router.push(`/quiz?mode=exam&examType=${cfg.type}`); }}
+                  accessibilityLabel={cfg.label}
+                  accessibilityRole="button"
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 15, fontWeight: "600", color: colors.text }}>{cfg.label}</Text>
+                    <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>{cfg.description}</Text>
+                  </View>
+                  <Text style={{ fontSize: 20, color: colors.textMuted }}>›</Text>
+                </Pressable>
+              ))}
+            </ScrollView>
+          </Pressable>
+        </Pressable>
+      </Modal>
+
       {/* Practice filter modal */}
       <Modal visible={practiceModal} transparent animationType="fade" onRequestClose={() => setPracticeModal(false)}>
         <Pressable
@@ -183,6 +270,18 @@ export default function HomeScreen() {
             <Text style={{ fontSize: 13, color: colors.textMuted, marginBottom: 16 }}>Alege o categorie sau rezolvă totul</Text>
 
             <ScrollView showsVerticalScrollIndicator={false}>
+              {/* Adaptive — weak + unseen */}
+              <Pressable
+                style={{ flexDirection: "row", alignItems: "center", padding: 14, borderRadius: 12, backgroundColor: colors.primary + "18", borderWidth: 1, borderColor: colors.primary + "55", marginBottom: 8 }}
+                onPress={() => { setPracticeModal(false); router.push("/quiz?mode=practice&adaptive=1"); }}
+              >
+                <View style={{ flex: 1 }}>
+                  <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>Antrenament personalizat</Text>
+                  <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>20 întrebări · greșite des + nevăzute</Text>
+                </View>
+                <Text style={{ fontSize: 20, color: colors.primary }}>›</Text>
+              </Pressable>
+
               {/* All questions */}
               <Pressable
                 style={{ flexDirection: "row", alignItems: "center", padding: 14, borderRadius: 12, backgroundColor: colors.bg, marginBottom: 8 }}
@@ -190,7 +289,7 @@ export default function HomeScreen() {
               >
                 <View style={{ flex: 1 }}>
                   <Text style={{ fontSize: 15, fontWeight: "600", color: colors.text }}>Toate întrebările</Text>
-                  <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>{TOTAL_QUESTIONS} întrebări</Text>
+                  <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>{total} întrebări</Text>
                 </View>
                 <Text style={{ fontSize: 20, color: colors.textMuted }}>›</Text>
               </Pressable>

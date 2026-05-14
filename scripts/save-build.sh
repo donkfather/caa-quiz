@@ -24,3 +24,10 @@ fi
 
 cp "$SRC" "$DEST"
 echo "Saved: $DEST"
+
+# Send push notification via ntfy.sh
+PROFILE_CAP=$(echo "${PROFILE:0:1}" | tr '[:lower:]' '[:upper:]')${PROFILE:1}
+curl -s \
+  -H "Title: CAA Quiz - ${PROFILE_CAP} Build" \
+  -d "${PROFILE_CAP} build v${VERSION} (${VCODE}) saved to NAS" \
+  ntfy.sh/bhdit-caa-quiz-builds > /dev/null 2>&1 || true

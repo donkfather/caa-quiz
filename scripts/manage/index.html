@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Question manager · CAA Quiz</title>
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+<style>
+  :root {
+    --bg: #0a0e14;
+    --panel: #0f141c;
+    --panel2: #141b25;
+    --panel3: #1a2230;
+    --line: #1f2733;
+    --line-bright: #2c3a4f;
+    --muted: #7a8493;
+    --muted-bright: #9aa4b3;
+    --text: #e6edf3;
+    --accent: #22d3ee;
+    --accent-soft: rgba(34, 211, 238, .12);
+    --ok: #22c55e;
+    --warn: #f59e0b;
+    --bad: #ef4444;
+    --colreg: #38bdf8;
+    --navigation: #a78bfa;
+    --seamanship: #34d399;
+    --maneuvering: #fb923c;
+    --law: #f472b6;
+    --first_aid: #f87171;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background:
+      radial-gradient(1400px 700px at 85% -15%, #142031 0, transparent 55%),
+      radial-gradient(1000px 600px at -10% 110%, #0e1c25 0, transparent 55%),
+      var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01" 1, "cv11" 1;
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #1c2533; border-radius: 10px; border: 2px solid transparent; background-clip: padding-box; }
+  ::-webkit-scrollbar-thumb:hover { background: #2a3548; background-clip: padding-box; border: 2px solid transparent; }
+
+  /* ──────────────────────── header ──────────────────────── */
+  header.appbar {
+    position: sticky; top: 0; z-index: 50;
+    height: 56px; padding: 0 24px;
+    display: flex; align-items: center; gap: 16px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(10, 14, 20, .85); backdrop-filter: blur(12px);
+  }
+  header.appbar .brand {
+    font-size: 14px; font-weight: 600;
+    display: flex; align-items: center; gap: 10px;
+  }
+  header.appbar .brand-mark {
+    width: 22px; height: 22px; border-radius: 7px;
+    background: linear-gradient(135deg, var(--accent), var(--seamanship));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: #06210e; font-weight: 700;
+  }
+  header.appbar .total {
+    font-size: 12px; color: var(--muted);
+    padding: 4px 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+  }
+  header.appbar .save-status {
+    font-size: 12px; color: var(--muted); margin-left: 8px;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: color .25s;
+  }
+  header.appbar .save-status.dirty { color: var(--warn); }
+  header.appbar .save-status.saved { color: var(--ok); }
+  header.appbar .save-status .dot {
+    width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+    animation: pulse 1.4s ease-in-out infinite alternate;
+  }
+  header.appbar .save-status.saved .dot { animation: none; }
+  @keyframes pulse { from { opacity: .4 } to { opacity: 1 } }
+  header.appbar .right { margin-left: auto; display: flex; gap: 8px; align-items: center; }
+
+  /* ──────────────────────── layout ──────────────────────── */
+  .layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    height: calc(100vh - 56px);
+  }
+  aside.sidebar {
+    border-right: 1px solid var(--line);
+    background: rgba(15, 20, 28, .35);
+    display: flex; flex-direction: column;
+    min-height: 0;
+  }
+  aside .sidebar-head {
+    padding: 14px 14px 8px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(15, 20, 28, .6);
+    backdrop-filter: blur(8px);
+    flex-shrink: 0;
+  }
+  .search-box {
+    position: relative;
+  }
+  .search-box svg {
+    position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+    width: 14px; height: 14px; color: var(--muted); pointer-events: none;
+  }
+  .search-box input {
+    width: 100%; background: var(--panel); border: 1px solid var(--line);
+    color: var(--text); border-radius: 8px; font-size: 13px;
+    padding: 8px 10px 8px 32px; font-family: inherit;
+    transition: border-color .15s;
+  }
+  .search-box input:focus { outline: none; border-color: var(--accent); background: var(--panel2); }
+  .search-box .clear {
+    position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+    background: transparent; border: 0; color: var(--muted); cursor: pointer;
+    padding: 4px; font-size: 14px; border-radius: 4px;
+  }
+  .search-box .clear:hover { color: var(--text); background: var(--panel2); }
+
+  .topic-row {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .topic-pill {
+    background: transparent; border: 1px solid var(--line);
+    color: var(--muted); cursor: pointer;
+    border-radius: 999px; padding: 3px 9px; font-size: 11px;
+    transition: all .15s; display: inline-flex; align-items: center; gap: 5px;
+    font-family: inherit;
+  }
+  .topic-pill:hover { color: var(--text); border-color: var(--line-bright); }
+  .topic-pill.active { color: var(--text); background: var(--accent-soft); border-color: var(--accent); }
+  .topic-pill .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .topic-pill .count { color: var(--muted); font-family: ui-monospace, monospace; font-size: 10px; }
+  .topic-pill.active .count { color: var(--accent); }
+
+  .lic-row {
+    display: flex; gap: 4px; margin-top: 8px;
+  }
+  .lic-pill {
+    flex: 1;
+    background: transparent; border: 1px solid var(--line);
+    color: var(--muted); cursor: pointer;
+    border-radius: 6px; padding: 4px 8px; font-size: 11px;
+    transition: all .15s; font-family: inherit;
+    text-align: center;
+  }
+  .lic-pill:hover { color: var(--text); }
+  .lic-pill.active { color: var(--text); background: var(--accent-soft); border-color: var(--accent); }
+
+  .qlist-scroll { overflow-y: auto; flex: 1; padding: 8px; min-height: 0; }
+  ul.qlist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
+  ul.qlist li {
+    display: grid; grid-template-columns: 3px 1fr; gap: 0;
+    cursor: pointer; border-radius: 8px;
+    overflow: hidden; transition: background .15s;
+    border: 1px solid transparent;
+  }
+  ul.qlist li:hover { background: rgba(255, 255, 255, .025); }
+  ul.qlist li.active {
+    background: var(--panel2); border-color: var(--line-bright);
+  }
+  ul.qlist li .topic-bar { background: var(--muted); transition: background .15s; }
+  ul.qlist li .body {
+    padding: 8px 12px;
+    display: flex; flex-direction: column; gap: 3px;
+    min-width: 0;
+  }
+  ul.qlist li .qtext {
+    font-size: 12.5px; line-height: 1.45;
+    overflow: hidden; text-overflow: ellipsis;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
+  ul.qlist li .meta {
+    display: flex; gap: 4px; align-items: center; flex-wrap: wrap;
+    font-size: 10px; color: var(--muted);
+  }
+  ul.qlist li .lic-tag {
+    padding: 0 4px; border-radius: 3px;
+    background: rgba(255, 255, 255, .04);
+    font-family: ui-monospace, monospace; font-size: 9px;
+    border: 1px solid var(--line);
+  }
+  ul.qlist .empty { padding: 32px 12px; text-align: center; color: var(--muted); font-size: 12px; }
+
+  /* ──────────────────────── main panel ──────────────────────── */
+  main.workspace {
+    display: grid; grid-template-rows: auto 1fr;
+    overflow: hidden; min-height: 0;
+  }
+  .workspace-head {
+    padding: 16px 28px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(15, 20, 28, .35);
+  }
+  .workspace-head h2 {
+    margin: 0; font-size: 18px; font-weight: 500; line-height: 1.4;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .workspace-head .qid {
+    font-family: ui-monospace, monospace; font-size: 11px;
+    color: var(--muted); padding: 2px 8px; border-radius: 4px;
+    background: var(--panel); border: 1px solid var(--line);
+  }
+  .workspace-head .breadcrumbs {
+    font-size: 12px; color: var(--muted); margin-top: 6px;
+    display: flex; gap: 6px; align-items: center;
+  }
+  .workspace-head .breadcrumbs .topic-chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 2px 8px; border-radius: 999px;
+    font-size: 11px; background: var(--panel); border: 1px solid var(--line);
+  }
+  .workspace-head .breadcrumbs .topic-chip .dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  .workspace-scroll { overflow-y: auto; padding: 28px; min-height: 0; }
+  .workspace-grid {
+    display: grid; grid-template-columns: 1fr 280px; gap: 28px;
+    max-width: 1100px; margin: 0 auto;
+  }
+  @media (max-width: 1100px) { .workspace-grid { grid-template-columns: 1fr; } }
+
+  .editor-card, .meta-card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px; display: flex; flex-direction: column; gap: 18px;
+  }
+  .meta-card {
+    align-self: flex-start; position: sticky; top: 0;
+  }
+
+  .field {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .field > .label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--muted); font-weight: 500;
+  }
+  .field > .hint {
+    font-size: 11px; color: var(--muted); margin-top: -2px;
+  }
+
+  textarea, input[type="text"], select {
+    background: var(--panel2); border: 1px solid var(--line); color: var(--text);
+    padding: 10px 12px; border-radius: 8px; font-size: 14px; font-family: inherit;
+    transition: border-color .15s, background .15s;
+    line-height: 1.5;
+  }
+  textarea { resize: vertical; min-height: 80px; }
+  textarea:focus, input:focus, select:focus {
+    outline: none; border-color: var(--accent); background: var(--panel3);
+  }
+
+  /* options editor */
+  .opt-list { display: flex; flex-direction: column; gap: 6px; }
+  .opt-row {
+    display: grid; grid-template-columns: 36px 1fr 32px;
+    align-items: stretch;
+    background: var(--panel2); border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden;
+    transition: all .15s;
+  }
+  .opt-row:focus-within { border-color: var(--accent); }
+  .opt-row.correct {
+    border-color: rgba(34, 197, 94, .55);
+    background: linear-gradient(90deg, rgba(34, 197, 94, .08), rgba(34, 197, 94, .02));
+  }
+  .opt-row .mark {
+    background: transparent; border: 0; cursor: pointer;
+    color: var(--muted); display: flex; align-items: center; justify-content: center;
+    font-size: 12px; transition: all .15s;
+  }
+  .opt-row .mark .circle {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 1.5px solid var(--line-bright);
+    display: flex; align-items: center; justify-content: center;
+    transition: all .15s;
+  }
+  .opt-row .mark:hover .circle { border-color: var(--ok); }
+  .opt-row.correct .mark .circle { background: var(--ok); border-color: var(--ok); color: #06210e; }
+  .opt-row textarea {
+    flex: 1; background: transparent; border: 0; padding: 10px 12px 10px 4px;
+    min-height: 40px; font-size: 14px;
+  }
+  .opt-row textarea:focus { background: transparent; }
+  .opt-row .del {
+    background: transparent; border: 0; color: var(--muted); cursor: pointer;
+    padding: 8px; font-size: 14px;
+  }
+  .opt-row .del:hover { color: var(--bad); }
+  .opt-row .del:disabled { opacity: 0; cursor: default; }
+
+  .add-opt {
+    align-self: flex-start; margin-top: 4px;
+    background: transparent; border: 1px dashed var(--line-bright); color: var(--muted);
+    padding: 8px 14px; border-radius: 8px; font-size: 12px; font-family: inherit;
+    cursor: pointer; transition: all .15s;
+  }
+  .add-opt:hover { color: var(--accent); border-color: var(--accent); border-style: solid; }
+
+  /* meta card */
+  .topic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .topic-choice {
+    background: var(--panel2); border: 1px solid var(--line); color: var(--muted);
+    padding: 8px 10px; border-radius: 8px; cursor: pointer;
+    font-family: inherit; font-size: 12px;
+    display: flex; align-items: center; gap: 7px; transition: all .15s;
+    text-align: left;
+  }
+  .topic-choice:hover { color: var(--text); border-color: var(--line-bright); }
+  .topic-choice.active { color: var(--text); background: var(--panel3); border-color: var(--accent); }
+  .topic-choice .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  .lic-toggle-row { display: flex; gap: 6px; }
+  .lic-toggle {
+    flex: 1; background: var(--panel2); border: 1px solid var(--line);
+    color: var(--muted); cursor: pointer;
+    padding: 9px 10px; border-radius: 8px; font-size: 13px; font-family: inherit;
+    transition: all .15s; text-align: center;
+  }
+  .lic-toggle:hover { color: var(--text); border-color: var(--line-bright); }
+  .lic-toggle.active {
+    color: var(--text); background: var(--panel3); border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent) inset;
+  }
+
+  .danger-zone {
+    border-top: 1px solid var(--line); padding-top: 14px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  /* buttons */
+  button.btn {
+    background: var(--panel2); border: 1px solid var(--line); color: var(--text);
+    padding: 8px 14px; border-radius: 8px; font-size: 13px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 7px; font-family: inherit;
+    font-weight: 500; transition: all .15s; line-height: 1;
+  }
+  button.btn:hover { background: var(--panel3); border-color: var(--line-bright); }
+  button.btn.primary {
+    background: linear-gradient(180deg, rgba(34, 211, 238, .15), rgba(34, 211, 238, .08));
+    border-color: rgba(34, 211, 238, .5); color: var(--accent);
+  }
+  button.btn.primary:hover {
+    background: linear-gradient(180deg, rgba(34, 211, 238, .22), rgba(34, 211, 238, .12));
+  }
+  button.btn.ghost { background: transparent; }
+  button.btn.bad-ghost { background: transparent; border-color: rgba(239, 68, 68, .25); color: var(--bad); }
+  button.btn.bad-ghost:hover { background: rgba(239, 68, 68, .08); border-color: rgba(239, 68, 68, .5); }
+  button.btn:disabled { opacity: .4; cursor: not-allowed; }
+  button.btn.icon { padding: 8px; }
+
+  /* coverage bar */
+  .coverage-strip {
+    display: flex; gap: 8px; align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .cov-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 999px; font-size: 11px;
+    background: var(--panel); border: 1px solid var(--line);
+    color: var(--muted); cursor: default;
+  }
+  .cov-chip.ok { color: var(--ok); border-color: rgba(34, 197, 94, .3); }
+  .cov-chip.bad { color: var(--bad); border-color: rgba(239, 68, 68, .3); }
+  .cov-chip .label { font-family: ui-monospace, monospace; }
+
+  /* empty / placeholder */
+  .placeholder {
+    height: 100%; display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 13px; text-align: center;
+    padding: 60px 20px;
+  }
+  .placeholder svg { opacity: .3; margin-bottom: 12px; }
+
+  /* keyboard shortcuts */
+  .shortcuts {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    color: var(--muted); font-size: 11px;
+    padding: 10px 14px; border-top: 1px solid var(--line);
+    background: rgba(15, 20, 28, .5);
+    flex-shrink: 0;
+  }
+  .shortcuts kbd {
+    background: var(--panel); border: 1px solid var(--line); border-bottom-width: 2px;
+    padding: 1px 6px; border-radius: 4px; font-size: 10px;
+    font-family: ui-monospace, monospace; color: var(--text);
+    margin-right: 3px;
+  }
+
+  /* toasts */
+  #toast-host {
+    position: fixed; bottom: 24px; right: 24px; z-index: 100;
+    display: flex; flex-direction: column; gap: 8px;
+    pointer-events: none; max-width: 420px;
+  }
+  .toast {
+    background: rgba(15, 20, 28, .95); backdrop-filter: blur(12px);
+    border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    padding: 12px 16px; border-radius: 10px;
+    font-size: 13px; line-height: 1.5;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .5);
+    pointer-events: auto;
+    animation: slideIn .25s ease-out;
+  }
+  .toast.ok  { border-left-color: var(--ok); }
+  .toast.bad { border-left-color: var(--bad); }
+  .toast.warn { border-left-color: var(--warn); }
+  .toast b { display: block; margin-bottom: 2px; }
+  .toast pre {
+    margin: 6px 0 0; font-size: 11px; color: var(--muted);
+    white-space: pre-wrap; max-height: 200px; overflow-y: auto;
+    background: var(--panel2); padding: 8px 10px; border-radius: 6px;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(8px) scale(.98); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* deploy modal */
+  .modal-backdrop {
+    position: fixed; inset: 0; background: rgba(0, 0, 0, .6); backdrop-filter: blur(4px);
+    z-index: 200; display: flex; align-items: center; justify-content: center;
+    animation: fadeIn .15s ease-out;
+  }
+  .modal {
+    background: var(--panel); border: 1px solid var(--line-bright); border-radius: 14px;
+    padding: 24px; width: 460px; max-width: 90vw;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+    animation: modalIn .2s ease-out;
+  }
+  .modal h3 { margin: 0 0 8px; font-size: 16px; }
+  .modal p { color: var(--muted); font-size: 13px; line-height: 1.6; margin: 0 0 18px; }
+  .modal .actions { display: flex; gap: 8px; justify-content: flex-end; }
+  @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes modalIn { from { opacity: 0; transform: translateY(8px) scale(.97); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<header class="appbar">
+  <div class="brand">
+    <span class="brand-mark">CQ</span>
+    <span>Question manager</span>
+  </div>
+  <span class="total" id="total-pill">…</span>
+  <span class="save-status" id="save-status"><span class="dot"></span><span class="text">All saved</span></span>
+  <div class="right">
+    <button class="btn ghost" id="new-btn" title="New question (N)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      New
+    </button>
+    <button class="btn primary" id="deploy-btn" title="Deploy to Supabase">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"/><polyline points="5 12 12 5 19 12"/></svg>
+      Deploy
+    </button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search" type="text" placeholder="Search questions and answers…" autocomplete="off" />
+        <button class="clear" id="search-clear" style="display:none">✕</button>
+      </div>
+      <div class="topic-row" id="topic-filter"></div>
+      <div class="lic-row" id="lic-filter">
+        <button class="lic-pill active" data-l="">All licenses</button>
+        <button class="lic-pill" data-l="C">Class C</button>
+        <button class="lic-pill" data-l="D">Class D</button>
+        <button class="lic-pill" data-l="C+D">C ∩ D</button>
+      </div>
+      <div class="coverage-strip" id="coverage"></div>
+    </div>
+
+    <div class="qlist-scroll">
+      <ul class="qlist" id="qlist"></ul>
+    </div>
+
+    <div class="shortcuts">
+      <span><kbd>↑↓</kbd> navigate</span>
+      <span><kbd>N</kbd> new</span>
+      <span><kbd>⌘S</kbd> save</span>
+      <span><kbd>⌘D</kbd> duplicate</span>
+      <span><kbd>⌘⌫</kbd> delete</span>
+    </div>
+  </aside>
+
+  <main class="workspace">
+    <div class="workspace-head">
+      <h2 id="title">
+        <span class="qid" id="qid">—</span>
+        <span id="qtitle">No question selected</span>
+      </h2>
+      <div class="breadcrumbs" id="breadcrumbs"></div>
+    </div>
+
+    <div class="workspace-scroll">
+      <div class="workspace-grid" id="form-host">
+        <div class="placeholder">Select a question from the list, or press <kbd>N</kbd> to create a new one.</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="toast-host"></div>
+
+<script>
+const TOPICS = ["colreg", "navigation", "seamanship", "maneuvering", "first_aid", "law"];
+const TOPIC_COLOR = (t) => `var(--${t})`;
+const LICENSES = ["C", "D"];
+const AUTOSAVE_DELAY = 1500;
+
+let questions = [];
+let stats = null;
+let current = null;        // currently-edited question (mutable copy)
+let currentId = null;
+let dirty = false;
+let saveTimer = null;
+let filterTopic = "all";
+let filterLic = "";
+let searchTerm = "";
+
+// ─────────────── boot ───────────────
+async function boot() {
+  await loadAll();
+  if (questions.length) selectQuestion(questions[0].id);
+  render();
+}
+
+async function loadAll() {
+  [questions, stats] = await Promise.all([
+    fetch("/api/questions").then(r => r.json()),
+    fetch("/api/stats").then(r => r.json()),
+  ]);
+}
+
+// ─────────────── filtering ───────────────
+function visibleQuestions() {
+  const term = searchTerm.toLowerCase();
+  return questions.filter(q => {
+    if (filterTopic !== "all" && q.topic !== filterTopic) return false;
+    if (filterLic === "C" && !(q.license || []).includes("C")) return false;
+    if (filterLic === "D" && !(q.license || []).includes("D")) return false;
+    if (filterLic === "C+D" && !((q.license || []).includes("C") && (q.license || []).includes("D"))) return false;
+    if (term) {
+      const hay = (q.question + " " + q.options.join(" ")).toLowerCase();
+      if (!hay.includes(term)) return false;
+    }
+    return true;
+  });
+}
+
+// ─────────────── rendering ───────────────
+function render() {
+  document.getElementById("total-pill").textContent = `${questions.length} questions`;
+  renderTopicFilter();
+  renderCoverage();
+  renderList();
+  renderEditor();
+  updateSaveStatus();
+}
+
+function renderTopicFilter() {
+  const host = document.getElementById("topic-filter");
+  const items = ["all", ...TOPICS];
+  host.innerHTML = items.map(t => {
+    const count = t === "all" ? questions.length : (stats?.by_topic[t] ?? 0);
+    const dot = t === "all"
+      ? `<span class="dot" style="background:linear-gradient(135deg,var(--accent),var(--seamanship))"></span>`
+      : `<span class="dot" style="background:${TOPIC_COLOR(t)}"></span>`;
+    return `
+      <button class="topic-pill ${t === filterTopic ? "active" : ""}" data-t="${t}">
+        ${dot}<span>${t}</span><span class="count">${count}</span>
+      </button>`;
+  }).join("");
+  host.querySelectorAll(".topic-pill").forEach(b => {
+    b.onclick = () => { filterTopic = b.dataset.t; renderList(); renderTopicFilter(); };
+  });
+}
+
+function renderCoverage() {
+  const host = document.getElementById("coverage");
+  if (!stats) { host.innerHTML = ""; return; }
+  const totalOk = Object.values(stats.coverage).every(c => c.ok);
+  if (totalOk) {
+    host.innerHTML = `<span class="cov-chip ok">✓ All exams covered</span>`;
+  } else {
+    const broken = Object.entries(stats.coverage).filter(([_, c]) => !c.ok);
+    host.innerHTML = broken.map(([exam, c]) => {
+      const short = c.slots.filter(s => !s.ok).map(s => `${s.topic} (${s.have}/${s.need})`).join(", ");
+      return `<span class="cov-chip bad" title="${short}">⚠ ${exam}: ${short}</span>`;
+    }).join("");
+  }
+}
+
+function renderList() {
+  const list = visibleQuestions();
+  const ul = document.getElementById("qlist");
+  if (!list.length) {
+    ul.innerHTML = `<div class="empty">No questions match the current filters.</div>`;
+    return;
+  }
+  ul.innerHTML = list.map(q => {
+    const isActive = q.id === currentId;
+    const licTags = (q.license || []).map(l => `<span class="lic-tag">${l}</span>`).join("");
+    return `
+      <li class="${isActive ? "active" : ""}" data-id="${q.id}">
+        <div class="topic-bar" style="background:${TOPIC_COLOR(q.topic)}"></div>
+        <div class="body">
+          <div class="qtext">${escapeHtml(q.question)}</div>
+          <div class="meta">
+            <span style="color:${TOPIC_COLOR(q.topic)};font-weight:500">${q.topic}</span>
+            <span>·</span>
+            <span>${q.options.length} options</span>
+            ${licTags ? `<span>·</span>${licTags}` : ""}
+          </div>
+        </div>
+      </li>`;
+  }).join("");
+  ul.querySelectorAll("li").forEach(li => {
+    li.onclick = () => selectQuestion(parseInt(li.dataset.id, 10));
+  });
+  // scroll active into view
+  const active = ul.querySelector("li.active");
+  if (active) active.scrollIntoView({ block: "nearest" });
+}
+
+function renderEditor() {
+  const host = document.getElementById("form-host");
+  if (!current) {
+    host.innerHTML = `<div class="placeholder">Select a question from the list, or press <kbd>N</kbd> to create a new one.</div>`;
+    document.getElementById("qid").textContent = "—";
+    document.getElementById("qtitle").textContent = "No question selected";
+    document.getElementById("breadcrumbs").innerHTML = "";
+    return;
+  }
+
+  document.getElementById("qid").textContent = `#${current.id}`;
+  document.getElementById("qtitle").textContent = current.question.slice(0, 80) + (current.question.length > 80 ? "…" : "");
+  document.getElementById("breadcrumbs").innerHTML = `
+    <span class="topic-chip"><span class="dot" style="background:${TOPIC_COLOR(current.topic)}"></span>${current.topic}</span>
+    <span>·</span>
+    <span>${(current.license || []).join(" + ") || "no license"}</span>
+    <span>·</span>
+    <span>${current.options.length} options</span>
+  `;
+
+  host.innerHTML = `
+    <div class="editor-card">
+      <div class="field">
+        <span class="label">Question</span>
+        <textarea id="f-question" placeholder="Întrebarea…">${escapeHtml(current.question)}</textarea>
+      </div>
+
+      <div class="field">
+        <span class="label">Options</span>
+        <span class="hint">Click the circle on the left to mark which option is correct.</span>
+        <div class="opt-list" id="f-options"></div>
+        <button class="add-opt" id="add-opt">+ Add option</button>
+      </div>
+    </div>
+
+    <div class="meta-card">
+      <div class="field">
+        <span class="label">Topic</span>
+        <div class="topic-grid" id="f-topic">
+          ${TOPICS.map(t => `
+            <button class="topic-choice ${t === current.topic ? "active" : ""}" data-t="${t}">
+              <span class="dot" style="background:${TOPIC_COLOR(t)}"></span>${t}
+            </button>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="label">Licenses</span>
+        <div class="lic-toggle-row">
+          ${LICENSES.map(l => `
+            <button class="lic-toggle ${(current.license || []).includes(l) ? "active" : ""}" data-lic="${l}">
+              Class ${l}
+            </button>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="danger-zone">
+        <button class="btn ghost" id="dup-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Duplicate
+        </button>
+        <button class="btn bad-ghost" id="del-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 01-2 2H9a2 2 0 01-2-2L5 6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+          Delete
+        </button>
+      </div>
+    </div>
+  `;
+
+  renderOptionsEditor();
+  attachEditorHandlers();
+}
+
+function renderOptionsEditor() {
+  const host = document.getElementById("f-options");
+  host.innerHTML = current.options.map((opt, i) => `
+    <div class="opt-row ${i === current.correct ? "correct" : ""}" data-i="${i}">
+      <button class="mark" title="Mark as correct"><span class="circle">${i === current.correct ? "✓" : ""}</span></button>
+      <textarea placeholder="Răspuns…">${escapeHtml(opt)}</textarea>
+      <button class="del" title="Remove option" ${current.options.length <= 2 ? "disabled" : ""}>✕</button>
+    </div>
+  `).join("");
+  host.querySelectorAll(".opt-row").forEach((row, i) => {
+    row.querySelector(".mark").onclick = () => { current.correct = i; markDirty(); renderOptionsEditor(); };
+    row.querySelector("textarea").addEventListener("input", e => { current.options[i] = e.target.value; markDirty(); });
+    row.querySelector(".del").onclick = () => {
+      if (current.options.length <= 2) return;
+      current.options.splice(i, 1);
+      if (current.correct >= current.options.length) current.correct = current.options.length - 1;
+      else if (current.correct > i) current.correct--;
+      markDirty();
+      renderOptionsEditor();
+    };
+  });
+}
+
+function attachEditorHandlers() {
+  document.getElementById("f-question").addEventListener("input", e => {
+    current.question = e.target.value;
+    markDirty();
+  });
+  document.getElementById("add-opt").onclick = () => {
+    current.options.push("");
+    markDirty();
+    renderOptionsEditor();
+    // focus the new one
+    setTimeout(() => {
+      const last = document.querySelectorAll(".opt-row textarea");
+      last[last.length - 1]?.focus();
+    }, 0);
+  };
+  document.querySelectorAll(".topic-choice").forEach(b => {
+    b.onclick = () => {
+      current.topic = b.dataset.t;
+      markDirty();
+      document.querySelectorAll(".topic-choice").forEach(x => x.classList.toggle("active", x === b));
+      renderBreadcrumbs();
+    };
+  });
+  document.querySelectorAll(".lic-toggle").forEach(b => {
+    b.onclick = () => {
+      const l = b.dataset.lic;
+      const lics = new Set(current.license || []);
+      if (lics.has(l)) lics.delete(l); else lics.add(l);
+      current.license = [...lics].sort();
+      markDirty();
+      b.classList.toggle("active");
+      renderBreadcrumbs();
+    };
+  });
+  document.getElementById("dup-btn").onclick = () => duplicateCurrent();
+  document.getElementById("del-btn").onclick = () => deleteCurrent();
+}
+
+function renderBreadcrumbs() {
+  document.getElementById("breadcrumbs").innerHTML = `
+    <span class="topic-chip"><span class="dot" style="background:${TOPIC_COLOR(current.topic)}"></span>${current.topic}</span>
+    <span>·</span>
+    <span>${(current.license || []).join(" + ") || "no license"}</span>
+    <span>·</span>
+    <span>${current.options.length} options</span>
+  `;
+}
+
+// ─────────────── selection / dirty / save ───────────────
+function selectQuestion(id) {
+  if (dirty) {
+    flushSave();  // commit pending edits before switching
+  }
+  currentId = id;
+  const q = questions.find(x => x.id === id);
+  current = q ? deepClone(q) : null;
+  dirty = false;
+  render();
+}
+
+function markDirty() {
+  dirty = true;
+  updateSaveStatus();
+  if (saveTimer) clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => flushSave(), AUTOSAVE_DELAY);
+}
+
+function updateSaveStatus() {
+  const el = document.getElementById("save-status");
+  if (!current) {
+    el.className = "save-status";
+    el.querySelector(".text").textContent = "—";
+    return;
+  }
+  if (dirty) {
+    el.className = "save-status dirty";
+    el.querySelector(".text").textContent = "Unsaved changes…";
+  } else {
+    el.className = "save-status saved";
+    el.querySelector(".text").textContent = "Saved";
+  }
+}
+
+async function flushSave() {
+  if (!dirty || !current) return;
+  if (saveTimer) { clearTimeout(saveTimer); saveTimer = null; }
+  const snapshot = deepClone(current);
+  const r = await fetch(`/api/questions/${snapshot.id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(snapshot),
+  });
+  if (!r.ok) {
+    const err = await r.json().catch(() => ({}));
+    toast("bad", "Couldn't save", (err.details || ["unknown error"]).join("\n"));
+    return;
+  }
+  dirty = false;
+  // Refresh local state from server (in case of reordering)
+  await loadAll();
+  // Keep cursor on same question
+  const stillThere = questions.find(q => q.id === snapshot.id);
+  if (stillThere && currentId === stillThere.id) {
+    // re-sync current with what server has
+    current = deepClone(stillThere);
+  }
+  render();
+}
+
+async function duplicateCurrent() {
+  if (dirty) await flushSave();
+  if (!current) return;
+  const copy = { ...deepClone(current) };
+  delete copy.id;
+  const r = await fetch("/api/questions", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(copy),
+  });
+  if (!r.ok) { toast("bad", "Couldn't duplicate"); return; }
+  const created = await r.json();
+  await loadAll();
+  selectQuestion(created.id);
+  toast("ok", "Duplicated");
+}
+
+async function createNew() {
+  if (dirty) await flushSave();
+  const blank = {
+    question: "",
+    options: ["", "", ""],
+    correct: 0,
+    topic: "seamanship",
+    license: ["C"],
+  };
+  const r = await fetch("/api/questions", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...blank, question: "Întrebare nouă" }),
+  });
+  if (!r.ok) { toast("bad", "Couldn't create"); return; }
+  const created = await r.json();
+  await loadAll();
+  selectQuestion(created.id);
+  // focus the question textarea immediately
+  setTimeout(() => {
+    const ta = document.getElementById("f-question");
+    if (ta) { ta.focus(); ta.select(); }
+  }, 50);
+}
+
+async function deleteCurrent() {
+  if (!current) return;
+  if (!confirm(`Delete this question?\n\n"${current.question.slice(0, 100)}${current.question.length > 100 ? "…" : ""}"`)) return;
+  const id = current.id;
+  const r = await fetch(`/api/questions/${id}`, { method: "DELETE" });
+  if (!r.ok) { toast("bad", "Couldn't delete"); return; }
+  toast("ok", "Deleted");
+  dirty = false;
+  await loadAll();
+  // pick the next question if any
+  const idx = questions.findIndex(q => q.id >= id);
+  if (questions.length) selectQuestion(questions[Math.min(idx, questions.length - 1)].id);
+  else { current = null; currentId = null; render(); }
+}
+
+// ─────────────── deploy ───────────────
+async function deployFlow() {
+  if (dirty) await flushSave();
+  const ok = await confirmModal({
+    title: "Deploy to Supabase?",
+    body: `Publishes all ${questions.length} questions as a new version. The next time anyone opens the app with internet, they'll receive these.`,
+    confirmText: "Deploy",
+  });
+  if (!ok) return;
+  const btn = document.getElementById("deploy-btn");
+  btn.disabled = true;
+  const oldHtml = btn.innerHTML;
+  btn.innerHTML = `<span class="dot" style="background:currentColor;animation:pulse 1s infinite alternate;width:6px;height:6px;border-radius:50%"></span>Deploying…`;
+  try {
+    const r = await fetch("/api/deploy", { method: "POST" });
+    const out = await r.json();
+    if (out.ok) toast("ok", "Deployed", (out.stdout || "").trim());
+    else        toast("bad", "Deploy failed", (out.stderr || out.error || "").trim());
+  } catch (e) {
+    toast("bad", "Deploy failed", String(e));
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = oldHtml;
+  }
+}
+
+// ─────────────── search ───────────────
+const searchEl = document.getElementById("search");
+searchEl.addEventListener("input", () => {
+  searchTerm = searchEl.value;
+  document.getElementById("search-clear").style.display = searchTerm ? "" : "none";
+  renderList();
+});
+document.getElementById("search-clear").onclick = () => {
+  searchEl.value = ""; searchTerm = "";
+  document.getElementById("search-clear").style.display = "none";
+  renderList(); searchEl.focus();
+};
+document.getElementById("lic-filter").querySelectorAll(".lic-pill").forEach(b => {
+  b.onclick = () => {
+    filterLic = b.dataset.l;
+    document.querySelectorAll("#lic-filter .lic-pill").forEach(x => x.classList.toggle("active", x === b));
+    renderList();
+  };
+});
+document.getElementById("new-btn").onclick = () => createNew();
+document.getElementById("deploy-btn").onclick = () => deployFlow();
+
+// ─────────────── shortcuts ───────────────
+document.addEventListener("keydown", e => {
+  const inField = e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT" || e.target.tagName === "SELECT";
+  const cmd = e.metaKey || e.ctrlKey;
+
+  if (cmd && (e.key === "s" || e.key === "S")) { e.preventDefault(); flushSave(); return; }
+  if (cmd && (e.key === "d" || e.key === "D")) { e.preventDefault(); duplicateCurrent(); return; }
+  if (cmd && e.key === "Backspace") { e.preventDefault(); deleteCurrent(); return; }
+  if (cmd && (e.key === "k" || e.key === "K")) { e.preventDefault(); searchEl.focus(); return; }
+
+  if (inField) return;
+
+  const list = visibleQuestions();
+  const idx = list.findIndex(q => q.id === currentId);
+  if (e.key === "ArrowDown" || e.key === "j") {
+    if (idx < list.length - 1) selectQuestion(list[idx + 1].id);
+  } else if (e.key === "ArrowUp" || e.key === "k") {
+    if (idx > 0) selectQuestion(list[idx - 1].id);
+  } else if (e.key === "n" || e.key === "N") {
+    createNew();
+  } else if (e.key === "/") {
+    e.preventDefault();
+    searchEl.focus();
+  } else if (e.key === "Escape") {
+    document.activeElement?.blur();
+  }
+});
+
+// ─────────────── modal ───────────────
+function confirmModal({ title, body, confirmText = "Confirm" }) {
+  return new Promise(resolve => {
+    const backdrop = document.createElement("div");
+    backdrop.className = "modal-backdrop";
+    backdrop.innerHTML = `
+      <div class="modal" role="dialog">
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(body)}</p>
+        <div class="actions">
+          <button class="btn ghost" data-act="cancel">Cancel</button>
+          <button class="btn primary" data-act="ok">${escapeHtml(confirmText)}</button>
+        </div>
+      </div>`;
+    document.body.appendChild(backdrop);
+    function close(v) { document.body.removeChild(backdrop); resolve(v); }
+    backdrop.onclick = e => { if (e.target === backdrop) close(false); };
+    backdrop.querySelector('[data-act="cancel"]').onclick = () => close(false);
+    backdrop.querySelector('[data-act="ok"]').onclick = () => close(true);
+    backdrop.querySelector('[data-act="ok"]').focus();
+  });
+}
+
+// ─────────────── toasts ───────────────
+function toast(kind, title, body) {
+  const host = document.getElementById("toast-host");
+  const el = document.createElement("div");
+  el.className = `toast ${kind}`;
+  el.innerHTML = `<b>${escapeHtml(title)}</b>${body ? `<pre>${escapeHtml(body)}</pre>` : ""}`;
+  host.appendChild(el);
+  setTimeout(() => {
+    el.style.animation = "slideIn .25s ease-out reverse";
+    setTimeout(() => el.remove(), 240);
+  }, kind === "bad" ? 8000 : 4000);
+}
+
+// ─────────────── utilities ───────────────
+function deepClone(o) { return JSON.parse(JSON.stringify(o)); }
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+// flush save on page unload
+window.addEventListener("beforeunload", () => {
+  if (dirty) flushSave();
+});
+
+boot();
+</script>
+</body>
+</html>

@@ -131,8 +131,8 @@ export async function checkAndUnlockBadges(): Promise<string[]> {
   // Căpitan — 50 quizzes
   await tryUnlock("capitan", history.length >= 50);
 
-  // Perfect — 100% on an exam (26 questions)
-  const hasPerfect = history.some((h) => h.score === 100 && h.mode === "exam");
+  // Perfect — every question correct on an exam
+  const hasPerfect = history.some((h) => h.mode === "exam" && h.correct === h.total);
   await tryUnlock("perfect", hasPerfect);
 
   // Persistent — 7-day streak
@@ -144,14 +144,18 @@ export async function checkAndUnlockBadges(): Promise<string[]> {
   // Explorer — seen all questions
   await tryUnlock("explorer", seen.size >= 511);
 
-  // Admis — 5 consecutive passed exams (score >= 70)
+  // Admis — 5 consecutive passed exams
+  // Falls back to score >= 70 for legacy records that don't have `passed`.
+  const isPass = (h: { passed?: boolean; score: number }) =>
+    h.passed !== undefined ? h.passed : h.score >= 70;
   let consecutive = 0;
   let maxConsecutive = 0;
   for (const h of [...history].reverse()) {
-    if (h.mode === "exam" && h.score >= 70) {
+    if (h.mode !== "exam") continue;
+    if (isPass(h)) {
       consecutive++;
       maxConsecutive = Math.max(maxConsecutive, consecutive);
-    } else if (h.mode === "exam") {
+    } else {
       consecutive = 0;
     }
   }

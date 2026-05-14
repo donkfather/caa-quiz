@@ -6,7 +6,7 @@
     {
       "id": "m7_s1",
       "title": "Efectul carmei",
-      "content": "\nCarma este un element al instalatiei de guvernare care ajuta ambarcatiunile sa isi mentina drumul pe directia dorita. Carma se poate roti cu ajutorul echei (transmite miscarea direct in axul carmei) sau cu ajutorul timonei (transmite miscarea printr-un sistem de transmisie).\nUnghiul de rotire al carmei este unghiul facut de echea rotita fata de pozitia de mjloc a acesteia si reprezinta inclinatia safranului fata de filoanele de apa care curg paralel cu axul longitudinal al navei.\n\n\n### Miscarea carmei are ca efecte\n\n deplaseaza pupa spre bordul opus celui in care safranul s-a rotit si prova spre directia de rotire a safranului;\n viteza ambarcatiunii este micsorata (efect de franare);\n genereaza deriva in bordul opus celui in care s-a rotit safranul;\n inclina ambarcatiunea in bordul in care s-a rotit carma.\n\n\n### Efectul de guvernare al carmei\n\na) la deplasarea inainte a ambarcatiunii:\n timona babord - prova gireaza la babord si pupa se abate la tribord;\n eche babord - prova gireaza la tribord si pupa se abate la babord;\n timona tribord - prova gireaza la tribord si pupa babord;\n eche tribord - prova gireaza la babord si pupa se abate la tribord;\n\nb) la deplasarea inapoi a ambarcatiunii:\n timona babord - prova gireaza la tribord si pupa se abate la babord;\n eche babord - prova gireaza la babord si pupa se abate la tribord;\n timona tribord - prova gireaza la babord si pupa se abate la tribord;\n eche tribord - prova gireaza la tribord si pupa se abate la babord.\n\nCapacitatea ambarcatiunii de a se mentine pe o anumita directie sau de a schimba directia de mers se numeste guvernare.\nO nava bandata sau canarisita intoarce mai repede in bordul ridicat.\n",
+      "content": "### Ce este carma?\n\n**Carma** este elementul instalatiei de guvernare care permite ambarcatiunii sa isi mentina sau sa isi schimbe directia. Se actioneaza prin:\n• **Eche** — transmite miscarea direct in axul carmei\n• **Timona** — transmite miscarea printr-un sistem de transmisie\n\n**Unghiul de rotire** al carmei este unghiul facut de eche fata de pozitia de mijloc si reprezinta inclinatia safranului fata de filetele de apa care curg paralel cu axul longitudinal al navei.\n\n### Efectele miscarii carmei\n\n• Deplaseaza **pupa** spre bordul opus celui in care s-a rotit safranul si **prova** spre directia de rotire\n• **Reduce viteza** ambarcatiunii (efect de franare)\n• Genereaza **deriva** in bordul opus rotitiei safranului\n• **Inclina** ambarcatiunea in bordul in care s-a rotit carma\n\n### Guvernarea la mars inainte\n\n• **Timona babord** — prova gireaza la babord, pupa se abate la tribord\n• **Eche babord** — prova gireaza la tribord, pupa se abate la babord\n• **Timona tribord** — prova gireaza la tribord, pupa se abate la babord\n• **Eche tribord** — prova gireaza la babord, pupa se abate la tribord\n\n### Guvernarea la mars inapoi\n\n• **Timona babord** — prova gireaza la tribord, pupa se abate la babord\n• **Eche babord** — prova gireaza la babord, pupa se abate la tribord\n• **Timona tribord** — prova gireaza la babord, pupa se abate la tribord\n• **Eche tribord** — prova gireaza la tribord, pupa se abate la babord\n\n### De retinut\n\n**Guvernarea** — capacitatea ambarcatiunii de a se mentine pe o directie sau de a schimba directia de mers.\n\nO nava **bandata** (inclinata, canarisita) intoarce mai repede in bordul ridicat.",
       "images": [
         "m7_p84_0.png",
         "m7_p84_1.png",
@@ -15,27 +15,26 @@
       ],
       "quiz": [
         {
-          "question": "Care sunt factorii care trebuie luaţi în consideraţie pentru determinarea \"vitezei de siguranţă\"? lungimea navei, calităţile nautice ale navei, puterea maşinii şi vizibilitatea.",
-          "options": [
-            "pregătirea echipajului, condiţiile de navigaţie, vizibilitatea.",
-            "vizibilitatea, densitatea traficului, capacitatea de manevră a navei, noaptea-existenţa unui fundal luminos, starea vântului şi a mării, pescajul navei."
-          ],
+          "question": "Ce efect are miscarea carmei asupra ambarcatiunii, pe langa schimbarea directiei?",
+          "options": ["Creste viteza ambarcatiunii", "Reduce viteza ambarcatiunii (efect de franare)", "Nu are alt efect decat schimbarea directiei"],
           "correct": 1
         },
         {
-          "question": "Lumina galbenă aşezată cât mai aproape posibil în pupa arătând o lumină de 135°, câte 67°5 în fiecare bord este: lumina de pupa.",
-          "options": [
-            "lumina de remorcaj.",
-            "lumina de ancoră pupa."
-          ],
+          "question": "La mars inainte cu timona la babord, in ce directie gireaza prova?",
+          "options": ["La babord", "La tribord", "Ramane pe loc"],
           "correct": 0
+        },
+        {
+          "question": "O nava bandata (inclinata) intoarce mai repede in ce bord?",
+          "options": ["In bordul inclinat (coborat)", "In bordul ridicat", "Intoarce la fel in ambele borduri"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s2",
       "title": "Efectul elicei",
-      "content": "\nAmbarcatiunile cu motor sunt propulsate de elice care are mai multe pale (2-5 fixe sau variabile) si care poate fi pas dreapta sau pas stanga in functie de sensul rotirii ei. O ambarcatiune poate avea una sau doua elice. Cele care au doua elice sunt intotdeauna una cu pas stanga si cealalta cu pas dreapta.\n\nAmbarcatiunile cu doua elici sunt mai usor de manevrat pentru ca pot intoarce si din diferenta dintre rotatiile celor doua masini sau chiar utilizarea in sensuri opuse a acestora. Efectul de guverare al carmei este redus in comparatie cu ambarcatiunile cu o singura elice datorita faptului ca fluxul de apa propulsat de elice nu este aruncat direct in carma. Cele care au o singura elice sunt de regula pas dreapta.\nInvartirea elicei genereaza un efect de propulsie dar directia in care se roteste are efect si asupra guvernarii.\n\n\n### Efectul elicei asupra guvernarii\n\nIn conditiile de carma dreapta, elicea are urmatoarele efecte asupra miscarii ambarcatiunii:\n\na) elice pas stanga:\n\n mars inainte - prova gireaza la tribord iar pupa se abate la babord;\n mars inapoi - prova gireaza la babord si pupa se abate la tribord;\n\nb) elice pas dreapta:\n\n mars inainte - prova gireaza la babord si pupa se abate la tribord;\n mars inapoi - prova gireaza la tribord iar pupa se abate la babord.\n",
+      "content": "### Elicea — element de propulsie\n\nAmbarcatiunile cu motor sunt propulsate de **elice** cu 2-5 pale (fixe sau variabile). Elicea poate fi:\n• **Pas dreapta** — cel mai frecvent la ambarcatiunile cu o singura elice\n• **Pas stanga**\n\nAmbarcatiunile cu **doua elici** au intotdeauna una pas stanga si una pas dreapta. Sunt mai usor de manevrat datorita posibilitatii de a folosi rotatii diferite sau sensuri opuse ale motoarelor.\n\nLa ambarcatiunile cu doua elici, efectul de guvernare al carmei este mai redus deoarece fluxul de apa nu este aruncat direct in carma.\n\n### Efectul elicei asupra guvernarii\n\nInvartirea elicei genereaza propulsie, dar sensul de rotatie influenteaza si guvernarea navei.\n\nIn conditii de **carma dreapta**:\n\n**Elice pas stanga:**\n• Mars inainte — prova gireaza la tribord, pupa se abate la babord\n• Mars inapoi — prova gireaza la babord, pupa se abate la tribord\n\n**Elice pas dreapta:**\n• Mars inainte — prova gireaza la babord, pupa se abate la tribord\n• Mars inapoi — prova gireaza la tribord, pupa se abate la babord",
       "images": [
         "m7_p85_0.png",
         "m7_p85_1.png",
@@ -43,19 +42,13 @@
       ],
       "quiz": [
         {
-          "question": "Cum trebuie să se execute o manevră pentru evitarea unei coliziuni? din timp, cu schimbări mici de drum, pentru a nu devia prea mult de la drumul navei.",
-          "options": [
-            "hotărât, din timp şi conform cu buna practică marinărească.",
-            "hotărât, cu variaţii de viteză, pentru evitarea pericolului."
-          ],
-          "correct": 0
+          "question": "Ce tip de pas are cel mai frecvent elicea la ambarcatiunile cu o singura elice?",
+          "options": ["Pas stanga", "Pas dreapta", "Pas variabil"],
+          "correct": 1
         },
         {
-          "question": "Ce se înţelege prin expresia \"lumină de remorcaj\"? o lumină albă aşezată deasupra luminii de la pupa după care se guvernează în timpul remorcajului.",
-          "options": [
-            "o lumină galbenă neîntreruptă vizibilă la 360°.",
-            "o lumină galbenă aşezată cât mai aproape posibil de pupa, arătând o lumină neîntreruptă pe un arc de cerc de 135°, câte 67°5 în fiecare bord."
-          ],
+          "question": "De ce sunt mai usor de manevrat ambarcatiunile cu doua elici?",
+          "options": ["Au viteza mai mare", "Pot folosi rotatii diferite sau sensuri opuse ale motoarelor", "Au carma mai mare"],
           "correct": 1
         }
       ]
@@ -63,33 +56,27 @@
     {
       "id": "m7_s3",
       "title": "Efectul combinat carma si elicea",
-      "content": "\nDatorita cumularii efectelor carmei si ale elicei, pentru a mentine directia ambarcatiunii, carma trebuie sa fie pozitionata intr-un un unghi mic fata de axul longitudinal, in bordul pasului elicei.\nDe asemenea, nava va intoarce mai repede in bordul opus pasului elicei. Pentru o mai buna guvernare in marsul inainte, elicea se amplaseaza in fata carmei si nu in spatele ei, pe extremitatea arborelui post-elice.\n\nRegula generala pentru intoarcerea pe loc a navelor cu o singura elice este:\n nava cu elice pas dreapta trebuie sa intoarca pe loc, din elice si carma, numai la tribord\n nava cu elice pas stanga trebuie sa intoarca pe loc, din elice si carma, numai la babord\n intoarcerile pe loc in celelalte borduri se fac de regula pe ancora.\n",
+      "content": "### Efectul combinat\n\nDatorita cumularii efectelor carmei si elicei, pentru a mentine directia in linie dreapta, carma trebuie pozitionata la un unghi mic fata de axul longitudinal, in bordul pasului elicei.\n\nDe asemenea, nava intoarce mai repede in bordul opus pasului elicei.\n\nPentru o guvernare mai buna la mars inainte, elicea se amplaseaza **in fata carmei**, nu in spatele ei.\n\n### Regula intoarcerii pe loc\n\nPentru nave cu o singura elice:\n\n• **Elice pas dreapta** — intoarce pe loc numai la **tribord** (din elice si carma)\n• **Elice pas stanga** — intoarce pe loc numai la **babord** (din elice si carma)\n• Intoarcerile in celelalte borduri se fac de regula **pe ancora**",
       "images": [
         "m7_p86_0.png"
       ],
       "quiz": [
         {
-          "question": "Dacă pentru evitarea unei coliziuni este suficientă numai schimbarea de drum, cum trebuie să fie executată? manevra se va face cu mult timp înainte, să fie substanţială şi să nu conducă la o altă situaţie de foarte mare apropiere.",
-          "options": [
-            "se vor executa schimbări mari de drum, suficiente pentru evitarea coliziunii.",
-            "se va efectua o schimbare de drum suficientă pentru ca să se elimine orice pericol de coliziune."
-          ],
-          "correct": 0
+          "question": "O nava cu elice pas dreapta poate intoarce pe loc doar la ce bord?",
+          "options": ["Babord", "Tribord", "In ambele borduri la fel"],
+          "correct": 1
         },
         {
-          "question": "La ce distanţă trebuie să se vadă lumina de remorcaj pentru navele cu o lungime mai mare de 50 m? 3 Mm.",
-          "options": [
-            "4 Mm.",
-            "3,5 Mm."
-          ],
-          "correct": 0
+          "question": "Unde se amplaseaza elicea fata de carma pentru o guvernare mai buna la mars inainte?",
+          "options": ["In spatele carmei", "In fata carmei", "Nu conteaza pozitia relativa"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s4",
       "title": "Pregatirea pentru voiaj",
-      "content": "4.1. Prognoza meteo\n\n###  Website-uri dedicate profesionale sau semi-profesionale\n\n### Exemple recomandate\n\n###  Aplicatii mobile android/Iphone\n\n### Exemple recomandate\n\nWindguru\nPredict wind\nWindfinder\nNavionics\n\n\n### Surse de verificare a prognozei meteorologice\n\n\nCapitania portului;\n\nTransmiterea live a prognozei in VHF (pe teritoriul Romaniei la orele 10.00, 16.00, 22.00,\n04.00 se anunta in canalul 16 si se transmite efectiv in canalele 25 si 12);\n serviciu SMS pentru telefoane mobile: www.metmarine.com;\n barometrul ambarcatiunii. Presiunea care creste rapid este un semn de vanturi puternice (furtuni).\n\n4.2. Verificarea tehnica a ambarcatiunii\n\na) CHECK LIST 1:\n\n Verificare parame\nVerificati daca paramele sunt rupte, roase, desprinse la capete. Plecati intotdeauna cu parame de rezerva de lungimi si grosimi diferite. Obligatoriu este sa aveti macar o parama de acostare in plus.\n Verificare prinderi, piane, sanii, cheite\nFaceti un tur al ambarcatiunii de la prova la pupa, mergand pe fiecare dintre borduri si verificati daca cheitele de prindere sunt bine inchise, daca lipsesc, daca scripetii functioneaza.\n Verificare motor\nDeschideti compartimentul unde se afla motorul si cautati daca exista scurgeri de orice fel:\ncombustibil, ulei.\n\n**Verificati joja de ulei uitandu** — va la nivel, completati daca este cazul\n**Porniti motorul asigurandu** — va ca maneta este pe pozitia neutru si ca nu exista parame pe sub barca si verificati racirea acestuia\n**Asigurati** — va ca aveti pe barca o trusa care sa contina: cheie de schimbat filtru, filtre de ulei si combustibil, impeler si curea de trasmisie\nVerificati alternatorul si cureaua sa, daca este intinsa si daca nu prezinta defecte.\n\n Verificare ancora\nVerificati prinderile: ancora de lant, lantul de parama, parama este legata la ambarcatiune;\nVerificati daca lantul este suficient de lung si de asemenea parama este suficient de lunga.\nVerificati daca actionarea electrica functioneaza.\n\n Verificare comunicatii\nVerificati daca statiile fixa si mobila VHF functioneaza.\nNu plecati la drum fara baterii de rezerva.\n\n Verificare mijloace de navigatie si aparatura\n\nVerificati daca functioneaza corect si calibrati daca este cazul instrumentele de bord.\n**In afara GPS** — ului navei, luati si o tableta sau telefon mobil cu aplicatii de navigatie\nAplicatii recomandate: Navionics, Isailer\nNu uitati de hartile de hartie si instrumentele clasice de navigatie: echer, compas.\n\nb) CHECK LIST 2\n\n Tancuri de apa Aprovizionarea cu apa este extrem de importanta in timpul unei calatorii, verificati daca tancurile de apa sunt pline.\n\n Tancuri de motorina Asigurati-va ca aveti motorina suficienta si tineti intotdeauna o canistra de rezerva.\n\n Baterii incarcate Verficati daca bateriile sunt incarcate si aveti grija sa eficientizati consumul in timpul voiajului.\n\n Apa in santina/pompa de santina Verificati fiecare compartiment de santina al barcii. Este normal ca in santina sa exista putina apa. Daca nivelul apei este cumva prea mare, verificati daca este dulce sau sarata si evacuati apa din santina. Dupa caz, contnuati verificarile, daca situatie este de natura sa implice reparatii.\n\n Dulapuri inchise Dulapurile si spatiile de stocare ale unei ambarcatiuni au in general incuietori speciale. Asigurati-va inainte de a pleca pe apa ca toate sunt inchise pentru a preveni rasturnarea, spargerea, caderea obiectelor care se afla inauntrul dulapurilor.\n\n Asigurarea obiectelor mobile (amararea) Bagajele de orice fel si toate obiectele mobile aflate in cabine, salon, sau pe punte trebuie asigurate in sensul imobilizarii lor (asezarea intr- un loc inchis de unde nu pot cadea). In timpul navigatiei, miscarile barcii (ruliu, tangaj) pot determina caderea, spargerea, incurcarea acestora, lucru care trebuie evitat.\n\n Ferestre inchise Valurile sau o furtuna locala aparuta ad-hoc pot genera apa pe punte. In acest caz, ferestrele deschise vor permite apei sa intre inauntru.\n\n Priza de curent Trebuie scoasa si pusa in ambarcatiune, daca o lasati pe mal, riscati sa ajungeti la destinatie, intr-un port unde veti avea nevoie de ea. Atentie, nu plecati cu priza legata la mal!\n\n Echipamentele de siguranta Verificati echipamentul de Om la Apa: colac, parama, danbuoy\n(daca exista).\nVerificati daca exista veste de salvare si hamuri pentru tot echipajul si daca sunt in stare corespunzatoare (curele, prinderi, carabine etc)\n\n*Asigurati-va ca aveti pe barca manualele de functionare, setare si reparare ale motorului, statiei, aparatelor de navigatie. In caz de avarie, le puteti consulta si remedia.\n* Asigurati-va ca aveti pe barca Cartea Pilot a zonei de navigatie unde intentionati sa navigati. Cartea\nPilot contine informatii despre zone de pericol, porturi, asezarea lor, locuri de ancoraj, etc.\n*Asigurati-va ca aveti mijloace atat electronice cat si in pe suport de hartie (harti, carti), in caz de avarie electrica, orice modalitate de navigatie/informare scrisa va va ajuta.\n\n4.3. Planificarea voiajului\n\n\n### Trebuie sa tina seama de urmatoarele lucruri\n\n Prognoza meteo;\n Traseu, lungime, viteza, ETA;\n Pericole, puncte de atentie;\n Carturi;\n Aprovizionare cu apa si alimente;\n Verificarea tehnica a ambarcatiunii;\n Asigurarea echipamentului personal corespunzator;\n Echipaj, instruire, delegarea responsabilitatilor.\n\n4.4. Instructaj de siguranta pentru echipaj.\n\nInainte de plecare, faceti un instructaj de siguranta membrilor echipajului care sa cuprinda unde se afla echipamentele de siguranta, cum functioneaza si in ce conditii trebuie folosite. In situatii de urgenta, este bine sa aveti pe cine conta si sa va puteti baza pe ajutorul membrilor de echipaj. In plus, situatiile de urgenta necesita decizii si manevre rapide, astfel ca, timpul alocat acestora se va scurta daca fiecare stie ce are de facut.\n\n\n### CHECKLIST\n\n Unde sunt pozitionate vestele de salvare, hamurile si alonjele si cum functioneaza;\n Unde sunt pozitionate rachetele de salvare cum si cand se folosesc;\n Unde sunt pozitionate extinctoarele si paturile de foc si cum se folosesc;\n Cum opresti si pornesti motorul;\n Cum functioneaza ancora, vinciurile (cabestanele);\n Cum functioneaza statia VHF si cum trimiti un Mayday;\n Identificati si aratati zonele de pericol de la bord: ferestre deschise, pozitia corpului pe ambarcatiune;\n Unde este pozitionata trusa de prim-ajutor si daca contine elemente lipsa sau expirate;\n Unde sunt pozitionate: rezerva de combustibil, trusa de scule, piese de rezerva;\n Informare cu privire la procedura de Om la Apa (Man over board);\n Cum functioneaza aragazul, unde este butelia cu gaz, cum se inchide;\n Atentionati care sunt obiectele de care te poti tine (tin-te bine, metal, plastic, lemn) si cele de care nu este recomandat sa te tii (manevre mobile).\n",
+      "content": "### 1. Prognoza meteo\n\nInainte de orice voiaj, verifica prognoza meteo din mai multe surse:\n\n**Surse profesionale:**\n• Website-uri dedicate (profesionale sau semi-profesionale)\n• Aplicatii mobile: **Windguru, Predict Wind, Windfinder, Navionics**\n\n**Surse de verificare:**\n• Capitania portului\n• Transmitere live VHF — in Romania la orele 10:00, 16:00, 22:00, 04:00 (anunt pe canalul 16, transmitere pe canalele 25 si 12)\n• SMS meteo: www.metmarine.com\n• **Barometrul ambarcatiunii** — presiunea care creste rapid = semn de vanturi puternice (furtuni)\n\n### 2. Verificare tehnica — Checklist 1\n\n**Parame:**\n• Verificati daca sunt rupte, roase sau desprinse la capete\n• Plecati cu parame de rezerva (lungimi si grosimi diferite)\n• Minim o parama de acostare in plus\n\n**Prinderi, piane, sanii, cheite:**\n• Tur complet al ambarcatiunii, prova-pupa, pe fiecare bord\n• Verificati cheitele de prindere si functionarea scripetilor\n\n**Motor:**\n• Deschideti compartimentul si cautati scurgeri (combustibil, ulei)\n• Verificati joja de ulei — completati daca e cazul\n• Porniti motorul pe pozitia neutru, fara parame sub barca, verificati racirea\n• Asigurati-va ca aveti trusa cu: cheie filtru, filtre ulei si combustibil, impeler, curea de transmisie\n• Verificati alternatorul si cureaua (intinsa, fara defecte)\n\n**Ancora:**\n• Verificati prinderile: ancora-lant, lant-parama, parama-ambarcatiune\n• Verificati lungimea lantului si a paramei\n• Verificati actionarea electrica\n\n**Comunicatii:**\n• Verificati statiile VHF (fixa si mobila)\n• Baterii de rezerva obligatoriu\n\n**Navigatie si aparatura:**\n• Calibrati instrumentele de bord\n• Pe langa GPS-ul navei, luati tableta/telefon cu aplicatii (Navionics, Isailer)\n• Harti de hartie si instrumente clasice (echer, compas)\n\n### 3. Verificare tehnica — Checklist 2\n\n• **Tancuri de apa** — verificati ca sunt pline (aprovizionarea cu apa e critica)\n• **Tancuri de motorina** — asigurati motorina suficienta + canistra de rezerva\n• **Baterii** — verificati incarcarea, eficientizati consumul in voiaj\n• **Santina** — verificati fiecare compartiment; putina apa e normal, dar daca nivelul e prea mare verificati daca e dulce/sarata si evacuati\n• **Dulapuri** — inchideti toate incuietorile speciale pentru a preveni caderea obiectelor\n• **Amararea** — imobilizati toate obiectele mobile (bagaje, echipamente) in locuri inchise; miscarile barcii (ruliu, tangaj) le pot rasturna\n• **Ferestre** — inchise obligatoriu; valurile pot aduce apa pe punte\n• **Priza de curent** — scoateti-o si puneti-o pe barca; nu plecati cu priza legata la mal!\n• **Echipamente de siguranta** — colac, parama, danbuoy; veste de salvare si hamuri pentru tot echipajul (verificati curelele, prinderile, carabinele)\n\nAsigurati-va ca aveti la bord:\n• Manualele de functionare ale motorului, statiei, aparatelor de navigatie\n• **Cartea Pilot** a zonei de navigatie (zone de pericol, porturi, locuri de ancoraj)\n• Harti si carti pe suport de hartie (backup in caz de avarie electrica)\n\n### 4. Planificarea voiajului\n\nTrebuie sa tineti cont de:\n• Prognoza meteo\n• Traseu, lungime, viteza, ETA\n• Pericole si puncte de atentie\n• Carturile (harti)\n• Aprovizionare cu apa si alimente\n• Verificarea tehnica a ambarcatiunii\n• Echipament personal corespunzator\n• Echipaj — instruire si delegarea responsabilitatilor\n\n### 5. Instructaj de siguranta pentru echipaj\n\nInainte de plecare, prezentati echipajului unde se afla echipamentele de siguranta, cum functioneaza si cand se folosesc. In situatii de urgenta, timpul se scurteaza daca fiecare stie ce are de facut.\n\n**Checklist instructaj:**\n• Pozitia si functionarea vestelor de salvare, hamurilor si alonjelor\n• Pozitia si folosirea rachetelor de salvare\n• Pozitia si folosirea extinctoarele si paturilor de foc\n• Cum se opreste si porneste motorul\n• Cum functioneaza ancora si vinciurile (cabestanele)\n• Cum functioneaza statia VHF si cum se trimite un **Mayday**\n• Zone de pericol de la bord (ferestre deschise, pozitia corpului)\n• Pozitia trusei de prim-ajutor (verificati elementele lipsa/expirate)\n• Pozitia rezervei de combustibil, trusei de scule, pieselor de rezerva\n• Procedura **Om la Apa (MOB)**\n• Functionarea aragazului, pozitia buteliei de gaz, cum se inchide\n• Obiectele de care te poti tine (metal, plastic, lemn) vs. cele de care NU (manevre mobile)",
       "images": [
         "m7_p86_0.png",
         "m7_p87_0.png",
@@ -100,27 +87,26 @@
       ],
       "quiz": [
         {
-          "question": "Manevra de evitare între nave se va efectua astfel încât să permită trecerea la: o distanţă maximă.",
-          "options": [
-            "o distanţă de siguranţă.",
-            "o distanţă minimă."
-          ],
-          "correct": 0
+          "question": "Ce indica o crestere rapida a presiunii pe barometrul ambarcatiunii?",
+          "options": ["Vreme frumoasa si stabila", "Semn de vanturi puternice (furtuni)", "Scaderea temperaturii apei"],
+          "correct": 1
         },
         {
-          "question": "La ce distanţă trebuie să se vadă lumina de remorcaj pentru navele cu o lungime între 12 şi 50 m? 3 Mm.",
-          "options": [
-            "2 Mm.",
-            "5 Mm."
-          ],
-          "correct": 0
+          "question": "La ce ore se transmite prognoza meteo pe VHF in Romania?",
+          "options": ["La orele 08:00, 14:00, 20:00, 02:00", "La orele 10:00, 16:00, 22:00, 04:00", "La orele 06:00, 12:00, 18:00, 00:00"],
+          "correct": 1
+        },
+        {
+          "question": "Ce trebuie verificat la motor inainte de plecarea in voiaj?",
+          "options": ["Doar nivelul de combustibil", "Scurgeri de combustibil/ulei, joja de ulei, racirea, alternatorul si cureaua", "Doar daca porneste"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s5",
       "title": "Manevra de plecare",
-      "content": "\nManevrele de plecare trebuie sa tina cont de pozitia pe care o are o ambarcatiune legata la cheu (cu prova, cu pupa, cu babordul sau tribordul, cat si de directia din care bate vantul. In functie de aceste doua elemente, se stabileste si o ordine in care vor fi manevrate/eliberate paramele cu care ambarcatiunea este legata.\n\n5.1. Legaturile la cheu si efectele lor\n\nParama de etrava/etambou - deplaseaza nava spre inainte/inapoi de-a lungul cheului;\n**Parama prova** — deplaseaza nava in ax spre prova, apropie prova de cheu, departeaza pupa\n**Parama pupa** — deplaseaza nava in ax spre pupa, apropie pupa de cheu, departeaza prova\n**Springul prova** — deplaseaza nava spre inapoi, apropie prova de cheu, departeaza pupa\n**Springul pupa** — deplaseaza nava spre inainte, apropie pupa de cheu, departeaza prova\n**Traversa prova** — apropie prova de cheu, departeaza pupa\n**Traversa pupa** — apropie pupa de cheu, departeaza prova\n\n\n### Efectele combinate ale legaturilor\n\nParama prova si spring prova faciliteaza acostarea cu bordul, plecarea cu pupa inainte pe springul prova;\nParama prova si spring prova faciliteaza apropierea navei de cheu fara deplasare spre inainte/inapoi;\nParama prova si spring pupa faciliteaza apropierea navei de cheu cu deplasare spre inainte;\nParama pupa si spring prova faciliteaza acostarea cu bordul, plecarea cu pupa inainte pe springul prova.\n\n\n### 5.2. Manevra de plecare cu motor de la cheu/ponton\n\n\na) nava este cu pupa la ponton:\n\nDaca vantul bate inspre prova navei\n(se elibereaza mai intai paramele pupa) sau inspre pupa navei (se elibereaza mai intai parama prova), se pune motorul pe mars inainte si se pleaca.\n\nDaca vantul bate din oricare alta directie decat cele de mai sus, se desfac mai intai paramele de sub vant se pune motorul pe mars inainte si se pleaca.\nb) nava este cu prova la ponton: In aceasta situatie, se pune motorul pe mars inapoi.\nc) nava este cu bordul la ponton:\n\nDaca vantul bate inspre ponton, se elibereaza toate paramele in afara de parama pupa, se da motorul pe mars inapoi, parama pupa devenind rand pe rand traversa pupa si apoi spring pupa. O data ajuns cu prova in vant, se pune masina pe mars inainte.\n\n\nDaca vantul bate dinspre ponton, se elibereaza concomitent paramele pentru ca vantul sa dezlipeasca ambarcatiunea de cheu si se pleaca cu motorul pe mars inainte.\n\nPlecarea cu motorul se mai poate face si folosind parama de spring, ca in imaginea alaturata:\n\nImportant! La toate manevrele de plecare si acostare se tine cont de giratia ambarcatiunii care poate avea ca efect lovirea provei sau a pupei de ponton sau de alte ambarcatiuni aflate in preajma.\nMembrii echipajului trebuie sa fie activi la manevrele de plecare si acostare astfel incat sa previna posibile coliziuni. Este recomandat ca unul sau mai multi membri ai echipajului sa vegheze cu un fender (balon de acostare) la mana pentru a apara ambarcatiunea de o posibila lovire. Nu se pune niciodata piciorul intre ambarcatiuni.\n",
+      "content": "### Factori de luat in calcul\n\nManevrele de plecare depind de:\n• **Pozitia ambarcatiunii** la cheu (cu prova, cu pupa, cu babordul sau tribordul)\n• **Directia vantului**\n\nIn functie de aceste doua elemente se stabileste ordinea in care se elibereaza paramele.\n\n### Legaturile la cheu si efectele lor\n\n• **Parama de etrava/etambou** — deplaseaza nava inainte/inapoi de-a lungul cheului\n• **Parama prova** — trage nava spre prova, apropie prova de cheu, departeaza pupa\n• **Parama pupa** — trage nava spre pupa, apropie pupa de cheu, departeaza prova\n• **Springul prova** — deplaseaza nava inapoi, apropie prova de cheu, departeaza pupa\n• **Springul pupa** — deplaseaza nava inainte, apropie pupa de cheu, departeaza prova\n• **Traversa prova** — apropie prova de cheu, departeaza pupa\n• **Traversa pupa** — apropie pupa de cheu, departeaza prova\n\n### Efectele combinate ale legaturilor\n\n• Parama prova + spring prova — faciliteaza acostarea cu bordul si plecarea cu pupa inainte\n• Parama prova + spring prova — apropierea navei fara deplasare inainte/inapoi\n• Parama prova + spring pupa — apropierea navei cu deplasare inainte\n• Parama pupa + spring prova — acostare cu bordul, plecare cu pupa inainte pe spring prova\n\n### Manevra de plecare de la cheu/ponton\n\n**a) Nava cu pupa la ponton:**\n• Vant din prova/pupa — eliberezi paramele corespunzatoare, motor mars inainte, pleci\n• Vant din alta directie — desfaci mai intai paramele de sub vant, motor inainte, pleci\n\n**b) Nava cu prova la ponton:**\n• Motor pe mars inapoi\n\n**c) Nava cu bordul la ponton:**\n• **Vant inspre ponton** — eliberezi toate paramele in afara de parama pupa; motor mars inapoi; parama pupa devine traversa pupa, apoi spring pupa; cand prova ajunge in vant, motor mars inainte\n• **Vant dinspre ponton** — eliberezi concomitent toate paramele (vantul dezlipeste barca), motor inainte\n\nPlecarea se poate face si folosind **parama de spring**.\n\n### Reguli importante\n\n• Tineti cont de **giratia ambarcatiunii** — prova sau pupa pot lovi pontonul sau alte ambarcatiuni\n• Echipajul trebuie sa fie activ cu **fendere** (baloane de acostare) la mana pentru protectie\n• **Nu puneti niciodata piciorul intre ambarcatiuni**",
       "images": [
         "m7_p89_0.png",
         "m7_p89_1.png",
@@ -131,19 +117,18 @@
       ],
       "quiz": [
         {
-          "question": "Care este manevra cea mai indicată pentru a se câştiga mai mult timp pentru aprecierea situaţiei, atunci când trebuie să se evite o coliziune? reducerea vitezei sau opirea completă, stopând maşinile ori punându-le înapoi.",
-          "options": [
-            "stoparea navei.",
-            "reducerea la minimum de viteză, până la limita guvernării."
-          ],
-          "correct": 0
+          "question": "Ce parama se foloseste de preferinta pentru a opri barca la acostare cu bordul?",
+          "options": ["Parama prova", "Springul prova", "Traversa pupa"],
+          "correct": 1
         },
         {
-          "question": "La ce distanţă trebuie să se vadă lumina de remorcaj pentru navele cu o lungime mai mică de  12  m? 1 Mm.",
-          "options": [
-            "3 Mm.",
-            "2 Mm."
-          ],
+          "question": "Ce se face cand pleci de la ponton cu bordul si vantul bate inspre ponton?",
+          "options": ["Eliberezi toate paramele concomitent, vantul dezlipeste barca", "Eliberezi toate paramele in afara de parama pupa si folosesti motorul inapoi", "Pleci cu motor mars inainte direct"],
+          "correct": 1
+        },
+        {
+          "question": "Ce nu trebuie sa faceti niciodata la manevra de plecare de la ponton?",
+          "options": ["Sa puneti motorul pe mars inapoi", "Sa puneti piciorul intre ambarcatiuni", "Sa folositi fendere"],
           "correct": 1
         }
       ]
@@ -151,7 +136,7 @@
     {
       "id": "m7_s6",
       "title": "Ancorarea",
-      "content": "### Locul de ancorare poate fi\n\n\n recomandat de cartile pilot/harti;\n stabilit de autoritati;\n ales de skipperul barcii.\n\nSe considera bun, un loc de ancorare care ofera ambarcatiunii siguranta in stationare.\nElementele de care trebuie sa tinem cont atunci cand cautam un loc de ancorare sunt:\n adancimi suficiente in raport cu pescajul maxim;\n natura fundului favorabila fixarii imediate a ancorei la fundarisire (riscul graparii);\n smulgere usoara la ridicarea ancorei;\n adapost impotriva vanturilor dominante, a valurilor si a curentilor;\n spatiu suficient pentru siguranta ambarcatiunii (considerand lungimea navei);\n permiterea unei usoare ancorari si a unei usoare plecari;\n in afara cailor navigabile.\n\n\n### Natura fundului trebuie sa prezinte o buna priza a ancorei\n\nfunduri optime - argila vascoasa, namol vascos, nisip noroios, nisip cu alge;\nfunduri acceptabile - nisip fin, prundis, namol moale, scoici sfaramate;\nfunduri nefavorabile - pietris marunt si mare, stanci, bolovani si corali.\n\n\n### Lasarea ancorei\n\n\n1. Identificati locul de ancorare luand in considerare vant, curenti, adancime/lungimea lantului de ancorare, felul fundului de mare;\n2. Inaintati cu prova in vant catre locul de ancorare ;\n3. Puneti motorul pe pozitia neutru, cand barca s-a oprit, lasati ancora (4X adancimea) si asteptati cateva secunde pentru ca ancora si lantul sa se aseze pe fund;\n4. Puneti motorul pe mars inapoi pentru genera o deplasare inapoi a ambarcatiunii astfel incat ancora sa se fixeze;\n5. Asigurati-va ca ancora este prinsa. Pentru a constata ca nava ancorata nu grapeaza se va putea folosi un jalon de veghe cat si aliniament uscat (repere la tarm).\n\nDaca in timpul stationarii la ancora apare un pericol iminent in prova acesta trebuie evitat prin filarea intregului lant si marcarea acestuia cu o geamandura.\n\n\n### Ridicarea ancorei\n\n\n1. Puneti masina pe mars inainte la viteza extrem de mica;\n2. Ridicati lantul cand ajunge in pozitie aproape verticala;\n3. Daca ancora s-a blocat, nu puneti masina pe mars inapoi, nu va face decat sa infiga si mai tare ancora in sol.\n\nIn cazul navelor mari ridicarea ancorei se poate face si cu mars inapoi in contextul in care situatia din rada o cere.\n\nA nu se confunda manevra de ancorare cu manevra de andocare care reprezinta ridicarea navei pe doc in vederea efectuarii de reparatii.\n",
+      "content": "### Alegerea locului de ancorare\n\nLocul de ancorare poate fi:\n• Recomandat de cartile pilot / harti\n• Stabilit de autoritati\n• Ales de skipperul barcii\n\nUn loc bun de ancorare ofera siguranta in stationare.\n\n### Criterii pentru un loc bun\n\n• Adancimi suficiente in raport cu pescajul maxim\n• Natura fundului favorabila fixarii ancorei (risc redus de grapare)\n• Smulgere usoara la ridicarea ancorei\n• Adapost contra vanturilor dominante, valurilor si curentilor\n• Spatiu suficient (considerand lungimea navei)\n• Ancorare si plecare usoare\n• In afara cailor navigabile\n\n### Natura fundului\n\n**Funduri optime:** argila vascoasa, namol vascos, nisip noroios, nisip cu alge\n\n**Funduri acceptabile:** nisip fin, prundis, namol moale, scoici sfaramate\n\n**Funduri nefavorabile:** pietris marunt/mare, stanci, bolovani, corali\n\n### Lasarea ancorei — pas cu pas\n\n1. Identificati locul tinand cont de vant, curenti, adancime, lungimea lantului, natura fundului\n2. Inaintati cu **prova in vant** catre locul de ancorare\n3. Motor pe neutru; cand barca s-a oprit, lasati ancora (lant = **4x adancimea**); asteptati cateva secunde sa se aseze pe fund\n4. Motor pe **mars inapoi** pentru a fixa ancora\n5. Verificati ca ancora e prinsa — folositi **jalon de veghe** sau **aliniament uscat** (repere la tarm)\n\nDaca apare un pericol iminent in prova in timpul stationarii, filati intregul lant si marcati-l cu o geamandura.\n\n### Ridicarea ancorei — pas cu pas\n\n1. Motor pe mars inainte la viteza extrem de mica\n2. Ridicati lantul cand ajunge in pozitie aproape verticala\n3. Daca ancora s-a blocat, **nu puneti motor pe mars inapoi** (va infige si mai tare ancora in sol)\n\nLa navele mari, ridicarea se poate face si cu mars inapoi daca situatia din rada o cere.\n\n### Atentie\n\nNu confundati **ancorarea** (oprire temporara cu ancora) cu **andocarea** (ridicarea navei pe doc pentru reparatii).",
       "images": [
         "m7_p91_0.png",
         "m7_p92_0.png",
@@ -163,19 +148,26 @@
       ],
       "quiz": [
         {
-          "question": "Cum trebuie să manevreze două nave cu vele care se apropie una de alta, astfel încât există pericolul de coliziune şi primesc vântul din borduri diferite? nava care primeşte vântul din babord trebuie să se abată din drumul navei care primeşte vântul din tribord.",
-          "options": [
-            "nava care primeşte vântul din tribord trebuie să se abată din drumul navei care primeşte vântul din babord.",
-            "nava care primeşte vântul din pupa trebuie să se abată din drumul navei care primeşte vântul din tribord."
-          ],
-          "correct": 0
+          "question": "Cat lant trebuie lasat la ancorare in raport cu adancimea?",
+          "options": ["De 2 ori adancimea", "De 4 ori adancimea", "De 10 ori adancimea"],
+          "correct": 1
+        },
+        {
+          "question": "Care sunt fundurile optime pentru ancorare?",
+          "options": ["Pietris mare, stanci, bolovani", "Argila vascoasa, namol vascos, nisip noroios", "Corali, prundis grosier"],
+          "correct": 1
+        },
+        {
+          "question": "Ce faceti daca ancora s-a blocat la ridicare?",
+          "options": ["Puneti motorul pe mars inapoi cu viteza", "Nu puneti motor pe mars inapoi, deoarece va infige ancora si mai tare", "Taiati lantul si abandonati ancora"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s7",
       "title": "Remorcarea",
-      "content": "\n1. Remorcarea unei alte ambarcatiuni se face cu mare atentie. Elementul de succes al remorcarii este parama suficient de lunga si de rezistenta (material si grosime). Lungimea acesteia trebuie sa fie egala cu lungimea de undă a valului sau cu un multiplu al acestei marimi;\n2. Folositi viteza adecvata pentru a arunca parama ambarcatiunii remorcate (in cazul in care va aflati pe ambarcatiunea care remorcheaza, aveti grija la manevrare pana cand parama de remorcare este prinsa si asigurata. Deplasarea se face cu viteza adecvata si cu atentie la manevre.\n3. Mentineti viteza constanta si nu efectuati schimbari bruse de drum. Orice schimbare a vitezei se face treptat.\n4. Ambarcatiunea remorcata trebuie carmita astfel incat sa ajute la cursul care trebuie urmat.\n5. Comunicatia intre cele doua ambarcatiuni (cea care remorcheaza si cea care este remorcata trebuie mentinuta neintrerupt. Fiecare dintre conducatorii celor doua ambarcatiuni trebuie sa se informeze reciproc asupra intentiei de manevra si asupra oricarei probleme ivite. Ambii conducatori nu trebuie sa piarda vizual contactul cu cealalta ambarcatiune si cu parama de remocare care trebuie sa fie intinsa pe toata durata remorcarii.\n7. In drumul la remorca, atat ambarcatiunea remorcata cat mai ales cea care remorcheaza trebuie sa tina cont de valuri (directie si marime).\n8. Pregatirea pentru dezremorcare consta in reducerea treptata a vitezei pana la punctul in care parama de remorcare nu se mai afla in tensiune astfel incat sa poata fi dezlegata, dar mentinuta la un nivel suficient de mare astfel incat ambarcatiune remorcata sa nu isi piarda guvernarea si sa raspunda la comenzile carmei, pana cand ajunge in pozitia de a fi in afara pericolului de deriva.\n9. Dupa ce cele doua ambarcatiuni nu se mai afla prinse una de alta, atentia celei care a remorcat va fi in directia de a nu obstructiona manevrele celeilalte sau a eventualelor terte ajutoare.\n",
+      "content": "### Principii generale\n\nRemorcarea unei alte ambarcatiuni se face cu mare atentie. Elementul cheie al succesului este **parama** — trebuie sa fie suficient de lunga si de rezistenta.\n\n**Lungimea paramei** trebuie sa fie egala cu lungimea de unda a valului sau cu un multiplu al acesteia.\n\n### Procedura de remorcare\n\n1. Folositi viteza adecvata pentru a arunca parama ambarcatiunii remorcate\n2. Pana cand parama e prinsa si asigurata, manevrati cu mare atentie\n3. Mentineti **viteza constanta** — nu faceti schimbari bruste de drum\n4. Orice schimbare de viteza se face **treptat**\n5. Ambarcatiunea remorcata trebuie carmita pentru a ajuta la cursul de urmat\n\n### Comunicarea si veghea\n\n• Comunicatia intre cele doua ambarcatiuni trebuie mentinuta **neintrerupt**\n• Ambii conducatori se informeaza reciproc asupra intentiilor de manevra si problemelor aparute\n• Mentineti **contactul vizual** permanent cu cealalta ambarcatiune si cu parama de remorcare\n• Parama trebuie sa fie **intinsa** pe toata durata remorcarii\n• Tineti cont de directia si marimea valurilor\n\n### Dezremorcarea\n\n1. Reduceti **treptat** viteza pana cand parama nu mai e in tensiune\n2. Parama poate fi dezlegata, dar mentineti viteza suficienta pentru ca ambarcatiunea remorcata sa nu piarda guvernarea\n3. Dupa separare, ambarcatiunea care a remorcat nu trebuie sa obstructioneze manevrele celeilalte sau ale tertelor ajutoare",
       "images": [
         "m7_p93_0.png",
         "m7_p93_1.png",
@@ -184,19 +176,21 @@
       ],
       "quiz": [
         {
-          "question": "Cum trebuie să manevreze două nave cu vele care se apropie una de alta, astfel încât există pericolul de coliziune şi primesc vântul din acelaşi bord? nava care o vede pe cealaltă prin babord trebuie să se abată din drumul celeilalte nave.",
-          "options": [
-            "nava care este în vânt se va abate din drumul navei de sub vânt.",
-            "nava care o vede pe cealaltă prin tribord trebuie să se abată din drumul celeilalte nave."
-          ],
-          "correct": 0
+          "question": "Cu ce trebuie sa fie egala lungimea paramei de remorcare?",
+          "options": ["Cu lungimea ambarcatiunii remorcate", "Cu lungimea de unda a valului sau un multiplu al acesteia", "Cu de doua ori lungimea ambarcatiunii remorcher"],
+          "correct": 1
+        },
+        {
+          "question": "Ce regula trebuie respectata privind viteza in timpul remorcarii?",
+          "options": ["Viteza maxima pentru a ajunge cat mai repede", "Viteza constanta, fara schimbari bruste de drum", "Viteza minima in permanenta"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s8",
       "title": "Zone inguste si adancimi mici",
-      "content": "Conducerea navei in stramtori, ape inguste şi in general in treceri dificile se efectueaza pe baza unui studiu amanuntit al condiţiilor locale si stabilirea de masuri speciale pentru siguranta navigatiei, astfel:\n se utilizeaza harti la scara mare/planuri;\n trasarea drumului se face tinand cont de giratia navei;\n comandantul preia personal conducerea navei;\n ofiterul de cart executa veghea de navigatie, determinand continuu pozitia navei şi informand comandantul despre eventualele abateri de la drumul trasat pe harta.\n\nIn timpul navigaţiei prin zone înguste şi cu adancimi mici, apare un plus de rezistenţă la înaintarea navei, datorită vitezei scăzute a stratului de apă, cauzată de frecările cu fundul căii navigabile, frecări ce se opun implicit înaintării navei. Reducerea vitezei navei este de 20-25%, iar efectul de carmă este mai mic, nava guvernand mai greu, de aceea căile de navigaţie înguste şi cu adancimi mici sunt considerate zone dificile de navigat. In zone cu adancimi mici, la apariţia unei diferenţe mari de\n\nadancime, nava va abate brusc cu prova spre adancimea mare, datorită reducerilor frecărilor cu fundul.\n\nPe funduri mici se formează valuri mari la prova şi la pupa, proporţional cu viteza navei, care la viteze mari ale navei chiar se suprapun, mărind rezistenţa la înaintare cu 25-30%.\n\nMarşul pe funduri mici la viteze corespunzătoare se execută fără probleme, dar mărind viteza necorespunzător, se vor forma valuri de însoţire periculoase prin modificarea presiunilor din jurul navei, care vor determina schimbarea asietei navei (apupare accentuată), ceea ce va duce cu siguranţă la pierderea calităţilor manevriere ale navei.\n\nInfluenţa fundurilor mici asupra deplasării navelor este nesemnificativă, dacă pescajul este mult mai mic decat adancimea apei (rezerva de pilot este mare), de aceea navele cu aripi portante nu au restricţii de viteză în zone cu funduri mici.\n\nPe timpul manevrei navei în zone înguste şi cu adancimi mici, nu este recomandabil a se staţiona cu nava la ancoră în apropierea unui pericol pentru navigaţie.\n\nÎnainte de intrarea navei în zone înguste sau cu adancimi mici, fie cu pilot sau fără, comandantul navei trebuie să ia următoarele măsuri:\n micşorarea vitezei, astfel încat valurile formate să nu provoace avarii ambarcaţiunilor şi instalaţiilor aflate la mal; micşorează pericolul punerii pe uscat şi a abordajelor, precum şi eliminarea fenomenului de sucţiune;\n măsurarea mai des a adancimilor;\n întărirea observării vizuale şi radiotehnice;\n pregătirea ancorelor pentru fundarisit imediat, manevra este permanent la post;\n închiderea tuturor porţilor etanşe de pe navă;\n",
+      "content": "### De ce sunt dificile zonele inguste?\n\nNavigatia prin stramtori, ape inguste si treceri dificile necesita studiu amanuntit al conditiilor locale si masuri speciale:\n\n• Se utilizeaza harti la scara mare / planuri\n• Trasarea drumului tine cont de giratia navei\n• Comandantul preia personal conducerea navei\n• Ofiterul de cart determina continuu pozitia navei si informeaza comandantul despre abateri\n\n### Efecte fizice in ape inguste\n\nIn zone inguste si cu adancimi mici apare un **plus de rezistenta** la inaintare, cauzat de frecarea stratului de apa cu fundul. Consecinte:\n\n• **Reducerea vitezei** cu 20-25%\n• **Efectul de carma mai mic** — nava guverneaza mai greu\n• La diferente mari de adancime, nava **abate brusc cu prova spre adancimea mare**\n• Pe funduri mici se formeaza **valuri mari** la prova si pupa (proportional cu viteza)\n• La viteze prea mari, valurile de insotire modifica presiunile si **schimba asieta navei** (apupare accentuata), ceea ce duce la pierderea calitatilor manevriere\n\n### Cand nu sunt probleme?\n\nDaca pescajul este mult mai mic decat adancimea (rezerva de pilot mare), influenta fundurilor mici este nesemnificativa. Navele cu aripi portante nu au restrictii de viteza in astfel de zone.\n\n### Masuri de siguranta obligatorii\n\nInainte de intrarea in zone inguste sau cu adancimi mici:\n\n• **Micsorati viteza** — valurile formate nu trebuie sa provoace avarii; se reduce si riscul punerii pe uscat\n• Masurati **mai des adancimile**\n• Intariti **observarea vizuala si radiotehnica**\n• Pregatiti **ancorele pentru fundarisit imediat** — manevra permanent la post\n• Inchideti toate **portile etanse** de pe nava\n• Nu stationati la ancora in apropierea pericolelor de navigatie",
       "images": [
         "m7_p93_0.png",
         "m7_p93_1.png",
@@ -206,19 +200,26 @@
       ],
       "quiz": [
         {
-          "question": "Care este manevra unei nave care nu este obligată să se abată din drumul altei nave? trebuie să-şi menţină drumul şi viteza.",
-          "options": [
-            "va schimba numai drumul, pentru a evita o situaţie periculoasă.",
-            "va reduce viteza sau va stopa, pentru a nu crea situaţii periculoase."
-          ],
-          "correct": 0
+          "question": "Cu cat poate fi redusa viteza navei in zone cu adancimi mici?",
+          "options": ["Cu 5-10%", "Cu 20-25%", "Cu 50%"],
+          "correct": 1
+        },
+        {
+          "question": "Ce se intampla la diferente mari de adancime in zone inguste?",
+          "options": ["Nava accelereaza brusc", "Nava abate brusc cu prova spre adancimea mare", "Nava se opreste din inertie"],
+          "correct": 1
+        },
+        {
+          "question": "Ce masura obligatorie se ia inainte de intrarea in zone inguste?",
+          "options": ["Se opreste motorul", "Se pregatesc ancorele pentru fundarisit imediat", "Se coboara drapelul"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s9",
       "title": "Om la apa (MOB)",
-      "content": "### Principalele actiuni\n\n\n1. Strigati OM LA APA!\n2. Puneti un membru al echipajului sa localizeze omul cazut in apa si sa nu il piarda din ochi;\n3. Aruncati danbuoy pentru a fixa locul;\n4. Apasati butonul MOB de pe GPS (daca aveti);\n6. Pregatiti colacul potcoava;\n\n\n### Actiuni secundare\n\n\n1. Verificati paramele;\n2. Intorceti-va la persoana cazuta, aruncati-i colacul;\n\n\n### Actiunea de recuperare la bord\n\n\n1. Inaintati fara sa pierdeti din vedere victima;\n2. Pregatiti un lasou sau o parama de recuperare;\n3. Puneti un membru al echipajului in ham pentru a ajuta la recuperare;\n4. Recuperati victima pe bordul de sub vant.\n\n\n### Exista doua strategii de executare a manevrei de Om la Apa\n\n### Curba lui SCHRANOW\n\nSe pune cârma bandă în oricare dintre borduri şi după o întoarcere la drumul de salvare calculat : Ds = Di + 180° ± 60°, se va naviga pe acest drum pentru găsirea omului din apă.\n\nCurba lui WILLIAMSON\nDupă ce s-a executat o întoarcere de 60° cu cârma banda în bordul în care a căzut omul, se orientează cârma banda în bordul opus pentru a se ajunge la drum iniţial inversat.\n\nPentru recuperarea la bord a persoanei care a cazut in apa, in functie de conditiile de vant si val, exista mai multe metode. Cateva sunt exemplificate in urmatoarele ilustratii:\n",
+      "content": "### Principalele actiuni — fiecare secunda conteaza!\n\n1. Strigati **\"OM LA APA!\"** — alertati echipajul\n2. Desemnati un membru al echipajului sa **urmareasca vizual** victima — sa nu o piarda din ochi\n3. Aruncati **danbuoy** pentru a marca locul\n4. Apasati butonul **MOB pe GPS** (daca aveti)\n5. Pregatiti **colacul potcoava**\n\n### Actiuni secundare\n\n1. Verificati paramele\n2. Intoarceti-va la persoana cazuta si aruncati-i colacul\n\n### Recuperarea la bord\n\n1. Inaintati fara sa pierdeti din vedere victima\n2. Pregatiti un **lasou** sau o **parama de recuperare**\n3. Puneti un membru al echipajului **in ham** pentru a ajuta la recuperare\n4. Recuperati victima pe **bordul de sub vant**\n\n### Strategii de manevra MOB\n\n**Curba lui Scharnow:**\nSe pune carma banda in oricare bord. Dupa intoarcere, se navigheaza pe drumul de salvare: **Ds = Di + 180° +/- 60°** pentru a gasi omul din apa.\n\n**Curba lui Williamson:**\nSe executa o intoarcere de **60°** cu carma banda in bordul in care a cazut omul, apoi se orienteaza carma banda in **bordul opus** pentru a ajunge la drumul initial inversat.\n\nMetoda de recuperare se alege in functie de conditiile de vant si val.",
       "images": [
         "m7_p94_0.png",
         "m7_p95_0.png",
@@ -227,56 +228,67 @@
       ],
       "quiz": [
         {
-          "question": "Când trebuie să manevreze nava care nu este obligată să se abată din drumul altei nave? indiferent de situaţie, nu se va abate niciodată din drumul altei nave.",
-          "options": [
-            "imediat ce i se pare evident faptul că nava care are obligaţia de a se abate din drumul său nu face manevra.",
-            "când în urma observării relevmentului şi-a dat seama că există pericolul de coliziune."
-          ],
+          "question": "Care este primul lucru pe care il faci cand cineva cade in apa?",
+          "options": ["Opresti motorul", "Strigi 'OM LA APA!' si alertezi echipajul", "Sari dupa persoana"],
+          "correct": 1
+        },
+        {
+          "question": "Pe ce bord se recupereaza victima la manevra MOB?",
+          "options": ["Pe bordul de sub vant", "Pe bordul din vant", "Pe bordul babord intotdeauna"],
           "correct": 0
+        },
+        {
+          "question": "Ce formula se foloseste pentru drumul de salvare in curba lui Scharnow?",
+          "options": ["Ds = Di + 90 grade", "Ds = Di + 180 grade +/- 60 grade", "Ds = Di - 180 grade"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s10",
       "title": "Esuarea. Dezesuarea",
-      "content": "\nIntrarea la ape mici se petrece atunci cand nu urmarim marcajele hartilor, nu respectam balizele care indica senalul bun de navigat.\n\nTotusi daca o avarie nu poate fi evitata, comandantul navei poate alege sa esueze nava de preferat pe un fund nisipos.\n\nDaca fundul apei este nisipos sau malos, exista posibilitatea de dezesuare prin punerea motorului pe mars inapoi cu viteza. Dezesuarea pe fund nisipos este cel mai usor de facut.\n\nNu este recomandata aceasta tehnica cand exista posibilitatea ca sub apa sa fie stanci. In acest caz si nu numai folositi greutatea mobila a ambarcatiunii, echipajul in primul rand pentru a canarisi nava generand astfel scoaterea derivorului.\n\nDaca nu sunteti sigur ca pornind masina pe mars inainte ajungeti la ape sigure, nu faceti acest lucru.\nEste recomandat ca in situatia unei esuari sa incercati sa dezesuati (iesiti) exact pe traseul pe pare ati intrat, pentru a evita o noua esuare.\n",
+      "content": "### Ce este esuarea?\n\nEsuarea se produce cand ambarcatiunea ajunge la ape prea mici, de obicei din cauza nerespectarii marcajelor hartilor sau balizelor care indica senalul navigabil.\n\nDaca o avarie nu poate fi evitata, comandantul poate alege sa esueze nava de preferat pe un **fund nisipos**.\n\n### Tehnici de dezesuare\n\n**Pe fund nisipos sau malos:**\n• Puneti motorul pe **mars inapoi cu viteza** — dezesuarea pe nisip este cea mai usoara\n\n**Pe fund stancos:**\n• **Nu folositi** motorul pe mars inapoi direct\n• Utilizati **greutatea mobila** a ambarcatiunii (deplasati echipajul) pentru a **canarisi nava**, scoatand derivorul din fund\n\n### Reguli de siguranta\n\n• Daca nu sunteti sigur ca mergand inainte ajungeti la ape sigure, **nu faceti acest lucru**\n• Incercati sa dezesuati (iesiti) exact pe **traseul pe care ati intrat**, pentru a evita o noua esuare",
       "images": [
         "m7_p96_0.png"
       ],
       "quiz": [
         {
-          "question": "Lumina albă aşezată deasupra axului longitudinal al navei, arătând o lumină neîntreruptă pe un arc de orizont de 22°5 astfel ca să arate 22°5 înapoia traversului fiecărui bord este: lumina de pupa.",
-          "options": [
-            "lumina de catarg.",
-            "lumina de remorcaj."
-          ],
-          "correct": 0
+          "question": "Pe ce tip de fund este cel mai usor sa dezesuezi o ambarcatiune?",
+          "options": ["Fund stancos", "Fund nisipos", "Fund cu corali"],
+          "correct": 1
+        },
+        {
+          "question": "Ce faci daca nu esti sigur ca mergand inainte ajungi la ape sigure dupa esuare?",
+          "options": ["Mergi inainte cu viteza mica", "Nu faci acest lucru, incerci sa iesi pe traseul pe care ai intrat", "Astepti sa creasca nivelul apei"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s11",
       "title": "Rondoul",
-      "content": "\nRondoul este manevra de intoarcerea unei navei prin care aceasta isi schimba directia de inaintare cu\n180 grade.\n\nPentru efectuarea acestei manevre se vor tine cont de urmatorii factori:\n curentul si vantul;\n unghiul maxim al carmei;\n pescajul;\n adancimi si obstacole naturale sau artificiale;\n latimea locului;\n navele din zona si deplasarea acestora.\n\nManevra este folosita in mod curent pentru acostarea si plecarea de la cheu pe rauri sau fluvii cu prova inspre amonte.\nManevra de efectuare a rondoului de catre o nava care naviga in aval trebuie facuta de la curent puternica la curent slab astfel incat pe timpul girarii navei, curentul sa impinga pupa in aval si sa ajute giratia.\nIn cazul rondului facut in amonte, acesta trebuie facut de la curent slab la curent puternic astfel ca pe timpul girarii navei curentul sa abata prova in aval.\nManevra de efectuarea a rondoului cu vant din travers se executa intotdeauna cu prova contra directiei din care bate vantul.\nManevra de efectuare a rondoului folosind ancora se executa in cazul navelor mari, pe vreme rea cand latimea senalului nu este suficienta pentru intoarcere. Se orienteaza carma banda pana ce nava se aseaza perpendicular pe curent, venindu-se de la curent slab spre curent puternic. Se fundariseste ancora in bordul dinauntrul intoarcerii astfel incat dupa ce nava s-a prins de fund se intoarce imediat.\nSe vireaza ancora si se naviga amonte. Aceasta manevra se foloseste doar la intoarcerea din aval in amonte.\nSimilar rondoului efectuat cu ajutorul ancorei, se mai poate face si rondou cu prova in mal. In acest caz, unghiul de apropiere de mal trebuie sa fie de 60-70 grade.\n",
+      "content": "### Ce este rondoul?\n\n**Rondoul** este manevra prin care o nava isi schimba directia de inaintare cu **180 de grade** (intoarcere completa).\n\n### Factori de care trebuie tinut cont\n\n• Curentul si vantul\n• Unghiul maxim al carmei\n• Pescajul\n• Adancimi si obstacole (naturale sau artificiale)\n• Latimea locului\n• Navele din zona si deplasarea lor\n\n### Rondoul pe rauri si fluvii\n\nManevra se foloseste curent pentru acostare/plecare de la cheu cu prova inspre amonte.\n\n**Rondou din aval:**\nSe face de la curent puternic la curent slab — curentul impinge pupa in aval si ajuta giratia.\n\n**Rondou din amonte:**\nSe face de la curent slab la curent puternic — curentul abate prova in aval.\n\n### Rondoul cu vant din travers\n\nSe executa intotdeauna cu **prova contra directiei din care bate vantul**.\n\n### Rondoul pe ancora\n\nSe foloseste la navele mari, pe vreme rea, cand latimea senalului nu e suficienta. Pasi:\n\n1. Orientati carma banda pana nava e perpendiculara pe curent (de la curent slab spre puternic)\n2. Fundarisiti ancora in bordul dinauntrul intoarcerii\n3. Nava se prinde de fund si se intoarce imediat\n4. Virati ancora si navigati amonte\n\nAceasta manevra se foloseste **doar la intoarcerea din aval in amonte**.\n\n### Rondoul cu prova in mal\n\nSimilar rondoului pe ancora. Unghiul de apropiere de mal trebuie sa fie de **60-70 grade**.",
       "images": [
         "m7_p96_0.png",
         "m7_p97_0.png"
       ],
       "quiz": [
         {
-          "question": "Lumină verde din tribord şi lumină roşie din babord, vizibile pe un arc de 112°5 adică de la prova până la 22°5 înapoia traversului, reprezintă ceea ce se înţelege prin expresia: lumină de bord.",
-          "options": [
-            "lumină de pupa.",
-            "lumină de remorcaj."
-          ],
-          "correct": 0
+          "question": "Ce este rondoul?",
+          "options": ["O manevra de acostare laterala", "O manevra de schimbare a directiei cu 180 de grade", "O manevra de ancorare in rada"],
+          "correct": 1
+        },
+        {
+          "question": "Cum se executa rondoul cu vant din travers?",
+          "options": ["Cu pupa contra directiei vantului", "Cu prova contra directiei din care bate vantul", "Perpendicular pe directia vantului"],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m7_s12",
       "title": "Acostarea",
-      "content": "\nAcostarea reprezinta apropierea unei nave de cheu, debarcader, mal, geamandura, loc neamenajat sau alta nava. La acostare trebuie intotdeauna tinut cont de pasul elicei care, la mars inainte va intoarce pupa in bordul acestuia iar la mars inapoi in bordul opus acestuia.\nMajoritatea ambarcatiunilor de agrement au elice pas dreapta, astfel ca este preferabil, in cazul unei acostari cu bordul la cheu ca aceasta sa fie facuta cu bordul babord.\nAtentie intotdeauna ca baloanele de acostare sa fie pozitionate astfel incat ambarcatiunea sa fie protejata de riscul lovirii de ponton sau alte nave acostate in preajma.\n\nViteza de acostare trebuie sa fie gradual din ce in ce mai mica, iar in apropierea locului de acostare deplasarea navei trebuie sa se faca din inertie, astfel incat ambarcatiunea sa se opreasca cu 1 metru inainte de cheu.\nIn eventualitatea in care este nevoie sa opriti ambarcatiunea prin manevrarea unei parame, este de preferat ca aceasta sa fie springul prova. Acostarea se continua apoi dand la mal parama pupa si apoi parama prova si springul pupa.\n\nManevra de acostare cu bordul la cheu cu vantul si/sau curentul de-a lungul pontonului din prova\nCand pana la locul de acostare au mai ramas 6-8 lungimi de nava, se schimba directia de inaintare, astfel incat nava sa ajunga la o distanta fata de mal egala cu 2 lungimi de nava. La 5 lungimi de nava pana la ponton, se reduce viteza la jumatate, iar la 3 lungimi de nava pana la ponton se reduce viteza la incet iar carma se manevreaza spre locul de acostare sub un unghi de apropiere de 10-15 grade.\nApropierea se executa cu masina foarte incet inainte si carma 0, pregatind masina pentru mars inapoi in caz de nevoie. Nava se opreste din inertie punand masina incet inapoi, astfel ca la 1-2 m de ponton aceasta sa fie stopata si se da la mal parama prova.\n\nManevra de acostare cu bordul la cheu cu vantul care bate inspre ponton si curent din prova indiferent de intensitatea acestuia\nSe aplica mai intai manevra de acostare cu bordul la cheu cu vantul care bate de-a lungul pontonului din prova astfel incat nava sa ajunga aproape de cheu, paralela cu cheul. Vantul o va apropia cu bordul de ponton.\n\nManevra de acostare cu bordul la cheu cu vantul care bate dinspre ponton si curent inexistent sau foarte slab\nEste important ca viteza sa ofere guvernare, se vine cu prova in vant, pregatind paramele prova si pupa pentru acostare, cea pupa aducandu-se pana in prova ambarcatiunii prin afara bordului. Se arunca mai intai parama prova, apoi parama pupa. Prin virarea paramei pupa, nava se va apropia de ponton. Directia trebuie sa fie stabila cu cel putin 1-1,5 lungimi de barca inaintea pontonului.\n\nManevra de acostare cu bordul la cheu cu vantul care bate dinspre ponton si curent in lungul pontonului\nNava va fi dirijata paralela cu pontonul dar la o distanta nu mai mica ca lungimea proprie. Cand pana la locul de acostare au mai ramas 1-1,5 lungimi de nava se manevreaza carma in asa fel incat prova sa se afle in vant si in curent sub un unghi de aproximativ 30 grade (directia vectorului compus vant+curent) fata de linia pontonului. Masina functioneaza pe incet inainte pentru a invinge rezistenta vantului si a curentului si se stopeaza considerand inertia navei astfel incat sa se evite ciocnirea cu pontonul. Se da parama prova la mal si apoi celelalte parame.\n\n*In toate cazurile descrise mai sus se observa ca nava este dirijata cu prova in vant si curent.\n\nManevra de acostare cu bordul la cheu cu vantul si/sau curentul de-a lungul pontonului din pupa\nCu 5-6 lungimi de nava fata de ponton se reduce viteza la jumatate si se va mentine nava paralela cu pontonul la o distanta minima de 3 latimi de nava. Cand distanta dintre nava si ponton s-a redus la 3 lungimi de nava, viteza se reduce la incet mentinandu-se directia. In momentul in care prova navei ajunge la travers de capatul pontonului (sau de locul liber de acostare), se stopeaza masina. Se continua deplasarea din inertie iar cand pupa navei depaseste capatul celalalt al pontonului (sau al locului liber de acostare) se fixeaza masina pe mers inapoi la o turatie ce tine de cont de viteza vantului si forta curentului. Dupa ce nava a fost stopata si capata sens de miscare inspre inapoi, carma se orienteaza spre ponton astfel incat apropierea sa se faca la un unghi de 15-20 grade.\n\nManevra de acostare la un mal neamenajat\nLocul de acostare trebuie ales tinand cont de adancimi si obstacole naturale sau artificiale periculoase. In masura in care acestea permit, ne apropiem cu nava cat mai mult de mal cu un unghi fata de acesta de 35-45 grade dand o parama prova care poate fi legata de un copac rezistent sau se realizeaza o ancora de corp mort (bolovan). Pentru mentinerea navei cu pupa indepartata de mal se va da o legatura spring pupa situata in bordul dinspre vant si/sau curent sau daca asa ceva nu este posibil, se fundariseste un ancorot in bordul dinspre vant si/sau curent (amonte) sau se fixeaza un scondru in bordul de sub vant sau din aval in cazul exista curent.\n\nManevra usoara!\n\n1.\nAmbarcatiuni pentru agrement (Z. Crantea)\n2.\n**ABC** — ul marinarului (Gh. Ionescu, I. Manole)\n3.\n4.\n7.\nManevra navei in conditii speciale (Constantin Maraloi)\n",
+      "content": "### Ce este acostarea?\n\n**Acostarea** este apropierea unei nave de cheu, debarcader, mal, geamandura, loc neamenajat sau alta nava.\n\nReguli de baza:\n• Tineti cont de **pasul elicei** — la mars inainte pupa se deplaseaza in bordul pasului, la mars inapoi in bordul opus\n• Majoritatea ambarcatiunilor de agrement au **elice pas dreapta**, deci e preferabil sa acostati cu **bordul babord**\n• Pozitionati **baloanele de acostare** pentru protectie contra loviturilor\n• Viteza de acostare trebuie sa scada gradual — in apropierea cheului deplasarea se face **din inertie**, oprire la 1 m de cheu\n\n### Ordinea paramelor la acostare\n\nDaca trebuie sa opriti cu o parama, folositi de preferinta **springul prova**. Apoi dati:\n1. Parama pupa\n2. Parama prova\n3. Springul pupa\n\n### Acostare cu vant/curent din prova\n\n1. La 6-8 lungimi de nava, schimbati directia pentru a ajunge la 2 lungimi distanta de mal\n2. La 5 lungimi — reduceti viteza la jumatate\n3. La 3 lungimi — reduceti la incet, carma spre locul de acostare, unghi de apropiere **10-15 grade**\n4. Apropierea cu motor foarte incet inainte, carma 0, pregatiti mars inapoi\n5. Opriti din inertie cu motor incet inapoi; la 1-2 m de ponton dati parama prova\n\n### Acostare cu vant inspre ponton si curent din prova\n\nAplicati mai intai manevra de acostare cu vant din prova pana ajungeti paralel cu cheul. **Vantul va apropia** ambarcatiunea de ponton.\n\n### Acostare cu vant dinspre ponton, fara curent\n\n• Mentineti viteza pentru guvernare\n• Veniti cu **prova in vant**\n• Pregatiti parama prova si parama pupa (pupa adusa pana in prova, prin afara bordului)\n• Aruncati mai intai parama prova, apoi pupa\n• Virati parama pupa pentru a apropia nava de ponton\n• Directia stabila cu 1-1.5 lungimi de barca inaintea pontonului\n\n### Acostare cu vant dinspre ponton si curent in lungul pontonului\n\n1. Dirijati nava paralel cu pontonul la distanta minima = lungimea proprie\n2. La 1-1.5 lungimi de locul de acostare, orientati carma — prova in vant si curent sub unghi de **~30 grade** fata de ponton\n3. Motor incet inainte (sa invinga vantul si curentul), stopati considerand inertia\n4. Dati parama prova, apoi celelalte\n\n**Regula generala:** nava se dirijeaza mereu cu **prova in vant si curent**.\n\n### Acostare cu vant/curent din pupa\n\n1. La 5-6 lungimi, reduceti viteza la jumatate, nava paralela cu pontonul la 3 latimi distanta\n2. La 3 lungimi, reduceti la incet\n3. Cand prova ajunge la travers de ponton, stopati masina\n4. Continuati din inertie; cand pupa depaseste celalalt capat, motor inapoi (turatie functie de vant/curent)\n5. Dupa oprire, carma spre ponton — unghi de apropiere **15-20 grade**\n\n### Acostare la mal neamenajat\n\n1. Alegeti locul tinand cont de adancimi si obstacole\n2. Apropiati-va la unghi de **35-45 grade** fata de mal\n3. Dati parama prova (legata de copac rezistent sau ancora de corp mort)\n4. Pentru mentinerea pupei departe de mal:\n   • Legatura spring pupa in bordul dinspre vant/curent, SAU\n   • Fundarisiti un ancorot in bordul dinspre vant/curent (amonte), SAU\n   • Fixati un scondru in bordul de sub vant / din aval",
       "images": [
         "m7_p97_0.png",
         "m7_p98_0.png",
@@ -286,11 +298,18 @@
       ],
       "quiz": [
         {
-          "question": "Lumina albă aşezată cât mai aproape posibil în pupa, arătând o lumină neîntreruptă pe un arc de 135° câte 67°5 în fieare bord este: lumina de ancoră pupa.",
-          "options": [
-            "lumina de remorcaj.",
-            "lumina de pupa."
-          ],
+          "question": "De ce este preferabil sa acostezi cu bordul babord la ambarcatiunile cu elice pas dreapta?",
+          "options": ["Pentru ca bordul babord este mai rezistent", "Din cauza efectului elicei la mars inainte care deplaseaza pupa in bordul pasului", "Pentru ca baloanele de acostare sunt montate doar pe babord"],
+          "correct": 1
+        },
+        {
+          "question": "Care este regula generala privind directia navei la acostare cu vant si curent?",
+          "options": ["Nava se dirijeaza cu pupa in vant si curent", "Nava se dirijeaza cu prova in vant si curent", "Nu conteaza directia fata de vant si curent"],
+          "correct": 1
+        },
+        {
+          "question": "Care este unghiul de apropiere de mal la acostare la mal neamenajat?",
+          "options": ["10-15 grade", "35-45 grade", "90 grade (perpendicular)"],
           "correct": 1
         }
       ]

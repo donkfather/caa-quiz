@@ -1,0 +1,2447 @@
+[
+  {
+    "id": "e54a2e657607",
+    "kind": "existing_disagrees",
+    "title": "Boturile sunt:",
+    "cards": [
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Boturile sunt:",
+        "options": [
+          "capete de parama vegetala sau de lant fixate cu unul din capete solid in punte pentru fixarea provizorie a unei parame.",
+          "sigurante ale axului unei macarale.",
+          "stifturi de siguranta ale unei chei de impreunare."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 149,
+          "page": 8,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Boturile sunt:",
+        "options": [
+          "capete de parâmă vegetala sau de lanț fixate cu unul din capete solid în punte pentru fixarea provizorie a unei parâme.",
+          "siguranțe ale axului unei macarale.",
+          "știfturi de siguranță ale unei chei de împreunare."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 291,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Boturile sunt:",
+        "options": [
+          "capete de parâmă vegetala sau de lant fixate cu unul din capete solid în punte pentru fixarea provizorie a unei parâme.",
+          "siguranțe ale axului unei macarale.",
+          "stifturi de siguranță ale unei chei de împreunare."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 291,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4204f17ed3f9",
+    "kind": "existing_disagrees",
+    "title": "Care dintre afirmațiile de mai jos este adevărata?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Care dintre afirmațiile de mai jos este adevărata?",
+        "options": [
+          "turnichetii sunt piese metalice în forma de T, ce se folosesc la luarea voltelor la diverse parâme",
+          "turnichetii sunt piese metalice de ghidarea parâmelor, cu minimum de frecare",
+          "turnichetii sunt piese metalice pentru agățat lanțuri, parâme vegetale și sârme."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 293,
+          "page": 14,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Care dintre afirmatiile de mai jos este adevarata?",
+        "options": [
+          "turnichetii sunt piese metalice in forma de T, ce se folosesc la luarea voltelor la diverse parame",
+          "turnichetii sunt piese metalice de ghidarea paramelor, cu minimum de frecare",
+          "turnichetii sunt piese metalice pentru agatat lanturi, parame vegetale si sarme."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 151,
+          "page": 8,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Care dintre afirmațiile de mai jos este adevărată?",
+        "options": [
+          "turnicheții sunt piese metalice în forma de T, ce se folosesc la luarea voltelor la diverse parâme.",
+          "turnicheții sunt piese metalice de ghidarea parâmelor, cu minimum de frecare.",
+          "turnicheții sunt piese metalice pentru agățat lanțuri, parâme vegetale și sârme."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 293,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "564c25d88a70",
+    "kind": "existing_disagrees",
+    "title": "Ce sunt parâmele de sizal?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce sunt parâmele de sizal?",
+        "options": [
+          "parâme vegetale confecționate din fire lungi de cânepă",
+          "parâme vegetale confecționate din fibre de bananier",
+          "parâme vegetale confecționate din frunze de cactus"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 285,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce sunt parâmele de sizal?",
+        "options": [
+          "parâme vegetale confecționate din fire lungi de cânepă.",
+          "parâme vegetale confecționate din fibre de bananier.",
+          "parâme vegetale confecționate din frunze de cactus."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 285,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "143de0bacbf5",
+    "kind": "existing_disagrees",
+    "title": "Corpul balizei marcajului cardinal de Est este piturat în dungi orizontale dispuse de sus în jos astfel:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Corpul balizei marcajului cardinal de Est este piturat în dungi orizontale dispuse de sus în jos astfel:",
+        "options": [
+          "negru-galben-negru;",
+          "galben-negru-galben;",
+          "negru-galben."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 188,
+          "page": 10,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Corpul balizei marcajului cardinal de Est este piturat în dungi orizontale dispuse de sus în jos astfel:",
+        "options": [
+          "negru-galben-negru.",
+          "galben-negru-galben.",
+          "negru-galben."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C",
+            "D"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 188,
+          "topic": "navigation"
+        }
+      }
+    ]
+  },
+  {
+    "id": "37090eddfab7",
+    "kind": "existing_disagrees",
+    "title": "Cum trebuie să manevreze două nave cu vele care se apropie una de alta, astfel încât există pericolul de coliziune şi primesc vântul din acelaşi bord?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Cum trebuie să manevreze două nave cu vele care se apropie una de alta, astfel încât există pericolul de coliziune şi primesc vântul din acelaşi bord?",
+        "options": [
+          "nava care o vede pe cealaltă prin babord trebuie să se abată din drumul celeilalte nave.",
+          "nava care este în vânt se va abate din drumul navei de sub vânt.",
+          "nava care o vede pe cealaltă prin tribord trebuie să se abată din drumul celeilalte nave."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 51,
+          "page": 4,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Cum trebuie să manevreze două nave cu vele care se apropie una de alta, astfel încât există pericolul de coliziune și primesc vântul din același bord?",
+        "options": [
+          "nava care o vede pe cealaltă prin babord trebuie să se abată din drumul celeilalte nave.",
+          "nava care este în vânt se va abate din drumul navei de sub vânt.",
+          "nava care o vede pe cealaltă prin tribord trebuie să se abată din drumul celeilalte nave."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C",
+            "D"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 51,
+          "topic": "colreg"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2a6f5d99e0ad",
+    "kind": "existing_disagrees",
+    "title": "Dispozitivele de construcţie specială, fixate în punte, cu rol de ghidare a parâmei se numesc",
+    "cards": [
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Dispozitivele de construcţie specială, fixate în punte, cu rol de ghidare a parâmei se numesc",
+        "options": [
+          "rodante",
+          "urechi",
+          "tacheti"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 99,
+          "page": 6,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Dispozitivele de construcție speciala, fixate în punte, cu rol de ghidare a parâmei se numesc:",
+        "options": [
+          "rodante.",
+          "urechi.",
+          "tacheti."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 241,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "db56f36994a1",
+    "kind": "existing_disagrees",
+    "title": "Mai multe fire răsucite intre ele formează:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Mai multe fire răsucite intre ele formează:",
+        "options": [
+          "o șuviță",
+          "o lanțană",
+          "o sfilata"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 283,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Mai multe fire rasucite intre ele formeaza:",
+        "options": [
+          "o suvita",
+          "o lantana",
+          "o sfilata"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 141,
+          "page": 7,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Mai multe fire răsucite între ele formează:",
+        "options": [
+          "o suvița.",
+          "o lanțână.",
+          "o sfilata."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 283,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "308761bb6c72",
+    "kind": "existing_disagrees",
+    "title": "Marcajul lateral de babord din regiunea A are ca semn de vârf:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Marcajul lateral de babord din regiunea A are ca semn de vârf:",
+        "options": [
+          "un con negru cu vârful în sus;",
+          "un cilindru verde:",
+          "un cilindru roșu."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 189,
+          "page": 10,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Marcajul lateral de babord din regiunea A are ca semn de vârf:",
+        "options": [
+          "un con negru cu vârful în sus.",
+          "un cilindru verde.",
+          "un cilindru roșu."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C",
+            "D"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 189,
+          "topic": "navigation"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cfa651def341",
+    "kind": "existing_disagrees",
+    "title": "Piesele metalice de ghidare a parâmelor eliminând frecarea se numesc",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Piesele metalice de ghidare a parâmelor eliminând frecarea se numesc",
+        "options": [
+          "binte",
+          "babale",
+          "turnicheti"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 230,
+          "page": 11,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Piesele metalice de ghidare a parâmelor eliminând frecarea se numesc:",
+        "options": [
+          "binte.",
+          "babale.",
+          "turnicheti."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 230,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "dccaccbf6e4d",
+    "kind": "existing_disagrees",
+    "title": "Trei lumini în poziţie verticală din care luminile de sus şi de jos roşii şi lumina din mijloc albă sunt luminile purtate de o navă:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Trei lumini în poziţie verticală din care luminile de sus şi de jos roşii şi lumina din mijloc albă sunt luminile purtate de o navă:",
+        "options": [
+          "cu capacitate de manevră redusă când nu este în marş.",
+          "nestăpână pe manevra sa.",
+          "stânjenită de pescajul ei când nu este în marş."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 73,
+          "page": 5,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Trei lumini în poziție verticală din care luminile de sus și de jos roșii și lumina din mijloc albă sunt luminile purtate de o navă:",
+        "options": [
+          "cu capacitate de manevră redusă când nu este în marș.",
+          "nestăpână pe manevra sa.",
+          "stânjenită de pescajul ei când nu este în marș."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C",
+            "D"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 73,
+          "topic": "navigation"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b8614ea74f22",
+    "kind": "existing_disagrees",
+    "title": "În ce perioadă sunt respectate regulile referitoare la lumini?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "În ce perioadă sunt respectate regulile referitoare la lumini?",
+        "options": [
+          "pe timpul nopţii.",
+          "pe timpul nopţii şi pe vizibilitate redusă.",
+          "de la apusul la răsăritul soarelui."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 62,
+          "page": 4,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "În ce perioadă sunt respectate regulile referitoare la lumini?",
+        "options": [
+          "pe timpul nopții.",
+          "pe timpul nopții și pe vizibilitate redusă.",
+          "de la apusul la răsăritul soarelui."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C",
+            "D"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 62,
+          "topic": "navigation"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6f1748234f11",
+    "kind": "correct_answer",
+    "title": "Boturile sunt:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Boturile sunt:",
+        "options": [
+          "capete de parâmă vegetala sau de lanț fixate cu unul din capete solid în punte pentru fixarea provizorie a unei parâme.",
+          "siguranțe ale axului unei macarale.",
+          "știfturi de siguranță ale unei chei de împreunare."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 291,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Boturile sunt:",
+        "options": [
+          "capete de parama vegetala sau de lant fixate cu unul din capete solid in punte pentru fixarea provizorie a unei parame.",
+          "sigurante ale axului unei macarale.",
+          "stifturi de siguranta ale unei chei de impreunare."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 149,
+          "page": 8,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Boturile sunt:",
+        "options": [
+          "capete de parâmă vegetala sau de lant fixate cu unul din capete solid în punte pentru fixarea provizorie a unei parâme.",
+          "siguranțe ale axului unei macarale.",
+          "stifturi de siguranță ale unei chei de împreunare."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 291,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6458489765f7",
+    "kind": "option_set",
+    "title": "Cabestanul este :",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Cabestanul este :",
+        "options": [
+          "instalație mecanica",
+          "ddeis ppoez cithive ud,e b mabaanleev, rbainte,tacheti,la",
+          "Mecanism de punte, pentru virarea ancorei sau manevrarea parâmelor, acționat manual sau electro-mecanic, cu ax vertical"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 355,
+          "page": 16,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Cabestanul este :",
+        "options": [
+          "instalatie mecanica",
+          "dispozitiv de manevra",
+          "Mecanism de punte,pentru virarea ancorei sau manevrarea paramelor,actionat manual sau electro- mecanic, cu ax vertical"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 213,
+          "page": 10,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Cabestanul este:",
+        "options": [
+          "instalație mecanica.",
+          "dispozitiv de manevra.",
+          "Mecanism de punte, pentru virarea ancorei sau manevrarea parâmelor, acționat manual sau electro-mecanic, cu ax vertical."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 355,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "99842bdd0660",
+    "kind": "option_set",
+    "title": "Caracteristicile paramelor sunt:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Caracteristicile parâmelor sunt:",
+        "options": [
+          "flotabilitatea, greutatea, rezistenta, elasticitatea",
+          "grosimea, greutatea, rezistenta, flexibilitatea, elasticitatea",
+          "grosimea, flotabilitatea, greutatea, elasticitatea, asieta"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 260,
+          "page": 12,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Caracteristicile paramelor sunt:",
+        "options": [
+          "grosimea, flotabilitatea, greutatea, rezistenta, elasticitatea",
+          "grosimea, greutatea, rezistenta, flexibilitatea, elasticitatea",
+          "grosimea, flotabilitatea, greutatea, elasticitatea, asieta"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 118,
+          "page": 6,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Caracteristicile parâmelor sunt:",
+        "options": [
+          "flotabilitatea, greutatea, rezistența, elasticitatea.",
+          "grosimea, greutatea, rezistența, flexibilitatea, elasticitatea.",
+          "grosimea, flotabilitatea, greutatea, flexibilitatea, elasticitatea, asieta."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 260,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ae00c54a8d90",
+    "kind": "option_set",
+    "title": "Care dintre afirmatiile de mai jos este adevarata?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Care dintre afirmațiile de mai jos este adevărata?",
+        "options": [
+          "turnichetii sunt piese metalice în forma de T, ce se folosesc la luarea voltelor la diverse parâme",
+          "turnichetii sunt piese metalice de ghidarea parâmelor, cu minimum de frecare",
+          "turnichetii sunt piese metalice pentru agățat lanțuri, parâme vegetale și sârme."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 293,
+          "page": 14,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Care dintre afirmatiile de mai jos este adevarata?",
+        "options": [
+          "tachetii sunt piese metalice formate din doua coloane cilindrice care servesc la luarea voltelor la paramele date ca legaturi la mal",
+          "tachetii sunt piese metalice in forma de T, montate pe punte, pe copastie si servesc pentru luarea voltelor la parame mai subtiri",
+          "tachetii sunt piese metalice de ghidarea paramelor, cu minimum de frecare."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 150,
+          "page": 8,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Care dintre afirmațiile de mai jos este adevărată?",
+        "options": [
+          "turnicheții sunt piese metalice în forma de T, ce se folosesc la luarea voltelor la diverse parâme.",
+          "turnicheții sunt piese metalice de ghidarea parâmelor, cu minimum de frecare.",
+          "turnicheții sunt piese metalice pentru agățat lanțuri, parâme vegetale și sârme."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 293,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ddca820bc4fb",
+    "kind": "option_set",
+    "title": "Care este sancțiunea pentru folosirea mijloacelor de semnalizare de la bord în mod nejustificat sau neadecvat regulamentelor de navigație?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Care este sancțiunea pentru folosirea mijloacelor de semnalizare de la bord în mod nejustificat sau neadecvat regulamentelor de navigație?",
+        "options": [
+          "amendă de la 10.000 la 20.000 lei",
+          "amendă de la 5.000 la 20.000 lei",
+          "amendă de la 1.000 la 5.000 lei"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 15,
+          "page": 24,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Care este sancțiunea pentru folosirea mijloacelor de semnalizare de la bord în mod nejustificat sau neadecvat regulamentelor de navigație?",
+        "options": [
+          "amendă de la 5.000 la 10.000 lei",
+          "amendă de la 5.000 la 20.000 lei",
+          "amendă de la 10.000 la 20.000 lei"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 15,
+          "page": 20,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Care este sancțiunea pentru folosirea mijloacelor de semnalizare de la bord în mod nejustificat sau neadecvat regulamentelor de navigație?",
+        "options": [
+          "amendă de la 10.000 la 20.000 lei.",
+          "amendă de la 5.000 la 20.000 lei.",
+          "amendă de la 1.000 la 5.000 lei."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C",
+            "D"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 2015,
+          "topic": "law"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1ef29a7c676f",
+    "kind": "option_set",
+    "title": "Ce este garlinul?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce este garlinul?",
+        "options": [
+          "o lanƫanã de 40-80mm grosime folosită la legarea navelor mici",
+          "o parâmă cu grosimea de 100- 620mm folosită la legarea sau remorcarea navei",
+          "o lanțană subțire de 7-8mm folosită la înfășurări și patronări de parâme groase"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 274,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Ce este garlinul?",
+        "options": [
+          "o lantana de 40-80mm grosime folosita la legarea navelor mici",
+          "o parama cu grosimea de 100-620mm folosita la legarea sau remorcarea navei",
+          "o lantana subtire de 7-8mm folosita la infasurari si patronari de parame groase"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 132,
+          "page": 7,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce este garlinul?",
+        "options": [
+          "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+          "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+          "o lanțână subțire de 7-8mm folosită la înfășurări și patronări de parâme groase."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 274,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e669ece07b05",
+    "kind": "option_set",
+    "title": "Ce este grandeea?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce este grandeea?",
+        "options": [
+          "o lanƫanã cu circumferința de 25-120mm cusuta pe marginea unei vele sau tenzi pentru a o întări.",
+          "o parâmă cu grosimea de 100- 620mm folosită la legarea sau remorcarea navei",
+          "o lanțană subțire de 7-8mm folosită la înfășurări și patronări de parâme groase"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 257,
+          "page": 12,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Ce este grandeea?",
+        "options": [
+          "o lantana cu circumferinta de 25-120mm",
+          "o parama cu grosimea de 100-620mm folosita la legarea sau remorcarea navei",
+          "o lantana subtire de 7-8mm folosita la infasurari si patronari de parame groase"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "D",
+          "pdf_id": 115,
+          "page": 6,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce este grandeea?",
+        "options": [
+          "o lanțană cu circumferința de 25-120mm cusuta pe marginea unei vele sau tenzi pentru a o întări.",
+          "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+          "o lanțană subțire de 7-8mm folosită la înfășurări și patronări de parâme groase."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 257,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3639ae5f625e",
+    "kind": "option_set",
+    "title": "Ce este lusinul?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce este lusinul?",
+        "options": [
+          "o lanƫanã de 40-80mm grosime folosită la legarea navelor mici",
+          "o lanțană mai fină decât merlinul, folosită la patronări și înfășurări fine",
+          "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 268,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Ce este lusinul?",
+        "options": [
+          "o lantana de 40-80mm grosime folosita la legarea navelor mici",
+          "o lantana mai fina decat merlinul, folosita la patronari si infasurari fine",
+          "o parama cu grosimea de 15-40mm folosita la bandula sau la pavilion"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 126,
+          "page": 7,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce este lusinul?",
+        "options": [
+          "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+          "o lanțană mai fină decât merlinul, folosită la patronări și înfășurări fine.",
+          "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 268,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "85179a721006",
+    "kind": "option_set",
+    "title": "Ce este merlinul?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce este merlinul?",
+        "options": [
+          "o lanƫanã de 40-80mm grosime folosită la legarea navelor mici",
+          "o parâmă cu grosimea de 100- 620mm folosită la legarea sau remorcarea navei",
+          "o parâmă subțire confecționată din trei sfilate, folosită la înfășurare, legături și patronări"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 252,
+          "page": 12,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Ce este merlinul?",
+        "options": [
+          "o lantana de 40-80mm grosime folosita la legarea navelor mici",
+          "o parama cu grosimea de 100-620mm folosita la legarea sau remorcarea navei",
+          "o lantana subtire de 7-8mm folosita la infasurari si patronari de parame groase"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 110,
+          "page": 6,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce este merlinul?",
+        "options": [
+          "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+          "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+          "o parâmă subțire confecționată din trei sfilate, folosită la înfășurare, legături și patronări."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 252,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6962e4335357",
+    "kind": "option_set",
+    "title": "Ce este saula?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce este saula?",
+        "options": [
+          "o lanƫanã de 40-80mm grosime folosită la legarea navelor mici",
+          "o parâmă cu grosimea de 100- 620mm folosită la legarea sau remorcarea navei",
+          "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 262,
+          "page": 12,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Ce este saula?",
+        "options": [
+          "o lantana de 40-80mm grosime folosita la legarea navelor mici",
+          "o parama cu grosimea de 100-620mm folosita la legarea sau remorcarea navei",
+          "o parama cu grosimea de 15-40mm folosita la bandula sau la pavilion"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 120,
+          "page": 6,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce este saula?",
+        "options": [
+          "o lanțană de 40-80mm grosime folosită la legarea navelor mici.",
+          "o parâmă cu grosimea de 100-620mm folosită la legarea sau remorcarea navei.",
+          "o parâmă cu grosimea de 15-40mm folosită la bandulă sau la pavilion."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 262,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f6b95a6f44cf",
+    "kind": "option_set",
+    "title": "Ce se intelege prin \"bataia paramei\"?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce se înțelege prin \"bătaia parâmei\"?",
+        "options": [
+          "separarea firelor după lungime și eliberarea produsului secundar numit stupa",
+          "îndepărtarea materialelor străine din materia prima",
+          "operațiunea prin care firele sunt răsucite"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 261,
+          "page": 12,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Ce se intelege prin \"bataia paramei\"?",
+        "options": [
+          "separara firelor dupa lungime si eliberarea produsului secundar numit stupa",
+          "indepartarea materialelor straine din materia prima",
+          "operatiunea prin care firele sunt rasucite"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 119,
+          "page": 6,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce se înțelege prin \"bătaia parâmei\"?",
+        "options": [
+          "separarea firelor după lungime și eliberarea produsului secundar numit stupa.",
+          "îndepărtarea materialelor străine din materia prima.",
+          "operațiunea prin care firele sunt răsucite."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 261,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "73768c738af2",
+    "kind": "option_set",
+    "title": "Ce sunt paramele de sizal?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Ce sunt parâmele de sizal?",
+        "options": [
+          "parâme vegetale confecționate din fire lungi de cânepă",
+          "parâme vegetale confecționate din fibre de bananier",
+          "parâme vegetale confecționate din frunze de cactus"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 285,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Ce sunt paramele de sizal?",
+        "options": [
+          "parame vegetale confectionate din fire lungi de canepa",
+          "parame vegetale confectionate din fibre de bananaier",
+          "parame vegetale confectionate din frunze de cactus"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 143,
+          "page": 7,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Ce sunt parâmele de sizal?",
+        "options": [
+          "parâme vegetale confecționate din fire lungi de cânepă.",
+          "parâme vegetale confecționate din fibre de bananier.",
+          "parâme vegetale confecționate din frunze de cactus."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 285,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3c2fb0031148",
+    "kind": "option_set",
+    "title": "Cum se masoara grosimea unei parame?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Cum se măsoară grosimea unei parâme?",
+        "options": [
+          "prin măsurarea circumferinței ei",
+          "prin măsurarea sarcinii la care se rupe parâma",
+          "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 298,
+          "page": 14,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Cum se masoara grosimea unei parame?",
+        "options": [
+          "prin masurarea circumferintei ei",
+          "prin masurarea sarcinii la care se rupe parama",
+          "prin masurarea greutattii in kilograme a unui metru liniar din parama respectiva"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "D",
+          "pdf_id": 156,
+          "page": 8,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Cum se măsoară grosimea unei parâme?",
+        "options": [
+          "prin măsurarea circumferinței ei.",
+          "prin măsurarea sarcinii care se rupe parâma.",
+          "prin măsurarea greutății în kilograme a unui metru liniar din parâma respectiva."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 298,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "53a7996d1b93",
+    "kind": "option_set",
+    "title": "Dacă barca devine instabilă",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Dacă barca devine instabilă",
+        "options": [
+          "măriţi viteza pentru a stabiliza deplasarea",
+          "reduceţi viteza în mod gradat, nu acceleraţi, opriţi testul de navigaţie în viteza pe apă, apoi verificaţi barca şi echipamentul, iar în cazul în care consideraţi că este nevoie, contactaţi- vă dealer-ul sau un expert pentru a vă ajuta",
+          "nu este nevoie de nici o verificare, continuaţi mersul la aceeaşi parametri, deoarece fenomenul de instabilitate dispare după scurt timp"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 450,
+          "page": 19,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Dacă barca devine instabilă",
+        "options": [
+          "măriţi viteza pentru a stabiliza deplasarea",
+          "reduceţi viteza în mod gradat, nu acceleraţi, opriţi testul de navigaţie în viteza pe apă, apoi verificaţi barca şi echipamentul, iar în cazul în care consideraţi că este nevoie, contactaţi-vă dealer-ul sau un expert pentru a vă ajuta",
+          "nu este nevoie de nici o verificare, continuaţi mersul la aceeaşi parametri, deoarece fenomenul de instabilitate dispare după scurt timp"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 308,
+          "page": 14,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Dacă barca devine instabilă:",
+        "options": [
+          "măriți viteza pentru a stabiliza deplasarea.",
+          "reduceți viteza în mod gradat, nu accelerați, opriți testul de navigație în viteza pe apă, apoi verificați barca și echipamentul, iar în cazul în care considerați că este nevoie, contactați dealer-ul sau un expert pentru a vă ajuta.",
+          "nu este nevoie de nicio verificare, continuați mersul la aceeași parametri, deoarece fenomenul de instabilitate dispare după scurt timp."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 450,
+          "topic": "maneuvering"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2e45e48e20dc",
+    "kind": "option_set",
+    "title": "Din ce sunt confectionate paramele vegetale?",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Din ce sunt confecționate parâmele vegetale?",
+        "options": [
+          "din fire de cânepă, in, bumbac, iuta",
+          "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm",
+          "din fire de capron,relon,nailon, polipropilena"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 280,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Din ce sunt confectionate paramele vegetale?",
+        "options": [
+          "din fire de canepa, in, bumbac, iuta",
+          "din fire de sarma de otel zincat cu grosimi",
+          "din fire de capron,relon,nailon,"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "D",
+          "pdf_id": 138,
+          "page": 7,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Din ce sunt confecționate parâmele vegetale?",
+        "options": [
+          "din fire de cânepă, in, bumbac, iuta.",
+          "din fire de sarma de otel zincat cu grosimi de 0,2-0,6mm.",
+          "din fire de capron, relon, nailon, polipropilena."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 280,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a5c3491dc905",
+    "kind": "option_set",
+    "title": "In categoria obiectelor de armament destinate pentru salvare, in inventarul barcii intra si:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "In categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intra si:",
+        "options": [
+          "colaci de salvare",
+          "ghiordelul",
+          "compasul de barca"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 310,
+          "page": 14,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "In categoria obiectelor de armament destinate pentru salvare, in inventarul barcii intra si:",
+        "options": [
+          "trusa cu scule de marangozerie",
+          "veste de salvare",
+          "ispolul"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 167,
+          "page": 8,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "În categoria obiectelor de armament destinate pentru salvare, în inventarul bărcii intră si:",
+        "options": [
+          "trusa cu scule de marangozerie.",
+          "veste de salvare.",
+          "compasul de barca."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 309,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "34fa79981515",
+    "kind": "option_set",
+    "title": "Instalatia de ancorare a navei reprezinta:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Instalația de ancorare a navei reprezintă:",
+        "options": [
+          "un complex de mecanisme care, acționate separat sau în comun, produce momentul girației (schimbarea direcției de înaintare a navei)",
+          "instalația cu care se realizează propulsia navei",
+          "instalația cu care se realizează fixarea într-o poziție bine determinată a navei."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 318,
+          "page": 15,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Instalatia de ancorare a navei reprezinta:",
+        "options": [
+          "un complex de mecanisme care, actionate separat sau in comun, produce momentul giratiei (schimbarea directiei de inaintare a navei)",
+          "instalatia cu care se realizeaza propulsia navei",
+          "instalatia cu care se realizeaza fixarea intr- o pozitie bine determinata a navei."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 176,
+          "page": 9,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Instalația de ancorare a navei reprezintă:",
+        "options": [
+          "un complex de mecanisme care, acționate separat sau în comun, produce momentul girației (schimbarea direcției de înaintare a navei).",
+          "instalația cu care se realizează propulsia navei.",
+          "instalația cu care se realizează fixarea într-o poziție bine determinată a navei."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 318,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "23896593871f",
+    "kind": "option_set",
+    "title": "Instalatia de ancorare:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Instalația de ancorare:",
+        "options": [
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei.",
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
+          "reprezintă un ansamblu de piese și mecanisme cu ajutorul cărora se guverneaza nava în locul voit"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 319,
+          "page": 15,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Instalatia de ancorare:",
+        "options": [
+          "reprezinta un ansamblu de piese si mecanisme destinate pentru a realiza deplasarea navei.",
+          "reprezinta un ansamblu de piese si mecanisme destinate pentru mentinerea navei intr-o zona in afara caii navigabile, sau intr-o pozitie stabila, de catre comandantul navei.",
+          "reprezinta un ansamblu de piese si mecanisme cu ajutorul carora se asigura nava in locul voit si intr-o pozitie aleasa"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 177,
+          "page": 9,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Instalația de ancorare:",
+        "options": [
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei.",
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
+          "reprezintă un ansamblu de piese și mecanisme cu ajutorul cărora se guvernează nava în locul voit."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 319,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e3420d2cb07d",
+    "kind": "option_set",
+    "title": "Instalatia de guvernare a navei reprezinta:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Instalația de guvernare a navei reprezintă:",
+        "options": [
+          "un complex de mecanisme care, acționate separat sau în comun, produce momentul girației (schimbarea direcției de înaintare a navei)",
+          "instalația cu care se realizează propulsia navei",
+          "instalatia cu care se realizează fixarea într-o pozitie bine determinată a navei."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 320,
+          "page": 15,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Instalatia de guvernare a navei reprezinta:",
+        "options": [
+          "un complex de mecanisme care, actionate separat sau in comun, produce momentul giratiei (schimbarea diretiei de inaintare a navei)",
+          "instalatia cu care se realizeaza propulsia navei",
+          "instalatia cu care se realizeaza fixarea intr- o pozitie bine determinata a navei."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "D",
+          "pdf_id": 178,
+          "page": 9,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Instalația de guvernare a navei reprezintă:",
+        "options": [
+          "un complex de mecanisme care, acționate separat sau în comun, produce momentul girației (schimbarea direcției de înaintare a navei).",
+          "instalația cu care se realizează propulsia navei.",
+          "instalatia cu care se realizează fixarea într-o poziție bine determinată a navei."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 320,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "72534675556c",
+    "kind": "option_set",
+    "title": "Instalatia de guvernare:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Instalația de guvernare:",
+        "options": [
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
+          "reprezintă un ansamblu de piese și mecanisme care trebuie sa asigure respectarea drumului impus navei sau schimbarea direcției de înaintare a navei.",
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 321,
+          "page": 15,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Instalatia de guvernare:",
+        "options": [
+          "reprezinta un ansamblu de piese si mecanisme destinate pentru mentinerea navei intr-o zona in afara caii navigabile, sau intr-o pozitie stabila, de catre comandantul navei.",
+          "reprezinta un ansamblu de piese si mecanisme care trebuie sa asigure respectarea drumului impus navei sau schimbarea directiei navei.",
+          "reprezintpa un ansamblu de piese si mecanisme destinate pentru a realiza deplasarea navei."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 179,
+          "page": 9,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Instalația de guvernare:",
+        "options": [
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru menținerea navei într-o zona în afara caii navigabile, sau într-o poziție stabila, de către comandantul navei.",
+          "reprezintă un ansamblu de piese și mecanisme care trebuie sa asigure respectarea drumului impus navei sau schimbarea direcției de înaintare a navei.",
+          "reprezintă un ansamblu de piese și mecanisme destinate pentru a realiza deplasarea navei."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 321,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "af7740b857ed",
+    "kind": "option_set",
+    "title": "Instalaţia de guvernare se compune din",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Instalaţia de guvernare se compune din",
+        "options": [
+          "timonă şi transmisie",
+          "timona sau manipulatorul electric; servomotorul la navele mari; sistemul de transmisie timonă- servomotor-cârmă; cârma propiu- zisă",
+          "timona"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 444,
+          "page": 19,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Instalaţia de guvernare se compune din",
+        "options": [
+          "timonă şi transmisie",
+          "timona sau manipulatorul electric; servomotorul la navele mari; sistemul de transmisie timonă-servomotor-cârmă; cârma propiu-zisă",
+          "timona"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 302,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Instalația de guvernare se compune din:",
+        "options": [
+          "timonă și transmisie.",
+          "timona sau manipulatorul electric; servomotorul la navele mari; sistemul de transmisie timonă-servomotor-cârmă; cârma propiu-zisă.",
+          "timona."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 444,
+          "topic": "maneuvering"
+        }
+      }
+    ]
+  },
+  {
+    "id": "25d901380777",
+    "kind": "option_set",
+    "title": "La deplasarea înainte a bărcii, efectul cârmei determină",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "La deplasarea înainte a bărcii, efectul cârmei determină",
+        "options": [
+          "orientarea provei în vânt",
+          "orientarea provei în bordul în care s- a pus cârma şi a pupei în bordul opus",
+          "mersul în linie dreaptă"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 408,
+          "page": 16,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "La deplasarea înainte a bărcii, efectul cârmei determină",
+        "options": [
+          "orientarea provei în vânt",
+          "orientarea provei în bordul în care s-a pus cârma şi a pupei în bordul opus",
+          "mersul în linie dreaptă"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 266,
+          "page": 11,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "La deplasarea înainte a bărcii, efectul cârmei determină:",
+        "options": [
+          "orientarea provei în vânt.",
+          "orientarea provei în bordul în care s-a pus cârma și a pupei în bordul opus.",
+          "mersul în linie dreaptă."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 408,
+          "topic": "maneuvering"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cce41f7477e8",
+    "kind": "option_set",
+    "title": "La deplasarea înapoi a bărcii, efectul cârmei determină",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "La deplasarea înapoi a bărcii, efectul cârmei determină",
+        "options": [
+          "nu are nici o influenţă",
+          "orientarea provei în bordul în care s- a pus cârma şi a pupei în sensul opus cârmei",
+          "orientarea provei în bordul opus celui în care s-a pus cârma şi a pupei în sensul punerii cârmei"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 477,
+          "page": 21,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "La deplasarea înapoi a bărcii, efectul cârmei determină",
+        "options": [
+          "nu are nici o influenţă",
+          "orientarea provei în bordul în care s-a pus cârma şi a pupei în sensul opus cârmei",
+          "orientarea provei în bordul opus celui în care s-a pus cârma şi a pupei în sensul punerii cârmei"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 335,
+          "page": 16,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "La deplasarea înapoi a bărcii, efectul cârmei determină:",
+        "options": [
+          "nu are nicio influență.",
+          "orientarea provei în bordul în care s-a pus cârma și a pupei în sensul opus cârmei.",
+          "orientarea provei în bordul opus celui în care s-a pus cârma și a pupei în sensul punerii cârmei."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 477,
+          "topic": "maneuvering"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e41108ede204",
+    "kind": "option_set",
+    "title": "Macaralele in marinarie sunt:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Macaralele în marinărie sunt:",
+        "options": [
+          "dispozitive de genul scripeților, folosite pentru ridicarea unor greutăți sau pentru schimbarea direcției de tracțiune a unei parâme",
+          "instalații de forță prevăzute cu cabina și panou de comandă",
+          "instalații compuse dintr-un ansamblu de grinzi metalice sudate sau nituite, aflate pe nave"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 263,
+          "page": 12,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Macaralele in marinarie sunt:",
+        "options": [
+          "dispozitive de genul scripetilor, folosite pentru ridicarea unor greutati sau pentru schimbarea directiei de tractiune a unei parame",
+          "instalatii de forta prevazute cu cabina si panou de comanda",
+          "instalatii compuse dintr-un ansanmblu de grinzi metalice sudate sau nituite, aflate pe nave"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "D",
+          "pdf_id": 121,
+          "page": 7,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Macaralele în marinărie sunt:",
+        "options": [
+          "dispozitive de genul scripetilor, folosite pentru ridicarea unor greutăți sau pentru schimbarea direcției de tracțiune a unei parâme.",
+          "instalații de forță prevăzute cu cabina și panou de comandă.",
+          "instalații compuse dintr-un ansamblu de grinzi metalice sudate sau nituite, aflate pe nave."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 263,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7f2ee942c8bd",
+    "kind": "option_set",
+    "title": "Orificiul rotund prin care trece axul cârmei se numeşte",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Orificiul rotund prin care trece axul cârmei se numește",
+        "options": [
+          "stelatura pupa",
+          "etrava",
+          "etambreul axului cârmei"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "C",
+          "pdf_id": 236,
+          "page": 11,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Orificiul rotund prin care trece axul cârmei se numeşte",
+        "options": [
+          "stelatura pupa",
+          "etrava",
+          "etambreu"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 94,
+          "page": 5,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Orificiul rotund prin care trece axul cârmei se numește:",
+        "options": [
+          "stelatura pupa.",
+          "etrava.",
+          "etambreul axului cârmei."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 236,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "be96d18b1b89",
+    "kind": "option_set",
+    "title": "Pastrarea paramelor vegetale se face ferindu-le de:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Păstrarea parâmelor vegetale se face ferindu-le de:",
+        "options": [
+          "întuneric și lipsa de ventilație",
+          "umezeala și radiația solara",
+          "nu necesita masuri speciale pentru păstrare"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 272,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Pastrarea paramelor vegetale se face ferindu-le de:",
+        "options": [
+          "razele solare",
+          "umezeala",
+          "nu necesita masuri speciale pentru pastrare"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 130,
+          "page": 7,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Păstrarea parâmelor vegetale se face ferindu-le de:",
+        "options": [
+          "întuneric și lipsa de ventilație.",
+          "umezeala și radiația solara.",
+          "nu necesită măsuri speciale pentru păstrare."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 272,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "71170bf63e8f",
+    "kind": "option_set",
+    "title": "Vesta de salvare asigura:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Vesta de salvare asigura:",
+        "options": [
+          "ieșirea la suprafață a persoanei căzute în apă, chiar în stare de inconștiență, și menține gura acesteia deasupra nivelului apei",
+          "la confecționarea baloanelor și paietelor",
+          "la confecționarea saulelor la ambarcațiuni sport și de agrement"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 287,
+          "page": 13,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Vesta de salvare asigura:",
+        "options": [
+          "iesirea la suprafata a persoanei cazute in apa,chiar in stare de inconstienta,si mentine gura acesteia deasupra nivelului apei",
+          "la confectionarea baloanelor si paietelor",
+          "la confectionarea saulelor la ambarcatiuni sport si de agrement"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "D",
+          "pdf_id": 145,
+          "page": 8,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Vesta de salvare asigura:",
+        "options": [
+          "ieșirea la suprafață a persoanei căzute în apă, chiar în stare de inconștiență, și menține gura acesteia deasupra nivelului apei.",
+          "la confecționarea baloanelor și paietelor.",
+          "la confecționarea saulelor la ambarcațiuni sport și de agrement."
+        ],
+        "correct": 0,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 287,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0388e27b01b5",
+    "kind": "option_set",
+    "title": "Vinciul este :",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Vinciul este :",
+        "options": [
+          "instalație fixa",
+          "mecanism de ridicat sau tras, manual sau acționat mecanic, cu ax orizontal utilizat la bord pentru virarea ancorei, manevrelor unei bigi, a curenților palancurilor gruelor de barcă",
+          "instalație mecanica de forță"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 351,
+          "page": 16,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Vinciul este :",
+        "options": [
+          "instalatie fixa",
+          "mecanism de ridicat sau tras, manual sau actionat mecanic,cu ax orizontal utilizat la bord pentru virarea ancorei,manevrelor unei bigi,a curentilor palancurilor gruelor de barca",
+          "instalatie mecanica de forta"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 209,
+          "page": 10,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Vinciul este:",
+        "options": [
+          "instalație fixa.",
+          "mecanism de ridicat sau tras, manual sau acționat mecanic, cu ax orizontal utilizat la bord pentru virarea ancorei, manevrelor unei bigi, a curenților palancurilor gruelor de barcă.",
+          "instalație mecanica de forță."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 351,
+          "topic": "seamanship"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7b4c234d7ee1",
+    "kind": "option_set",
+    "title": "În camerele ecluzei:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "În camerele ecluzei",
+        "options": [
+          "navele trebuie să se menţină în interiorul limitelor, în cazul în care pe pereţii ecluzelor sunt marcate graniţe/limite",
+          "navele se pot lega oriunde consideră",
+          "nu este nevoie de legarea navelor în timpul ecluzării"
+        ],
+        "correct": 0,
+        "ref": {
+          "license": "C",
+          "pdf_id": 481,
+          "page": 21,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "În camerele ecluzei:",
+        "options": [
+          "nu se folosesc baloanele/trancheţi pentru acostare",
+          "este obligatorie folosirea trancheţilor pentru acostare",
+          "se folosesc trancheţi care trebuie să fie flotabili, dacă nu sunt legaţi strâns-fixaţi de navă"
+        ],
+        "correct": 2,
+        "ref": {
+          "license": "D",
+          "pdf_id": 291,
+          "page": 12,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "În camerele ecluzei:",
+        "options": [
+          "nu se folosesc baloanele/trancheții pentru acostare.",
+          "este obligatorie folosirea trancheților pentru acostare.",
+          "se folosesc trancheți care trebuie să fie flotabili, dacă nu sunt legați strâns de navă."
+        ],
+        "correct": 2,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 433,
+          "topic": "maneuvering"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8b7e5ffc7a89",
+    "kind": "option_set",
+    "title": "Înmulţind rotaţiile pe minut (RPM) cu pasul elicei, se obţine:",
+    "cards": [
+      {
+        "label": "Class C",
+        "source": "pdf",
+        "question": "Înmulţind rotaţiile pe minut (RPM) cu pasul elicei, se obţine:",
+        "options": [
+          "valoarea rezistenţei elicei",
+          "spaţiul parcurs de ambarcaţiune într- un minut",
+          "numărul de pale de elice"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "C",
+          "pdf_id": 452,
+          "page": 19,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Class D",
+        "source": "pdf",
+        "question": "Înmulţind rotaţiile pe minut (RPM) cu pasul elicei, se obţine:",
+        "options": [
+          "valoarea rezistenţei elicei",
+          "spaţiul parcurs de ambarcaţiune într-un minut",
+          "numărul de pale de elice"
+        ],
+        "correct": 1,
+        "ref": {
+          "license": "D",
+          "pdf_id": 310,
+          "page": 14,
+          "existing_id": null,
+          "topic": null
+        }
+      },
+      {
+        "label": "Existing JSON",
+        "source": "existing",
+        "question": "Înmulțind rotațiile pe minut (RPM) cu pasul elicei, se obține:",
+        "options": [
+          "valoarea rezistenței elicei.",
+          "spațiul parcurs de ambarcațiune într-un minut.",
+          "numărul de pale de elice."
+        ],
+        "correct": 1,
+        "ref": {
+          "license": [
+            "C"
+          ],
+          "pdf_id": null,
+          "page": null,
+          "existing_id": 452,
+          "topic": "maneuvering"
+        }
+      }
+    ]
+  }
+]

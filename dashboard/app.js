@@ -729,16 +729,10 @@ function renderTopicFilter() {
 }
 
 function renderCoverage() {
+  // Coverage chips hidden for now — the gauge is noisy while the topic mix
+  // is still being filled. Re-enable by restoring the implementation below.
   const host = document.getElementById("coverage");
-  const broken = coverageInfo();
-  if (!broken.length) { host.innerHTML = `<span class="cov-chip ok">✓ All exams covered</span>`; return; }
-  // Group by exam
-  const byExam = {};
-  for (const b of broken) (byExam[b.exam] ??= []).push(b);
-  host.innerHTML = Object.entries(byExam).map(([exam, list]) => {
-    const txt = list.map(b => `${b.topic} ${b.have}/${b.need}`).join(", ");
-    return `<span class="cov-chip bad" title="${txt}">⚠ ${exam}: ${txt}</span>`;
-  }).join("");
+  if (host) { host.innerHTML = ""; host.hidden = true; }
 }
 
 function renderList() {
@@ -4414,13 +4408,14 @@ async function renderCourseModulesList(body) {
       renderCoursePage();
     });
   }
-  // Compute usage once per Library entry, not on every re-render — otherwise
-  // each renderCoursePage triggers a fresh full-table fetch + a re-render
-  // chain that hammers the browser.
-  if (_course.libraryTab === "library" && !_course.imageUsage?.size && !_course.imageUsageLoading) {
+  // Compute usage once per Library entry, not on every re-render. An empty
+  // result (no modules yet) is still a valid load — gated on a boolean,
+  // not on map size, so we don't refetch forever.
+  if (_course.libraryTab === "library" && !_course.imageUsageLoaded && !_course.imageUsageLoading) {
     _course.imageUsageLoading = true;
     computeCourseImageUsage().then(m => {
       _course.imageUsage = m;
+      _course.imageUsageLoaded = true;
       _course.imageUsageLoading = false;
       if (_course.libraryTab === "library") renderCoursePage();
     });
@@ -4742,7 +4737,7 @@ async function renameCourseImage(oldName, newName) {
   }
 
   _course.imagePaths = null;
-  _course.imageUsage = new Map(); // invalidate so next Library render refetches
+  _course.imageUsage = new Map(); _course.imageUsageLoaded = false;
   toast("ok", "Renamed", `${refsTouched} ref${refsTouched === 1 ? "" : "s"} across ${modsTouched} module${modsTouched === 1 ? "" : "s"} updated`);
   renderCoursePage();
 }
@@ -4780,7 +4775,7 @@ async function promptDeleteCourseImage(name) {
   const { error } = await supabase.storage.from("course-images").remove([fullPath]);
   if (error) { toast("bad", "Delete failed", error.message); return; }
   _course.imagePaths = null;
-  _course.imageUsage = new Map();
+  _course.imageUsage = new Map(); _course.imageUsageLoaded = false;
   toast("ok", "Deleted", name);
   renderCoursePage();
 }
@@ -4792,7 +4787,7 @@ async function bulkUploadCourseImages(files) {
     else fail++;
   }
   _course.imagePaths = null;
-  _course.imageUsage = new Map();
+  _course.imageUsage = new Map(); _course.imageUsageLoaded = false;
   toast(fail ? "warn" : "ok", `${ok}/${(files || []).length} uploaded`, fail ? `${fail} failed` : "course-images bucket");
   renderCoursePage();
 }
@@ -5566,11 +5561,12 @@ function attachCETabHandlers() {
 
   if (tab === "images") {
     // Lazy-load the usage map once. Cached afterward so the tab doesn't
-    // refetch on every render.
-    if (!_course.imageUsage?.size && !_course.imageUsageLoading) {
+    // refetch on every render — even when the table is empty.
+    if (!_course.imageUsageLoaded && !_course.imageUsageLoading) {
       _course.imageUsageLoading = true;
       computeCourseImageUsage().then(m => {
         _course.imageUsage = m;
+        _course.imageUsageLoaded = true;
         _course.imageUsageLoading = false;
         if (_course.activeTab === "images") renderCoursePage();
       });

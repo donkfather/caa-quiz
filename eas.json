@@ -9,7 +9,11 @@
       "android": {
         "buildType": "apk"
       },
+      "ios": {
+        "simulator": true
+      },
       "env": {
+        "APP_VARIANT": "preview",
         "EXPO_ROUTER_APP_ROOT": "./app",
         "EXPO_PUBLIC_USE_TEST_ADS": "true",
         "EXPO_PUBLIC_SUPABASE_URL": "https://heuooollkwoksqfncvoc.supabase.co",
@@ -23,6 +27,15 @@
         "EXPO_ROUTER_APP_ROOT": "./app",
         "EXPO_PUBLIC_SUPABASE_URL": "https://heuooollkwoksqfncvoc.supabase.co",
         "EXPO_PUBLIC_SUPABASE_KEY": "sb_publishable_l2_o9DCf7qRXkHXLTgYUPg_uDYTvNIm"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "popescut94@gmail.com",
+        "ascAppId": "REPLACE_WITH_APP_STORE_CONNECT_APP_ID",
+        "appleTeamId": "8R3Q7Z73N5"
       }
     }
   }

@@ -6,44 +6,82 @@
     {
       "id": "m4_s1",
       "title": "Temperatura aerului",
-      "content": "\nTemperatura aerului atmosferei este determinată de radiația solară. Razele soarelui încălzesc mai întâi pământul care degajă căldură încălzind aerul. Temperatura aerului atmosferic variază în funcție de mai mulți factori:\n latitudine: scade treptat de la Ecuator spre cei doi poli;\n anotimpuri;\n diferența dintre zi și noapte;\n altitudine: când crește altitudinea scade temperatura (la 1000m altitudine, temperatura\n scade cu 6 grade Celsius);\n incălzirea diferită a apei față de suprafețele terestre;\n vânturi;\n curenți marini.\n\nIzotermele sunt liniile de pe hartă ce unesc punctele cu aceeași temperatură.\n",
+      "content": "Temperatura aerului este determinata de radiatia solara. Razele soarelui incalzesc mai intai pamantul, care apoi degaja caldura si incalzeste aerul.\n\n### Factori care influenteaza temperatura\n\n• **Latitudine** — scade treptat de la Ecuator spre poli\n• **Anotimpuri** — variatie sezoniera\n• **Diferenta zi/noapte** — variatie diurna\n• **Altitudine** — la fiecare 1000 m altitudine, temperatura scade cu ~6°C\n• **Tipul suprafetei** — apa se incalzeste diferit fata de uscat\n• **Vanturi** — transporta mase de aer cald sau rece\n• **Curenti marini** — influenteaza temperatura in zonele costiere\n\n### Izoterme\n\n**Izotermele** (Isotherms) — linii trasate pe harta care unesc punctele cu aceeasi temperatura.",
       "images": [
         "m4_p44_0.png",
         "m4_p45_0.png"
       ],
       "quiz": [
         {
-          "question": "Schemelor de separare a traficului li se aplică reglementările referitoare la schemele de separare a traficului, adoptate de: guvernele ţărilor unde se află schemele.",
+          "question": "Cu cat scade temperatura la fiecare 1000 m altitudine?",
           "options": [
-            "Organizaţie.",
-            "Organizaţie şi guvernele anumitor ţări."
+            "Aproximativ 3 grade C",
+            "Aproximativ 6 grade C",
+            "Aproximativ 10 grade C"
           ],
-          "correct": 0
+          "correct": 1
+        },
+        {
+          "question": "Ce sunt izotermele?",
+          "options": [
+            "Linii care unesc punctele cu aceeasi presiune atmosferica",
+            "Linii care unesc punctele cu aceeasi temperatura",
+            "Linii care unesc punctele cu aceeasi altitudine"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce incalzeste mai intai razele soarelui?",
+          "options": [
+            "Aerul din atmosfera",
+            "Pamantul, care apoi degaja caldura si incalzeste aerul",
+            "Apa oceanelor, care apoi incalzeste aerul"
+          ],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m4_s2",
       "title": "Presiunea atmosferica",
-      "content": "\nEste greutatea cu care apasă o coloană de aer cu secţiunea de 1cm2 şi cu înălţimea considerată de la nivelul respectiv până la limita superioară a atmosferei. Presiunea atmosferică variază de la o zonă la alta în funcţie de latitudinea geografică şi de temperatura aerului. Presiunea variază invers proporţional cu temperatura.\nPresiunea atmosferică se exprimă în milimetri coloană de mercur (mmHg) sau în milibari (mb). Se consideră presiune normală presiunea de 760 mmHg la nivelul mării la temperatura de 0°C şi la latitudinea de 45°.\nPresiunea prezintă tipurile de variaţii: pe verticală, periodice şi neperiodice.\n\nDeplasările maselor de aer din zone cu presiune ridicată spre zone cu presiune coborâtă poartă denumirea de vânturi, iar când aceste deplasări se fac în sisteme unitare ce cuprind suprafeţe mari, poartă denumirea de curenţi atmosferici.\nCauza principală a formării vânturilor este repartiţia neuniformă a temperaturii şi presiunii care determină formarea unor gradienţi barici, mai mari sau mai mici care vor fi orientaţi întotdeauna perpendicular pe izobare, de la zona de presiune mare la zona de presiune mică. Vânturile pot fi:\nregulate, periodice, locale.\n",
+      "content": "### Ce este presiunea atmosferica\n\nGreutatea unei coloane de aer cu sectiunea de 1 cm² de la nivelul respectiv pana la limita superioara a atmosferei. Presiunea variaza de la o zona la alta in functie de latitudine si temperatura aerului.\n\n**Regula cheie:** presiunea variaza invers proportional cu temperatura.\n\n### Unitati de masura si valori de referinta\n\n• Se exprima in **milimetri coloana de mercur (mmHg)** sau **milibari (mb)**\n• Presiune normala: **760 mmHg** la nivelul marii, la 0°C si latitudine 45°\n• Tipuri de variatie: pe verticala, periodice si neperiodice\n\n### Vanturi si curenti atmosferici\n\nDeplasarile maselor de aer din zone cu presiune ridicata spre zone cu presiune coborata se numesc **vanturi**. Cand aceste deplasari acopera suprafete mari, se numesc **curenti atmosferici**.\n\n### Cauza formarii vanturilor\n\nCauza principala este repartitia neuniforma a temperaturii si presiunii, care creeaza **gradienti barici**. Acestia sunt orientati perpendicular pe izobare, dinspre zona de presiune mare spre zona de presiune mica.\n\n### Tipuri de vanturi\n\n• **Regulate** — cu directie si intensitate constanta\n• **Periodice** — se schimba regulat (ex: briza)\n• **Locale** — specifice unor zone geografice",
       "images": [
         "m4_p45_0.png"
       ],
       "quiz": [
         {
-          "question": "Când poate o navă să pătrundă într-o zonă de separare sau să taie o linie de separare? când condiţiile hidrometeorologice fac dificilă navigaţia în sensul general al traficului.",
+          "question": "Care este valoarea presiunii atmosferice normale la nivelul marii?",
           "options": [
-            "în caz de urgenţă, pentru evitarea unui pericol imediat, sau pentru a pescui într-o zonă de separare.",
-            "zona de separare nu va fi traversată în nici o situaţie."
+            "700 mmHg",
+            "760 mmHg",
+            "800 mmHg"
           ],
-          "correct": 0
+          "correct": 1
+        },
+        {
+          "question": "Cum variaza presiunea atmosferica in raport cu temperatura?",
+          "options": [
+            "Direct proportional",
+            "Invers proportional",
+            "Nu exista o relatie intre ele"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce cauzeaza formarea vanturilor?",
+          "options": [
+            "Rotatia Pamantului in jurul Soarelui",
+            "Repartitia neuniforma a temperaturii si presiunii care creeaza gradienti barici",
+            "Interactiunea dintre curentii marini si atmosfera"
+          ],
+          "correct": 1
         }
       ]
     },
     {
       "id": "m4_s3",
       "title": "Vantul",
-      "content": "\nVântul influențează toate domeniile transporturilor, dar și unele procese și elemente meteorologice\n(umiditatea, nebulozitatea, precipitațiile, evaporarea, temperatura aerului și solului etc).\nDiversitatea fenomenelor meteorologice depinde de existența în atmosferă a curenților de aer, atât a celor verticali cât și a celor orizontali. Lipsa acestora în atmosferă ar duce la inexistența schimbărilor bruște ale vremii și s-ar observa o trecere lentă de la iarnă la vară și invers, după variația înălțimii\nSoarelui. Fiind un element meteorologic dinamic, vântul se caracterizează prin direcție, viteză și tărie sau intensitate.\n\nDirecția vântului reprezintă sensul din care bate vântul într-un punct sau într-o regiune oarecare. Ea se stabilește în raport cu punctul cardinal dinspre care bate. In scopul indicării direcției vântului, se uzitează roza vânturilor cu cele patru puncte cardinale și cu cele patru direcții intercardinale sau cu cele duasprezece directii inter-intercardinale. Deoarece acest mod de notare nu este foarte precis, în transporturi se folosește azimutul vântului, adică unghiul pe care îl face vectorul vânt cu direcția nordului geografic. Acesta se exprima în grade sexagesimale de la 0° la 360°, în sensul deplasării acelor de ceas. Astfel, nordul corespunde la 360°, estul la 90°, sudul la 180° iar vestul la 270°. Celelalte\n\ndirecții au valori intermediare. Variația diurnă a direcției vântului se schimbă foarte mult în funcție de condițiile orografice și a modului diferit de repartiție a presiunii aerului.\n\nViteza vântului reprezintă distanța parcursă de aerul care se deplasează pe orizontală în unitatea de timp. Ea se exprima în noduri, metri pe secundă sau în kilometri pe oră.\n\nAerul atmosferic definit prin caracteristici generale ca temperatura, presiune, nebulozitate, umiditate si viteza, in timpul deplasarii sale ca masa de aer intalneste intotdeauna o alta masa de aer care poate fi tot in miscare sau in stationare. Zonele de contact ale maselor de aer cu proprietati diferite se numesc fronturi atmosferice.\n\n1. Frontul cald\nIa naştere când masa de aer cald este cea mai activă. Masa de aer cald fiind mai uşoară alunecă peste aerul rece, iar pe măsura înălţării pe panta formată iau naştere norii frontali şi cad precipitaţii cu caracter general ce durează aproximativ 14-16 h.\nDupă trecerea frontului vremea se ameliorează, se încălzeşte, vântul e calm la moderat şi se roteşte, pot apărea nori stratus sau stratocumulus.\n\n2. Frontul rece\nMasa de aer mai activă este masa de aer rece şi funcţie de diferenţa de temperatură dintre aerul cald şi cel rece poate exista front rece de ordin I şi front rece de ordin II.\n\n**Front rece de ordin I** — atunci când diferenţa de temperatură nu este mai mare de 5°C\n\n**Front rece de ordin II** — când diferenţa de temperatură dintre aerul rece şi cel cald este foarte mare. Pe timp de vară vântul bate în rafale şi se semnalează descărcări electrice\n\n3. Frontul oclus\nEste zona de întâlnire dintre două fronturi. Precipitaţiile sunt tipice frontului cald, frontului rece şi frontului oclus ce s-a format. Acest front poate fi cu caracter neutru, cald sau rece.\n\nFrontul oclus neutru se formează când aerul rece din spatele frontului rece are aceeaşi temperatură cu aerul rece din faţa frontului cald.\n\nFrontul oclus rece se formează când aerul rece din spatele frontului rece este mai rece decât aerul rece din faţa frontului cald.\n\nFrontul oclus cald se formează când aerul rece din spatele frontului rece este mai cald decât aerul rece din faţa frontului cald.\nFenomele meteorologice generate de frontul astmosferic determina particularitati ale vremii inainte de venirea frontului si dupa trecerea lui.\n\n\n### La apropierea frontului cald\n\n\n presiunea scade incet si continuu;\n vantul se intensifica;\n nebulozitatea creste, norii Cirrus fiind primii care apar, apoi Cirrostratus, Altostratus si\nNimbostratus;\n precipitatiile incep cu burnite usoare;\n vizibilitatea se reduce treptat, in functie de intensificarea ploii;\n creste umiditatea aerului.\n\n\n### La apropierea frontului rece\n\n\n presiunea atmosferica scade incet la inceput apoi scaderea se accentueaza;\n in fata frontului apa green-uri violente (rafale de vant);\n temperatura scade usor;\n nebulozitatea creste dupa aparitia norilor Stratus, apoi Altostratus, Cumulus si\nCumulonimbus;\n precipitatiile sunt la inceput sub forma de burnita intermitenta;\n vizibilitatea este moderata, apoi slaba, uneori apare si ceata;\n umiditatea este foarte mare.\n",
+      "content": "Vantul influenteaza transporturile, dar si procesele meteorologice: umiditate, nebulozitate, precipitatii, evaporare, temperatura. Diversitatea fenomenelor meteo depinde de curentii de aer, atat verticali cat si orizontali.\n\n### Directia vantului\n\nDirectia vantului indica sensul din care bate. Se stabileste in raport cu punctul cardinal dinspre care bate, folosind **roza vanturilor** (4 puncte cardinale + 4 directii intercardinale + 12 directii inter-intercardinale).\n\nIn transporturi se foloseste **azimutul vantului** — unghiul fata de nordul geografic, exprimat in grade (0°–360°), in sensul acelor de ceas:\n\n• **Nord** = 360° (sau 0°)\n• **Est** = 90°\n• **Sud** = 180°\n• **Vest** = 270°\n\n### Viteza vantului\n\nDistanta parcursa de aerul care se deplaseaza pe orizontala in unitatea de timp. Se exprima in:\n\n• **Noduri** (kn)\n• **Metri pe secunda** (m/s)\n• **Kilometri pe ora** (km/h)\n\n### Fronturi atmosferice\n\nCand o masa de aer in miscare intalneste o alta masa de aer cu proprietati diferite, zona de contact se numeste **front atmosferic**.\n\n### Frontul cald\n\nMasa de aer cald, mai usoara, aluneca peste aerul rece. Pe masura inaltarii pe panta formata iau nastere norii frontali si cad precipitatii cu caracter general, care dureaza aproximativ **14–16 ore**.\n\nDupa trecerea frontului: vremea se amelioreaza, se incalzeste, vantul e calm la moderat si se roteste, pot aparea nori stratus sau stratocumulus.\n\n### Frontul rece\n\nMasa de aer rece este cea mai activa. Exista doua tipuri:\n\n• **Front rece de ordin I** — diferenta de temperatura nu depaseste 5°C\n• **Front rece de ordin II** — diferenta de temperatura este foarte mare; vara se semnaleaza rafale de vant si descarcari electrice\n\n### Frontul oclus\n\nZona de intalnire dintre doua fronturi. Precipitatiile combina caracteristicile frontului cald si rece. Poate fi:\n\n• **Neutru** — aerul rece din spatele frontului rece are aceeasi temperatura cu aerul rece din fata frontului cald\n• **Rece** — aerul din spatele frontului rece este mai rece decat aerul din fata frontului cald\n• **Cald** — aerul din spatele frontului rece este mai cald decat aerul din fata frontului cald\n\n### La apropierea frontului cald\n\n• Presiunea scade incet si continuu\n• Vantul se intensifica\n• Nebulozitatea creste: Cirrus → Cirrostratus → Altostratus → Nimbostratus\n• Precipitatiile incep cu burnite usoare\n• Vizibilitatea se reduce treptat\n• Umiditatea aerului creste\n\n### La apropierea frontului rece\n\n• Presiunea scade incet, apoi scaderea se accentueaza\n• In fata frontului apar rafale violente de vant (green-uri)\n• Temperatura scade usor\n• Nebulozitatea creste: Stratus → Altostratus → Cumulus → Cumulonimbus\n• Precipitatiile incep ca burnita intermitenta\n• Vizibilitatea moderata, apoi slaba, uneori ceata\n• Umiditate foarte mare",
       "images": [
         "m4_p45_0.png",
         "m4_p46_0.png",
@@ -55,12 +93,58 @@
         "m4_p47_5.png",
         "m4_p47_6.png"
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "question": "Ce indica directia vantului?",
+          "options": [
+            "Sensul spre care bate vantul",
+            "Sensul din care bate vantul",
+            "Viteza cu care se deplaseaza vantul"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Cat dureaza aproximativ precipitatiile asociate unui front cald?",
+          "options": [
+            "2-4 ore",
+            "14-16 ore",
+            "24-48 ore"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce azimut corespunde directiei Est?",
+          "options": [
+            "90 de grade",
+            "180 de grade",
+            "270 de grade"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Ce se intampla la apropierea unui front rece de ordin II vara?",
+          "options": [
+            "Vremea se amelioreaza treptat",
+            "Se semnaleaza rafale de vant si descarcari electrice",
+            "Precipitatiile inceteaza complet"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce este un front atmosferic?",
+          "options": [
+            "O zona de presiune foarte ridicata",
+            "Zona de contact dintre doua mase de aer cu proprietati diferite",
+            "Un curent de aer vertical puternic"
+          ],
+          "correct": 1
+        }
+      ]
     },
     {
       "id": "m4_s4",
       "title": "Precipitatiile",
-      "content": "### Precipitaţiile se clasifică astfel\n\n\n### După caracterul lor\n\n\nBurniţa: ploaie cu picături mici şi foarte dese;\n\nAversele: căderi de precipitaţii cu intensitate variată, de scurtă durată;\n\nPrecipitaţii cu caracter general: precipitaţii obişnuite, fără variaţii de\n intensitate.\n\n### După starea de agregare\n\n\nPrecipitaţii lichide: ploaia, burniţa, aversa de ploaie;\n\nPrecipitaţii solide: zăpada (ninsoarea), aversa de zăpadă, lapoviţa (zăpada este perpendiculară pe picăturile de apă), ace de gheaţă, grindina.\n",
+      "content": "Precipitatiile se clasifica dupa doua criterii principale.\n\n### Dupa caracter\n\n• **Burnita** — ploaie cu picaturi mici si foarte dese\n• **Aversele** — caderi de precipitatii cu intensitate variata, de scurta durata\n• **Precipitatii cu caracter general** — precipitatii obisnuite, fara variatii de intensitate\n\n### Dupa starea de agregare\n\n**Precipitatii lichide:**\n• Ploaia\n• Burnita\n• Aversa de ploaie\n\n**Precipitatii solide:**\n• Zapada (ninsoarea)\n• Aversa de zapada\n• Lapovita (zapada amestecata cu picaturi de apa)\n• Ace de gheata\n• Grindina",
       "images": [
         "m4_p47_0.png",
         "m4_p47_1.png",
@@ -75,12 +159,40 @@
         "m4_p48_3.png",
         "m4_p48_4.png"
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "question": "Ce este burnita?",
+          "options": [
+            "Precipitatie solida formata din ace de gheata",
+            "Ploaie cu picaturi mici si foarte dese",
+            "Cadere de precipitatii de scurta durata cu intensitate variata"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce este lapovita?",
+          "options": [
+            "Ploaie puternica insotita de vant",
+            "Zapada amestecata cu picaturi de apa",
+            "Precipitatie sub forma de ace de gheata"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce caracterizeaza aversele?",
+          "options": [
+            "Sunt precipitatii cu intensitate constanta si durata lunga",
+            "Sunt caderi de precipitatii cu intensitate variata si de scurta durata",
+            "Sunt precipitatii exclusiv solide"
+          ],
+          "correct": 1
+        }
+      ]
     },
     {
       "id": "m4_s5",
       "title": "Ceata",
-      "content": "\nReprezintă un aglomerat de picături mici de apă aflate la mică înălţime deasupra suprafeţei terestre.\nPicăturile au dimensiunile de ordinul a câţiva microni. În condiţiile în care vizibilitatea este până la 1 km → ceaţă, iar de la 1 km la 10 km → aer ceţos.\n\n\n### Condiţii de formare a ceţei\n\n saturaţia aerului cu vapori de apă < 100%;\n scaderea temperaturii până la atingerea punctului de rouă;\n vânt slab sau calm.\n\nVizibilitatea reprezintă distanţa la care un reper poate fi descoperit ca formă, culoare, claritate. Este influenţată de:\n transparenţa aerului (cantitatea de impurităţi solide sau lichide ce se găsesc în aer);\n culoarea şi claritatea reperului;\n dimensiunile şi luminozitatea reperului;\n\n\n### SFATURI UTILE PE TIMP DE CEATA\n\n Ridicati reflectorul radar;\n Aprindeti luminile de navigatie;\n Sunati din hornul de ceata la intervale de 2 minute lung;\n Ascultati cu atentie zgmotele dimprejur;\n Purtati vestele de salvare;\n Daca aveti radar, urmariti-l permanent;\n Ascultati frecventa zonei de navigatie in care va aflati pentru a auzi daca exista trafic sau manevre ale vapoarelor comerciale in preajma;\n Nu stati in zonele cu scheme de separare a traficului, ancoraj de nave mari, senale navigabile, rute de tranzit comercial;\n Cautati si urmariti contururile din preajma;\n Nu intrati in port daca vizibilitatea este extrem de redusa, o eroare de curs va poate trimite in zone pericol (stabilopozi) sau in mijlocul rutelor navelor comerciale;\n Daca puteti, ancorati la ape mici.\n",
+      "content": "**Ceata** (Fog) — un aglomerat de picaturi mici de apa aflate la mica inaltime deasupra suprafetei terestre, cu dimensiuni de ordinul catorva microni.\n\n• Vizibilitate pana la **1 km** → **ceata**\n• Vizibilitate de la **1 km** la **10 km** → **aer cetos**\n\n### Conditii de formare a cetei\n\n• Saturatia aerului cu vapori de apa aproape de 100%\n• Scaderea temperaturii pana la atingerea **punctului de roua**\n• Vant slab sau calm\n\n### Vizibilitatea\n\n**Vizibilitatea** — distanta la care un reper poate fi descoperit ca forma, culoare si claritate. Este influentata de:\n\n• Transparenta aerului (cantitatea de impuritati solide sau lichide din aer)\n• Culoarea si claritatea reperului\n• Dimensiunile si luminozitatea reperului\n\n### Sfaturi utile pe timp de ceata\n\n• Ridicati reflectorul radar\n• Aprindeti luminile de navigatie\n• Sunati din cornul de ceata la intervale de 2 minute (semnal lung)\n• Ascultati cu atentie zgomotele din jur\n• Purtati vestele de salvare\n• Daca aveti radar, urmariti-l permanent\n• Ascultati frecventa zonei de navigatie pentru trafic comercial\n\n### Ce sa evitati pe ceata\n\n• Nu stati in zonele cu scheme de separare a traficului, ancoraj de nave mari, senale navigabile sau rute de tranzit comercial\n• Nu intrati in port daca vizibilitatea este extrem de redusa — o eroare de curs va poate trimite in zone de pericol (stabilopozi) sau in mijlocul rutelor navelor comerciale\n• Daca puteti, ancorati la ape mici",
       "images": [
         "m4_p48_0.png",
         "m4_p48_1.png",
@@ -88,12 +200,40 @@
         "m4_p48_3.png",
         "m4_p48_4.png"
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "question": "Pana la ce distanta de vizibilitate se considera ceata?",
+          "options": [
+            "Pana la 500 m",
+            "Pana la 1 km",
+            "Pana la 5 km"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "La ce interval trebuie sunat cornul de ceata?",
+          "options": [
+            "La fiecare 30 de secunde",
+            "La fiecare 2 minute",
+            "La fiecare 5 minute"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Care este una dintre conditiile de formare a cetei?",
+          "options": [
+            "Vant puternic si temperatura ridicata",
+            "Scaderea temperaturii pana la punctul de roua si vant slab sau calm",
+            "Presiune atmosferica foarte ridicata"
+          ],
+          "correct": 1
+        }
+      ]
     },
     {
       "id": "m4_s6",
       "title": "Norii. Semne de vreme",
-      "content": "\nNorii sunt sisteme coloidale formate din picături de apă şi cristale de gheaţă în stare de suspensie sau semisuspensie, formaţi ca urmare a condensării vaporilor de apa la diferite înălţimi, într-un spaţiu saturat. Condiţiile de formare: scăderea temperaturii până la atingerea temperaturii punctului de rouă, umiditate relativ 100% şi existenţa moleculelor de condensare în jurul cărora se produce condensarea şi desublimarea vaporilor de apă.\n\n1) Norii cirrus\n\nSe gasesc la aproximativ 6 km deasupra Pamantului, fiind formaţi din cristale de gheaţa. Ei sunt de culoare alba, iar daca sunt nemişcaţi, acest lucru prevede o vreme frumoasa. Daca se mişca rapid pe cer, sa va aşteptaţi la o schimbare a vremii in 24 de ore.\n\n2) Norii cirrostratus\n\nEi formeaza un inveliş deasupra cerului, şi sunt destui de subţiri incat sa se poata vedea Luna şi Soarele prin ei. Daca veţi vedea acest gen de nori, sa va aşteptaţi la o furtuna intre 12 şi 24 de ore dupa apariţie.\n\n3) Norii cirrocumulus\n\nSunt nişte nori mici, de culoare alba şi pufoşi, parand ca nişte bucaţi de bumbac. De obicei apar iarna şi indica vreme frumoasa, dar rece. In regiunile tropicale, aceşti nori indica apropierea unui uragan.\n\n4) Norii altostratus\n\nSunt nori mai joşi, situaţi intre 2 şi 5 km, ce au culoare albastru-gri; de obicei acopera tot cerul şi semnalizeaza apropierea unei  furtuni, a unei ploi sau a unei ninsori.\n\n5) Norii altocumulus\nSunt nori gri şi pufoşi. Daca vremea este calda şi umeda, aşteptaţi-va la o furtuna in urmatoarele 12 ore.\n\n6) Norii stratus\n\nSunt nori gri, joşi, care ating aproape Pamantul. Prezenţa lor nu semnifica nimic in ceea ce priveşte starea vremii.\n\n7) Norii stratocumulus\n\nSunt tot nori joşi, de obicei de culoare gri, care, nu prevestesc nimic in starea vremii.\n\n8) Norii nimbostratus\n\nIn latina “nimbus” inseamna “ploaie grea”; aşa ca, imaginaţi-va ce ar putea aduce un astfel de nor. Ei au o suprafaţa gri intunecata, ce este insoţita de nişte dungi negre, ce arata faptul ca ploua sau ninge.\n\n9) Norii cumulus\n\nEi sunt nori albi, pufoşi, groşi, care de obicei semnifica vreme buna.\n\n10) Norii cumulonimbus\n\nAtunci cand norii cumulus dezvolta o forma de nicovala, datorita faptului ca parţile lor superioare au fost platizate de vanturi, atunci se indreapta o furtuna uriaşa, insoţita de obicei de tornade.\n\nManevra usoara!\n\n1.\nMeteorologie maritima (Negut A. Liviu)\n",
+      "content": "**Norii** (Clouds) — sisteme coloidale formate din picaturi de apa si cristale de gheata in stare de suspensie, formati prin condensarea vaporilor de apa la diferite inaltimi.\n\n### Conditii de formare\n\n• Scaderea temperaturii pana la punctul de roua\n• Umiditate relativa 100%\n• Existenta moleculelor de condensare (nuclee in jurul carora se produce condensarea)\n\n### Nori de altitudine mare (~6+ km)\n\n**Cirrus** — formati din cristale de gheata, culoare alba. Daca sunt nemiscati, prevad vreme frumoasa. Daca se misca rapid, asteptati schimbare a vremii in 24 ore.\n\n**Cirrostratus** — formeaza un invelis subtire pe cer, prin care se vad Luna si Soarele. Indica o furtuna in 12–24 ore.\n\n**Cirrocumulus** — nori mici, albi si pufosi, ca bucati de bumbac. Iarna indica vreme frumoasa dar rece. In regiunile tropicale semnaleaza apropierea unui uragan.\n\n### Nori de altitudine medie (2–5 km)\n\n**Altostratus** — culoare albastru-gri, acopera tot cerul. Semnalizeaza apropierea unei furtuni, ploi sau ninsori.\n\n**Altocumulus** — nori gri si pufosi. Pe vreme calda si umeda, asteptati o furtuna in urmatoarele 12 ore.\n\n### Nori de altitudine joasa\n\n**Stratus** — nori gri, joasi, aproape de pamant. Nu indica nimic special despre starea vremii.\n\n**Stratocumulus** — nori joasi, de obicei gri. Nu prevestesc schimbari ale vremii.\n\n**Nimbostratus** — \"nimbus\" inseamna \"ploaie grea\" in latina. Suprafata gri-inchis cu dungi negre, insotita de ploaie sau ninsoare.\n\n### Nori cu dezvoltare verticala\n\n**Cumulus** — nori albi, pufosi, grosi. De obicei semnifica vreme buna.\n\n**Cumulonimbus** — cand norii cumulus dezvolta o forma de nicovala (partile superioare aplatizate de vanturi), se apropie o furtuna puternica, posibil insotita de tornade.",
       "images": [
         "m4_p48_0.png",
         "m4_p48_1.png",
@@ -106,7 +246,44 @@
         "m4_p51_1.png",
         "m4_p52_0.png"
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "question": "Ce tip de nori indica o furtuna in 12-24 ore daca formeaza un invelis subtire pe cer?",
+          "options": [
+            "Cirrus",
+            "Cirrostratus",
+            "Stratus"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Ce sunt norii Cumulonimbus?",
+          "options": [
+            "Nori joasi, gri, aproape de pamant",
+            "Nori albi, pufosi, care semnifica vreme buna",
+            "Nori cumulus cu forma de nicovala care prevestesc furtuna puternica"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Ce indica norii Cirrus cand sunt nemiscati?",
+          "options": [
+            "Vreme frumoasa",
+            "Furtuna in 12 ore",
+            "Precipitatii iminente"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "La ce altitudine se formeaza norii Altostratus si Altocumulus?",
+          "options": [
+            "Sub 2 km",
+            "Intre 2 si 5 km",
+            "Peste 6 km"
+          ],
+          "correct": 1
+        }
+      ]
     }
   ]
 }
