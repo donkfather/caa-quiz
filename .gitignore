@@ -47,7 +47,7 @@ credentials.json
 *.tsbuildinfo
 
 # generated native folders
-/ios
+# ios/ is committed (source of truth for Xcode Cloud); android stays generated
 /android
 
 # local builds
