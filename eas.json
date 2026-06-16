@@ -26,7 +26,9 @@
       "env": {
         "EXPO_ROUTER_APP_ROOT": "./app",
         "EXPO_PUBLIC_SUPABASE_URL": "https://heuooollkwoksqfncvoc.supabase.co",
-        "EXPO_PUBLIC_SUPABASE_KEY": "sb_publishable_l2_o9DCf7qRXkHXLTgYUPg_uDYTvNIm"
+        "EXPO_PUBLIC_SUPABASE_KEY": "sb_publishable_l2_o9DCf7qRXkHXLTgYUPg_uDYTvNIm",
+        "EXPO_PUBLIC_RC_IOS_KEY": "appl_kavuEwwxMyoJRMqTPNbStdRlbyw",
+        "EXPO_PUBLIC_RC_ANDROID_KEY": "goog_ywFcFczGgDtOpwokufQrbpQWYFR"
       }
     }
   },
@@ -36,6 +38,10 @@
         "appleId": "popescut94@gmail.com",
         "ascAppId": "6769403260",
         "appleTeamId": "8R3Q7Z73N5"
+      },
+      "android": {
+        "serviceAccountKeyPath": "/Users/tudor/Library/CloudStorage/SynologyDrive-tudor/Google/claude-499612-fd8e38d26ee9.json",
+        "track": "internal"
       }
     }
   }

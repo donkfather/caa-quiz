@@ -29,6 +29,11 @@ module.exports = ({ config }) => {
       ...(config.extra ?? {}),
       useTestAds: process.env.EXPO_PUBLIC_USE_TEST_ADS === "true",
       isPreview,
+      // RevenueCat PUBLIC SDK keys (appl_… / goog_…) — safe to embed. Set per
+      // build via EXPO_PUBLIC_RC_* env (eas.json / .env.local). Undefined until
+      // configured → the Purchases SDK stays disabled and ads behave as before.
+      revenueCatIosKey: process.env.EXPO_PUBLIC_RC_IOS_KEY,
+      revenueCatAndroidKey: process.env.EXPO_PUBLIC_RC_ANDROID_KEY,
     },
   };
 };

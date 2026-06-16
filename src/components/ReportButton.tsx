@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Alert, Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../lib/ThemeContext";
 import { reportQuestion, ReportTarget } from "../lib/reports";
 
@@ -40,7 +41,9 @@ export function ReportButton({ target }: { target: ReportTarget }) {
         accessibilityLabel="Raportează problemă cu această întrebare"
         accessibilityRole="button"
       >
-        <Text style={[styles.flagText, { color: t.textMuted }]}>⚐ raportează</Text>
+        <Text style={[styles.flagText, { color: t.textMuted }]}>
+          <Ionicons name="flag-outline" size={12} color={t.textMuted} /> raportează
+        </Text>
       </Pressable>
       <Modal visible={visible} transparent animationType="fade" onRequestClose={() => setVisible(false)}>
         <Pressable

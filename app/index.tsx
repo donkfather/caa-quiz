@@ -1,4 +1,5 @@
 import { View, Text, Pressable, StyleSheet, Modal, ScrollView } from "react-native";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useRouter, useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useCallback, useEffect } from "react";
@@ -8,6 +9,10 @@ import { onQuestionsUpdated } from "../src/lib/questionsRemote";
 import { getStats, getActiveSessions, getHistory, QuizStats, ActiveSession } from "../src/lib/storage";
 import { showInterstitial } from "../src/lib/ads";
 import { getStreak, getUnlockedBadges, BADGE_DEFS, StreakData } from "../src/lib/gamification";
+
+// Cursuri (cloud course platform) is not prod-ready — deferred to v1.1.
+// Flip to true to re-enable the home entry point.
+const COURSES_ENABLED = false;
 
 function sessionLabel(s: ActiveSession): string {
   if (s.mode === "exam") return s.examType ? (EXAM_CONFIGS[s.examType as ExamType]?.shortLabel ?? "Examen") : "Examen";
@@ -105,7 +110,7 @@ export default function HomeScreen() {
         accessibilityLabel={`Streak: ${streak.current} zile, ${badgeCount} realizări. Deschide realizări`}
         accessibilityRole="button"
       >
-        <Text style={{ fontSize: 24 }}>🔥</Text>
+        <Ionicons name="flame" size={24} color={colors.warning} />
         <View style={{ marginLeft: 10, flex: 1 }}>
           <Text style={{ fontSize: 16, fontWeight: "700", color: colors.text }}>
             {streak.current} {streak.current === 1 ? "zi" : "zile"}
@@ -120,7 +125,7 @@ export default function HomeScreen() {
       {/* Nautical divider */}
       <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 20 }}>
         <View style={{ flex: 1, height: 1, backgroundColor: colors.border }} />
-        <Text style={{ marginHorizontal: 12, fontSize: 16, color: colors.textMuted }}>⚓</Text>
+        <MaterialCommunityIcons name="anchor" size={16} color={colors.textMuted} style={{ marginHorizontal: 12 }} />
         <View style={{ flex: 1, height: 1, backgroundColor: colors.border }} />
       </View>
 
@@ -141,7 +146,7 @@ export default function HomeScreen() {
             accessibilityLabel="Continuă ultima sesiune"
             accessibilityRole="button"
           >
-            <Text style={{ fontSize: 24 }}>↻</Text>
+            <Ionicons name="play-circle" size={28} color={colors.warning} />
             <View style={{ flex: 1 }}>
               <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>Continuă ultima sesiune</Text>
               <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>
@@ -158,7 +163,7 @@ export default function HomeScreen() {
           accessibilityLabel="Începe examen"
           accessibilityRole="button"
         >
-          <Text style={{ fontSize: 28 }}>⚓</Text>
+          <MaterialCommunityIcons name="anchor" size={28} color="#fff" />
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: "#fff" }}>Examen</Text>
             <Text style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", marginTop: 2 }}>
@@ -173,7 +178,7 @@ export default function HomeScreen() {
           accessibilityLabel="Modul practică"
           accessibilityRole="button"
         >
-          <Text style={{ fontSize: 28 }}>📖</Text>
+          <Ionicons name="book" size={28} color={colors.text} />
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Practică</Text>
             <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>
@@ -188,12 +193,27 @@ export default function HomeScreen() {
           accessibilityLabel="Invata teorie"
           accessibilityRole="button"
         >
-          <Text style={{ fontSize: 28 }}>🎓</Text>
+          <Ionicons name="school" size={28} color={colors.text} />
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Învață</Text>
             <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>8 module de teorie + quiz</Text>
           </View>
         </Pressable>
+
+        {COURSES_ENABLED && (
+          <Pressable
+            style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border }}
+            onPress={() => router.push("/courses")}
+            accessibilityLabel="Cursuri cloud"
+            accessibilityRole="button"
+          >
+            <Ionicons name="library" size={28} color={colors.text} />
+            <View>
+              <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Cursuri</Text>
+              <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>Conținut actualizat din cloud</Text>
+            </View>
+          </Pressable>
+        )}
       </View>
 
       {/* History */}

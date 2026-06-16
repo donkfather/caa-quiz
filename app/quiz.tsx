@@ -1,4 +1,5 @@
 import { View, Text, Pressable, StyleSheet, ScrollView } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
@@ -321,7 +322,7 @@ export default function QuizScreen() {
         <Stack.Screen options={{ title: "Rezultat", headerBackVisible: false }} />
         <View style={[styles.container, { paddingTop: insets.top + 20 }]}>
           <View style={styles.resultCard}>
-            <Text style={styles.resultEmoji}>{passed ? "🎉" : "📚"}</Text>
+            <Ionicons name={passed ? "trophy" : "school"} size={48} color={passed ? colors.warning : colors.primary} style={{ marginBottom: 12 }} />
             <Text style={styles.resultTitle}>
               {passed ? "Felicitări!" : "Mai exersează!"}
             </Text>
@@ -349,7 +350,7 @@ export default function QuizScreen() {
                 const def = BADGE_DEFS.find((b) => b.key === key);
                 return def ? (
                   <Text key={key} style={{ fontSize: 13, color: colors.text, textAlign: "center" }}>
-                    🏅 {def.name} — {def.description}
+                    <Ionicons name="medal" size={13} color={colors.warning} /> {def.name} — {def.description}
                   </Text>
                 ) : null;
               })}
@@ -375,16 +376,31 @@ export default function QuizScreen() {
 
         {/* Stats row */}
         <View style={styles.statsRow}>
-          <Text style={styles.statCorrect}>{correct} ✓</Text>
-          <Text style={styles.statWrong}>{wrong} ✗</Text>
-          <Text
-            style={[
-              styles.progressText,
-              timer.isCountdown && timer.remainingMs !== null && timer.remainingMs < 60_000 && { color: colors.error, fontWeight: "700" },
-            ]}
-          >
-            {timer.isCountdown ? "⏱ " : ""}{timer.display}
-          </Text>
+          <View style={styles.statItem}>
+            <Ionicons name="checkmark-circle" size={15} color={colors.success} />
+            <Text style={styles.statCorrect}>{correct}</Text>
+          </View>
+          <View style={styles.statItem}>
+            <Ionicons name="close-circle" size={15} color={colors.error} />
+            <Text style={styles.statWrong}>{wrong}</Text>
+          </View>
+          <View style={styles.statItem}>
+            {timer.isCountdown && (
+              <Ionicons
+                name="timer-outline"
+                size={14}
+                color={timer.remainingMs !== null && timer.remainingMs < 60_000 ? colors.error : colors.textMuted}
+              />
+            )}
+            <Text
+              style={[
+                styles.progressText,
+                timer.isCountdown && timer.remainingMs !== null && timer.remainingMs < 60_000 && { color: colors.error, fontWeight: "700" },
+              ]}
+            >
+              {timer.display}
+            </Text>
+          </View>
           <Text style={styles.progressText}>{index + 1} / {total}</Text>
         </View>
 
@@ -510,6 +526,11 @@ function makeStyles(colors: any) { return StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 16,
+  },
+  statItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
   },
   statCorrect: {
     fontSize: 13,

@@ -1,4 +1,5 @@
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useCallback } from "react";
 import { useFocusEffect } from "expo-router";
@@ -71,7 +72,7 @@ export default function BadgesScreen() {
         borderWidth: 1,
         borderColor: colors.border,
       }}>
-        <Text style={{ fontSize: 40 }}>🔥</Text>
+        <Ionicons name="flame" size={44} color={colors.warning} />
         <Text style={{ fontSize: 36, fontWeight: "800", color: colors.text, marginTop: 4 }}>
           {streak.current}
         </Text>

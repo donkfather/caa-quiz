@@ -1,6 +1,7 @@
 import { useState, useRef, useMemo } from "react";
 import { View, Text, Pressable, ScrollView, FlatList, useWindowDimensions } from "react-native";
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTheme } from "../../src/lib/ThemeContext";
 import { getModule } from "../../src/lib/courseData";
@@ -168,7 +169,7 @@ function InlineQuiz({ questions, theme, onDone, refPrefix }: { questions: QuizQu
   if (done) {
     return (
       <View style={{ alignItems: "center", paddingVertical: 20 }}>
-        <Text style={{ fontSize: 36, marginBottom: 8 }}>{score === questions.length ? "🎉" : "📊"}</Text>
+        <Ionicons name={score === questions.length ? "trophy" : "stats-chart"} size={40} color={score === questions.length ? theme.warning : theme.primary} style={{ marginBottom: 8 }} />
         <Text style={{ fontSize: 20, fontWeight: "700", color: theme.text }}>
           {score}/{questions.length} corecte
         </Text>

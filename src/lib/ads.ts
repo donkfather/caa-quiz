@@ -113,6 +113,10 @@ function loadInterstitial(): void {
 }
 
 export function preloadInterstitial(): void {
+  if (process.env.DISABLE_ADS === "true") return;
+  // AdMob wasn't initialized (e.g. an ad-free / entitled user — initAds returns
+  // early when settings.adsDisabled). Never request an ad for them.
+  if (!adsInitialized) return;
   if (!interstitial) loadInterstitial();
 }
 

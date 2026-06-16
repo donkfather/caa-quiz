@@ -40,11 +40,11 @@ DESIGN ȘI CONFORT
 
 DISCREȚIE DE LA ÎNCEPUT
 
-Nu colectăm informații personale. Folosim un identificator anonim de dispozitiv doar pentru gestionarea codurilor promoționale. Datele tale (progres, setări) rămân local pe dispozitiv. Poți șterge oricând toate datele din Setări.
+Nu colectăm informații personale. Datele tale (progres, setări) rămân local pe dispozitiv. Poți șterge oricând toate datele din Setări.
 
 GRATUIT, CU RECLAME
 
-Aplicația este gratuită și susținută prin reclame discrete. Dacă vrei să le dezactivezi, poți folosi un cod promoțional din secțiunea Setări.
+Aplicația este gratuită și susținută prin reclame discrete.
 
 Mult succes la examen!
 
@@ -80,7 +80,7 @@ Prima versiune pe App Store. Cele 517 întrebări oficiale CAA Clasa C și D, mo
 For the App Store Connect "App Privacy" section, declare:
 
 - **Data Collected: Yes**
-- **Device ID** — Purpose: App Functionality (voucher redemption tracking); Not linked to user; Not used for tracking
+- **Device ID** — only collected on Android (voucher redemption); on iOS promo codes are disabled, so do NOT declare it
 - **Advertising Data** (via Google AdMob) — Purpose: Third-Party Advertising; Not linked to user; Used for tracking only if user grants ATT (not currently requested — non-personalized ads only)
 - **Crash Data / Performance Data** — Only if you later enable analytics; currently none
 - **Email, Name, Phone, Location**: NOT COLLECTED
