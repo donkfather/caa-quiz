@@ -69,11 +69,15 @@ export default function HomeScreen() {
   const hasHistory = activeSessions > 0 || historyCount > 0;
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.bg, paddingHorizontal: 20, paddingTop: insets.top + 20 }}>
+    <View style={{ flex: 1, backgroundColor: colors.bg }}>
+      <ScrollView
+        contentContainerStyle={{ paddingHorizontal: 20, paddingTop: insets.top + 20, paddingBottom: insets.bottom + 24, flexGrow: 1 }}
+        showsVerticalScrollIndicator={false}
+      >
       {/* Header */}
       <View style={{ marginBottom: 24 }}>
-        <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-          <Text style={{ fontSize: 32, fontWeight: "800", color: colors.text, marginBottom: 6 }}>Chestionare Barca</Text>
+        <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+          <Text style={{ fontSize: 32, fontWeight: "800", color: colors.text, marginBottom: 6, flexShrink: 1 }}>Chestionare Barca</Text>
           <Pressable onPress={() => router.push("/settings")} hitSlop={8} accessibilityLabel="Deschide setări" accessibilityRole="button">
             <Text style={{ fontSize: 14, fontWeight: "600", color: colors.primary }}>Setări</Text>
           </Pressable>
@@ -234,14 +238,15 @@ export default function HomeScreen() {
         </Pressable>
       )}
 
-      <View style={{ position: "absolute", bottom: 40, left: 20, right: 20 }}>
-        <Text style={{ textAlign: "center", fontSize: 12, color: colors.textMuted }}>
-          Pregătire pentru examenul teoretic CAA — Clasa C și D
-        </Text>
-        <Text style={{ textAlign: "center", fontSize: 10, color: colors.textMuted, opacity: 0.5, marginTop: 4 }}>
-          Ultima actualizare a datelor: 2025
-        </Text>
-      </View>
+        <View style={{ marginTop: "auto", paddingTop: 28 }}>
+          <Text style={{ textAlign: "center", fontSize: 12, color: colors.textMuted }}>
+            Pregătire pentru examenul teoretic CAA — Clasa C și D
+          </Text>
+          <Text style={{ textAlign: "center", fontSize: 10, color: colors.textMuted, opacity: 0.5, marginTop: 4 }}>
+            Ultima actualizare a datelor: 2025
+          </Text>
+        </View>
+      </ScrollView>
 
       {/* Exam picker modal */}
       <Modal visible={examModal} transparent animationType="fade" onRequestClose={() => setExamModal(false)}>
