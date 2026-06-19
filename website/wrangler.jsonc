@@ -1,0 +1,12 @@
+{
+  // Static-assets-only Worker for the Chestionare Barca landing page.
+  // Assemble ./dist first with ./build.sh, then `npx wrangler deploy`.
+  "name": "chestionarebarca",
+  "compatibility_date": "2026-06-08",
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [
+    { "pattern": "chestionarebarca.bhdit.ro", "custom_domain": true }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Chestionare Barca",
+  "short_name": "Chestionare Barca",
+  "description": "Pregatire permis barca CAA, Clasa C si Clasa D.",
+  "lang": "ro-RO",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#053f4d",
+  "theme_color": "#053f4d",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/adaptive-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

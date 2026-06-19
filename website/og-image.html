@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chestionare Barca - imagine sociala</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        color: #fffdf8;
+        font-family: "Aptos Display", "Trebuchet MS", "Gill Sans", sans-serif;
+        background:
+          linear-gradient(112deg, rgba(5, 63, 77, 0.98), rgba(9, 118, 132, 0.94) 58%, rgba(4, 34, 42, 1)),
+          repeating-linear-gradient(0deg, transparent 0 34px, rgba(223, 246, 242, 0.12) 34px 36px);
+      }
+
+      .frame {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        padding: 72px;
+      }
+
+      .frame::before {
+        position: absolute;
+        inset: -40px 290px -60px auto;
+        width: 220px;
+        content: "";
+        background: rgba(244, 182, 37, 0.2);
+        transform: skewX(-10deg);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 30px;
+        font-weight: 900;
+      }
+
+      .brand img {
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
+      }
+
+      .copy {
+        position: relative;
+        z-index: 2;
+        max-width: 670px;
+        margin-top: 76px;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: #f4b625;
+        font-size: 22px;
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 76px;
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 620px;
+        margin: 24px 0 0;
+        color: rgba(255, 253, 248, 0.84);
+        font-size: 29px;
+        line-height: 1.28;
+      }
+
+      .phone {
+        position: absolute;
+        right: 104px;
+        bottom: -36px;
+        width: 285px;
+        overflow: hidden;
+        border: 10px solid #071318;
+        border-radius: 34px;
+        box-shadow: 0 28px 70px rgba(3, 31, 38, 0.45);
+        transform: rotate(4deg);
+      }
+
+      .phone img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <div class="brand">
+        <img src="/assets/icon.png" alt="" />
+        <span>Chestionare Barca</span>
+      </div>
+      <section class="copy">
+        <p class="eyebrow">Permis barca CAA - Clasa C si D</p>
+        <h1>Chestionare CAA pentru permisul de barca.</h1>
+        <p>Simulare examen, practica pe categorii si studiu fara internet.</p>
+      </section>
+      <div class="phone">
+        <img src="/store-assets/caa-quiz1.jpeg" alt="" />
+      </div>
+    </main>
+  </body>
+</html>
