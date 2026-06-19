@@ -1,8 +1,8 @@
 import { View, Text, Pressable, StyleSheet, Modal, ScrollView } from "react-native";
-import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { Flame, Anchor, CirclePlay, BookOpen, GraduationCap, Library, History } from "lucide-react-native";
 import { useRouter, useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, type ComponentType } from "react";
 import { useTheme } from "../src/lib/ThemeContext";
 import { TOPIC_LABELS, LICENSE_LABELS, Topic, License, ExamType, EXAM_CONFIGS, getQuestionCount, totalQuestions } from "../src/lib/questions";
 import { onQuestionsUpdated } from "../src/lib/questionsRemote";
@@ -13,6 +13,45 @@ import { getStreak, getUnlockedBadges, BADGE_DEFS, StreakData } from "../src/lib
 // Cursuri (cloud course platform) is not prod-ready — deferred to v1.1.
 // Flip to true to re-enable the home entry point.
 const COURSES_ENABLED = false;
+
+// Per-action accent colours for the home-screen icon tiles (color-coded).
+const ACTION_ACCENT = {
+  practica: "#34d399", // emerald
+  invata: "#a78bfa", // violet
+  cursuri: "#22d3ee", // cyan
+  istoric: "#94a3b8", // slate
+};
+
+// Lucide icon inside a tinted rounded tile. `onBlue` renders white-on-translucent
+// for use on the solid primary card.
+function IconTile({
+  Icon,
+  color,
+  onBlue = false,
+  size = 22,
+  tile = 42,
+}: {
+  Icon: ComponentType<{ size?: number; color?: string; strokeWidth?: number }>;
+  color: string;
+  onBlue?: boolean;
+  size?: number;
+  tile?: number;
+}) {
+  return (
+    <View
+      style={{
+        width: tile,
+        height: tile,
+        borderRadius: 12,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: onBlue ? "rgba(255,255,255,0.18)" : color + "26",
+      }}
+    >
+      <Icon size={size} color={onBlue ? "#fff" : color} strokeWidth={2} />
+    </View>
+  );
+}
 
 function sessionLabel(s: ActiveSession): string {
   if (s.mode === "exam") return s.examType ? (EXAM_CONFIGS[s.examType as ExamType]?.shortLabel ?? "Examen") : "Examen";
@@ -114,8 +153,8 @@ export default function HomeScreen() {
         accessibilityLabel={`Streak: ${streak.current} zile, ${badgeCount} realizări. Deschide realizări`}
         accessibilityRole="button"
       >
-        <Ionicons name="flame" size={24} color={colors.warning} />
-        <View style={{ marginLeft: 10, flex: 1 }}>
+        <IconTile Icon={Flame} color={colors.warning} size={20} tile={38} />
+        <View style={{ marginLeft: 12, flex: 1 }}>
           <Text style={{ fontSize: 16, fontWeight: "700", color: colors.text }}>
             {streak.current} {streak.current === 1 ? "zi" : "zile"}
           </Text>
@@ -129,7 +168,7 @@ export default function HomeScreen() {
       {/* Nautical divider */}
       <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 20 }}>
         <View style={{ flex: 1, height: 1, backgroundColor: colors.border }} />
-        <MaterialCommunityIcons name="anchor" size={16} color={colors.textMuted} style={{ marginHorizontal: 12 }} />
+        <Anchor size={16} color={colors.textMuted} strokeWidth={2} style={{ marginHorizontal: 12 }} />
         <View style={{ flex: 1, height: 1, backgroundColor: colors.border }} />
       </View>
 
@@ -150,7 +189,7 @@ export default function HomeScreen() {
             accessibilityLabel="Continuă ultima sesiune"
             accessibilityRole="button"
           >
-            <Ionicons name="play-circle" size={28} color={colors.warning} />
+            <IconTile Icon={CirclePlay} color={colors.warning} />
             <View style={{ flex: 1 }}>
               <Text style={{ fontSize: 15, fontWeight: "700", color: colors.text }}>Continuă ultima sesiune</Text>
               <Text style={{ fontSize: 12, color: colors.textMuted, marginTop: 2 }}>
@@ -167,7 +206,7 @@ export default function HomeScreen() {
           accessibilityLabel="Începe examen"
           accessibilityRole="button"
         >
-          <MaterialCommunityIcons name="anchor" size={28} color="#fff" />
+          <IconTile Icon={Anchor} color="#ffffff" onBlue />
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: "#fff" }}>Examen</Text>
             <Text style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", marginTop: 2 }}>
@@ -182,7 +221,7 @@ export default function HomeScreen() {
           accessibilityLabel="Modul practică"
           accessibilityRole="button"
         >
-          <Ionicons name="book" size={28} color={colors.text} />
+          <IconTile Icon={BookOpen} color={ACTION_ACCENT.practica} />
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Practică</Text>
             <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>
@@ -197,7 +236,7 @@ export default function HomeScreen() {
           accessibilityLabel="Invata teorie"
           accessibilityRole="button"
         >
-          <Ionicons name="school" size={28} color={colors.text} />
+          <IconTile Icon={GraduationCap} color={ACTION_ACCENT.invata} />
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Învață</Text>
             <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>8 module de teorie + quiz</Text>
@@ -211,7 +250,7 @@ export default function HomeScreen() {
             accessibilityLabel="Cursuri cloud"
             accessibilityRole="button"
           >
-            <Ionicons name="library" size={28} color={colors.text} />
+            <IconTile Icon={Library} color={ACTION_ACCENT.cursuri} />
             <View>
               <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Cursuri</Text>
               <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>Conținut actualizat din cloud</Text>
@@ -223,14 +262,15 @@ export default function HomeScreen() {
       {/* History */}
       {hasHistory && (
         <Pressable
-          style={{ flexDirection: "row", alignItems: "center", marginTop: 20, paddingVertical: 14, paddingHorizontal: 16, backgroundColor: colors.bgCard, borderRadius: 12, borderWidth: 1, borderColor: colors.border }}
+          style={{ flexDirection: "row", alignItems: "center", gap: 12, marginTop: 20, paddingVertical: 14, paddingHorizontal: 16, backgroundColor: colors.bgCard, borderRadius: 12, borderWidth: 1, borderColor: colors.border }}
           onPress={() => router.push("/history")}
           accessibilityLabel="Deschide istoric"
           accessibilityRole="button"
         >
+          <IconTile Icon={History} color={ACTION_ACCENT.istoric} size={20} tile={38} />
           <Text style={{ fontSize: 15, color: colors.textSecondary, flex: 1 }}>Istoric</Text>
           {activeSessions > 0 && (
-            <View style={{ backgroundColor: colors.warning, borderRadius: 10, minWidth: 20, height: 20, alignItems: "center", justifyContent: "center", paddingHorizontal: 6, marginRight: 8 }}>
+            <View style={{ backgroundColor: colors.warning, borderRadius: 10, minWidth: 20, height: 20, alignItems: "center", justifyContent: "center", paddingHorizontal: 6 }}>
               <Text style={{ fontSize: 11, fontWeight: "700", color: "#fff" }}>{activeSessions}</Text>
             </View>
           )}
