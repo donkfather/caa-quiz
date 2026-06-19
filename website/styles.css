@@ -639,6 +639,17 @@ footer {
   font-size: 0.95rem;
 }
 
+.made-by {
+  font-weight: 800;
+  color: var(--deep-sea);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.made-by:hover {
+  border-color: var(--deep-sea);
+}
+
 @keyframes floatMain {
   0%,
   100% {
