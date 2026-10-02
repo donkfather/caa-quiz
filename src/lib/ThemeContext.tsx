@@ -28,10 +28,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    loadSettings().then((s) => {
-      setThemeModeState(s.themeMode);
-      setLoaded(true);
-    });
+    // A corrupt settings blob must not leave the whole app blank (this
+    // provider renders nothing until loaded) — fall back to the default theme.
+    loadSettings()
+      .then((s) => setThemeModeState(s.themeMode))
+      .catch(() => {})
+      .finally(() => setLoaded(true));
   }, []);
 
   const setThemeMode = useCallback(async (mode: ThemeMode) => {

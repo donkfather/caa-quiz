@@ -13,7 +13,6 @@
 #   EXPO_PUBLIC_SUPABASE_URL
 #   EXPO_PUBLIC_SUPABASE_KEY
 #   EXPO_ROUTER_APP_ROOT=./app
-# Do NOT set EXPO_PUBLIC_USE_TEST_ADS (its absence selects real AdMob units).
 
 set -euo pipefail
 
@@ -41,7 +40,9 @@ echo "▸ Pinned NODE_BINARY → $NODE_BIN_DIR/node"
 # eas.json, so inject it here. The "Bundle React Native code and images" phase runs
 # `expo export:embed` and sources .xcode.env.local, so app.config.js can read
 # EXPO_PUBLIC_RC_IOS_KEY when it evaluates `extra`. Without this the Purchases SDK
-# stays disabled in the build and the Remove-Ads IAP never appears.
+# stays disabled in the build, the one-time unlock IAP never appears and cannot be
+# restored — so once the 5-day trial ends EVERY user, past buyers included, is
+# stuck at the paywall.
 echo "export EXPO_PUBLIC_RC_IOS_KEY=\"appl_kavuEwwxMyoJRMqTPNbStdRlbyw\"" >> ios/.xcode.env.local
 echo "▸ Injected EXPO_PUBLIC_RC_IOS_KEY"
 

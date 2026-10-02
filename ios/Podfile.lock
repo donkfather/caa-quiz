@@ -85,14 +85,13 @@ PODS:
   - ExpoRouter (55.0.9-canary-20260328-2049187):
     - ExpoModulesCore
     - RNScreens
+  - ExpoSecureStore (55.0.10-canary-20260328-2049187):
+    - ExpoModulesCore
   - ExpoSplashScreen (55.0.21):
     - ExpoModulesCore
   - ExpoSymbols (55.0.6-canary-20260328-2049187):
     - ExpoModulesCore
   - FBLazyVector (0.83.4)
-  - Google-Mobile-Ads-SDK (13.1.0):
-    - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleUserMessagingPlatform (3.1.0)
   - hermes-engine (0.14.1):
     - hermes-engine/Pre-built (= 0.14.1)
   - hermes-engine/Pre-built (0.14.1)
@@ -2006,30 +2005,6 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - RNGoogleMobileAds (16.3.1):
-    - Google-Mobile-Ads-SDK (= 13.1.0)
-    - GoogleUserMessagingPlatform (= 3.1.0)
-    - hermes-engine
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-Core-prebuilt
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - ReactNativeDependencies
-    - Yoga
   - RNPurchases (10.3.0):
     - PurchasesHybridCommon (= 18.14.1)
     - React-Core
@@ -2155,6 +2130,7 @@ DEPENDENCIES:
   - ExpoModulesJSI (from `../node_modules/expo-modules-core`)
   - ExpoNotifications (from `../node_modules/expo-notifications/ios`)
   - ExpoRouter (from `../node_modules/expo-router/ios`)
+  - ExpoSecureStore (from `../node_modules/expo-secure-store/ios`)
   - ExpoSplashScreen (from `../node_modules/expo-splash-screen/ios`)
   - ExpoSymbols (from `../node_modules/expo-router/node_modules/expo-symbols/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -2233,7 +2209,6 @@ DEPENDENCIES:
   - ReactNativeDependencies (from `../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
-  - RNGoogleMobileAds (from `../node_modules/react-native-google-mobile-ads`)
   - RNPurchases (from `../node_modules/react-native-purchases`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -2241,8 +2216,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Google-Mobile-Ads-SDK
-    - GoogleUserMessagingPlatform
     - libavif
     - libdav1d
     - libwebp
@@ -2286,6 +2259,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-notifications/ios"
   ExpoRouter:
     :path: "../node_modules/expo-router/ios"
+  ExpoSecureStore:
+    :path: "../node_modules/expo-secure-store/ios"
   ExpoSplashScreen:
     :path: "../node_modules/expo-splash-screen/ios"
   ExpoSymbols:
@@ -2441,8 +2416,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
-  RNGoogleMobileAds:
-    :path: "../node_modules/react-native-google-mobile-ads"
   RNPurchases:
     :path: "../node_modules/react-native-purchases"
   RNScreens:
@@ -2469,12 +2442,11 @@ SPEC CHECKSUMS:
   ExpoModulesJSI: ce68e73d2b09c791f5ddb869c196f3768eaaf2e3
   ExpoNotifications: e4e605c6d7a2ef6333fbda14a203a8165472140a
   ExpoRouter: c2f352ad4a2d4d349adc2c622ab4ec50e470b0d4
+  ExpoSecureStore: a3a13df10eb6677f0619cf154bfd0986b742ad16
   ExpoSplashScreen: 049301b226bce8284fcafb7923fcad3a43f23a9f
   ExpoSymbols: 1ba4e78d8b3e49456bd89f4d4aa328088585b4bb
   FBLazyVector: 061f518bbd81677ed8a8317e2ae60b8779495808
-  Google-Mobile-Ads-SDK: 8429bef6ee1a4e322b0a5571b64217ed8317a3d5
-  GoogleUserMessagingPlatform: befe603da6501006420c206222acd449bba45a9c
-  hermes-engine: 7cbd8b46f50662eba80dcf7816b3924c99f755e3
+  hermes-engine: 66408aa4882b1e52ead9c8201229ecc5df5b9c10
   libavif: 5f8e715bea24debec477006f21ef9e95432e254d
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
@@ -2487,7 +2459,7 @@ SPEC CHECKSUMS:
   React: 3e14066ac707b3e369d09e2e923d8bee7f8c33ff
   React-callinvoker: bd7959a24564feaf5e4c8c11789e64884da13482
   React-Core: f060f4e14e9301685ce63ea65fbe903bf3397e45
-  React-Core-prebuilt: 748c5fdd3ce607c727539e3206471e79d60b77b0
+  React-Core-prebuilt: 0bc64e2a4d619ca4bd3ad6d0e55571c2d69baa55
   React-CoreModules: 89a1a544297be88ca4cdff317423f9e0d0c192a4
   React-cxxreact: 81b1bfa305b1b759cc0fe18327644816216e5993
   React-debug: 234fddb309822e13b9b442ef1bdca8d2b8c3cbf2
@@ -2549,11 +2521,10 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: 2b19d66e5ddfe8dc7afb6338a4626156cbf2bab1
   ReactCodegen: 43f0948182edee9407c7b977fb059455dfeb9361
   ReactCommon: c6e81cc1ae185fa84863f3ea1d58caac4be741d7
-  ReactNativeDependencies: 7c13c869e969c384c301d51f51fd5732502bd211
+  ReactNativeDependencies: e73aa1dbc1057218f91f397f25de6f28300d85c5
   RevenueCat: f3641992451c1426da8d8d1466cec3bbdb765962
   RNCAsyncStorage: 3a4f5e2777dae1688b781a487923a08569e27fe4
   RNGestureHandler: 0ea8153746a92b3744d4eaadade647debedf646e
-  RNGoogleMobileAds: d266aeeed25da0b8edea9ce2cb5d60de449b47f0
   RNPurchases: ebcfb4effc608048bf2481a413b0bcaa2b6677f7
   RNScreens: 02e62f995ceb94ea465864b3bf4d4767b87f0362
   RNSVG: 0bd149b873018bc6e0e3321e2f6435bdba294460
@@ -2565,4 +2536,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b149233af6910c67ea0285e618c0261971d5a699
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.17.0

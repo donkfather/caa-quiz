@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chestionare Barca | Pregatire permis barca CAA Clasa C si D</title>
+    <title>Chestionare Barca | Pregătire permis barcă CAA Clasa C și D</title>
     <meta
       name="description"
-      content="Chestionare Barca este aplicatia pentru pregatirea examenului CAA de conducator de ambarcatiuni de agrement, Clasa C si Clasa D. Exersezi intrebari, simulezi examenul si inveti fara internet."
+      content="Chestionare Barca este aplicația pentru pregătirea examenului CAA de conducător de ambarcațiuni de agrement, Clasa C și Clasa D. Exersezi întrebări, simulezi examenul și înveți fără internet."
     />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#053f4d" />
@@ -18,25 +18,25 @@
     <meta property="og:locale" content="ro_RO" />
     <meta property="og:url" content="https://chestionarebarca.bhdit.ro/" />
     <meta property="og:site_name" content="Chestionare Barca" />
-    <meta property="og:title" content="Chestionare Barca - Pregatire permis barca CAA" />
+    <meta property="og:title" content="Chestionare Barca - Pregătire permis barcă CAA" />
     <meta
       property="og:description"
-      content="Aplicatie in romana pentru examenul de permis barca CAA, Clasa C si Clasa D: chestionare, simulare examen, progres si studiu fara internet."
+      content="Aplicație în română pentru examenul de permis barcă CAA, Clasa C și Clasa D: chestionare, simulare examen, progres și studiu fără internet. Descărcare gratuită, 5 zile de încercare, apoi o singură plată, fără reclame."
     />
     <meta property="og:image" content="https://chestionarebarca.bhdit.ro/og-image.png" />
     <meta property="og:image:secure_url" content="https://chestionarebarca.bhdit.ro/og-image.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Chestionare Barca - Pregatire permis barca CAA" />
+    <meta property="og:image:alt" content="Chestionare Barca - Pregătire permis barcă CAA" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Chestionare Barca - Pregatire permis barca CAA" />
+    <meta name="twitter:title" content="Chestionare Barca - Pregătire permis barcă CAA" />
     <meta
       name="twitter:description"
-      content="Pregateste examenul de conducator de ambarcatiuni de agrement cu chestionare CAA, simulare examen si studiu fara internet."
+      content="Pregătește examenul de conducător de ambarcațiuni de agrement cu chestionare CAA, simulare examen și studiu fără internet. Descărcare gratuită, 5 zile de încercare, apoi o singură plată, fără reclame."
     />
     <meta name="twitter:image" content="https://chestionarebarca.bhdit.ro/og-image.png" />
-    <meta name="twitter:image:alt" content="Chestionare Barca - Pregatire permis barca CAA" />
+    <meta name="twitter:image:alt" content="Chestionare Barca - Pregătire permis barcă CAA" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -52,9 +52,20 @@
         "name": "Chestionare Barca",
         "url": "https://chestionarebarca.bhdit.ro/",
         "inLanguage": "ro-RO",
-        "description": "Pagina oficiala pentru aplicatia Chestionare Barca."
+        "description": "Pagina oficială pentru aplicația Chestionare Barca."
       }
     </script>
+    <!--
+      Pricing model: the DOWNLOAD is free (price "0" below is the download, not
+      the app) and includes 5 days of full access; after that the app is
+      unlocked by ONE in-app purchase, no subscription.
+      TODO(owner): once the RON price of "Deblochează aplicația" is final, add it
+      as a second Offer in "offers" below (do not guess it — the store price is
+      the source of truth):
+        { "@type": "Offer", "name": "Deblochează aplicația",
+          "description": "Plată unică în aplicație, fără abonament.",
+          "price": "<PRICE>", "priceCurrency": "RON" }
+    -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -65,13 +76,17 @@
         "applicationCategory": "EducationalApplication",
         "operatingSystem": "iOS, Android",
         "inLanguage": "ro-RO",
-        "description": "Aplicatie pentru pregatirea examenului de conducator de ambarcatiuni de agrement CAA, Clasa C si Clasa D.",
+        "description": "Aplicație pentru pregătirea examenului de conducător de ambarcațiuni de agrement CAA, Clasa C și Clasa D. Descărcare gratuită, 5 zile de încercare cu acces complet, apoi o singură plată în aplicație — fără abonament, fără reclame.",
         "downloadUrl": "https://apps.apple.com/ro/app/skipper-permit-exam-training/id6769403260",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "RON"
-        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Descărcare",
+            "description": "Descărcare gratuită, cu 5 zile de acces complet. După aceea, aplicația se deblochează printr-o singură plată în aplicație, fără abonament.",
+            "price": "0",
+            "priceCurrency": "RON"
+          }
+        ],
         "sameAs": "https://apps.apple.com/ro/app/skipper-permit-exam-training/id6769403260"
       }
     </script>
@@ -83,26 +98,42 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Aplicatia este pentru permis barca CAA?",
+            "name": "Aplicația este pentru permis barcă CAA?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Da. Este construita pentru pregatirea examenului de conducator de ambarcatiuni de agrement, Clasa C si Clasa D."
+              "text": "Da. Este construită pentru pregătirea examenului de conducător de ambarcațiuni de agrement, Clasa C și Clasa D."
             }
           },
           {
             "@type": "Question",
-            "name": "Pot invata fara internet?",
+            "name": "Cât costă aplicația?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Da. Modul fara internet permite continuarea sesiunilor de practica si cand nu ai conexiune."
+              "text": "Descărcarea este gratuită și ai 5 zile de încercare cu acces complet la toate întrebările, simulările de examen și cursurile. După aceea, deblochezi aplicația printr-o singură plată în aplicație, la prețul afișat în App Store sau Google Play (TVA inclus) — fără abonament și fără reclame."
             }
           },
           {
             "@type": "Question",
-            "name": "Exista mod de simulare examen?",
+            "name": "Am cumpărat eliminarea reclamelor. Trebuie să plătesc din nou?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Da. Simularea include 26 de intrebari, cronometru si rezultat final cu detalii pentru raspunsurile gresite."
+              "text": "Nu. Ai în continuare acces complet. Dacă aplicația nu te recunoaște automat, apasă „Restaurează achizițiile”."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pot învăța fără internet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da. Modul fără internet permite continuarea sesiunilor de practică și când nu ai conexiune."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Există mod de simulare examen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da. Simularea include 26 de întrebări, cronometru și rezultat final cu detalii pentru răspunsurile greșite."
             }
           }
         ]
@@ -115,11 +146,11 @@
         <img src="/assets/icon.png" alt="" />
         <span>Chestionare Barca</span>
       </a>
-      <nav aria-label="Navigatie principala">
+      <nav aria-label="Navigație principală">
         <a href="#beneficii">Beneficii</a>
         <a href="#examen">Examen</a>
         <a href="#ecrane">Ecrane</a>
-        <a href="#intrebari">Intrebari</a>
+        <a href="#intrebari">Întrebări</a>
       </nav>
     </header>
 
@@ -132,161 +163,170 @@
         </div>
 
         <div class="hero-copy">
-          <p class="eyebrow">Permis barca CAA - Clasa C si D</p>
-          <h1>Chestionare CAA pentru permisul de barca.</h1>
+          <p class="eyebrow">Permis barcă CAA - Clasa C și D</p>
+          <h1>Chestionare CAA pentru permisul de barcă.</h1>
           <p class="lead">
-            Pregateste examenul de conducator de ambarcatiuni de agrement cu intrebari organizate, simulare de examen, progres vizibil si studiu fara internet.
+            Pregătește examenul de conducător de ambarcațiuni de agrement cu întrebări organizate, simulare de examen, progres vizibil și studiu fără internet.
           </p>
           <div class="actions">
-            <a class="button primary" href="https://apps.apple.com/ro/app/skipper-permit-exam-training/id6769403260">Descarca aplicatia</a>
+            <a class="button primary" href="https://apps.apple.com/ro/app/skipper-permit-exam-training/id6769403260">Descarcă aplicația</a>
             <a class="button secondary" href="#beneficii">Vezi ce include</a>
           </div>
-          <div class="metrics" aria-label="Repere aplicatie">
+          <div class="metrics" aria-label="Repere aplicație">
             <div>
               <strong>26</strong>
-              <span>intrebari in simularea de examen</span>
+              <span>întrebări în simularea de examen</span>
             </div>
             <div>
               <strong>6</strong>
               <span>categorii nautice de studiu</span>
             </div>
             <div>
-              <strong>Fara internet</strong>
-              <span>invata si fara conexiune</span>
+              <strong>Fără internet</strong>
+              <span>înveți și fără conexiune</span>
             </div>
           </div>
         </div>
 
-        <div class="phone-stage" aria-label="Previzualizare aplicatie">
+        <div class="phone-stage" aria-label="Previzualizare aplicație">
           <div class="scan-lines" aria-hidden="true"></div>
           <div class="phone main-phone">
-            <img src="/store-assets/caa-quiz1.jpeg" alt="Ecran principal din aplicatia Chestionare Barca" />
+            <img src="/store-assets/caa-quiz1.jpeg" alt="Ecran principal din aplicația Chestionare Barca" />
           </div>
           <div class="phone side-phone">
-            <img src="/store-assets/caa-quiz2.jpeg" alt="Modul de examen pentru permis barca CAA" />
+            <img src="/store-assets/caa-quiz2.jpeg" alt="Modul de examen pentru permis barcă CAA" />
           </div>
         </div>
       </section>
 
       <section class="ticker" aria-label="Categorii incluse">
         <span>COLREG</span>
-        <span>Navigatie</span>
-        <span>Marinarie</span>
+        <span>Navigație</span>
+        <span>Marinărie</span>
         <span>Manevre</span>
         <span>Prim ajutor</span>
-        <span>Raspunsuri rapide</span>
+        <span>Răspunsuri rapide</span>
       </section>
 
       <section class="section intro" id="beneficii">
         <div>
           <p class="eyebrow">Studiu clar, ritm constant</p>
-          <h2>O cabina de comanda pentru pregatirea examenului CAA.</h2>
+          <h2>O cabină de comandă pentru pregătirea examenului CAA.</h2>
         </div>
         <p>
-          Chestionare Barca grupeaza materia pe teme nautice, iti arata raspunsul corect imediat in modul de practica si pastreaza istoricul sesiunilor, ca sa stii exact unde trebuie sa revii.
+          Chestionare Barca grupează materia pe teme nautice, îți arată răspunsul corect imediat în modul de practică și păstrează istoricul sesiunilor, ca să știi exact unde trebuie să revii.
         </p>
       </section>
 
-      <section class="feature-grid" id="examen" aria-label="Functii principale">
+      <section class="feature-grid" id="examen" aria-label="Funcții principale">
         <article>
           <span class="feature-icon">01</span>
           <h3>Simulare de examen</h3>
-          <p>26 de intrebari, cronometru si rezultat final, pentru un ritm cat mai apropiat de proba reala.</p>
+          <p>26 de întrebări, cronometru și rezultat final, pentru un ritm cât mai apropiat de proba reală.</p>
         </article>
         <article>
           <span class="feature-icon">02</span>
-          <h3>Practica pe categorii</h3>
-          <p>Inveti separat COLREG, navigatie, marinarie, manevre, prim ajutor si raspunsuri rapide.</p>
+          <h3>Practică pe categorii</h3>
+          <p>Înveți separat COLREG, navigație, marinărie, manevre, prim ajutor și răspunsuri rapide.</p>
         </article>
         <article>
           <span class="feature-icon">03</span>
-          <h3>Progres masurabil</h3>
-          <p>Vezi scorurile, timpul, istoricul si intrebarile care au nevoie de mai multa atentie.</p>
+          <h3>Progres măsurabil</h3>
+          <p>Vezi scorurile, timpul, istoricul și întrebările care au nevoie de mai multă atenție.</p>
         </article>
         <article>
           <span class="feature-icon">04</span>
-          <h3>Invatare comoda</h3>
-          <p>Mod intunecat si luminos, suport pentru iPad, notificari locale si acces fara internet.</p>
+          <h3>Învățare comodă</h3>
+          <p>Mod întunecat și luminos, suport pentru iPad, notificări locale, acces fără internet și nicio reclamă.</p>
         </article>
       </section>
 
       <section class="screens-section" id="ecrane">
         <div class="section-heading">
-          <p class="eyebrow">Ecrane din aplicatie</p>
-          <h2>Tot traseul de invatare, de la prima intrebare pana la simularea finala.</h2>
+          <p class="eyebrow">Ecrane din aplicație</p>
+          <h2>Tot traseul de învățare, de la prima întrebare până la simularea finală.</h2>
         </div>
         <div class="screens">
-          <img src="/store-assets/caa-quiz3.jpeg" alt="Categorii de intrebari pentru examenul CAA" />
-          <img src="/store-assets/caa-quiz4.jpeg" alt="Intrebare cu variante de raspuns pentru permis barca" />
-          <img src="/store-assets/caa-quiz5.jpeg" alt="Realizari si progres in aplicatia Chestionare Barca" />
-          <img src="/store-assets/caa-quiz6.jpeg" alt="Setari pentru studiu si notificari" />
+          <img src="/store-assets/caa-quiz3.jpeg" alt="Categorii de întrebări pentru examenul CAA" />
+          <img src="/store-assets/caa-quiz4.jpeg" alt="Întrebare cu variante de răspuns pentru permis barcă" />
+          <img src="/store-assets/caa-quiz5.jpeg" alt="Realizări și progres în aplicația Chestionare Barca" />
+          <img src="/store-assets/caa-quiz6.jpeg" alt="Setări pentru studiu și notificări" />
         </div>
       </section>
 
       <section class="section exam-info">
         <div>
-          <p class="eyebrow">Pentru permisul de barca</p>
-          <h2>Pregatire pentru CAA Clasa C si Clasa D.</h2>
+          <p class="eyebrow">Pentru permisul de barcă</p>
+          <h2>Pregătire pentru CAA Clasa C și Clasa D.</h2>
         </div>
         <div class="info-list">
           <p>
-            Aplicatia este gandita pentru candidatii care se pregatesc pentru examenul de conducator de ambarcatiuni de agrement si vor o metoda simpla de repetare zilnica.
+            Aplicația este gândită pentru candidații care se pregătesc pentru examenul de conducător de ambarcațiuni de agrement și vor o metodă simplă de repetare zilnică.
           </p>
           <ul>
-            <li>intrebari organizate pe subiecte usor de parcurs;</li>
-            <li>mod examen pentru verificarea nivelului de pregatire;</li>
-            <li>mod practica pentru consolidarea raspunsurilor gresite;</li>
-            <li>date pastrate local pe dispozitiv.</li>
+            <li>întrebări organizate pe subiecte ușor de parcurs;</li>
+            <li>mod examen pentru verificarea nivelului de pregătire;</li>
+            <li>mod practică pentru consolidarea răspunsurilor greșite;</li>
+            <li>date păstrate local pe dispozitiv.</li>
           </ul>
         </div>
       </section>
 
       <section class="privacy" id="confidentialitate">
         <div>
-          <p class="eyebrow">Confidentialitate</p>
-          <h2>Datele tale raman pe dispozitiv.</h2>
+          <p class="eyebrow">Confidențialitate</p>
+          <h2>Datele tale rămân pe dispozitiv.</h2>
         </div>
         <p>
-          Chestionare Barca nu colecteaza informatii personale. Progresul, istoricul si setarile sunt pastrate local si pot fi sterse oricand din aplicatie.
+          Nu ai nevoie de cont: Chestionare Barca nu îți cere nume, email sau telefon. Progresul, istoricul și setările sunt păstrate local și pot fi șterse oricând din aplicație. Pentru perioada de încercare păstrăm doar o amprentă ireversibilă a dispozitivului și data de început. Detalii în
+          <a href="https://sites.google.com/view/chestionare-barca-privacy-pol/home" style="text-decoration: underline; text-underline-offset: 3px">politica de confidențialitate</a>.
         </p>
       </section>
 
       <section class="faq" id="intrebari">
         <div class="section-heading">
-          <p class="eyebrow">Intrebari frecvente</p>
-          <h2>Raspunsuri rapide inainte sa incepi.</h2>
+          <p class="eyebrow">Întrebări frecvente</p>
+          <h2>Răspunsuri rapide înainte să începi.</h2>
         </div>
         <details>
-          <summary>Aplicatia este pentru permis barca CAA?</summary>
-          <p>Da. Este construita pentru pregatirea examenului de conducator de ambarcatiuni de agrement, Clasa C si Clasa D.</p>
+          <summary>Aplicația este pentru permis barcă CAA?</summary>
+          <p>Da. Este construită pentru pregătirea examenului de conducător de ambarcațiuni de agrement, Clasa C și Clasa D.</p>
         </details>
         <details>
-          <summary>Pot invata fara internet?</summary>
-          <p>Da. Modul fara internet iti permite sa continui sesiunile de practica si cand nu ai conexiune.</p>
+          <summary>Cât costă aplicația?</summary>
+          <p>Descărcarea este gratuită și ai 5 zile de încercare cu acces complet la toate întrebările, simulările de examen și cursurile. După aceea, deblochezi aplicația printr-o singură plată în aplicație, la prețul afișat în App Store sau Google Play (TVA inclus) — fără abonament și fără reclame.</p>
         </details>
         <details>
-          <summary>Exista mod de simulare examen?</summary>
-          <p>Da. Simularea include 26 de intrebari, cronometru si rezultat final cu detalii pentru raspunsurile gresite.</p>
+          <summary>Am cumpărat eliminarea reclamelor. Trebuie să plătesc din nou?</summary>
+          <p>Nu. Ai în continuare acces complet. Dacă aplicația nu te recunoaște automat, apasă „Restaurează achizițiile”.</p>
+        </details>
+        <details>
+          <summary>Pot învăța fără internet?</summary>
+          <p>Da. Modul fără internet îți permite să continui sesiunile de practică și când nu ai conexiune.</p>
+        </details>
+        <details>
+          <summary>Există mod de simulare examen?</summary>
+          <p>Da. Simularea include 26 de întrebări, cronometru și rezultat final cu detalii pentru răspunsurile greșite.</p>
         </details>
       </section>
 
       <section class="download" id="download">
         <img src="/assets/icon.png" alt="" />
         <div>
-          <p class="eyebrow">Disponibila gratuit</p>
-          <h2>Instaleaza aplicatia si incepe prima sesiune.</h2>
-          <p>Chestionare Barca este gratuita si sustinuta prin reclame discrete.</p>
+          <p class="eyebrow">Descărcare gratuită · 5 zile de încercare</p>
+          <h2>Instalează aplicația și începe prima sesiune.</h2>
+          <p>Ai acces complet 5 zile, apoi deblochezi aplicația printr-o singură plată — fără abonament, fără reclame.</p>
         </div>
         <div class="store-actions">
-          <a class="store-button" href="https://apps.apple.com/ro/app/skipper-permit-exam-training/id6769403260" aria-label="Descarca din App Store">Descarca din App Store</a>
-          <span class="store-button disabled" aria-label="Google Play in curand">Google Play in curand</span>
+          <a class="store-button" href="https://apps.apple.com/ro/app/skipper-permit-exam-training/id6769403260" aria-label="Descarcă din App Store">Descarcă din App Store</a>
+          <span class="store-button disabled" aria-label="Google Play în curând">Google Play în curând</span>
         </div>
       </section>
     </main>
 
     <footer>
       <span>Chestionare Barca</span>
-      <span>Pregatire permis barca CAA - Clasa C si D</span>
+      <span>Pregătire permis barcă CAA - Clasa C și D</span>
       <a class="made-by" href="https://bhdit.ro/" target="_blank" rel="noopener">Realizat de BHD-IT</a>
     </footer>
   </body>

@@ -13,7 +13,6 @@ import {
   ActiveSession,
 } from "../src/lib/storage";
 import { useFocusEffect, useRouter } from "expo-router";
-import { showInterstitial } from "../src/lib/ads";
 import { TOPIC_LABELS, LICENSE_LABELS, EXAM_CONFIGS, Topic, License, ExamType } from "../src/lib/questions";
 
 const MODE_LABELS: Record<string, string> = {
@@ -186,8 +185,7 @@ export default function HistoryScreen() {
     ]);
   };
 
-  const handleResume = async (session: ActiveSession) => {
-    await showInterstitial();
+  const handleResume = (session: ActiveSession) => {
     let url = `/quiz?mode=${session.mode}&sessionId=${session.id}`;
     if (session.topic) url += `&topic=${session.topic}`;
     if (session.license) url += `&license=${session.license}`;

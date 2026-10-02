@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Animated, StyleSheet, Text, View } from "react-native";
+import { useEffect, useState, type ReactNode } from "react";
+import { ActivityIndicator, Animated, StyleSheet, Text, View } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -12,15 +12,20 @@ import {
   Lora_400Regular, Lora_500Medium, Lora_700Bold, Lora_400Regular_Italic,
 } from "@expo-google-fonts/lora";
 import { ThemeProvider, useTheme } from "../src/lib/ThemeContext";
+import { AccessProvider, useAccess } from "../src/lib/AccessContext";
 import { FONTS } from "../src/lib/fonts";
-import { initAds, preloadInterstitial } from "../src/lib/ads";
-import { configurePurchases } from "../src/lib/purchases";
-import { validateAdsFree } from "../src/lib/vouchers";
 import { refreshAllQuestions, allQuestions } from "../src/lib/questions";
 import { onQuestionsUpdated } from "../src/lib/questionsRemote";
 import { migrateIdScheme } from "../src/lib/idMigration";
+import TrialIntro from "../src/components/TrialIntro";
+import Paywall from "../src/components/Paywall";
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
+
+// Upper bound on how long the native splash may stay up. Fonts and the access
+// check normally resolve well before this; if anything hangs, the splash goes
+// anyway and a spinner shows until it resolves, so nobody is stranded on it.
+const SPLASH_MAX_MS = 4000;
 
 // Make Inter the default for every <Text>. CourseMarkdown overrides
 // body paragraphs with Lora.
@@ -28,8 +33,11 @@ const TextAny = Text as any;
 TextAny.defaultProps = TextAny.defaultProps || {};
 TextAny.defaultProps.style = [{ fontFamily: FONTS.uiRegular }, TextAny.defaultProps.style].filter(Boolean);
 
-function AppStack() {
+// Decides what the whole app shows: nothing (behind the splash) until fonts
+// and access are known, then the trial intro, the lock screen, or the app.
+function AppShell({ fontsReady }: { fontsReady: boolean }) {
   const { theme, isDark } = useTheme();
+  const { state } = useAccess();
   const insets = useSafeAreaInsets();
   const [updateBanner, setUpdateBanner] = useState<number | null>(null);
   const [bannerOpacity] = useState(() => new Animated.Value(0));
@@ -45,16 +53,9 @@ function AppStack() {
   };
 
   useEffect(() => {
-    // configurePurchases MUST run first: validateAdsFree reads the RevenueCat
-    // entitlement into settings.adsDisabled, and initAds skips AdMob init when
-    // that flag is already true — so a paying user never initializes ads.
-    configurePurchases()
-      .then(() => validateAdsFree())
-      .then(() => initAds())
-      .then(() => preloadInterstitial())
-      .catch((e) => { if (__DEV__) console.warn("Ad init chain failed:", e); });
     // Pull cached + remote question set in the background. Falls back to
-    // bundled JSON if offline; never blocks the UI.
+    // bundled JSON if offline; never blocks the UI. Runs whatever the access
+    // state, so the set is current the moment a locked user unlocks.
     refreshAllQuestions().then(maybeMigrate).catch((e) => { if (__DEV__) console.warn("Question refresh failed:", e); });
 
     const unsubscribe = onQuestionsUpdated((version) => {
@@ -69,9 +70,27 @@ function AppStack() {
     return unsubscribe;
   }, []);
 
-  return (
-    <>
-      <StatusBar style={isDark ? "light" : "dark"} />
+  const ready = fontsReady && state !== null;
+  useEffect(() => {
+    if (ready) SplashScreen.hideAsync().catch(() => {});
+  }, [ready]);
+
+  let content: ReactNode;
+  let showsApp = false;
+  if (!fontsReady || state === null) {
+    // Hidden behind the splash; only visible if SPLASH_MAX_MS ran out first.
+    content = (
+      <View style={[styles.loading, { backgroundColor: theme.bg }]}>
+        <ActivityIndicator color={theme.primary} accessibilityLabel="Se încarcă" />
+      </View>
+    );
+  } else if (state.kind === "new") {
+    content = <TrialIntro />;
+  } else if (state.kind === "expired") {
+    content = <Paywall />;
+  } else {
+    showsApp = true;
+    content = (
       <Stack
         screenOptions={{
           headerStyle: { backgroundColor: theme.bg },
@@ -92,7 +111,14 @@ function AppStack() {
         <Stack.Screen name="courses/[moduleId]" options={{ title: "Curs" }} />
         <Stack.Screen name="courses/section" options={{ title: "Secțiune" }} />
       </Stack>
-      {updateBanner !== null && (
+    );
+  }
+
+  return (
+    <>
+      <StatusBar style={isDark ? "light" : "dark"} />
+      {content}
+      {showsApp && updateBanner !== null && (
         <Animated.View
           pointerEvents="none"
           style={[
@@ -108,6 +134,11 @@ function AppStack() {
 }
 
 const styles = StyleSheet.create({
+  loading: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   banner: {
     position: "absolute",
     left: 16,
@@ -125,20 +156,25 @@ const styles = StyleSheet.create({
 });
 
 export default function RootLayout() {
-  const [fontsLoaded] = useInter({
+  const [fontsLoaded, fontError] = useInter({
     Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold, Inter_800ExtraBold,
     Lora_400Regular, Lora_500Medium, Lora_700Bold, Lora_400Regular_Italic,
   });
+  // A font that fails to load must not brick the app — fall back to system fonts.
+  const fontsReady = fontsLoaded || fontError != null;
 
   useEffect(() => {
-    if (fontsLoaded) SplashScreen.hideAsync().catch(() => {});
-  }, [fontsLoaded]);
+    const timer = setTimeout(() => { SplashScreen.hideAsync().catch(() => {}); }, SPLASH_MAX_MS);
+    return () => clearTimeout(timer);
+  }, []);
 
-  if (!fontsLoaded) return null;
-
+  // Providers mount right away (not after fonts) so the access check runs in
+  // parallel with font loading; AppShell renders no text until fonts are ready.
   return (
     <ThemeProvider>
-      <AppStack />
+      <AccessProvider>
+        <AppShell fontsReady={fontsReady} />
+      </AccessProvider>
     </ThemeProvider>
   );
 }

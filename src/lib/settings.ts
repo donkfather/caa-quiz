@@ -6,6 +6,10 @@ export type ThemeMode = "dark" | "light" | "auto";
 
 export interface AppSettings {
   themeMode: ThemeMode;
+  /** @deprecated Legacy flag from the ad-supported build, where only a
+   * remove-ads purchase set it. Read by access.ts as the legacy payer signal
+   * (trusted only while the RevenueCat entitlement is unknown). Never written
+   * any more — access state lives in access.ts. */
   adsDisabled: boolean;
   reminderEnabled: boolean;
   reminderHour: number; // 0-23
@@ -31,7 +35,7 @@ export async function saveSettings(settings: AppSettings): Promise<void> {
 }
 
 // saveSettings overwrites the whole blob, so concurrent read-modify-write from
-// different callers (reconcile, purchase, restore, voucher, reminder, theme)
+// different callers (reminder, theme, …)
 // can clobber each other's fields. Serialize every mutation through one queue
 // that does a FRESH load → mutate → save, so writes can't interleave.
 let writeQueue: Promise<unknown> = Promise.resolve();

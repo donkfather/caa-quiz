@@ -343,7 +343,7 @@ export default function SectionScreen() {
                       <Text style={{ fontSize: 19, fontWeight: "700", color: theme.text }}>{card.title}</Text>
                     </View>
                   ) : null}
-                  {card.blocks.map((block, bIdx) => (
+                  {card.blocks.map((block: ContentBlock, bIdx: number) => (
                     <BlockView key={bIdx} block={block} theme={theme} />
                   ))}
                 </>

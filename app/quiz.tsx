@@ -65,11 +65,9 @@ import {
   checkAndUnlockBadges,
   BADGE_DEFS,
 } from "../src/lib/gamification";
-import { AdBanner } from "../src/components/AdBanner";
 import { ReportButton } from "../src/components/ReportButton";
 import { QuestionImage } from "../src/components/QuestionImage";
 import { recordAnswer, pickAdaptive } from "../src/lib/questionStats";
-import { showInterstitial } from "../src/lib/ads";
 
 type Mode = "exam" | "practice" | "learn";
 
@@ -280,8 +278,7 @@ export default function QuizScreen() {
     onExpire: () => { finalizeRef.current?.(); },
   });
 
-  const handleFinish = useCallback(async () => {
-    await showInterstitial();
+  const handleFinish = useCallback(() => {
     router.back();
   }, [router]);
 
@@ -492,7 +489,6 @@ export default function QuizScreen() {
             </Text>
           </Pressable>
         </ScrollView>
-        <AdBanner />
       </View>
     </>
   );

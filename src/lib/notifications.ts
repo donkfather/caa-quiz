@@ -12,7 +12,9 @@ const REMINDER_IDS = [
 // Configure how notifications appear when app is in foreground
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
-    shouldShowAlert: true,
+    shouldShowAlert: true, // deprecated; kept for older native modules
+    shouldShowBanner: true,
+    shouldShowList: true,
     shouldPlaySound: false,
     shouldSetBadge: false,
   }),
@@ -26,12 +28,23 @@ export async function requestPermission(): Promise<boolean> {
   return status === "granted";
 }
 
-export async function scheduleStreakReminder(hour: number, minute: number): Promise<void> {
+async function hasPermission(): Promise<boolean> {
+  const { status } = await Notifications.getPermissionsAsync();
+  return status === "granted";
+}
+
+/** `askPermission: false` schedules only when permission was already granted
+ * (used when reminders are restored automatically, never from a user tap). */
+export async function scheduleStreakReminder(
+  hour: number,
+  minute: number,
+  { askPermission = true }: { askPermission?: boolean } = {},
+): Promise<void> {
   // Cancel existing reminder first
   await cancelStreakReminder();
 
-  const hasPermission = await requestPermission();
-  if (!hasPermission) return;
+  const permitted = askPermission ? await requestPermission() : await hasPermission();
+  if (!permitted) return;
 
   const messages = [
     "Nu uita de streak! Rezolvă un test azi. ⚓",

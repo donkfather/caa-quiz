@@ -4,7 +4,13 @@
 // the static one.
 
 module.exports = ({ config }) => {
-  const isPreview = process.env.APP_VARIANT === "preview";
+  // Preview = the internal test build (own icon/name/package, test tools such as
+  // "expire the trial" — see src/lib/buildFlags.ts). It must never be true in a
+  // store build, so an EAS "production" profile build refuses it even when
+  // APP_VARIANT=preview leaks in from the shell. Xcode Cloud (iOS store builds)
+  // never sets APP_VARIANT.
+  const isPreview =
+    process.env.APP_VARIANT === "preview" && process.env.EAS_BUILD_PROFILE !== "production";
 
   return {
     ...config,
@@ -27,11 +33,12 @@ module.exports = ({ config }) => {
     },
     extra: {
       ...(config.extra ?? {}),
-      useTestAds: process.env.EXPO_PUBLIC_USE_TEST_ADS === "true",
       isPreview,
       // RevenueCat PUBLIC SDK keys (appl_… / goog_…) — safe to embed. Set per
-      // build via EXPO_PUBLIC_RC_* env (eas.json / .env.local). Undefined until
-      // configured → the Purchases SDK stays disabled and ads behave as before.
+      // build via EXPO_PUBLIC_RC_* env (eas.json / .env.local). The one-time
+      // purchase unlocks the app after the 5-day trial. Undefined → the
+      // Purchases SDK stays disabled, the unlock can never be bought or
+      // restored, and every user is stuck at the paywall once the trial ends.
       revenueCatIosKey: process.env.EXPO_PUBLIC_RC_IOS_KEY,
       revenueCatAndroidKey: process.env.EXPO_PUBLIC_RC_ANDROID_KEY,
     },

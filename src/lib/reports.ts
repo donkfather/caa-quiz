@@ -1,6 +1,6 @@
 import Constants from "expo-constants";
 import { supabase } from "./supabase";
-import { getDeviceId } from "./vouchers";
+import { getReportDeviceId as getDeviceId } from "./deviceKey";
 import { getQuestionsVersion } from "./questionsRemote";
 
 export type ReportTarget =

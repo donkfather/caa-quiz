@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politica de Confidentialitate - Chestionare Barca</title>
+  <title>Politica de confidențialitate — Chestionare Barca</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -42,67 +42,96 @@
 <body>
 
 <div class="lang-toggle">
-  <a href="#" id="btn-ro" class="active" onclick="showLang('ro'); return false;">Romana</a>
+  <a href="#" id="btn-ro" class="active" onclick="showLang('ro'); return false;">Română</a>
   <a href="#" id="btn-en" onclick="showLang('en'); return false;">English</a>
 </div>
 
 <!-- ROMANIAN -->
 <div id="lang-ro" class="section-ro active">
 
-<h1>Politica de Confidentialitate</h1>
-<p class="subtitle">Chestionare Barca &mdash; Ultima actualizare: 29 martie 2026</p>
+<h1>Politica de confidențialitate</h1>
+<p class="subtitle">Chestionare Barca &mdash; Ultima actualizare: 2 octombrie 2026</p>
 
 <h2>1. Introducere</h2>
-<p>Aceasta politica de confidentialitate descrie modul in care aplicatia <strong>Chestionare Barca</strong> colecteaza, utilizeaza si protejeaza datele dumneavoastra. Aplicatia este un instrument de pregatire pentru examenul CAA (Clasa C si D) si nu necesita crearea unui cont de utilizator sau autentificare.</p>
+<p>Această politică descrie ce date folosește aplicația <strong>Chestionare Barca</strong>, de ce le folosește, unde sunt păstrate și ce drepturi aveți. Aplicația este un instrument de pregătire pentru examenul CAA (Clasa C și D). Nu necesită cont și nu vă cerem nume, adresă de email sau număr de telefon.</p>
+<p>Aplicația <strong>nu afișează reclame</strong>, nu conține SDK-uri de publicitate și nu vă urmărește activitatea în alte aplicații sau site-uri.</p>
 
-<h2>2. Date stocate local pe dispozitiv</h2>
-<p>Aplicatia stocheaza urmatoarele date exclusiv pe dispozitivul dumneavoastra, folosind AsyncStorage:</p>
+<h2>2. Date păstrate doar pe dispozitiv</h2>
+<p>Aplicația păstrează următoarele date exclusiv pe dispozitivul dumneavoastră:</p>
 <ul>
-  <li>Istoricul chestionarelor completate (raspunsuri, scoruri, date)</li>
-  <li>Setarile aplicatiei (tema, preferinte notificari)</li>
-  <li>Realizarile obtinute (badge-uri)</li>
-  <li>Streak-ul zilnic (numarul de zile consecutive de utilizare)</li>
+  <li>istoricul chestionarelor completate (răspunsuri, scoruri, date);</li>
+  <li>setările aplicației (temă, preferințe pentru notificări);</li>
+  <li>realizările obținute (badge-uri) și streak-ul zilnic;</li>
+  <li>starea accesului: data la care se termină perioada de încercare, dacă aplicația a fost deblocată și ultimul preț al deblocării afișat de magazin;</li>
+  <li>întrebările și cursurile descărcate, ca să puteți învăța și fără internet.</li>
 </ul>
-<p>Aceste date nu parasesc dispozitivul dumneavoastra si nu sunt transmise catre servere externe, cu exceptia cazurilor descrise mai jos.</p>
+<p>Aceste date nu părăsesc dispozitivul. Le puteți șterge oricând cu butonul <strong>Șterge toate datele</strong> &mdash; în Setări sau, după încheierea perioadei gratuite, pe ecranul de deblocare &mdash; ori prin dezinstalarea aplicației. Butonul păstrează pe dispozitiv doar starea accesului și copia locală a identificatorului de la secțiunea 3, ca ștergerea datelor să nu poată reporni perioada de încercare și nici să blocheze aplicația cuiva care a plătit. Datele salvate local de RevenueCat (identificatorul anonim și informațiile despre achiziții din secțiunea 4) nu sunt atinse de buton; se șterg la dezinstalarea aplicației.</p>
 
-<h2>3. Supabase (stocarea datelor pe server)</h2>
-<p>Aplicatia utilizeaza serviciul Supabase pentru urmatoarele functionalitati:</p>
+<h2>3. Perioada gratuită de 5 zile</h2>
+<p>Fiecare dispozitiv primește o singură perioadă gratuită de 5 zile, cu acces complet. Ca să putem aplica această regulă, aplicația folosește un identificator al dispozitivului:</p>
 <ul>
-  <li><strong>Identificator de dispozitiv:</strong> Un ID unic de dispozitiv este generat si transmis catre Supabase. Acesta nu contine informatii personale identificabile.</li>
-  <li><strong>Rascumparare vouchere:</strong> Datele privind rascumpararea codurilor promotionale (voucher) sunt stocate pe serverele Supabase.</li>
+  <li><strong>Android:</strong> identificatorul Android al aplicației (Android ID) &mdash; o valoare pe care sistemul o atribuie separat fiecărei aplicații pe fiecare dispozitiv. Nu este identificatorul de publicitate.</li>
+  <li><strong>iOS:</strong> un identificator aleatoriu generat de aplicație și păstrat în Keychain-ul dispozitivului, unde rămâne și după dezinstalarea aplicației.</li>
 </ul>
-<p>Nu sunt colectate sau stocate informatii personale (nume, email, numar de telefon) prin Supabase.</p>
-
-<h2>4. Google AdMob (publicitate)</h2>
-<p>Aplicatia afiseaza reclame prin Google AdMob. AdMob poate colecta:</p>
+<p>La fiecare pornire a aplicației și la fiecare revenire în ea, identificatorul este trimis printr-o conexiune criptată (HTTPS) către serverul nostru Supabase din Uniunea Europeană (Irlanda), ca să verificăm dacă perioada gratuită a fost deja folosită pe acest dispozitiv și când se termină. Verificarea are loc și înainte să porniți perioada gratuită; nu mai are loc cât timp aplicația este deblocată pe dispozitiv și magazinul confirmă achiziția. Serverul transformă identificatorul imediat într-o amprentă ireversibilă (hash SHA-256) și nu păstrează nimic în urma acestei verificări. O înregistrare se creează doar când apăsați <em>Începe perioada gratuită</em> (sau, dacă atunci nu era conexiune la internet, la prima conectare ulterioară): pe server păstrăm doar amprenta, data la care a început perioada gratuită și platforma (iOS sau Android). Identificatorul original nu este stocat.</p>
 <ul>
-  <li>Identificatori de dispozitiv (Advertising ID)</li>
-  <li>Date despre interactiunile cu reclamele</li>
-  <li>Informatii tehnice despre dispozitiv (model, versiune sistem de operare)</li>
-</ul>
-<p>Colectarea acestor date este gestionata de Google conform <a href="https://policies.google.com/privacy" target="_blank">Politicii de Confidentialitate Google</a>. La prima utilizare, aplicatia va solicita consimtamantul dumneavoastra pentru personalizarea reclamelor, conform reglementarilor GDPR.</p>
-<p>Puteti modifica preferintele privind reclamele oricand din sectiunea <strong>Setari</strong> a aplicatiei.</p>
-
-<h2>5. Notificari</h2>
-<p>Aplicatia utilizeaza exclusiv notificari locale (programate pe dispozitiv) pentru remindere privind streak-ul zilnic. Nu exista un server de notificari push si nicio data nu este transmisa catre servere externe in scopul notificarilor.</p>
-
-<h2>6. Drepturile dumneavoastra (GDPR)</h2>
-<p>In conformitate cu Regulamentul General privind Protectia Datelor (GDPR), aveti urmatoarele drepturi:</p>
-<ul>
-  <li><strong>Dreptul de acces:</strong> Puteti solicita informatii despre datele colectate.</li>
-  <li><strong>Dreptul la stergere:</strong> Dezinstalarea aplicatiei sterge toate datele locale. Pentru datele de pe Supabase, contactati-ne la adresa de mai jos.</li>
-  <li><strong>Dreptul la opozitie:</strong> Puteti refuza personalizarea reclamelor prin formularul de consimtamant UMP sau din Setari.</li>
-  <li><strong>Dreptul la portabilitate:</strong> Datele locale sunt stocate pe dispozitivul dumneavoastra si pot fi sterse prin dezinstalarea aplicatiei.</li>
+  <li>Nu legăm această înregistrare de nume, email sau alte date care v-ar putea identifica.</li>
+  <li>Nu o folosim pentru publicitate, pentru urmărire sau pentru statistici de utilizare.</li>
+  <li><strong>Temei legal:</strong> interesul nostru legitim de a aplica condițiile ofertei, adică o singură perioadă gratuită pe dispozitiv (art. 6 alin. (1) lit. f) GDPR).</li>
+  <li><strong>Durata păstrării:</strong> înregistrarea rămâne pe server și după ce ștergeți datele din aplicație (butonul <em>Șterge toate datele</em> nu o șterge) sau o reinstalați &mdash; tocmai pentru ca perioada gratuită să nu poată fi repornită. O păstrăm cât timp aplicația este oferită în magazine.</li>
 </ul>
 
-<h2>7. Securitatea datelor</h2>
-<p>Datele locale sunt protejate de mecanismele de securitate ale sistemului de operare al dispozitivului. Comunicarea cu Supabase se realizeaza prin conexiuni criptate (HTTPS).</p>
+<h2>4. Achiziții (Apple, Google și RevenueCat)</h2>
+<p>După perioada gratuită, aplicația se deblochează printr-o singură plată, făcută prin App Store (Apple) sau Google Play (Google). Plata este procesată exclusiv de Apple sau Google; noi nu primim datele cardului și nici numele sau adresa de email a contului dumneavoastră din magazin.</p>
+<p>Pentru a verifica achizițiile și a le putea restaura, aplicația folosește serviciul <strong>RevenueCat</strong> (RevenueCat, Inc., SUA). RevenueCat primește:</p>
+<ul>
+  <li>un identificator anonim de utilizator, generat de RevenueCat la prima pornire a aplicației;</li>
+  <li>chitanțele achizițiilor din magazin (ce produs, când, la ce preț și în ce monedă);</li>
+  <li>date tehnice de bază ale cererii (versiunea aplicației, sistemul de operare și adresa IP, ca la orice conexiune la internet).</li>
+</ul>
+<p>După o reinstalare, RevenueCat generează un identificator anonim nou, care nu &bdquo;vede&rdquo; încă achiziția făcută anterior. De aceea, o singură dată pe instalare, aplicația retrimite automat către RevenueCat chitanțele din contul de magazin al dispozitivului, fără să vă ceară parola, ca o achiziție mai veche să fie recunoscută. Butonul <em>Restaurează achizițiile</em> face același lucru la cerere.</p>
+<p>RevenueCat nu primește identificatorul de publicitate. Folosim datele RevenueCat pentru a vă oferi ceea ce ați cumpărat și pentru rapoarte despre vânzări (de exemplu, numărul de achiziții). <strong>Temei legal:</strong> executarea contractului (art. 6 alin. (1) lit. b) GDPR). Transferul către SUA se face cu garanțiile prevăzute de GDPR, conform documentației RevenueCat.</p>
+<p>Mai multe detalii: <a href="https://www.revenuecat.com/privacy" target="_blank">Politica de confidențialitate RevenueCat</a>, <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple</a>, <a href="https://policies.google.com/privacy" target="_blank">Google</a>.</p>
 
-<h2>8. Modificari ale politicii</h2>
-<p>Ne rezervam dreptul de a actualiza aceasta politica. Orice modificare va fi publicata pe aceasta pagina cu data actualizarii.</p>
+<h2>5. Raportarea unei întrebări</h2>
+<p>Dacă alegeți să raportați o greșeală la o întrebare, aplicația trimite către serverul nostru Supabase: întrebarea raportată, mesajul pe care îl scrieți (opțional), versiunea aplicației și a setului de întrebări și un identificator aleatoriu generat de aplicație, folosit pentru a preveni trimiterile abuzive. Vă rugăm să nu includeți date personale în mesaj.</p>
+<p>Folosim raportările doar pentru a corecta întrebările (interes legitim) și le păstrăm cât timp sunt utile în acest scop. Butonul <strong>Șterge toate datele</strong> (în Setări sau pe ecranul de deblocare) șterge de pe server și raportările trimise de pe acel dispozitiv (cele asociate identificatorului aleatoriu de mai sus), apoi șterge identificatorul de pe dispozitiv. Dacă în acel moment nu există conexiune la internet, raportările rămân pe server; ni le puteți cere șterse prin email, la adresa de mai jos.</p>
 
-<h2>9. Contact</h2>
-<p>Pentru intrebari sau solicitari privind confidentialitatea datelor:</p>
+<h2>6. Conținut descărcat</h2>
+<p>Aplicația descarcă periodic întrebările și cursurile actualizate de pe serverul Supabase. Pentru aceste descărcări nu trimitem date despre dumneavoastră; ca la orice conexiune la internet, furnizorul serverului vede adresa IP și o poate păstra temporar în jurnalele tehnice.</p>
+
+<h2>7. Notificări</h2>
+<p>Aplicația utilizează exclusiv notificări locale (programate pe dispozitiv) pentru remindere privind streak-ul zilnic. Nu există un server de notificări push și nicio dată nu este transmisă către servere externe în scopul notificărilor. Dacă perioada gratuită s-a încheiat și aplicația nu este deblocată, reminderele programate se anulează automat; revin după deblocare, dacă le-ați activat.</p>
+
+<h2>8. Cine are acces la date</h2>
+<ul>
+  <li><strong>Supabase</strong> &mdash; găzduiește serverul aplicației (date stocate în UE, Irlanda);</li>
+  <li><strong>RevenueCat</strong> &mdash; verifică achizițiile;</li>
+  <li><strong>Apple și Google</strong> &mdash; distribuie aplicația și procesează plățile.</li>
+</ul>
+<p>Nu vindem date și nu le împărtășim cu rețele de publicitate sau cu alte terțe părți.</p>
+
+<h2>9. Drepturile dumneavoastră (GDPR)</h2>
+<p>Conform Regulamentului General privind Protecția Datelor (GDPR), aveți dreptul de acces, de rectificare, de ștergere, de restricționare a prelucrării, de opoziție și dreptul la portabilitatea datelor.</p>
+<ul>
+  <li><strong>Datele de pe dispozitiv</strong> le puteți șterge oricând cu butonul <em>Șterge toate datele</em> (în Setări sau pe ecranul de deblocare) sau prin dezinstalarea aplicației; datele locale ale RevenueCat se șterg doar la dezinstalare.</li>
+  <li><strong>Raportările trimise</strong> le puteți șterge cu același buton (cu conexiune la internet) sau ni le puteți cere șterse prin email.</li>
+  <li><strong>Înregistrarea perioadei gratuite</strong> nu este legată de identitatea dumneavoastră. Vă puteți opune prelucrării; vom analiza cererea, însă înregistrarea este necesară pentru a aplica condițiile perioadei gratuite.</li>
+  <li><strong>Achizițiile</strong> rămân în contul dumneavoastră Apple sau Google, conform politicilor acestora.</li>
+</ul>
+<p>Aveți și dreptul să depuneți o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), <a href="https://www.dataprotection.ro" target="_blank">www.dataprotection.ro</a>.</p>
+
+<h2>10. Securitatea datelor</h2>
+<p>Datele locale sunt protejate de mecanismele de securitate ale sistemului de operare. Comunicarea cu Supabase și RevenueCat se face prin conexiuni criptate (HTTPS). Identificatorul dispozitivului este păstrat pe server doar sub formă de amprentă ireversibilă (hash), iar accesul la datele de pe server este restricționat la dezvoltatorul aplicației.</p>
+
+<h2>11. Versiuni anterioare ale aplicației</h2>
+<p>Versiunile aplicației anterioare versiunii 1.1 afișau reclame prin Google AdMob, care putea colecta identificatorul de publicitate, date despre interacțiunea cu reclamele și informații tehnice despre dispozitiv, conform <a href="https://policies.google.com/privacy" target="_blank">Politicii de confidențialitate Google</a>; preferințele pentru reclame se puteau modifica din Setări &rarr; Preferințe reclame. Dacă folosiți încă o astfel de versiune, vă recomandăm să actualizați aplicația: versiunile actuale nu mai conțin AdMob.</p>
+
+<h2>12. Modificări ale politicii</h2>
+<p>Putem actualiza această politică. Orice modificare va fi publicată pe această pagină, împreună cu data actualizării.</p>
+
+<h2>13. Contact</h2>
+<p>Pentru întrebări sau solicitări privind confidențialitatea datelor:</p>
 <p><strong>Email:</strong> <a href="mailto:popescut94@gmail.com">popescut94@gmail.com</a></p>
 
 </div>
@@ -111,58 +140,87 @@
 <div id="lang-en" class="section-en">
 
 <h1>Privacy Policy</h1>
-<p class="subtitle">Chestionare Barca &mdash; Last updated: March 29, 2026</p>
+<p class="subtitle">Chestionare Barca &mdash; Last updated: October 2, 2026</p>
 
 <h2>1. Introduction</h2>
-<p>This privacy policy describes how the <strong>Chestionare Barca</strong> application collects, uses, and protects your data. The app is a study tool for the CAA exam (Class C and D) and does not require user account creation or authentication.</p>
+<p>This policy describes what data the <strong>Chestionare Barca</strong> app uses, why, where it is kept, and what rights you have. The app is a study tool for the CAA exam (Class C and D). It does not require an account, and we never ask for your name, email address or phone number.</p>
+<p>The app <strong>shows no ads</strong>, contains no advertising SDKs, and does not track your activity across other apps or websites.</p>
 
-<h2>2. Data stored locally on device</h2>
-<p>The app stores the following data exclusively on your device using AsyncStorage:</p>
+<h2>2. Data stored only on your device</h2>
+<p>The app stores the following data exclusively on your device:</p>
 <ul>
-  <li>Quiz history (answers, scores, dates)</li>
-  <li>App settings (theme, notification preferences)</li>
-  <li>Achievements (badges)</li>
-  <li>Daily streak (consecutive days of usage)</li>
+  <li>quiz history (answers, scores, dates);</li>
+  <li>app settings (theme, notification preferences);</li>
+  <li>achievements (badges) and your daily streak;</li>
+  <li>access status: when the trial ends, whether the app has been unlocked, and the last unlock price shown by the store;</li>
+  <li>downloaded questions and courses, so you can study offline.</li>
 </ul>
-<p>This data does not leave your device and is not transmitted to external servers, except as described below.</p>
+<p>This data does not leave your device. You can delete it at any time with the <strong>Delete all data</strong> button (&ldquo;Șterge toate datele&rdquo;) &mdash; in Settings or, once the free trial has ended, on the unlock screen &mdash; or by uninstalling the app. The button keeps on the device only the access status and the local copy of the identifier described in section 3, so that deleting your data can neither restart the trial nor lock out someone who has paid. Data stored locally by RevenueCat (the anonymous ID and purchase information described in section 4) is not touched by the button; it is removed when the app is uninstalled.</p>
 
-<h2>3. Supabase (server-side data storage)</h2>
-<p>The app uses the Supabase service for the following functionality:</p>
+<h2>3. The 5-day free trial</h2>
+<p>Each device gets one 5-day free trial with full access. To apply this rule, the app uses a device identifier:</p>
 <ul>
-  <li><strong>Device identifier:</strong> A unique device ID is generated and sent to Supabase. It does not contain personally identifiable information.</li>
-  <li><strong>Voucher redemption:</strong> Data related to promotional code (voucher) redemption is stored on Supabase servers.</li>
+  <li><strong>Android:</strong> the app-scoped Android ID &mdash; a value the system assigns separately to each app on each device. It is not the advertising ID.</li>
+  <li><strong>iOS:</strong> a random identifier generated by the app and kept in the device Keychain, where it remains even after the app is uninstalled.</li>
 </ul>
-<p>No personal information (name, email, phone number) is collected or stored through Supabase.</p>
-
-<h2>4. Google AdMob (advertising)</h2>
-<p>The app displays advertisements through Google AdMob. AdMob may collect:</p>
+<p>Every time the app starts or comes back to the foreground, the identifier is sent over an encrypted connection (HTTPS) to our Supabase server in the European Union (Ireland), to check whether this device has already used its free trial and when it ends. This check also happens before you start the trial; it stops while the app is unlocked on the device and the store confirms the purchase. The server immediately turns the identifier into a one-way fingerprint (a SHA-256 hash) and keeps nothing from this check. A record is created only when you tap <em>Start free trial</em> (&ldquo;Începe perioada gratuită&rdquo;) &mdash; or, if there was no internet connection then, the next time the app is online: the server keeps only the fingerprint, the date the trial started, and the platform (iOS or Android). The original identifier is not stored.</p>
 <ul>
-  <li>Device identifiers (Advertising ID)</li>
-  <li>Ad interaction data</li>
-  <li>Technical device information (model, OS version)</li>
-</ul>
-<p>Data collection is managed by Google according to the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>. On first use, the app will request your consent for ad personalization in compliance with GDPR regulations.</p>
-<p>You can change your ad preferences at any time from the <strong>Settings</strong> section of the app.</p>
-
-<h2>5. Notifications</h2>
-<p>The app uses only local notifications (scheduled on device) for daily streak reminders. There is no push notification server and no data is transmitted to external servers for notification purposes.</p>
-
-<h2>6. Your rights (GDPR)</h2>
-<p>In accordance with the General Data Protection Regulation (GDPR), you have the following rights:</p>
-<ul>
-  <li><strong>Right of access:</strong> You may request information about collected data.</li>
-  <li><strong>Right to erasure:</strong> Uninstalling the app deletes all local data. For data on Supabase, contact us at the address below.</li>
-  <li><strong>Right to object:</strong> You may refuse ad personalization via the UMP consent form or from Settings.</li>
-  <li><strong>Right to portability:</strong> Local data is stored on your device and can be deleted by uninstalling the app.</li>
+  <li>We do not link this record to a name, email or any other data that could identify you.</li>
+  <li>We do not use it for advertising, tracking or usage statistics.</li>
+  <li><strong>Legal basis:</strong> our legitimate interest in enforcing the terms of the offer, i.e. one free trial per device (Art. 6(1)(f) GDPR).</li>
+  <li><strong>Retention:</strong> the record stays on the server even after you delete the app's data (the <em>Delete all data</em> button does not delete it) or reinstall it &mdash; precisely so that the free trial cannot be restarted. We keep it for as long as the app is offered in the stores.</li>
 </ul>
 
-<h2>7. Data security</h2>
-<p>Local data is protected by the device operating system's security mechanisms. Communication with Supabase is conducted through encrypted connections (HTTPS).</p>
+<h2>4. Purchases (Apple, Google and RevenueCat)</h2>
+<p>After the free trial, the app is unlocked with a single one-time payment made through the App Store (Apple) or Google Play (Google). Payment is processed exclusively by Apple or Google; we never receive your card details, nor the name or email address of your store account.</p>
+<p>To verify purchases and make them restorable, the app uses <strong>RevenueCat</strong> (RevenueCat, Inc., USA). RevenueCat receives:</p>
+<ul>
+  <li>an anonymous user ID that RevenueCat generates the first time the app runs;</li>
+  <li>the store's purchase receipts (which product, when, at what price and in which currency);</li>
+  <li>basic technical request data (app version, operating system, and the IP address, as with any internet connection).</li>
+</ul>
+<p>After a reinstall, RevenueCat generates a new anonymous ID that does not yet &ldquo;see&rdquo; an earlier purchase. So, once per installation, the app automatically re-sends the receipts in the device's store account to RevenueCat, without asking for your password, so that an earlier purchase is recognized. The <em>Restore purchases</em> button does the same on request.</p>
+<p>RevenueCat does not receive the advertising ID. We use RevenueCat data to give you what you bought and for sales reports (for example, the number of purchases). <strong>Legal basis:</strong> performance of a contract (Art. 6(1)(b) GDPR). The transfer to the USA relies on the safeguards provided by the GDPR, as described in RevenueCat's documentation.</p>
+<p>More details: <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>, <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple</a>, <a href="https://policies.google.com/privacy" target="_blank">Google</a>.</p>
 
-<h2>8. Changes to this policy</h2>
-<p>We reserve the right to update this policy. Any changes will be published on this page with the updated date.</p>
+<h2>5. Reporting a question</h2>
+<p>If you choose to report a mistake in a question, the app sends to our Supabase server: the reported question, the message you write (optional), the app and question-set versions, and a random identifier generated by the app, used to prevent abusive submissions. Please do not include personal data in your message.</p>
+<p>We use reports only to correct questions (legitimate interest) and keep them for as long as they are useful for that purpose. The <strong>Delete all data</strong> button (in Settings or on the unlock screen) also deletes from the server the reports sent from that device (those tied to the random identifier above), then deletes the identifier from the device. If there is no internet connection at that moment, the reports stay on the server; you can ask us to delete them by email at the address below.</p>
 
-<h2>9. Contact</h2>
+<h2>6. Downloaded content</h2>
+<p>The app periodically downloads updated questions and courses from the Supabase server. No data about you is sent for these downloads; as with any internet connection, the server provider sees your IP address and may keep it briefly in technical logs.</p>
+
+<h2>7. Notifications</h2>
+<p>The app uses only local notifications (scheduled on device) for daily streak reminders. There is no push notification server and no data is transmitted to external servers for notification purposes. If the free trial has ended and the app is not unlocked, scheduled reminders are cancelled automatically; they come back after unlocking if you had turned them on.</p>
+
+<h2>8. Who has access to data</h2>
+<ul>
+  <li><strong>Supabase</strong> &mdash; hosts the app's server (data stored in the EU, Ireland);</li>
+  <li><strong>RevenueCat</strong> &mdash; verifies purchases;</li>
+  <li><strong>Apple and Google</strong> &mdash; distribute the app and process payments.</li>
+</ul>
+<p>We do not sell data and do not share it with advertising networks or other third parties.</p>
+
+<h2>9. Your rights (GDPR)</h2>
+<p>Under the General Data Protection Regulation (GDPR), you have the right of access, rectification, erasure, restriction of processing, objection, and data portability.</p>
+<ul>
+  <li><strong>Data on your device</strong> can be deleted at any time with the <em>Delete all data</em> button (in Settings or on the unlock screen) or by uninstalling the app; RevenueCat's local data is removed only on uninstall.</li>
+  <li><strong>Reports you sent</strong> can be deleted with the same button (with an internet connection), or on request by email.</li>
+  <li><strong>The free-trial record</strong> is not linked to your identity. You may object to its processing; we will consider your request, but the record is needed to enforce the terms of the free trial.</li>
+  <li><strong>Purchases</strong> remain in your Apple or Google account, under their policies.</li>
+</ul>
+<p>You also have the right to lodge a complaint with the Romanian data protection authority (ANSPDCP), <a href="https://www.dataprotection.ro" target="_blank">www.dataprotection.ro</a>.</p>
+
+<h2>10. Data security</h2>
+<p>Local data is protected by the operating system's security mechanisms. Communication with Supabase and RevenueCat uses encrypted connections (HTTPS). The device identifier is kept on the server only as a one-way fingerprint (hash), and access to server data is restricted to the app's developer.</p>
+
+<h2>11. Earlier versions of the app</h2>
+<p>App versions before 1.1 displayed ads through Google AdMob, which could collect the advertising identifier, ad interaction data and technical device information, under the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>; ad preferences could be changed in Settings &rarr; Ad preferences (&ldquo;Preferințe reclame&rdquo;). If you still use such a version, we recommend updating the app: current versions no longer contain AdMob.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this policy. Any change will be published on this page together with the update date.</p>
+
+<h2>13. Contact</h2>
 <p>For questions or requests regarding data privacy:</p>
 <p><strong>Email:</strong> <a href="mailto:popescut94@gmail.com">popescut94@gmail.com</a></p>
 

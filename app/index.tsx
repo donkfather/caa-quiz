@@ -1,5 +1,5 @@
 import { View, Text, Pressable, StyleSheet, Modal, ScrollView } from "react-native";
-import { Flame, Anchor, CirclePlay, BookOpen, GraduationCap, Library, History } from "lucide-react-native";
+import { Flame, Anchor, CirclePlay, BookOpen, GraduationCap, Library, History, Hourglass } from "lucide-react-native";
 import { useRouter, useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useCallback, useEffect, type ComponentType } from "react";
@@ -7,8 +7,9 @@ import { useTheme } from "../src/lib/ThemeContext";
 import { TOPIC_LABELS, LICENSE_LABELS, Topic, License, ExamType, EXAM_CONFIGS, getQuestionCount, totalQuestions } from "../src/lib/questions";
 import { onQuestionsUpdated } from "../src/lib/questionsRemote";
 import { getStats, getActiveSessions, getHistory, QuizStats, ActiveSession } from "../src/lib/storage";
-import { showInterstitial } from "../src/lib/ads";
 import { getStreak, getUnlockedBadges, BADGE_DEFS, StreakData } from "../src/lib/gamification";
+import { useAccess } from "../src/lib/AccessContext";
+import { zile } from "../src/components/Paywall";
 
 // Cursuri (cloud course platform) is not prod-ready — deferred to v1.1.
 // Flip to true to re-enable the home entry point.
@@ -66,7 +67,8 @@ function sessionLabel(s: ActiveSession): string {
 export default function HomeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { theme: colors } = useTheme();
+  const { theme: colors, isDark } = useTheme();
+  const { state: access } = useAccess();
   const [stats, setStats] = useState<QuizStats | null>(null);
   const [activeSessions, setActiveSessions] = useState(0);
   const [latestSession, setLatestSession] = useState<ActiveSession | null>(null);
@@ -107,6 +109,17 @@ export default function HomeScreen() {
 
   const hasHistory = activeSessions > 0 || historyCount > 0;
 
+  // Trial countdown. Never shown once unlocked (the gate in _layout only
+  // renders this screen for "trial" and "unlocked").
+  const trialDays = access?.kind === "trial" ? access.daysLeft : null;
+  const lastTrialDay = trialDays !== null && trialDays <= 1;
+  const trialTitle = trialDays === null
+    ? ""
+    : lastTrialDay
+      ? "Perioadă gratuită: ultima zi"
+      : `Perioadă gratuită: mai ai ${zile(trialDays)}`;
+  const trialAccent = lastTrialDay ? colors.warning : colors.primary;
+
   return (
     <View style={{ flex: 1, backgroundColor: colors.bg }}>
       <ScrollView
@@ -125,6 +138,28 @@ export default function HomeScreen() {
           {total} întrebări pentru examenul CAA — Clasa C și D
         </Text>
       </View>
+
+      {/* Free-trial countdown */}
+      {trialDays !== null && (
+        <Pressable
+          style={{ flexDirection: "row", alignItems: "center", gap: 12, backgroundColor: colors.bgCard, borderRadius: 14, padding: 12, marginBottom: 20, borderWidth: 1, borderColor: trialAccent + "55" }}
+          onPress={() => router.push("/settings")}
+          accessibilityLabel={`${trialTitle}. Deblochează aplicația`}
+          accessibilityHint="Deschide setările, unde poți debloca aplicația"
+          accessibilityRole="button"
+        >
+          <IconTile Icon={Hourglass} color={trialAccent} size={18} tile={36} />
+          <View style={{ flex: 1 }}>
+            <Text style={{ fontSize: 14, fontWeight: "700", color: colors.text }}>{trialTitle}</Text>
+            <Text style={{ fontSize: 12, color: colors.textSecondary, marginTop: 2 }}>
+              O singură plată, fără abonament
+            </Text>
+          </View>
+          <View style={{ backgroundColor: colors.primary, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7 }}>
+            <Text style={{ fontSize: 13, fontWeight: "700", color: isDark ? colors.bg : "#fff" }}>Deblochează</Text>
+          </View>
+        </Pressable>
+      )}
 
       {/* Stats card */}
       {stats && stats.totalQuizzes > 0 && (
@@ -177,9 +212,8 @@ export default function HomeScreen() {
         {latestSession && (
           <Pressable
             style={{ flexDirection: "row", alignItems: "center", padding: 16, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1.5, borderColor: colors.warning + "88" }}
-            onPress={async () => {
+            onPress={() => {
               const s = latestSession;
-              await showInterstitial();
               let url = `/quiz?mode=${s.mode}&sessionId=${s.id}`;
               if (s.topic) url += `&topic=${s.topic}`;
               if (s.license) url += `&license=${s.license}`;
@@ -233,7 +267,7 @@ export default function HomeScreen() {
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", padding: 18, borderRadius: 14, gap: 14, backgroundColor: colors.bgCard, borderWidth: 1, borderColor: colors.border }}
           onPress={() => router.push("/learn")}
-          accessibilityLabel="Invata teorie"
+          accessibilityLabel="Învață teorie"
           accessibilityRole="button"
         >
           <IconTile Icon={GraduationCap} color={ACTION_ACCENT.invata} />
