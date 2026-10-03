@@ -17,7 +17,7 @@ import { allQuestions, extraQuestionCount } from "../lib/questions";
 import { useTheme } from "../lib/ThemeContext";
 import { FONTS } from "../lib/fonts";
 import { useAccess } from "../lib/AccessContext";
-import { STORE_NAME, getUnlockPriceString, type PurchaseResult } from "../lib/purchases";
+import { STORE_NAME, getUnlockPrice, type PurchaseResult, type UnlockPrice } from "../lib/purchases";
 import { useWipeDataFlow } from "./useWipeDataFlow";
 import { TRIAL_DAYS } from "../lib/accessCore";
 
@@ -297,7 +297,8 @@ export type UnlockBusy = "buy" | "restore" | null;
  * taps, stays silent when the user cancels the store sheet. */
 export function useUnlockFlow() {
   const { purchase, restore } = useAccess();
-  const [price, setPrice] = useState<string | null>(null);
+  const [priceInfo, setPriceInfo] = useState<UnlockPrice | null>(null);
+  const price = priceInfo?.priceString ?? null;
   const [priceLoading, setPriceLoading] = useState(true);
   const [busy, setBusy] = useState<UnlockBusy>(null);
   const inFlight = useRef(false);
@@ -305,8 +306,8 @@ export function useUnlockFlow() {
 
   useEffect(() => {
     mounted.current = true;
-    getUnlockPriceString()
-      .then((p) => { if (mounted.current) setPrice(p); })
+    getUnlockPrice()
+      .then((p) => { if (mounted.current) setPriceInfo(p); })
       .catch(() => {})
       .finally(() => { if (mounted.current) setPriceLoading(false); });
     return () => { mounted.current = false; };
@@ -366,7 +367,7 @@ export function useUnlockFlow() {
     }
   }, [restore]);
 
-  return { price, priceLoading, busy, buy, restore: restoreFlow };
+  return { price, priceInfo, priceLoading, busy, buy, restore: restoreFlow };
 }
 
 /** A tilted phone showing a real question from the app, with a lock badge —
@@ -489,9 +490,12 @@ function TrustItem({ Icon, color, title, text }: { Icon: IconType; color: string
 
 /** The store price, shown as a launch price against the regular one when the
  * regular price is set and genuinely higher; otherwise just the store price. */
-function LaunchPrice({ price }: { price: string }) {
+function LaunchPrice({ info }: { info: UnlockPrice }) {
   const { theme: t } = useTheme();
-  const now = parseRon(price);
+  const price = info.priceString;
+  // The store's own amount + currency when known (both stores report them);
+  // parsing the display string is only the fallback for an old cached price.
+  const now = info.currency ? (info.currency === "RON" && info.amount ? info.amount : null) : parseRon(price);
   const regular = LAUNCH_REGULAR_PRICE_RON;
   if (now == null || regular == null || regular <= now) {
     return <Text style={[styles.price, { color: t.text }]}>{price}</Text>;
@@ -522,7 +526,7 @@ export default function Paywall({ trial }: { trial?: { daysLeft: number; onConti
   const insets = useSafeAreaInsets();
   const { theme: t, isDark } = useTheme();
   const { width } = useWindowDimensions();
-  const { price, priceLoading, busy, buy, restore } = useUnlockFlow();
+  const { price, priceInfo, priceLoading, busy, buy, restore } = useUnlockFlow();
   const n = extraQuestionCount();
   const extras = n > 0 ? intrebari(n) : "multe întrebări";
   const showPhone = width >= 360;
@@ -618,7 +622,7 @@ export default function Paywall({ trial }: { trial?: { daysLeft: number; onConti
         <View style={styles.bottom}>
           <View style={styles.priceBlock}>
             {price != null ? (
-              <LaunchPrice price={price} />
+              <LaunchPrice info={priceInfo ?? { priceString: price, amount: null, currency: null }} />
             ) : priceLoading ? (
               <ActivityIndicator color={t.textMuted} accessibilityLabel="Se încarcă prețul" />
             ) : (

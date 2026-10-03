@@ -147,31 +147,59 @@ export async function syncUnlockSilently(): Promise<boolean | null> {
  * Survives "Șterge toate datele" (dataReset.ts) — it is not user data. */
 export const PRICE_CACHE_KEY = "unlock_price_v1";
 
-async function readCachedPrice(): Promise<string | null> {
+/** The unlock's price as the store reports it: the display string plus, when
+ * known, the amount and ISO currency — so callers never have to parse a
+ * localized string ("17,99 RON", "RON 17.99", "17,99 lei") to do arithmetic. */
+export type UnlockPrice = { priceString: string; amount: number | null; currency: string | null };
+
+/** Cache format: JSON of UnlockPrice. Older installs stored the bare string;
+ * that still reads, just without amount/currency. */
+async function readCachedPrice(): Promise<UnlockPrice | null> {
   try {
     const v = await AsyncStorage.getItem(PRICE_CACHE_KEY);
-    return typeof v === "string" && v.trim() ? v : null;
+    if (typeof v !== "string" || !v.trim()) return null;
+    try {
+      const o = JSON.parse(v);
+      if (o && typeof o.priceString === "string" && o.priceString.trim()) {
+        return {
+          priceString: o.priceString,
+          amount: typeof o.amount === "number" && Number.isFinite(o.amount) ? o.amount : null,
+          currency: typeof o.currency === "string" ? o.currency : null,
+        };
+      }
+    } catch {
+      // Not JSON: the legacy bare string.
+    }
+    return { priceString: v, amount: null, currency: null };
   } catch {
     return null;
   }
 }
 
-/** Localized price string for the one-time unlock (e.g. "RON 19,99"), straight
- * from the store. When the offering can't be loaded right now (offline, store
- * hiccup) it falls back to the last string the store returned on this device;
- * null only when none was ever loaded. The cached string is the store's own
- * text — never computed or reformatted here. */
-export async function getUnlockPriceString(): Promise<string | null> {
-  const live = (await getUnlockPackage())?.product.priceString ?? null;
-  if (live) {
+/** The unlock price straight from the store. When the offering can't be loaded
+ * right now (offline, store hiccup) it falls back to the last price the store
+ * returned on this device; null only when none was ever loaded. */
+export async function getUnlockPrice(): Promise<UnlockPrice | null> {
+  const product = (await getUnlockPackage())?.product;
+  if (product?.priceString) {
+    const live: UnlockPrice = {
+      priceString: product.priceString,
+      amount: typeof product.price === "number" ? product.price : null,
+      currency: product.currencyCode || null,
+    };
     try {
-      await AsyncStorage.setItem(PRICE_CACHE_KEY, live);
+      await AsyncStorage.setItem(PRICE_CACHE_KEY, JSON.stringify(live));
     } catch {
       // Best-effort: the live value is returned either way.
     }
     return live;
   }
   return readCachedPrice();
+}
+
+/** Localized price string for the one-time unlock (e.g. "RON 19,99"). */
+export async function getUnlockPriceString(): Promise<string | null> {
+  return (await getUnlockPrice())?.priceString ?? null;
 }
 
 /** `pending` = the store accepted the payment but hasn't settled it (e.g.
