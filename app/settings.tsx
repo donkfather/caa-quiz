@@ -187,7 +187,7 @@ export default function SettingsScreen() {
                     : `Perioadă gratuită — mai ai ${zile(trialDays)}`}
                 </Text>
                 <Text style={[styles.hint, { color: t.textMuted }]}>
-                  Apoi aplicația se blochează până o deblochezi. O singură plată, fără abonament.
+                  Apoi aplicația se blochează până o deblochezi. Deblocarea include și întrebările suplimentare. O singură plată, fără abonament.
                 </Text>
               </View>
             )}

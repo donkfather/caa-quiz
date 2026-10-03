@@ -6,12 +6,15 @@ import { useTheme } from "../lib/ThemeContext";
 import { FONTS } from "../lib/fonts";
 import { useAccess } from "../lib/AccessContext";
 import { TRIAL_DAYS } from "../lib/accessCore";
+import { extraQuestionCount } from "../lib/questions";
 import {
   ActionButton,
   LegalLinks,
   STORE_NAME,
   Tile,
   UnlockFeatures,
+  ExtrasHighlight,
+  intrebari,
   paywallStyles as shared,
   useUnlockFlow,
   zile,
@@ -88,9 +91,11 @@ export default function TrialIntro() {
   };
 
   const days = zile(TRIAL_DAYS);
+  const extras = extraQuestionCount();
+  const plusExtras = extras > 0 ? `, plus ${intrebari(extras)} suplimentare` : ", plus întrebările suplimentare";
   const unlockText = price
-    ? `O singură plată de ${price} deblochează totul. Fără abonament și fără plăți automate.`
-    : `O singură plată deblochează totul — prețul îl vezi în ${STORE_NAME} înainte să confirmi. Fără abonament și fără plăți automate.`;
+    ? `O singură plată de ${price} deblochează aplicația pentru totdeauna${plusExtras}. Fără abonament și fără plăți automate.`
+    : `O singură plată deblochează aplicația pentru totdeauna${plusExtras} — prețul îl vezi în ${STORE_NAME} înainte să confirmi. Fără abonament și fără plăți automate.`;
 
   return (
     <View style={{ flex: 1, backgroundColor: t.bg }}>
@@ -107,11 +112,13 @@ export default function TrialIntro() {
             Încearcă gratuit {days}
           </Text>
           <Text style={[shared.lead, { color: t.textSecondary }]}>
-            Acces complet la toată aplicația, fără cont și fără reclame.
+            Întrebările oficiale ANR, simulări de examen și cursuri — fără cont și fără reclame.
           </Text>
         </View>
 
-        <UnlockFeatures heading="Ce primești" />
+        <UnlockFeatures heading={`Gratuit ${days}`} />
+        <View style={{ height: 14 }} />
+        <ExtrasHighlight when="trial" />
 
         <View style={[shared.card, { backgroundColor: t.bgCard, borderColor: t.border, marginTop: 14, gap: 12 }]}>
           <Text style={[shared.eyebrow, { color: t.textSecondary }]} accessibilityRole="header">
@@ -122,7 +129,7 @@ export default function TrialIntro() {
               Icon={CirclePlay}
               color={t.success}
               title="Azi"
-              text={`Pornești perioada gratuită: ai acces complet timp de ${days} și nu plătești nimic.`}
+              text={`Pornești perioada gratuită: ai acces la întrebările oficiale, simulări și cursuri timp de ${days} și nu plătești nimic.`}
             />
             <Step
               Icon={Lock}
@@ -145,7 +152,7 @@ export default function TrialIntro() {
           />
           <ActionButton
             variant="secondary"
-            label={busy === "buy" ? "Se procesează…" : price ? `Cumpără acum — ${price}` : "Cumpără acum"}
+            label={busy === "buy" ? "Se procesează…" : price ? `Cumpără + întrebări în plus — ${price}` : "Cumpără + întrebări în plus"}
             accessibilityLabel={price ? `Cumpără acum aplicația pentru ${price}` : "Cumpără acum aplicația"}
             accessibilityHint={`Deschide plata în ${STORE_NAME}`}
             onPress={buy}

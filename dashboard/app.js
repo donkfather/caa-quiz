@@ -346,7 +346,7 @@ function detectEnvTag() {
 async function loadQuestions() {
   const { data, error } = await supabase
     .from("questions")
-    .select("id, question, options, correct, topic, topics, license, image_path, updated_at")
+    .select("id, question, options, correct, topic, topics, license, official, image_path, updated_at")
     .order("id", { ascending: true });
   if (error) { toast("bad", "Couldn't load questions", error.message); return; }
   state.questions = data || [];
@@ -747,7 +747,8 @@ function renderList() {
   ul.innerHTML = list.map(q => {
     const isActive = q.id === state.currentId;
     const isChecked = state.selected.has(q.id);
-    const licTags = (q.license || []).map(l => `<span class="lic-tag">${l}</span>`).join("");
+    const licTags = (q.license || []).map(l => `<span class="lic-tag">${l}</span>`).join("")
+      + (q.official === true ? `<span class="lic-tag" title="Official ANR question (free in the trial)">ANR</span>` : "");
     const tList = topicsOf(q);
     const primary = tList[0] || "";
     const extra = tList.length > 1 ? ` <span class="topic-extra" title="${escapeHtml(tList.slice(1).join(", "))}">+${tList.length - 1}</span>` : "";
@@ -849,6 +850,13 @@ function renderEditor() {
           </div>
         </div>
         <div class="field">
+          <span class="label">Official (ANR)</span>
+          <span class="hint">Official questions are free during the trial; the rest are extras that come with the unlock.</span>
+          <div class="lic-toggle-row">
+            <button class="lic-toggle ${state.current.official === true ? "active" : ""}" id="f-official">${state.current.official === true ? "Oficială (ANR)" : "Suplimentară (extra)"}</button>
+          </div>
+        </div>
+        <div class="field">
           <span class="label">Image</span>
           <span class="hint">Pick from the <code>question-images</code> bucket.</span>
           <div style="display:flex;gap:6px;align-items:center">
@@ -944,6 +952,13 @@ function attachEditorHandlers() {
       renderBreadcrumbs();
     };
   });
+  document.getElementById("f-official").onclick = (e) => {
+    state.current.official = state.current.official !== true;
+    markDirty();
+    e.currentTarget.classList.toggle("active", state.current.official);
+    e.currentTarget.textContent = state.current.official ? "Oficială (ANR)" : "Suplimentară (extra)";
+    renderBreadcrumbs();
+  };
   document.getElementById("dup-btn").onclick = () => duplicateCurrent();
   document.getElementById("del-btn").onclick = () => deleteCurrent();
 
@@ -1135,7 +1150,7 @@ async function renderHistoryView() {
 }
 
 function renderDiff(oldSnap, newSnap, kind) {
-  const fields = ["question", "topic", "license", "options", "correct"];
+  const fields = ["question", "topic", "license", "official", "options", "correct"];
   const oldV = oldSnap || {};
   const newV = newSnap || {};
   const rows = fields.map(k => {
@@ -1351,6 +1366,9 @@ async function flushSave() {
       topics: topicsOf(snapshot),
       license: snapshot.license,
       image_path: snapshot.image_path || null,
+      // Only send it when known: writing an undefined would flip an official
+      // question to the column default (extra).
+      ...(typeof snapshot.official === "boolean" ? { official: snapshot.official } : {}),
     });
     state.dirty = false;
     // Replace local copy with what server returned
@@ -1375,6 +1393,7 @@ async function duplicateCurrent() {
       topic: state.current.topic,
       topics: topicsOf(state.current),
       license: state.current.license,
+      official: state.current.official === true,
       image_path: state.current.image_path || null,
     });
     state.questions.push(copy);
@@ -1465,6 +1484,13 @@ async function publishToPreview() {
   const old = btn.innerHTML;
   btn.innerHTML = `<span style="width:8px;height:8px;border-radius:50%;background:currentColor;animation:pulse 1s infinite alternate"></span>Publishing…`;
   try {
+    // The app treats official:false as "extra, needs the unlock". A question
+    // loaded without the field would be published as an extra and hidden from
+    // every trial user, so refuse rather than guess.
+    const unknown = state.questions.filter((q) => typeof q.official !== "boolean");
+    if (unknown.length) {
+      throw new Error(`${unknown.length} question(s) have no "official" value (e.g. #${unknown[0].id}). Reload the dashboard and try again.`);
+    }
     const payload = [...state.questions]
       .sort((a, b) => a.id - b.id)
       .map((q) => ({
@@ -1477,6 +1503,7 @@ async function publishToPreview() {
         topic: primaryTopic(q),
         topics: topicsOf(q),
         license: q.license || [],
+        official: q.official,
         image_path: q.image_path || null,
       }));
 

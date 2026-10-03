@@ -7,6 +7,7 @@ import Purchases, {
   type CustomerInfoUpdateListener,
   type PurchasesPackage,
 } from "react-native-purchases";
+import { IS_PREVIEW_BUILD } from "./buildFlags";
 
 /** RevenueCat entitlement that unlocks the app after the free trial. Must match
  * the dashboard exactly.
@@ -178,6 +179,18 @@ export async function getUnlockPriceString(): Promise<string | null> {
 export type PurchaseResult = { success: boolean; cancelled?: boolean; pending?: boolean; message?: string };
 
 export async function purchaseUnlock(): Promise<PurchaseResult> {
+  // No SDK key: this build cannot sell anything, ever. Say so — "not available
+  // right now" invites a retry that can never work. Store builds can't get
+  // here (app.config.js refuses a production build without the key), so in
+  // practice this is the preview build.
+  if (!(await configurePurchases())) {
+    return {
+      success: false,
+      message: IS_PREVIEW_BUILD
+        ? `Versiunea Preview nu poate face cumpărături. Testează deblocarea cu aplicația instalată din ${STORE_NAME}.`
+        : "Cumpărarea nu este disponibilă în această versiune a aplicației.",
+    };
+  }
   const pkg = await getUnlockPackage();
   if (!pkg) return { success: false, message: "Produsul nu este disponibil momentan." };
   try {

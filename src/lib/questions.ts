@@ -1,5 +1,7 @@
 import data from "../../assets/questions.json";
 import { initQuestions, getQuestions, onQuestionsUpdated } from "./questionsRemote";
+import { getAccessSnapshot, onAccessChanged } from "./access";
+import { availableQuestions, extraCount } from "./questionAccess";
 
 export type Topic = "colreg" | "navigation" | "seamanship" | "maneuvering" | "first_aid" | "rnd" | "weather" | "signs";
 export type License = "C" | "D";
@@ -14,6 +16,8 @@ export interface Question {
   topics?: Topic[];
   license: License[];
   image_path?: string | null;
+  /** Official ANR question (free) vs extra (unlock). See questionAccess.ts. */
+  official?: boolean;
 }
 
 /** Topics list, falling back to the legacy single-topic field. */
@@ -49,6 +53,31 @@ onQuestionsUpdated(() => {
   }
 });
 
+// ── Official vs. extra questions ────────────────────────────────────────────
+// Everyone gets the official ANR list; the extras come with the one-time
+// unlock. `allQuestions` itself stays complete: saved sessions store indices
+// into it (storage.ts), so filtering it would shift every index after the
+// first extra. The gate is applied below, in the functions that PICK
+// questions — every practice, exam and count goes through available().
+
+/** Ids shipped in the app = the original ANR seed (fallback for bundles that
+ * predate the `official` field). */
+const BUNDLED_IDS: ReadonlySet<number> = new Set((data as Question[]).map((q) => q.id));
+
+let extrasUnlocked = getAccessSnapshot()?.kind === "unlocked";
+onAccessChanged((s) => {
+  extrasUnlocked = s.kind === "unlocked";
+});
+
+function available(): readonly Question[] {
+  return availableQuestions(allQuestions, extrasUnlocked, BUNDLED_IDS);
+}
+
+/** How many questions the unlock adds on top of the official list. */
+export function extraQuestionCount(): number {
+  return extraCount(allQuestions, BUNDLED_IDS);
+}
+
 /** Shuffle array using Fisher-Yates */
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -61,7 +90,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 /** Get all questions in order, optionally filtered */
 export function getAllQuestions(filters?: { topic?: Topic; license?: License }): Question[] {
-  let qs = [...allQuestions];
+  let qs = [...available()];
   if (filters?.topic) qs = qs.filter((q) => topicsOf(q).includes(filters.topic!));
   if (filters?.license) qs = qs.filter((q) => q.license.includes(filters.license!));
   return qs;
@@ -206,7 +235,7 @@ export function getExamQuestions(examType: ExamType, recentIds?: Iterable<number
   const recent = new Set<number>(recentIds ?? []);
   const out: Question[] = [];
   for (const slot of cfg.composition) {
-    const pool = allQuestions.filter((q) => topicsOf(q).includes(slot.topic));
+    const pool = available().filter((q) => topicsOf(q).includes(slot.topic));
     const fresh = pool.filter((q) => !recent.has(q.id));
     const stale = pool.filter((q) => recent.has(q.id));
     const picked = shuffle(fresh).slice(0, slot.count);
@@ -222,7 +251,7 @@ export function getExamQuestions(examType: ExamType, recentIds?: Iterable<number
 /** Live total count. Re-evaluated on every read so it picks up remote
  * refreshes that happened after the importing module loaded. */
 export function totalQuestions(): number {
-  return allQuestions.length;
+  return available().length;
 }
 
 /** @deprecated use totalQuestions() — keeps the value at module-load time

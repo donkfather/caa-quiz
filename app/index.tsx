@@ -4,12 +4,12 @@ import { useRouter, useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useState, useCallback, useEffect, type ComponentType } from "react";
 import { useTheme } from "../src/lib/ThemeContext";
-import { TOPIC_LABELS, LICENSE_LABELS, Topic, License, ExamType, EXAM_CONFIGS, getQuestionCount, totalQuestions } from "../src/lib/questions";
+import { TOPIC_LABELS, LICENSE_LABELS, Topic, License, ExamType, EXAM_CONFIGS, getQuestionCount, totalQuestions, extraQuestionCount } from "../src/lib/questions";
 import { onQuestionsUpdated } from "../src/lib/questionsRemote";
 import { getStats, getActiveSessions, getHistory, QuizStats, ActiveSession } from "../src/lib/storage";
 import { getStreak, getUnlockedBadges, BADGE_DEFS, StreakData } from "../src/lib/gamification";
 import { useAccess } from "../src/lib/AccessContext";
-import { zile } from "../src/components/Paywall";
+import { zile, intrebari } from "../src/components/Paywall";
 
 // Cursuri (cloud course platform) is not prod-ready — deferred to v1.1.
 // Flip to true to re-enable the home entry point.
@@ -116,8 +116,8 @@ export default function HomeScreen() {
   const trialTitle = trialDays === null
     ? ""
     : lastTrialDay
-      ? "Perioadă gratuită: ultima zi"
-      : `Perioadă gratuită: mai ai ${zile(trialDays)}`;
+      ? "Ultima zi gratuită"
+      : `Gratuit încă ${zile(trialDays)}`;
   const trialAccent = lastTrialDay ? colors.warning : colors.primary;
 
   return (
@@ -135,7 +135,7 @@ export default function HomeScreen() {
           </Pressable>
         </View>
         <Text style={{ fontSize: 15, color: colors.textSecondary }}>
-          {total} întrebări pentru examenul CAA — Clasa C și D
+          {access?.kind === "unlocked" ? `${total} întrebări` : `${total} întrebări oficiale ANR`} pentru examenul CAA — Clasa C și D
         </Text>
       </View>
 
@@ -143,16 +143,16 @@ export default function HomeScreen() {
       {trialDays !== null && (
         <Pressable
           style={{ flexDirection: "row", alignItems: "center", gap: 12, backgroundColor: colors.bgCard, borderRadius: 14, padding: 12, marginBottom: 20, borderWidth: 1, borderColor: trialAccent + "55" }}
-          onPress={() => router.push("/settings")}
+          onPress={() => router.push("/unlock")}
           accessibilityLabel={`${trialTitle}. Deblochează aplicația`}
-          accessibilityHint="Deschide setările, unde poți debloca aplicația"
+          accessibilityHint="Deschide oferta de deblocare"
           accessibilityRole="button"
         >
           <IconTile Icon={Hourglass} color={trialAccent} size={18} tile={36} />
           <View style={{ flex: 1 }}>
             <Text style={{ fontSize: 14, fontWeight: "700", color: colors.text }}>{trialTitle}</Text>
             <Text style={{ fontSize: 12, color: colors.textSecondary, marginTop: 2 }}>
-              O singură plată, fără abonament
+              {extraQuestionCount() > 0 ? `+${intrebari(extraQuestionCount())} extra la deblocare` : "Întrebări extra la deblocare"}
             </Text>
           </View>
           <View style={{ backgroundColor: colors.primary, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7 }}>
@@ -259,7 +259,7 @@ export default function HomeScreen() {
           <View>
             <Text style={{ fontSize: 17, fontWeight: "700", color: colors.text }}>Practică</Text>
             <Text style={{ fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>
-              Toate {total} întrebările
+              {access?.kind === "unlocked" ? `Toate ${total} întrebările` : `${total} întrebări oficiale ANR`}
             </Text>
           </View>
         </Pressable>
@@ -411,7 +411,9 @@ export default function HomeScreen() {
 
               {/* Topic filter */}
               <Text style={{ fontSize: 12, fontWeight: "600", color: colors.textSecondary, marginTop: 12, marginBottom: 8, marginLeft: 4, textTransform: "uppercase", letterSpacing: 0.5 }}>Materie</Text>
-              {(Object.entries(TOPIC_LABELS) as [Topic, string][]).map(([key, label]) => (
+              {/* Only topics this user has questions for: an empty topic would open an
+                  empty quiz (a topic can hold only extras, or nothing yet). */}
+              {(Object.entries(TOPIC_LABELS) as [Topic, string][]).filter(([key]) => getQuestionCount({ topic: key }) > 0).map(([key, label]) => (
                 <Pressable
                   key={key}
                   style={{ flexDirection: "row", alignItems: "center", padding: 14, borderRadius: 12, backgroundColor: colors.bg, marginBottom: 8 }}

@@ -40,6 +40,15 @@ function AppShell({ fontsReady }: { fontsReady: boolean }) {
   const { state } = useAccess();
   const insets = useSafeAreaInsets();
   const [updateBanner, setUpdateBanner] = useState<number | null>(null);
+  // The offer opens on every app start while the trial runs; "Continuă
+  // perioada gratuită" closes it until the next start. Plain state on purpose:
+  // AppShell mounts once per process, so a cold start shows it again.
+  const [trialOfferClosed, setTrialOfferClosed] = useState(false);
+  // Not on the very first open: someone who just started the trial from the
+  // intro screen goes straight into the app. The offer waits for the next start.
+  useEffect(() => {
+    if (state?.kind === "new") setTrialOfferClosed(true);
+  }, [state?.kind]);
   const [bannerOpacity] = useState(() => new Animated.Value(0));
 
   // Only migrate once the loaded question set uses the new (DB-aligned)
@@ -88,6 +97,8 @@ function AppShell({ fontsReady }: { fontsReady: boolean }) {
     content = <TrialIntro />;
   } else if (state.kind === "expired") {
     content = <Paywall />;
+  } else if (state.kind === "trial" && !trialOfferClosed) {
+    content = <Paywall trial={{ daysLeft: state.daysLeft, onContinue: () => setTrialOfferClosed(true) }} />;
   } else {
     showsApp = true;
     content = (
@@ -103,6 +114,7 @@ function AppShell({ fontsReady }: { fontsReady: boolean }) {
         <Stack.Screen name="index" options={{ title: "Acasă", headerShown: false, headerBackTitle: "Acasă" }} />
         <Stack.Screen name="history" options={{ title: "Istoric" }} />
         <Stack.Screen name="settings" options={{ title: "Setări" }} />
+        <Stack.Screen name="unlock" options={{ headerShown: false, presentation: "modal", animation: "slide_from_bottom" }} />
         <Stack.Screen name="badges" options={{ title: "Realizări" }} />
         <Stack.Screen name="learn/index" options={{ title: "Învață" }} />
         <Stack.Screen name="learn/[moduleId]" options={{ title: "Modul" }} />

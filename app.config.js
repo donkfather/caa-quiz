@@ -12,6 +12,27 @@ module.exports = ({ config }) => {
   const isPreview =
     process.env.APP_VARIANT === "preview" && process.env.EAS_BUILD_PROFILE !== "production";
 
+  // A store build without its RevenueCat key can never sell the unlock, so
+  // every user is locked out the day their trial ends — and the paywall only
+  // says "not available", which reads like a store hiccup, not a broken build.
+  // Refuse the build instead. Every Android store build passes through here
+  // (builder-expo and `eas build` both set EAS_BUILD_PROFILE); the iOS store
+  // build (Xcode Cloud) gets its key from ci_scripts/ci_post_clone.sh.
+  if (process.env.EAS_BUILD_PROFILE === "production") {
+    const platform = process.env.EAS_BUILD_PLATFORM;
+    const required = {
+      android: ["EXPO_PUBLIC_RC_ANDROID_KEY"],
+      ios: ["EXPO_PUBLIC_RC_IOS_KEY"],
+    }[platform] ?? ["EXPO_PUBLIC_RC_ANDROID_KEY", "EXPO_PUBLIC_RC_IOS_KEY"];
+    const missing = required.filter((k) => !process.env[k]);
+    if (missing.length) {
+      throw new Error(
+        `production build without ${missing.join(", ")}: the one-time unlock could not be bought. ` +
+          `Set it in the eas.json "production" profile env.`,
+      );
+    }
+  }
+
   return {
     ...config,
     name: isPreview ? `${config.name} (Preview)` : config.name,
