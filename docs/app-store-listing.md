@@ -12,14 +12,14 @@ Chestionare Barca
 Pregătire examen CAA C și D
 
 ## Promotional Text (max 170)
-Învață, exersează și treci examenul CAA. Descărcare gratuită, 5 zile de încercare cu acces complet, apoi o singură plată — fără abonament, fără reclame.
+Lista oficială ANR, simulări și cursuri: 5 zile gratuit. O singură plată deblochează aplicația plus peste 300 de întrebări extra. Fără abonament, fără reclame.
 
 ## Description (max 4000)
 Chestionare Barca este aplicația completă pentru pregătirea examenului de conducător de ambarcațiuni de agrement (CAA), Clasa C și Clasa D.
 
 CE PRIMEȘTI
 
-Toate întrebările publicate oficial pentru examenul CAA Clasa C și D, plus întrebări suplimentare pentru exersare, organizate pe șase categorii: COLREG, navigație, marinărie, manevre, prim ajutor și răspunsuri rapide. Întrebările sunt actualizate periodic — primești noile întrebări fără să descarci o nouă versiune.
+Toate întrebările din lista oficială ANR pentru examenul CAA Clasa C și D, plus peste 300 de întrebări suplimentare pentru exersare (incluse la deblocare), organizate pe șase categorii: COLREG, navigație, marinărie, manevre, prim ajutor și răspunsuri rapide. Întrebările sunt actualizate periodic — primești noile întrebări fără să descarci o nouă versiune.
 
 MOD EXAMEN
 
@@ -49,7 +49,7 @@ DESIGN ȘI CONFORT
 
 DESCĂRCARE GRATUITĂ, 5 ZILE DE ÎNCERCARE, APOI O SINGURĂ PLATĂ
 
-Descarci aplicația gratuit și ai acces complet timp de 5 zile: toate întrebările, simulările de examen și cursurile. Perioada de încercare pornește doar când apeși „Începe perioada gratuită”. După aceea, deblochezi aplicația printr-o singură plată în aplicație, la prețul afișat în aplicație — fără abonament și fără reclame.
+Descarci aplicația gratuit și timp de 5 zile ai acces la lista oficială de întrebări, la simulările de examen și la cursuri. Perioada de încercare pornește doar când apeși „Începe perioada gratuită”. Cu o singură plată în aplicație, la prețul afișat în aplicație, o deblochezi pentru totdeauna și primești și întrebările suplimentare — fără abonament și fără reclame.
 
 Ai cumpărat deja eliminarea reclamelor? Ai în continuare acces complet. Dacă aplicația nu te recunoaște automat, apasă „Restaurează achizițiile”.
 
@@ -81,7 +81,7 @@ https://chestionarebarca.bhdit.ro/
 https://sites.google.com/view/chestionare-barca-privacy-pol/home
 
 ## What's New (release notes, max 4000)
-Am renunțat complet la reclame. Descărcarea rămâne gratuită: ai 5 zile de încercare cu acces complet, din momentul în care o pornești, apoi deblochezi aplicația printr-o singură plată — fără abonament.
+Am renunțat complet la reclame. Descărcarea rămâne gratuită: 5 zile cu lista oficială de întrebări, simulări și cursuri, din momentul în care pornești perioada gratuită. O singură plată deblochează aplicația pentru totdeauna, plus peste 300 de întrebări extra — fără abonament.
 
 Ai cumpărat eliminarea reclamelor? Ai în continuare acces complet: aplicația te recunoaște automat, iar dacă nu, apasă „Restaurează achizițiile”.
 
@@ -97,12 +97,12 @@ maps *that* product to the entitlement `no_ads`.
 | Field | Română | English |
 |---|---|---|
 | Display name (max 30) | Deblochează aplicația | Unlock the app |
-| Description (max 45) | Acces complet după perioada gratuită | Full access after the free trial |
+| Description (max 45) | Acces permanent + întrebări extra | Lifetime access + extra questions |
 
 Play Console in-app product (title max 55, description max 200):
 
 - **Title:** Deblochează aplicația
-- **Description:** Acces complet la toate întrebările, simulările de examen și cursurile, după perioada gratuită de 5 zile. O singură plată, fără abonament.
+- **Description:** Deblochează aplicația pentru totdeauna: lista oficială ANR, simulări, cursuri și peste 300 de întrebări suplimentare. O singură plată, fără abonament.
 
 The App Store review screenshot for the product must be replaced: the old one
 shows the "Elimină reclamele" row in Settings. Use the trial intro or the
@@ -112,9 +112,11 @@ lock screen instead.
 
 ```
 This version removes all advertising. The app now offers a 5-day free trial
-with full access; after it ends, a one-time non-consumable in-app purchase
-("Deblochează aplicația" / Unlock the app) is required to keep using the app.
-It is not a subscription. No account or login is required.
+with the official exam question list, exam simulations and courses; after it
+ends, a one-time non-consumable in-app purchase ("Deblochează aplicația" /
+Unlock the app) is required to keep using the app. The purchase also unlocks
+303 extra practice questions that are not part of the trial. It is not a
+subscription. No account or login is required.
 
 How to review:
 1. On first launch the app shows a one-time screen, BEFORE the trial starts,
@@ -123,9 +125,11 @@ How to review:
    settings; progress is kept and returns after unlocking) and the price
    of the one-time unlock. The trial starts only when the user taps
    "Începe perioada gratuită" (Start the free trial).
-2. You do not need to wait 5 days to test the purchase: "Cumpără acum"
-   (Buy now) on that same first screen opens the purchase. During the trial
-   it is also in Setări (Settings) > Acces > "Deblochează aplicația".
+2. You do not need to wait 5 days to test the purchase: "Cumpără" (Buy) on
+   that same first screen opens the purchase. During the trial, from the
+   second app start on, an offer screen opens at launch; it closes with the
+   X or "Mai târziu" (Later). The purchase is also reachable from the trial
+   banner on the home screen and in Setări (Settings) > Acces.
    "Restaurează achizițiile" (Restore purchases) is on the first screen, on
    the lock screen and in Settings.
 3. When the trial has ended, a full-screen lock screen ("Perioada de încercare
