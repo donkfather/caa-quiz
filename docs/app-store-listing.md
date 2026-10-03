@@ -85,6 +85,63 @@ Am renunțat complet la reclame. Descărcarea rămâne gratuită: 5 zile cu list
 
 Ai cumpărat eliminarea reclamelor? Ai în continuare acces complet: aplicația te recunoaște automat, iar dacă nu, apasă „Restaurează achizițiile”.
 
+## English (en-US) — App Store Connect has both locales
+
+### Promotional Text (max 170)
+Official ANR questions, exam simulations and courses: 5 days free. One payment unlocks the app plus 300+ extra questions. No subscription, no ads.
+
+### Description (max 4000)
+Chestionare Barca is the complete app for preparing for the recreational boating license exam (CAA), Class C and Class D.
+
+WHAT YOU GET
+
+All questions from the official ANR list for the CAA Class C and D exam, plus more than 300 extra practice questions (included when you unlock the app), organized by category: COLREG, navigation, seamanship, maneuvers, first aid and more. Questions are updated regularly — you get new questions without downloading a new version.
+
+EXAM MODE
+
+Simulate the real exam: 26 questions drawn from the official pool, timer running, no skipping ahead. See your result at the end, with details on every wrong answer.
+
+PRACTICE MODE
+
+Practice at your own pace, by category. See the correct answer right away. The questions you get wrong show up more often until you master them.
+
+LEARN THE THEORY
+
+Theory modules with a quiz at the end, so you understand the material behind the questions.
+
+MOTIVATION
+
+• Daily streak — keep a run of consecutive study days
+• Achievements (badges) — unlock trophies as you progress
+• Full history — every quiz you've completed, with score and time
+• Daily reminder — a local notification at the time you choose
+
+DESIGN AND COMFORT
+
+• Dark and light themes
+• iPad support
+• Offline mode — practice without an internet connection
+• Clean interface, no ads
+
+FREE DOWNLOAD, 5-DAY TRIAL, THEN ONE PAYMENT
+
+Download the app for free and get 5 days with the official question list, exam simulations and courses. The trial starts only when you tap "Începe perioada gratuită". A single in-app payment, at the price shown in the app, unlocks the app for good and adds the extra questions — no subscription, no ads.
+
+Already bought "remove ads"? You keep full access. If the app doesn't recognize it automatically, tap "Restaurează achizițiile" (Restore purchases).
+
+NO ACCOUNT
+
+We don't ask for your name, email or phone number. Progress and settings stay on your device and you can delete them anytime from the app.
+
+Good luck on your exam!
+
+Note: the exam content and app interface are in Romanian.
+
+### What's New
+We removed all ads. The download stays free: 5 days with the official question list, exam simulations and courses, from the moment you start the trial. One payment unlocks the app for good, plus more than 300 extra questions — no subscription.
+
+Bought "remove ads"? You keep full access: the app recognizes you automatically, and if not, tap "Restaurează achizițiile" (Restore purchases).
+
 ## Copyright
 © 2026 Tudor Popescu
 
