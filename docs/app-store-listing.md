@@ -72,13 +72,13 @@ Reference
 4+
 
 ## Support URL
-https://sites.google.com/view/chestionare-barca-privacy-pol/home
+https://chestionarebarca.bhdit.ro/privacy/
 
 ## Marketing URL
 https://chestionarebarca.bhdit.ro/
 
 ## Privacy Policy URL
-https://sites.google.com/view/chestionare-barca-privacy-pol/home
+https://chestionarebarca.bhdit.ro/privacy/
 
 ## What's New (release notes, max 4000)
 Am renunțat complet la reclame. Descărcarea rămâne gratuită: 5 zile cu lista oficială de întrebări, simulări și cursuri, din momentul în care pornești perioada gratuită. O singură plată deblochează aplicația pentru totdeauna, plus peste 300 de întrebări extra — fără abonament.

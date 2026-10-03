@@ -343,15 +343,18 @@ anywhere reports the problem.
 - [ ] Store listing: short and full description from
       [`store-listing.json`](./store-listing.json).
 
-### 5. Legal pages on Google Sites — by hand
+### 5. Legal pages — published from the repo
 
-The app links to
-<https://sites.google.com/view/chestionare-barca-privacy-pol/home> and
-<https://sites.google.com/view/chestionare-barca-terms-and-co/home>. These are
-**not** generated from `docs/`; copy the text of `docs/privacy-policy.html` and
-`docs/terms-of-service.html` into them and publish **before submitting**, since
-reviewers open them. The new policy also covers the old versions (section 11),
-so publishing it early does not leave 1.0.x users uncovered.
+The app, both stores and the website link to
+<https://chestionarebarca.bhdit.ro/privacy/> and
+<https://chestionarebarca.bhdit.ro/terms/>. `website/build.sh` copies them
+straight from `docs/privacy-policy.html` and `docs/terms-of-service.html`, so
+editing those files and deploying the website (`cd website && ./build.sh &&
+npx wrangler deploy`) is the whole process — publish **before submitting** a
+store build that depends on the new text. The old Google Sites pages
+(`sites.google.com/view/chestionare-barca-*`) are retired; versions up to
+1.1.0 (23) / iOS (4) still link to them, so leave them up with a pointer to
+the new address until those builds are gone.
 
 ### 6. Website
 

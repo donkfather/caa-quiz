@@ -13,6 +13,12 @@ mkdir -p dist/assets dist/store-assets
 cp index.html styles.css site.webmanifest sitemap.xml robots.txt og-image.png \
    favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png dist/
 
+# Legal pages (the app and both stores link here). Source of truth: docs/*.html,
+# copied in by this script so the published pages can never drift from them.
+mkdir -p dist/privacy dist/terms
+cp ../docs/privacy-policy.html dist/privacy/index.html
+cp ../docs/terms-of-service.html dist/terms/index.html
+
 # Icons referenced by the web manifest
 cp ../assets/icon.png ../assets/adaptive-icon.png dist/assets/
 

@@ -25,8 +25,8 @@ import { TRIAL_DAYS } from "../lib/accessCore";
 // trial intro and Settings share with it (purchase/restore flow, legal links,
 // Romanian day counts) — kept here so the copy and the alert wording exist once.
 
-export const PRIVACY_URL = "https://sites.google.com/view/chestionare-barca-privacy-pol/home";
-export const TERMS_URL = "https://sites.google.com/view/chestionare-barca-terms-and-co/home";
+export const PRIVACY_URL = "https://chestionarebarca.bhdit.ro/privacy/";
+export const TERMS_URL = "https://chestionarebarca.bhdit.ro/terms/";
 export { STORE_NAME };
 
 /** The regular price after the launch period, in RON. The paywall shows the
