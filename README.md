@@ -20,6 +20,22 @@ npm test                   # Access rules + scenario tests (node --test, Node >=
 
 **Note:** The `EXPO_ROUTER_APP_ROOT` env var is set automatically in npm scripts.
 
+## Release builds
+
+Both platforms are built on EAS (Expo's cloud), nothing on this machine:
+
+```bash
+scripts/release-android.sh            # build on EAS, bundle lands in build/
+scripts/release-android.sh --upload   # ...and upload it to Play internal testing
+eas build -p ios --profile production --auto-submit   # TestFlight
+```
+
+EAS keeps the upload key and the Android build number (`eas.json`:
+`appVersionSource: remote`, `autoIncrement`); the number was aligned with Play
+(27) on 2026-10-05. The Play upload reads the service account from 1Password
+through `~/homelab/appstore/builder-expo/play-upload.mjs`. The local Docker
+builder (`build-play.sh`) still works as a fallback.
+
 ## Access model
 
 No ads. Every device gets a **5-day free trial** with full access, started
