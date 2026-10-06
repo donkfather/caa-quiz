@@ -12,7 +12,7 @@ cd "$(dirname "$0")/.."
 
 EAS=${EAS:-npx --yes eas-cli@latest}
 PACKAGE=com.bhdit.caaquiz
-PLAY_UPLOAD=${PLAY_UPLOAD:-$HOME/homelab/appstore/builder-expo/play-upload.mjs}
+PLAY_UPLOAD=${PLAY_UPLOAD:-scripts/play-upload.mjs}
 UPLOAD=0
 [ "${1:-}" = "--upload" ] && UPLOAD=1
 

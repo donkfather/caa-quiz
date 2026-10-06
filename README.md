@@ -32,9 +32,12 @@ eas build -p ios --profile production --auto-submit   # TestFlight
 
 EAS keeps the upload key and the Android build number (`eas.json`:
 `appVersionSource: remote`, `autoIncrement`); the number was aligned with Play
-(27) on 2026-10-05. The Play upload reads the service account from 1Password
-through `~/homelab/appstore/builder-expo/play-upload.mjs`. The local Docker
-builder (`build-play.sh`) still works as a fallback.
+(27) on 2026-10-05. The Play upload goes through `scripts/play-upload.mjs`
+(a dependency-free Play Developer API client), which reads the service account
+from 1Password (`Play SA claude-499612`, vault Claude) on stdin, so the key
+never touches disk. A copy of the upload keystore is in 1Password too
+(`caa-quiz android upload signing`). The Docker builder that used to build
+Android on the Mini was decommissioned in October 2026; EAS is the only path.
 
 ## Access model
 
