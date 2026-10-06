@@ -35,7 +35,9 @@ AAB="build/caa-quiz-$VERSION-$CODE.aab"
 curl -fL --retry 3 -o "$AAB" "$URL"
 
 # R8 is on, so the bundle must carry its own map; Play reads it from there.
-unzip -l "$AAB" | grep -q "obfuscation/proguard.map" \
+# (grep reads to the end on purpose: with pipefail, grep -q would end unzip
+# with SIGPIPE on the first match and the check would fail on success)
+unzip -Z1 "$AAB" | grep -Fx "BUNDLE-METADATA/com.android.tools.build.obfuscation/proguard.map" >/dev/null \
   || { echo "$AAB has no R8 map inside: was minification turned off?" >&2; exit 1; }
 echo "built $AAB"
 
