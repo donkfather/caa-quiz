@@ -1,7 +1,7 @@
 import data from "../../assets/questions.json";
 import { initQuestions, getQuestions, onQuestionsUpdated } from "./questionsRemote";
 import { getAccessSnapshot, onAccessChanged } from "./access";
-import { availableQuestions, extraCount } from "./questionAccess";
+import { availableQuestions, extraCount, restorable } from "./questionAccess";
 
 export type Topic = "colreg" | "navigation" | "seamanship" | "maneuvering" | "first_aid" | "rnd" | "weather" | "signs";
 export type License = "C" | "D";
@@ -71,6 +71,12 @@ onAccessChanged((s) => {
 
 function available(): readonly Question[] {
   return availableQuestions(allQuestions, extrasUnlocked, BUNDLED_IDS);
+}
+
+/** Resume a saved session: its questions by id, from what may be served
+ * now. null = can't resume faithfully (see questionAccess.restorable). */
+export function restoreSessionQuestions(ids: readonly number[]): Question[] | null {
+  return restorable(ids, available());
 }
 
 /** How many questions the unlock adds on top of the official list. */

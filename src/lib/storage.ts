@@ -79,7 +79,12 @@ export async function clearHistory(): Promise<void> {
 export interface ActiveSession {
   id: string;
   mode: string;
-  questionIds: number[]; // indices into allQuestions
+  /** Question ids (the stable `Question.id`), in session order. */
+  qids?: number[];
+  /** Legacy: indices into allQuestions at the time the session started. Only
+   * read when `qids` is absent; indices shift whenever a question update
+   * inserts or removes a question, so new sessions write `qids`. */
+  questionIds: number[];
   /** Per-question option permutation. `optionOrders[i][j] = k` means the j-th
    * displayed option for question i is the k-th option of the original. Absent
    * on legacy sessions (treated as identity) and on exam/learn modes. */

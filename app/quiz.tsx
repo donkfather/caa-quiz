@@ -42,6 +42,7 @@ import {
   getExamQuestions,
   getAllQuestions,
   getPracticeQuestions,
+  restoreSessionQuestions,
   genShuffleOrder,
   applyOptionOrder,
   allQuestions,
@@ -126,8 +127,13 @@ export default function QuizScreen() {
           const sessions: ActiveSession[] = JSON.parse(raw);
           const existing = sessions.find((s) => s.id === sessionId);
           if (existing) {
-            const restoredRaw = existing.questionIds.map((id) => allQuestions[id]).filter(Boolean);
-            if (restoredRaw.length > 0) {
+            // By id, through the same gate as a new session — a session is
+            // never a way to see questions the user may not be served now
+            // (extras after a refund, a question retired by an update).
+            // Legacy sessions stored indices into allQuestions; translate.
+            const ids = existing.qids ?? existing.questionIds.map((i) => allQuestions[i]?.id ?? -1);
+            const restoredRaw = restoreSessionQuestions(ids);
+            if (restoredRaw) {
               // Re-apply the saved option permutations so the user's stored
               // answers still line up with the choices they originally saw.
               // Legacy sessions (no optionOrders) get identity permutations.
@@ -182,6 +188,7 @@ export default function QuizScreen() {
       const session: ActiveSession = {
         id: sid,
         mode: mode || "exam",
+        qids: ql.map((q) => q.id),
         questionIds,
         optionOrders,
         answers: new Array(ql.length).fill(null),

@@ -34,6 +34,23 @@ export function availableQuestions<T extends Gatable>(
   return all.filter((q) => isOfficial(q, bundledIds));
 }
 
+/** The questions of a saved session, looked up by id in what the user may
+ * be served NOW — not in what they were served when the session started.
+ * Returns null when any of them is missing (an extra after the unlock went
+ * away, or a question retired by an update): a session restored with gaps
+ * would misalign the saved answers, so the caller starts over instead. */
+export function restorable<T extends Gatable>(ids: readonly number[], served: readonly T[]): T[] | null {
+  const byId = new Map<number, T>();
+  for (const q of served) byId.set(q.id, q);
+  const out: T[] = [];
+  for (const id of ids) {
+    const q = byId.get(id);
+    if (!q) return null;
+    out.push(q);
+  }
+  return out.length ? out : null;
+}
+
 /** How many questions the unlock adds — for the paywall copy. */
 export function extraCount(all: readonly Gatable[], bundledIds: ReadonlySet<number>): number {
   let n = 0;
